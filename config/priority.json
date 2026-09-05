@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "category_order": ["reject", "ai", "streaming", "social", "developer", "service", "china"],
+  "version": 2,
+  "category_order": ["reject", "ai", "streaming", "social", "developer", "service", "global", "china"],
   "conflict_winner": "first_category",
   "cross_category_priority": {
     "reject": 1000,
@@ -9,6 +9,7 @@
     "social": 700,
     "developer": 650,
     "service": 600,
+    "global": 550,
     "china": 500
   }
 }
