@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T04:59:15+00:00",
+  "generated_at": "2026-09-05T05:18:57+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -793,7 +793,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111399,
+      "previous_count": 110953,
       "healthy_sources": 1,
       "sources": [
         {
@@ -801,7 +801,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 0,
+          "previous_source_rules": 120528,
           "considered_lines": 125771,
           "malformed_lines": 5243,
           "invalid_ratio": 0.0417,
@@ -813,6 +813,25 @@
           "rules": 120528,
           "status": "ok",
           "redirect_host_changed": false
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
+          "mode": "rules",
+          "policy_filter": null,
+          "min_rules": 1,
+          "previous_source_rules": 0,
+          "considered_lines": 111143,
+          "malformed_lines": 111143,
+          "invalid_ratio": 1.0,
+          "status_code": 200,
+          "bytes": 2299204,
+          "sha256": "9191417cc1fecdfe45732b20ba1e067c8bf36aacec6a48dfde4b6a828e593016",
+          "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
+          "content_type": "text/plain; charset=utf-8",
+          "rules": 0,
+          "status": "rejected",
+          "redirect_host_changed": false,
+          "reason": "too_few_rules"
         }
       ]
     },
@@ -42569,9 +42588,16 @@
   "gate": {
     "status": "PASS",
     "severity_counts": {
+      "WARNING": 1,
       "INFO": 2
     },
     "findings": [
+      {
+        "severity": "WARNING",
+        "category": "china/domains",
+        "reason": "too_few_rules",
+        "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+      },
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
