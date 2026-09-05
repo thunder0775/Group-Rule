@@ -32,10 +32,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Guard direct-rule upstreams
+        run: python scripts/direct_source_guard.py
+
       - name: Build and audit
         run: python scripts/rule_engine.py
 
-      # 即使发布闸门失败，也显示完整审计报告，便于定位问题。
       - name: Show report
         if: always()
         run: cat reports/latest.md
