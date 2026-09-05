@@ -9,28 +9,33 @@ AI = fallback,interval=600,timeout=2,url=https://chat.openai.com/cdn-cgi/trace,p
 
 [Rule]
 
-# 广告/隐私
+# 01. 广告 / 隐私 / 劫持：统一 REJECT
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/reject.list,REJECT
 
-# AI：高要求线路
+# 02. AI：高要求线路
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/atomic/ai/openai.list,AI,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/atomic/ai/anthropic.list,AI,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/atomic/ai/gemini.list,AI,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/atomic/ai/copilot.list,AI,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/atomic/ai/xai.list,AI,force-remote-dns
 
-# 海外服务：普通优选
+# 03. 海外专项服务：普通优选
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/streaming.list,🤖️ 优选,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/social.list,🤖️ 优选,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/developer.list,🤖️ 优选,force-remote-dns
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/service.list,🤖️ 优选,force-remote-dns
+RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/global.list,🤖️ 优选,force-remote-dns
 
-# 国内
+# 04. 中国大陆服务 / IP：直连
 RULE-SET,https://raw.githubusercontent.com/thunder0775/Group-Rule/main/rules/compiled/china.list,DIRECT
-
-# 最终兜底
 GEOIP,CN,DIRECT,no-resolve
+
+# 05. 最终兜底
 FINAL,🚀 策略选择
+
+[Host]
+
+localhost = 127.0.0.1
 
 [URL Rewrite]
 
