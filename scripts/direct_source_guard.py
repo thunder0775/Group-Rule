@@ -9,8 +9,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CFG = ROOT / "config" / "sources.json"
 
-# These upstreams are intentionally never accepted for China/DIRECT generation.
-# They are broad, derived, or have documented false-positive/coverage risks.
+# Explicit allowlist for China direct upstreams. Anything else is blocked.
+ALLOWED_CHINA_SOURCES = {
+    "https://raw.githubusercontent.com/GrandpaNiuu/cn-direct-rules/main/dist/rule-set/cn.list",
+}
+
+# Known risky upstreams are denied even if they are accidentally referenced.
 DENIED_SOURCE_FRAGMENTS = (
     "blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/",
     "Vincent-Loeng/shadowrocket-rules/release/direct.list",
@@ -27,6 +31,7 @@ def main() -> int:
     cfg = json.loads(CFG.read_text(encoding="utf-8"))
     china = cfg.get("sources", {}).get("china", {})
     violations = []
+
     for item_name, source_list in china.items():
         if not isinstance(source_list, list):
             violations.append(f"china/{item_name}: sources must be a list")
@@ -39,12 +44,13 @@ def main() -> int:
                 continue
             if any(fragment in url for fragment in DENIED_SOURCE_FRAGMENTS):
                 violations.append(f"china/{item_name}: denied upstream: {url}")
+            if url not in ALLOWED_CHINA_SOURCES:
+                violations.append(f"china/{item_name}: unapproved upstream: {url}")
 
-    # Conservative policy: China/DIRECT sources are opt-in only through this guard.
-    # An empty source set is the safe default; any future source must be audited and
-    # explicitly added to this allow model before it can reach generated DIRECT rules.
-    if any(isinstance(v, list) and v for v in china.values()):
-        violations.append("china: non-empty upstream source set requires explicit security review")
+    # The safe profile is domain-only. China IP routing remains the explicit
+    # Shadowrocket GEOIP,CN,no-resolve fallback in the user's .conf.
+    if set(china) != {"domains"}:
+        violations.append("china: only the vetted domain source is permitted")
 
     if violations:
         print("DIRECT SOURCE GUARD: BLOCK")
@@ -53,7 +59,8 @@ def main() -> int:
         return 1
 
     print("DIRECT SOURCE GUARD: PASS")
-    print("- china upstream sources: empty (conservative mode)")
+    print("- China domain source: approved strict-coverage source")
+    print("- China IP direct routing: GEOIP,CN,no-resolve only")
     print("- known risky direct upstreams: denied")
     return 0
 
