@@ -1,7 +1,11 @@
 {
-  "version": 4,
+  "version": 5,
   "source_timeout": 30,
   "max_bytes": 10485760,
+  "health": {
+    "min_rules": 1,
+    "min_rule_ratio": 0.2
+  },
   "sources": {
     "ai": {
       "openai": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list"}],
