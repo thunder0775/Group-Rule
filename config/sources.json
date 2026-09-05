@@ -1,10 +1,12 @@
 {
-  "version": 5,
+  "version": 6,
   "source_timeout": 30,
   "max_bytes": 10485760,
   "health": {
     "min_rules": 1,
-    "min_rule_ratio": 0.2
+    "min_rule_ratio": 0.2,
+    "max_rule_ratio": 10.0,
+    "max_invalid_ratio": 0.8
   },
   "sources": {
     "ai": {
