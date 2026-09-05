@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-"""Sanitize generated China DIRECT rules before regression/publish.
-
-Safety model:
-- China source contributes DOMAIN / DOMAIN-SUFFIX only.
-- IP-CIDR/IP-CIDR6/DOMAIN-KEYWORD and other match types are excluded from the
-  China DIRECT ruleset; explicit destination-IP routing is handled by
-  GEOIP,CN,no-resolve in the user's Shadowrocket config.
-- Domains covered by any higher-priority non-China proxy category are removed
-  from the China DIRECT set.
-- Public non-CN TLDs are excluded using the maintained Loyalsoldier tld-not-cn
-  list; failures to download it do not silently expand the China allowlist.
-- A small explicit foreign-domain denylist covers known regression cases whose
-  TLD is globally shared (.com/.net).
-"""
+"""Sanitize generated China DIRECT rules before regression/publish."""
 from __future__ import annotations
 
 import json
@@ -27,8 +14,6 @@ CHINA_ATOMIC = RULES / "atomic" / "china" / "domains.list"
 CHINA_COMPILED = RULES / "compiled" / "china.list"
 TLD_URL = "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
 
-# Explicitly verified foreign/global domains that must never be China DIRECT.
-# Keep this conservative: these are regression fixtures, not a broad brand list.
 EXPLICIT_DENY = {
     "nvidia.net",
     "developer.microsoft.com",
@@ -40,26 +25,12 @@ EXPLICIT_DENY = {
     "np-edge.itunes.apple.com",
     "play-edge.itunes.apple.com",
 }
-
 ALLOW_TYPES = {"DOMAIN", "DOMAIN-SUFFIX"}
+PROXY_CATEGORIES = ("ai", "streaming", "social", "developer", "service", "global")
 
 
 def normalize_domain(value: str) -> str:
     return value.strip().lower().rstrip(".")
-
-
-def domain_matches(rule: str, domain: str) -> bool:
-    try:
-        kind, value = rule.split(",", 1)
-    except ValueError:
-        return False
-    value = normalize_domain(value)
-    domain = normalize_domain(domain)
-    if kind == "DOMAIN":
-        return domain == value
-    if kind == "DOMAIN-SUFFIX":
-        return domain == value or domain.endswith("." + value)
-    return False
 
 
 def rule_value(rule: str) -> tuple[str, str] | None:
@@ -69,8 +40,19 @@ def rule_value(rule: str) -> tuple[str, str] | None:
     return parts[0].strip().upper(), normalize_domain(parts[1])
 
 
+def domain_covered(kind: str, value: str, exact: set[str], suffixes: set[str]) -> bool:
+    if kind == "DOMAIN" and value in exact:
+        return True
+    labels = value.split(".")
+    for index in range(len(labels)):
+        parent = ".".join(labels[index:])
+        if parent in suffixes:
+            return True
+    return False
+
+
 def load_tld_exclusions() -> set[str]:
-    req = urllib.request.Request(TLD_URL, headers={"User-Agent": "Group-Rule/10.0"})
+    req = urllib.request.Request(TLD_URL, headers={"User-Agent": "Group-Rule/10.1"})
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             text = resp.read(1024 * 1024).decode("utf-8", "replace")
@@ -86,21 +68,26 @@ def load_tld_exclusions() -> set[str]:
     return result
 
 
-def load_proxy_domain_rules() -> list[str]:
-    rules: list[str] = []
-    for category in ("ai", "streaming", "social", "developer", "service", "global"):
+def load_proxy_domain_index() -> tuple[set[str], set[str], int]:
+    exact, suffixes, count = set(), set(), 0
+    for category in PROXY_CATEGORIES:
         path = RULES / "compiled" / f"{category}.list"
         if not path.exists():
             continue
         for line in path.read_text(encoding="utf-8").splitlines():
-            value = rule_value(line.strip()) if line.strip() and not line.lstrip().startswith("#") else None
-            if value and value[0] in ALLOW_TYPES:
-                rules.append(f"{value[0]},{value[1]}")
-    return rules
+            parsed = rule_value(line.strip()) if line.strip() and not line.lstrip().startswith("#") else None
+            if not parsed or parsed[0] not in ALLOW_TYPES:
+                continue
+            count += 1
+            if parsed[0] == "DOMAIN":
+                exact.add(parsed[1])
+            else:
+                suffixes.add(parsed[1])
+    return exact, suffixes, count
 
 
-def filter_china_rules(rules: list[str], proxy_rules: list[str], excluded_tlds: set[str]):
-    kept: list[str] = []
+def filter_china_rules(rules: list[str], proxy_exact: set[str], proxy_suffixes: set[str], excluded_tlds: set[str]):
+    kept = []
     reasons = {"non_domain": 0, "foreign_tld": 0, "explicit_deny": 0, "proxy_category_overlap": 0, "invalid": 0}
     for raw in rules:
         parsed = rule_value(raw)
@@ -121,7 +108,7 @@ def filter_china_rules(rules: list[str], proxy_rules: list[str], excluded_tlds: 
         if tld in excluded_tlds:
             reasons["foreign_tld"] += 1
             continue
-        if any(domain_matches(proxy_rule, value) or domain_matches(raw, proxy_rule.split(",", 1)[1]) for proxy_rule in proxy_rules):
+        if domain_covered(kind, value, proxy_exact, proxy_suffixes):
             reasons["proxy_category_overlap"] += 1
             continue
         kept.append(f"{kind},{value}")
@@ -150,19 +137,19 @@ def update_report(stats):
             pass
     md_path = REPORTS / "latest.md"
     if md_path.exists():
-        md = md_path.read_text(encoding="utf-8")
+        md = md_path.read_text(encoding="utf-8").rstrip()
         block = [
             "",
             "## 中国直连安全过滤",
             "",
             f"- 原始中国规则：`{stats['input_rules']}`",
             f"- 发布中国域名规则：`{stats['output_rules']}`",
-            f"- 移除非域名/IP/关键词规则：`{stats['removed']['non_domain']}`",
+            f"- 移除非域名/关键词/IP规则：`{stats['removed']['non_domain']}`",
             f"- 移除非 CN TLD：`{stats['removed']['foreign_tld']}`",
             f"- 移除显式海外回归域名：`{stats['removed']['explicit_deny']}`",
             f"- 移除与海外高优先级分类重叠：`{stats['removed']['proxy_category_overlap']}`",
         ]
-        md_path.write_text(md.rstrip() + "\n" + "\n".join(block) + "\n", encoding="utf-8")
+        md_path.write_text(md + "\n" + "\n".join(block) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -177,8 +164,8 @@ def main() -> int:
     ]
     try:
         tlds = load_tld_exclusions()
-        proxy_rules = load_proxy_domain_rules()
-        safe_rules, reasons = filter_china_rules(raw_rules, proxy_rules, tlds)
+        exact, suffixes, proxy_count = load_proxy_domain_index()
+        safe_rules, reasons = filter_china_rules(raw_rules, exact, suffixes, tlds)
     except RuntimeError as exc:
         print("DIRECT RULE SANITIZE: BLOCK")
         print(f"- {exc}")
@@ -197,7 +184,7 @@ def main() -> int:
         "output_rules": len(safe_rules),
         "removed": reasons,
         "explicit_deny_count": len(EXPLICIT_DENY),
-        "proxy_domain_evidence_rules": len(proxy_rules),
+        "proxy_domain_evidence_rules": proxy_count,
         "foreign_tld_count": len(tlds),
     }
     update_report(stats)
