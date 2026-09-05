@@ -1,0 +1,633 @@
+{
+  "generated_at": "2026-09-05T03:11:44+00:00",
+  "status": {
+    "ai/openai": {
+      "state": "updated",
+      "rule_count": 34,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list",
+          "status_code": 200,
+          "bytes": 1353,
+          "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list",
+          "rules": 34,
+          "status": "ok"
+        }
+      ]
+    },
+    "ai/anthropic": {
+      "state": "updated",
+      "rule_count": 3,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list",
+          "status_code": 200,
+          "bytes": 244,
+          "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list",
+          "rules": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    "ai/gemini": {
+      "state": "updated",
+      "rule_count": 13,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list",
+          "status_code": 200,
+          "bytes": 605,
+          "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list",
+          "rules": 13,
+          "status": "ok"
+        }
+      ]
+    },
+    "ai/copilot": {
+      "state": "updated",
+      "rule_count": 49,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list",
+          "status_code": 200,
+          "bytes": 1822,
+          "sha256": "12773330de34b84b7fd2f3f2af598480ea62d8574d8e9b8ae9d011a53c044d39",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list",
+          "rules": 49,
+          "status": "ok"
+        }
+      ]
+    },
+    "ai/xai": {
+      "state": "updated",
+      "rule_count": 2,
+      "previous_count": 0,
+      "sources": []
+    },
+    "streaming/youtube": {
+      "state": "updated",
+      "rule_count": 190,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list",
+          "status_code": 200,
+          "bytes": 5436,
+          "sha256": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list",
+          "rules": 190,
+          "status": "ok"
+        }
+      ]
+    },
+    "streaming/netflix": {
+      "state": "updated",
+      "rule_count": 1157,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list",
+          "status_code": 200,
+          "bytes": 40351,
+          "sha256": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list",
+          "rules": 1157,
+          "status": "ok"
+        }
+      ]
+    },
+    "streaming/disney": {
+      "state": "updated",
+      "rule_count": 173,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list",
+          "status_code": 200,
+          "bytes": 5565,
+          "sha256": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list",
+          "rules": 173,
+          "status": "ok"
+        }
+      ]
+    },
+    "streaming/max": {
+      "state": "updated",
+      "rule_count": 51,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list",
+          "status_code": 200,
+          "bytes": 1738,
+          "sha256": "f89c50e9a1f433dc1acb8a75aa2cab27d4e2fd82f4fed6ba2820ce9b923680e2",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list",
+          "rules": 49,
+          "status": "ok"
+        }
+      ]
+    },
+    "streaming/spotify": {
+      "state": "updated",
+      "rule_count": 30,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list",
+          "status_code": 200,
+          "bytes": 1197,
+          "sha256": "577afc9442a38c578e0aa8769b192d2f935e808114c60cbd5afd2294c79b74d0",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list",
+          "rules": 30,
+          "status": "ok"
+        }
+      ]
+    },
+    "social/telegram": {
+      "state": "updated",
+      "rule_count": 35,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list",
+          "status_code": 200,
+          "bytes": 1338,
+          "sha256": "09f093cce5b3e2994147a2640e03040aac75e1db7bf2103fd1c9a2509b0176ab",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list",
+          "rules": 35,
+          "status": "ok"
+        }
+      ]
+    },
+    "social/twitter": {
+      "state": "updated",
+      "rule_count": 33,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list",
+          "status_code": 200,
+          "bytes": 1116,
+          "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list",
+          "rules": 33,
+          "status": "ok"
+        }
+      ]
+    },
+    "social/facebook": {
+      "state": "updated",
+      "rule_count": 569,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list",
+          "status_code": 200,
+          "bytes": 17399,
+          "sha256": "747563c96825bbd5f868be955543b0ca1979064e7b094f8aab08aafbce577c36",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list",
+          "rules": 569,
+          "status": "ok"
+        }
+      ]
+    },
+    "social/instagram": {
+      "state": "updated",
+      "rule_count": 4,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list",
+          "status_code": 200,
+          "bytes": 287,
+          "sha256": "65f28f9253b0dbb2a81485c788537896a0817766685e7bd91b2f90ec7aa19548",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list",
+          "rules": 4,
+          "status": "ok"
+        }
+      ]
+    },
+    "social/tiktok": {
+      "state": "updated",
+      "rule_count": 32,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list",
+          "status_code": 200,
+          "bytes": 1100,
+          "sha256": "403dccb2d51606d73db9e669e82cc1d9030c7e697756ae13d9f8f5fea53c151a",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list",
+          "rules": 32,
+          "status": "ok"
+        }
+      ]
+    },
+    "developer/github": {
+      "state": "updated",
+      "rule_count": 31,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list",
+          "status_code": 200,
+          "bytes": 1117,
+          "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list",
+          "rules": 31,
+          "status": "ok"
+        }
+      ]
+    },
+    "developer/gitlab": {
+      "state": "updated",
+      "rule_count": 6,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list",
+          "status_code": 200,
+          "bytes": 350,
+          "sha256": "0c41418dd3d49d6313c5516b1d828a39aa13e1c08b9750698b5e4ec5d7ba5f8c",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list",
+          "rules": 6,
+          "status": "ok"
+        }
+      ]
+    },
+    "developer/dropbox": {
+      "state": "updated",
+      "rule_count": 17,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list",
+          "status_code": 200,
+          "bytes": 699,
+          "sha256": "5e66a0c3798c02e8fdbdfd366c178b3273f03746e677193c35b5e4a411b6cbde",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list",
+          "rules": 17,
+          "status": "ok"
+        }
+      ]
+    },
+    "developer/onedrive": {
+      "state": "updated",
+      "rule_count": 16,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list",
+          "status_code": 200,
+          "bytes": 666,
+          "sha256": "9352a648b6a170ec902f4683a9002634e66e776c8362334757bb5ba115f6d3b6",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list",
+          "rules": 16,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/google": {
+      "state": "updated",
+      "rule_count": 698,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list",
+          "status_code": 200,
+          "bytes": 19777,
+          "sha256": "c6efe08ab4c0a12ddba20f5e75abfba2dd63a42b810f8cb5c303433a38e93b73",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list",
+          "rules": 698,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/apple": {
+      "state": "updated",
+      "rule_count": 43,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
+          "status_code": 200,
+          "bytes": 1451,
+          "sha256": "3aefad60c2423d1a66cc27f81ecd9eb3f14075103a06c8adf442da2252e30a9e",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
+          "rules": 43,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/microsoft": {
+      "state": "updated",
+      "rule_count": 671,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list",
+          "status_code": 200,
+          "bytes": 20536,
+          "sha256": "22df1a1017ad5d41755bf020ca8eb9afeedc7bdc2c649ed2074b255227a7ed8e",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list",
+          "rules": 671,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/bilibili": {
+      "state": "updated",
+      "rule_count": 127,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list",
+          "status_code": 200,
+          "bytes": 4523,
+          "sha256": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list",
+          "rules": 127,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/baidu": {
+      "state": "updated",
+      "rule_count": 251,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list",
+          "status_code": 200,
+          "bytes": 6981,
+          "sha256": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list",
+          "rules": 251,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/douyin": {
+      "state": "updated",
+      "rule_count": 13,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list",
+          "status_code": 200,
+          "bytes": 533,
+          "sha256": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list",
+          "rules": 13,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/zhihu": {
+      "state": "updated",
+      "rule_count": 7,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list",
+          "status_code": 200,
+          "bytes": 423,
+          "sha256": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list",
+          "rules": 7,
+          "status": "ok"
+        }
+      ]
+    },
+    "service/xiaohongshu": {
+      "state": "updated",
+      "rule_count": 4,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
+          "status_code": 200,
+          "bytes": 272,
+          "sha256": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
+          "rules": 4,
+          "status": "ok"
+        }
+      ]
+    },
+    "china/domains": {
+      "state": "unavailable",
+      "rule_count": 0,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
+          "status_code": 200,
+          "bytes": 1522198,
+          "sha256": "242559d5b8533caffa3b50f5ec4474eaed8d4a230e2d16e936bde2c3d1d3e188",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
+          "rules": 0,
+          "status": "rejected",
+          "reason": "zero_rules"
+        }
+      ]
+    },
+    "china/rules": {
+      "state": "updated",
+      "rule_count": 12586,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list",
+          "status_code": 200,
+          "bytes": 448800,
+          "sha256": "28bccf4924bc746b6f44750af2e82ca451ce093315210a61c1d4d955ffba3399",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list",
+          "rules": 12586,
+          "status": "ok"
+        }
+      ]
+    },
+    "reject/advertising": {
+      "state": "updated",
+      "rule_count": 781,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
+          "status_code": 200,
+          "bytes": 26853,
+          "sha256": "40ff89985e113233e00504228d36ec7bd4f24682448c6b05e0e7996f0ea449d9",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
+          "rules": 781,
+          "status": "ok"
+        }
+      ]
+    },
+    "reject/privacy": {
+      "state": "updated",
+      "rule_count": 20,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
+          "status_code": 200,
+          "bytes": 821,
+          "sha256": "24b048634166c810833c424455586e57d0db6991ed1bab2adafa09603b4f4c22",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
+          "rules": 20,
+          "status": "ok"
+        }
+      ]
+    },
+    "reject/hijacking": {
+      "state": "updated",
+      "rule_count": 228,
+      "previous_count": 0,
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
+          "status_code": 200,
+          "bytes": 6734,
+          "sha256": "47bffe4e8d4f56e736e43f1ed5f639f0b909591de09c5908df6cddad4b9e4e5b",
+          "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
+          "rules": 228,
+          "status": "ok"
+        }
+      ]
+    }
+  },
+  "compiled_counts": {
+    "ai": 71,
+    "streaming": 1600,
+    "social": 670,
+    "developer": 70,
+    "service": 1814,
+    "china": 12586,
+    "reject": 972
+  },
+  "cross_category_conflicts": {
+    "DOMAIN-SUFFIX,deepmind.com": [
+      "ai",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,grok.com": [
+      "ai",
+      "social"
+    ],
+    "IP-CIDR,172.110.32.0/21": [
+      "service",
+      "streaming"
+    ],
+    "IP-CIDR,216.73.80.0/20": [
+      "service",
+      "streaming"
+    ],
+    "IP-CIDR,2620:120:e000::/40": [
+      "service",
+      "streaming"
+    ],
+    "DOMAIN-SUFFIX,snssdk.com": [
+      "service",
+      "social"
+    ],
+    "USER-AGENT,TikTok*": [
+      "china",
+      "social"
+    ],
+    "DOMAIN-SUFFIX,1drv.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,livefilestore.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,microsoftpersonalcontent.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,onedrive.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,sharepoint.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,sharepointonline.com": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,spoprod-a.akamaihd.net": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-KEYWORD,1drv": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-KEYWORD,onedrive": [
+      "developer",
+      "service"
+    ],
+    "DOMAIN-KEYWORD,skydrive": [
+      "developer",
+      "service"
+    ],
+    "USER-AGENT,Microsoft*": [
+      "china",
+      "service"
+    ],
+    "USER-AGENT,*bili*": [
+      "china",
+      "service"
+    ],
+    "USER-AGENT,Bilibili*": [
+      "china",
+      "service"
+    ],
+    "USER-AGENT,bili*": [
+      "china",
+      "service"
+    ],
+    "USER-AGENT,bili-inter*": [
+      "china",
+      "service"
+    ],
+    "IP-CIDR,203.107.1.0/24": [
+      "reject",
+      "service"
+    ]
+  },
+  "priority": {
+    "version": 1,
+    "category_order": [
+      "reject",
+      "ai",
+      "streaming",
+      "social",
+      "developer",
+      "service",
+      "china"
+    ],
+    "conflict_winner": "first_category",
+    "cross_category_priority": {
+      "reject": 1000,
+      "ai": 900,
+      "streaming": 800,
+      "social": 700,
+      "developer": 650,
+      "service": 600,
+      "china": 500
+    }
+  }
+}
