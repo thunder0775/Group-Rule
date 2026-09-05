@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "source_timeout": 30,
   "max_bytes": 10485760,
   "sources": {
@@ -56,9 +56,9 @@
     "china": {
       "domains": [
         {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list","mode":"domains"},
-        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list","mode":"domains"},
-        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list","mode":"domains"},
-        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list","mode":"domains"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list"},
         {"url":"https://raw.githubusercontent.com/PeterLooper/rules-config/main/cn-direct.conf","policy":"DIRECT","mode":"shadowrocket_conf"},
         {"url":"https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module","policy":"DIRECT","mode":"shadowrocket_conf"}
       ],
