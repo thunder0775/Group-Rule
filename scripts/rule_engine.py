@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Group-Rule: fetch, validate, isolate, deduplicate and compile Shadowrocket rules."""
+"""Fetch, validate, isolate, deduplicate and compile Shadowrocket rules."""
 from __future__ import annotations
 import hashlib, json, sys, urllib.request
 from collections import defaultdict
@@ -18,17 +18,25 @@ def norm(line):
     p=[x.strip() for x in line.split(",")]
     if len(p)<2 or p[0] not in ALLOWED or not p[1]: return None
     return f"{p[0]},{p[1]}"
-def parse(text, mode="rules"):
-    out=[]; seen=set()
+def parse(text, mode="rules", expected_policy=None):
+    out=[]; seen=set(); in_rule = mode != "shadowrocket_conf"
     for line in text.splitlines():
-        if mode=="domains":
-            s=line.strip()
+        s=line.replace("\ufeff","").strip()
+        if not s: continue
+        if mode == "shadowrocket_conf" and s.startswith("[") and s.endswith("]"):
+            in_rule = s.lower() == "[rule]"; continue
+        if mode == "domains":
             r=None if not s or s.startswith(("#",";")) or "," in s else f"DOMAIN-SUFFIX,{s}"
-        else: r=norm(line)
+        else:
+            if mode == "shadowrocket_conf" and not in_rule: continue
+            p=[x.strip() for x in s.split(",")]
+            if expected_policy is not None:
+                if len(p)<3 or p[2].upper() != expected_policy.upper(): continue
+            r=norm(s)
         if r and r not in seen: seen.add(r); out.append(r)
     return out
 def fetch(url, timeout, max_bytes):
-    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/1.1"})
+    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/2.0"})
     with urllib.request.urlopen(req,timeout=timeout) as resp:
         data=resp.read(max_bytes+1)
         if len(data)>max_bytes: raise ValueError("response_too_large")
@@ -46,23 +54,23 @@ def write_list(p,rules,kind):
     p.write_text("\n".join(header+list(dict.fromkeys(rules)))+"\n",encoding="utf-8")
 def main():
     scfg=load(CFG/"sources.json"); pcfg=load(CFG/"priority.json")
-    timeout=int(scfg.get("source_timeout",30)); max_bytes=int(scfg.get("max_bytes",5*1024*1024))
+    timeout=int(scfg.get("source_timeout",30)); max_bytes=int(scfg.get("max_bytes",10*1024*1024))
     statuses={}; categories=defaultdict(dict)
     for category,items in scfg["sources"].items():
         for name,sources in items.items():
             target=atomic_path(category,name); previous=read_previous(target)
             candidates=[]; results=[]; healthy=0
             for src in sources:
-                url=src if isinstance(src,str) else src["url"]; mode="rules" if isinstance(src,str) else src.get("mode","rules")
+                if isinstance(src,str): src={"url":src}
+                url=src["url"]; mode=src.get("mode","rules"); policy=src.get("policy")
                 try:
-                    text,meta=fetch(url,timeout,max_bytes); parsed=parse(text,mode); reason=valid(text,parsed)
-                    ok=reason is None; item={"url":url,**meta,"rules":len(parsed),"status":"ok" if ok else "rejected"}
+                    text,meta=fetch(url,timeout,max_bytes); parsed=parse(text,mode,policy); reason=valid(text,parsed)
+                    ok=reason is None; item={"url":url,"mode":mode,"policy_filter":policy,**meta,"rules":len(parsed),"status":"ok" if ok else "rejected"}
                     if reason: item["reason"]=reason
                     if ok: candidates.extend(parsed); healthy+=1
-                except Exception as exc: item={"url":url,"status":"error","error":str(exc)}
+                except Exception as exc: item={"url":url,"mode":mode,"policy_filter":policy,"status":"error","error":str(exc)}
                 results.append(item)
             custom=[norm(x) for x in scfg.get("custom",{}).get(f"{category}/{name}.list",[])]; custom=[x for x in custom if x]
-            # Critical isolation rule: custom rules may supplement a healthy source, or define a source-less item.
             candidates=list(dict.fromkeys(candidates+custom))
             if candidates and (healthy>0 or not sources):
                 write_list(target,candidates,f"atomic:{category}/{name}"); current,state=candidates,"updated"
@@ -83,14 +91,12 @@ def main():
     report={"generated_at":now(),"status":statuses,"compiled_counts":compiled,"cross_category_conflicts":conflicts,"priority":pcfg}
     (REPORTS/"latest.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     md=["# Group-Rule 审计报告","",f"生成时间：`{report['generated_at']}`",f"跨分类重复规则：`{len(conflicts)}`","","## 分类统计",""]
-    md += [f"- `{k}`：{v} 条" for k,v in compiled.items()]
-    md += ["","## 原子规则状态",""]
+    md += [f"- `{k}`：{v} 条" for k,v in compiled.items()]; md += ["","## 原子规则状态",""]
     for key,st in sorted(statuses.items()):
         md.append(f"- `{key}`：**{st['state']}**，当前 {st['rule_count']}，历史 {st['previous_count']}，健康源 {st['healthy_sources']}")
         for src in st["sources"]:
             if src.get("status")!="ok": md.append(f"  - ⚠️ `{src.get('url')}` → `{src.get('status')}` {src.get('reason',src.get('error',''))}")
-    if conflicts:
-        md += ["","## 冲突示例（最多 100 条）",""]+[f"- `{r}` → {', '.join(c)}" for r,c in list(sorted(conflicts.items()))[:100]]
+    if conflicts: md += ["","## 冲突示例（最多 100 条）",""]+[f"- `{r}` → {', '.join(c)}" for r,c in list(sorted(conflicts.items()))[:100]]
     (REPORTS/"latest.md").write_text("\n".join(md)+"\n",encoding="utf-8")
     print(json.dumps({"ok":True,"conflicts":len(conflicts),"compiled":compiled},ensure_ascii=False))
 if __name__=="__main__": main()
