@@ -1,7 +1,7 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T03:41:40+00:00`
-跨分类重复规则：`3108`
+生成时间：`2026-09-05T03:42:25+00:00`
+跨分类重复规则：`3281`
 
 ## 分类统计
 
@@ -11,7 +11,7 @@
 - `developer`：70 条
 - `service`：2032 条
 - `global`：27313 条
-- `china`：237190 条
+- `china`：237408 条
 - `reject`：190335 条
 
 ## 原子规则状态
@@ -22,25 +22,22 @@
 - `ai/gemini`：**updated**，当前 13，历史 13，健康源 1
 - `ai/openai`：**updated**，当前 34，历史 34，健康源 1
 - `ai/xai`：**updated**，当前 2，历史 2，健康源 0
-- `china/domains`：**updated**，当前 222411，历史 111142，健康源 3
-  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list` → `rejected` zero_rules
-  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list` → `rejected` zero_rules
-  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list` → `rejected` zero_rules
-- `china/rules`：**updated**，当前 125960，历史 12586，健康源 5
+- `china/domains`：**updated**，当前 222629，历史 222411，健康源 6
+- `china/rules`：**updated**，当前 125960，历史 125960，健康源 5
 - `developer/dropbox`：**updated**，当前 17，历史 17，健康源 1
 - `developer/github`：**updated**，当前 31，历史 31，健康源 1
 - `developer/gitlab`：**updated**，当前 6，历史 6，健康源 1
 - `developer/onedrive`：**updated**，当前 16，历史 16，健康源 1
-- `global/proxy`：**updated**，当前 27313，历史 0，健康源 2
-- `reject/advertising`：**updated**，当前 190145，历史 781，健康源 4
+- `global/proxy`：**updated**，当前 27313，历史 27313，健康源 2
+- `reject/advertising`：**updated**，当前 190145，历史 190145，健康源 4
 - `reject/hijacking`：**updated**，当前 228，历史 228，健康源 1
 - `reject/privacy`：**updated**，当前 20，历史 20，健康源 1
-- `service/apple`：**updated**，当前 208，历史 43，健康源 2
+- `service/apple`：**updated**，当前 208，历史 208，健康源 2
 - `service/baidu`：**updated**，当前 251，历史 251，健康源 1
 - `service/bilibili`：**updated**，当前 127，历史 127，健康源 1
 - `service/douyin`：**updated**，当前 13，历史 13，健康源 1
 - `service/google`：**updated**，当前 698，历史 698，健康源 1
-- `service/icloud`：**updated**，当前 53，历史 0，健康源 1
+- `service/icloud`：**updated**，当前 53，历史 53，健康源 1
 - `service/microsoft`：**updated**，当前 671，历史 671，健康源 1
 - `service/xiaohongshu`：**kept_previous**，当前 4，历史 4，健康源 0
   - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list` → `rejected` too_few_rules
@@ -48,7 +45,7 @@
 - `social/facebook`：**updated**，当前 569，历史 569，健康源 1
 - `social/instagram`：**kept_previous**，当前 4，历史 4，健康源 0
   - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list` → `rejected` too_few_rules
-- `social/telegram`：**updated**，当前 43，历史 35，健康源 2
+- `social/telegram`：**updated**，当前 43，历史 43，健康源 2
 - `social/tiktok`：**updated**，当前 32，历史 32，健康源 1
 - `social/twitter`：**updated**，当前 33，历史 33，健康源 1
 - `streaming/disney`：**updated**，当前 173，历史 173，健康源 1
