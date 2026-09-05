@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch, validate, isolate, deduplicate and compile Shadowrocket rules."""
+"""Fetch, validate, isolate, deduplicate, audit and compile Shadowrocket rules."""
 from __future__ import annotations
-import hashlib, json, urllib.request
+import hashlib, ipaddress, json, urllib.parse, urllib.request
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -9,11 +9,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CFG, RULES, REPORTS = ROOT / "config", ROOT / "rules", ROOT / "reports"
 ALLOWED = {"DOMAIN","DOMAIN-SUFFIX","DOMAIN-KEYWORD","IP-CIDR","IP-CIDR6","USER-AGENT","URL-REGEX","PROCESS-NAME","DEST-PORT","DST-PORT","GEOIP"}
-
+DOMAIN_TYPES = {"DOMAIN", "DOMAIN-SUFFIX"}
+IP_TYPES = {"IP-CIDR", "IP-CIDR6"}
 
 def now(): return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
-
 
 def norm(line):
     line=line.replace("\ufeff","").strip()
@@ -22,195 +22,227 @@ def norm(line):
     if len(p)<2 or p[0] not in ALLOWED or not p[1]: return None
     return f"{p[0]},{p[1]}"
 
+def domain_norm(v): return v.strip().lower().rstrip(".")
+def valid_domain(v):
+    v=domain_norm(v)
+    if not v or " " in v or "/" in v or ":" in v or len(v)>253: return False
+    if any(not x or len(x)>63 for x in v.split(".")): return False
+    try: v.encode("idna")
+    except UnicodeError: return False
+    return True
 
 def parse(text, mode="rules", expected_policy=None):
-    out=[]; seen=set(); in_rule = mode != "shadowrocket_conf"
+    out=[]; seen=set(); in_rule=mode!="shadowrocket_conf"
     for line in text.splitlines():
         s=line.replace("\ufeff","").strip()
         if not s: continue
-        if mode == "shadowrocket_conf" and s.startswith("[") and s.endswith("]"):
-            in_rule = s.lower() == "[rule]"; continue
-        if mode == "domains":
-            r=None if not s or s.startswith(("#",";")) or "," in s else f"DOMAIN-SUFFIX,{s}"
+        if mode=="shadowrocket_conf" and s.startswith("[") and s.endswith("]"):
+            in_rule=s.lower()=="[rule]"; continue
+        if mode=="shadowrocket_conf" and not in_rule: continue
+        if mode=="domains":
+            r=None if s.startswith(("#",";")) or "," in s or not valid_domain(s) else f"DOMAIN-SUFFIX,{domain_norm(s)}"
         else:
-            if mode == "shadowrocket_conf" and not in_rule: continue
             p=[x.strip() for x in s.split(",")]
-            if expected_policy is not None:
-                if len(p)<3 or p[2].upper() != expected_policy.upper(): continue
+            if expected_policy is not None and (len(p)<3 or p[2].upper()!=expected_policy.upper()): continue
             r=norm(s)
         if r and r not in seen: seen.add(r); out.append(r)
     return out
 
-
 def source_line_stats(text, mode):
-    considered = 0
-    malformed = 0
-    in_rule = mode != "shadowrocket_conf"
+    considered=malformed=0; in_rule=mode!="shadowrocket_conf"
     for line in text.splitlines():
         s=line.replace("\ufeff","").strip()
         if not s: continue
-        if mode == "shadowrocket_conf" and s.startswith("[") and s.endswith("]"):
-            in_rule = s.lower() == "[rule]"
-            continue
-        if mode == "shadowrocket_conf" and not in_rule: continue
-        if s.startswith(("#",";")): continue
-        considered += 1
-        if mode == "domains":
-            if "," in s: malformed += 1
-        elif norm(s) is None:
-            malformed += 1
+        if mode=="shadowrocket_conf" and s.startswith("[") and s.endswith("]"):
+            in_rule=s.lower()=="[rule]"; continue
+        if mode=="shadowrocket_conf" and not in_rule or s.startswith(("#",";")): continue
+        considered+=1
+        malformed += 1 if (mode=="domains" and ("," in s or not valid_domain(s))) or (mode!="domains" and norm(s) is None) else 0
     return considered, malformed
 
-
 def fetch(url, timeout, max_bytes):
-    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/2.0"})
+    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/4.0"})
     with urllib.request.urlopen(req,timeout=timeout) as resp:
         data=resp.read(max_bytes+1)
         if len(data)>max_bytes: raise ValueError("response_too_large")
-        return data.decode("utf-8-sig"), {"status_code":getattr(resp,"status",200),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest(),"final_url":resp.geturl()}
+        headers={k.lower():v for k,v in resp.headers.items()}
+        return data.decode("utf-8-sig"), {"status_code":getattr(resp,"status",200),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest(),"final_url":resp.geturl(),"content_type":headers.get("content-type","")}
 
-
-def valid(text,rules,min_rules=1,previous_source_rules=0,min_rule_ratio=0.2,max_rule_ratio=10.0,max_invalid_ratio=0.8,mode="rules"):
+def validate_source(text,rules,min_rules,prev_count,min_ratio,max_ratio,max_invalid_ratio,mode):
     low=text.lower()
-    if "<html" in low or "<!doctype html" in low: return "html_instead_of_rules"
-    if len(rules) < min_rules: return "too_few_rules"
-    if previous_source_rules >= 10 and len(rules) < int(previous_source_rules * min_rule_ratio): return "sudden_rule_count_drop"
-    if previous_source_rules >= 10 and len(rules) > int(previous_source_rules * max_rule_ratio): return "sudden_rule_count_growth"
-    considered, malformed = source_line_stats(text, mode)
-    if considered >= 10 and malformed / considered > max_invalid_ratio: return "high_invalid_rule_ratio"
-    return None
-
+    if "<html" in low or "<!doctype html" in low: return "html_instead_of_rules",0,0
+    considered,malformed=source_line_stats(text,mode)
+    if len(rules)<min_rules: return "too_few_rules",considered,malformed
+    if prev_count>=10 and len(rules)<int(prev_count*min_ratio): return "sudden_rule_count_drop",considered,malformed
+    if prev_count>=10 and len(rules)>int(prev_count*max_ratio): return "sudden_rule_count_growth",considered,malformed
+    if considered>=10 and malformed/considered>max_invalid_ratio: return "high_invalid_rule_ratio",considered,malformed
+    return None,considered,malformed
 
 def atomic_path(c,n): return RULES/"atomic"/c/f"{n}.list"
 def read_previous(p): return parse(p.read_text(encoding="utf-8")) if p.exists() else []
-def read_source_history():
-    p=REPORTS/"latest.json"
+def read_history():
+    p=REPORTS/"source-history.json"
     if not p.exists(): return {}
-    try: report=load(p)
+    try: return load(p)
     except Exception: return {}
-    history={}
-    for st in report.get("status",{}).values():
-        for src in st.get("sources",[]):
-            url=src.get("url")
-            if url: history[url]=int(src.get("rules",0))
-    return history
-
 
 def write_list(p,rules,kind):
     p.parent.mkdir(parents=True,exist_ok=True)
     header=["# Generated by thunder0775/Group-Rule",f"# Type: {kind}",f"# Generated: {now()}","# Policy intentionally omitted; assign policy in Shadowrocket .conf."]
     p.write_text("\n".join(header+list(dict.fromkeys(rules)))+"\n",encoding="utf-8")
 
-
-def semantic_domain_redundancy(categories):
-    """Audit DOMAIN/DOMAIN-SUFFIX containment without modifying compiled output."""
-    domain_map=defaultdict(list)
-    suffix_map=defaultdict(list)
-    for category,items in categories.items():
+def semantic_domain_audit(categories,limit):
+    suffixes=defaultdict(list); findings=[]; keyword=[]
+    for cat,items in categories.items():
         for name,rules in items.items():
             for rule in rules:
-                kind, value = rule.split(",",1)
-                value=value.lower().rstrip(".")
-                if kind == "DOMAIN": domain_map[value].append({"category":category,"item":name,"rule":rule})
-                elif kind == "DOMAIN-SUFFIX": suffix_map[value].append({"category":category,"item":name,"rule":rule})
+                t,v=rule.split(",",1)
+                if t=="DOMAIN-SUFFIX": suffixes[domain_norm(v)].append((cat,name,rule))
+                elif t=="DOMAIN-KEYWORD" and len(v.strip())<4: keyword.append({"category":cat,"item":name,"rule":rule,"reason":"very_short_keyword"})
+    seen=set()
+    for cat,items in categories.items():
+        for name,rules in items.items():
+            for rule in rules:
+                t,v=rule.split(",",1)
+                if t not in DOMAIN_TYPES: continue
+                d=domain_norm(v); labels=d.split(".")
+                ancestors=[".".join(labels[i:]) for i in range(1,len(labels))]
+                if t=="DOMAIN": ancestors=[d]+ancestors
+                for parent in ancestors:
+                    refs=suffixes.get(parent)
+                    if not refs: continue
+                    for pcat,pitem,prule in refs:
+                        key=(rule,prule,"covered_domain" if t=="DOMAIN" else "covered_suffix")
+                        if key in seen: continue
+                        seen.add(key); findings.append({"type":key[2],"covered":{"category":cat,"item":name,"rule":rule},"covering":{"category":pcat,"item":pitem,"rule":prule}})
+                    break
+    return {"count":len(findings),"samples":findings[:limit],"risky_keyword_count":len(keyword),"risky_keyword_samples":keyword[:limit]}
 
+class Trie:
+    __slots__=("children","owners")
+    def __init__(self): self.children={}; self.owners=[]
+
+def semantic_cidr_audit(categories,limit):
+    nets=[]
+    for cat,items in categories.items():
+        for name,rules in items.items():
+            for rule in rules:
+                t,v=rule.split(",",1)
+                if t not in IP_TYPES: continue
+                try: n=ipaddress.ip_network(v,strict=False)
+                except ValueError: continue
+                nets.append((n.version,n.prefixlen,int(n.network_address),cat,name,rule))
     findings=[]
-    # A suffix rule makes deeper child suffix rules redundant.
-    suffixes=sorted(suffix_map, key=lambda x:(x.count("."),x))
-    for child in suffixes:
-        labels=child.split(".")
-        parents=[".".join(labels[i:]) for i in range(1,len(labels))]
-        for parent in parents:
-            if parent in suffix_map:
-                for child_ref in suffix_map[child]:
-                    for parent_ref in suffix_map[parent]:
-                        findings.append({"type":"parent_suffix_covers_child_suffix","covered":child_ref,"covering":parent_ref})
-                break
+    for version in (4,6):
+        root=Trie(); subset=sorted((x for x in nets if x[0]==version),key=lambda x:(x[1],x[2]))
+        maxbits=32 if version==4 else 128
+        for _,plen,address,cat,name,rule in subset:
+            node=root; covered=set()
+            for i in range(plen):
+                covered.update(node.owners)
+                bit=(address>>(maxbits-1-i))&1; node=node.children.setdefault(bit,Trie())
+            covered.update(node.owners)
+            if covered:
+                findings.append({"rule":rule,"category":cat,"item":name,"reason":"covered_by_parent_cidr","covered_by":[{"category":c,"item":n} for c,n in sorted(covered)])
+            node.owners.append((cat,name))
+    return {"count":len(findings),"samples":findings[:limit],"cidr_rule_count":len(nets)}
 
-    # DOMAIN exact match covered by a suffix rule.
-    for domain, domain_refs in domain_map.items():
-        labels=domain.split(".")
-        for i in range(len(labels)):
-            suffix=".".join(labels[i:])
-            if suffix in suffix_map:
-                for domain_ref in domain_refs:
-                    for suffix_ref in suffix_map[suffix]:
-                        findings.append({"type":"suffix_covers_exact_domain","covered":domain_ref,"covering":suffix_ref})
-                break
+def build_outputs(categories,order):
+    rank={c:i for i,c in enumerate(order)}; winners={}
+    for cat in order+[c for c in categories if c not in order]:
+        for rules in categories.get(cat,{}).values():
+            for r in rules:
+                if r not in winners or rank.get(cat,999999)<rank.get(winners[r],999999): winners[r]=cat
+    outputs={}
+    for cat,items in categories.items():
+        outputs[cat]=list(dict.fromkeys(r for rules in items.values() for r in rules if winners.get(r)==cat))
+    return outputs,winners
 
-    # Same semantic rule repeated inside one or multiple atomic files.
-    return findings
-
+def validate_outputs(outputs):
+    problems=[]; counts={}
+    for cat,rules in outputs.items():
+        counts[cat]=len(rules)
+        for r in rules:
+            if norm(r)!=r: problems.append({"category":cat,"rule":r,"reason":"invalid_normalized_rule"})
+            if len(r.split(","))!=2: problems.append({"category":cat,"rule":r,"reason":"policy_leakage"})
+            if r.startswith("DOMAIN,") or r.startswith("DOMAIN-SUFFIX,"):
+                if not valid_domain(r.split(",",1)[1]): problems.append({"category":cat,"rule":r,"reason":"invalid_domain"})
+            elif r.startswith("IP-CIDR,"):
+                try:
+                    if ipaddress.ip_network(r.split(",",1)[1]).version!=4: raise ValueError
+                except ValueError: problems.append({"category":cat,"rule":r,"reason":"invalid_ipv4_cidr"})
+            elif r.startswith("IP-CIDR6,"):
+                try:
+                    if ipaddress.ip_network(r.split(",",1)[1]).version!=6: raise ValueError
+                except ValueError: problems.append({"category":cat,"rule":r,"reason":"invalid_ipv6_cidr"})
+    return {"valid":not problems,"problem_count":len(problems),"problems":problems[:200],"counts":counts}
 
 def main():
-    scfg=load(CFG/"sources.json"); pcfg=load(CFG/"priority.json")
-    timeout=int(scfg.get("source_timeout",30)); max_bytes=int(scfg.get("max_bytes",10*1024*1024))
-    health=scfg.get("health",{}); min_rules_default=int(health.get("min_rules",1)); min_ratio=float(health.get("min_rule_ratio",0.2)); max_ratio=float(health.get("max_rule_ratio",10.0)); max_invalid_ratio=float(health.get("max_invalid_ratio",0.8))
-    source_history=read_source_history()
-    statuses={}; categories=defaultdict(dict)
+    generated=now(); scfg=load(CFG/"sources.json"); pcfg=load(CFG/"priority.json")
+    timeout=int(scfg.get("source_timeout",30)); max_bytes=int(scfg.get("max_bytes",10*1024*1024)); health=scfg.get("health",{})
+    min_rules_default=int(health.get("min_rules",1)); min_ratio=float(health.get("min_rule_ratio",0.2)); max_ratio=float(health.get("max_rule_ratio",10.0)); max_invalid=float(health.get("max_invalid_ratio",0.8)); limit=int(health.get("max_audit_samples",200))
+    prev_report=REPORTS/"latest.json"; previous_sources={}
+    if prev_report.exists():
+        try:
+            old=load(prev_report)
+            for st in old.get("status",{}).values():
+                for src in st.get("sources",[]):
+                    if src.get("url"): previous_sources[src["url"]]=int(src.get("rules",0))
+        except Exception: pass
+    history=read_history(); statuses={}; categories=defaultdict(dict); anomalies=[]; quality={}
     for category,items in scfg["sources"].items():
         for name,sources in items.items():
-            target=atomic_path(category,name); previous=read_previous(target)
-            candidates=[]; results=[]; healthy=0
-            for src in sources:
-                if isinstance(src,str): src={"url":src}
-                url=src["url"]; mode=src.get("mode","rules"); policy=src.get("policy")
-                min_rules=int(src.get("min_rules",min_rules_default)); ratio=float(src.get("min_rule_ratio",min_ratio)); max_source_ratio=float(src.get("max_rule_ratio",max_ratio)); invalid_ratio=float(src.get("max_invalid_ratio",max_invalid_ratio))
-                previous_source_rules=source_history.get(url,0)
+            target=atomic_path(category,name); previous=read_previous(target); candidates=[]; results=[]; healthy=0
+            for raw in sources:
+                src={"url":raw} if isinstance(raw,str) else raw; url=src["url"]; mode=src.get("mode","rules"); policy=src.get("policy")
+                prev_count=previous_sources.get(url,0); min_rules=int(src.get("min_rules",min_rules_default)); min_r=float(src.get("min_rule_ratio",min_ratio)); max_r=float(src.get("max_rule_ratio",max_ratio)); inv=float(src.get("max_invalid_ratio",max_invalid))
                 try:
-                    text,meta=fetch(url,timeout,max_bytes); parsed=parse(text,mode,policy); considered,malformed=source_line_stats(text,mode); reason=valid(text,parsed,min_rules,previous_source_rules,ratio,max_source_ratio,invalid_ratio,mode)
-                    ok=reason is None; item={"url":url,"mode":mode,"policy_filter":policy,"min_rules":min_rules,"previous_source_rules":previous_source_rules,"considered_lines":considered,"malformed_lines":malformed,"max_invalid_ratio":invalid_ratio,**meta,"rules":len(parsed),"status":"ok" if ok else "rejected"}
-                    if reason: item["reason"]=reason
-                    if ok: candidates.extend(parsed); healthy+=1
-                except Exception as exc: item={"url":url,"mode":mode,"policy_filter":policy,"min_rules":min_rules,"previous_source_rules":previous_source_rules,"status":"error","error":str(exc)}
+                    text,meta=fetch(url,timeout,max_bytes); parsed=parse(text,mode,policy); reason,considered,malformed=validate_source(text,parsed,min_rules,prev_count,min_r,max_r,inv,mode)
+                    final_host=urllib.parse.urlparse(meta["final_url"]).netloc; source_host=urllib.parse.urlparse(url).netloc; redirected_host=bool(final_host and source_host and final_host!=source_host)
+                    item={"url":url,"mode":mode,"policy_filter":policy,"min_rules":min_rules,"previous_source_rules":prev_count,"considered_lines":considered,"malformed_lines":malformed,"invalid_ratio":round(malformed/considered,4) if considered else 0,**meta,"rules":len(parsed),"status":"ok" if reason is None else "rejected","redirect_host_changed":redirected_host}
+                    if reason: item["reason"]=reason; anomalies.append({"url":url,"reason":reason})
+                    if redirected_host: anomalies.append({"url":url,"reason":"redirect_host_changed","final_url":meta["final_url"]})
+                    if reason is None:
+                        candidates.extend(parsed); healthy+=1
+                        old=history.get(url,{})
+                        history[url]={"sha256":meta["sha256"],"rules":len(parsed),"first_seen":old.get("first_seen",generated),"last_seen":generated,"last_changed":generated if old.get("sha256")!=meta["sha256"] else old.get("last_changed",generated),"unchanged_runs":int(old.get("unchanged_runs",0))+1 if old.get("sha256")==meta["sha256"] else 0}
+                except Exception as exc:
+                    item={"url":url,"mode":mode,"policy_filter":policy,"min_rules":min_rules,"previous_source_rules":prev_count,"status":"error","error":str(exc)}; anomalies.append({"url":url,"reason":"fetch_error","error":str(exc)})
                 results.append(item)
-            custom=[norm(x) for x in scfg.get("custom",{}).get(f"{category}/{name}.list",[])]; custom=[x for x in custom if x]
-            candidates=list(dict.fromkeys(candidates+custom))
-            if candidates and (healthy>0 or not sources):
-                write_list(target,candidates,f"atomic:{category}/{name}"); current,state=candidates,"updated"
-            else:
-                current,state=previous,("kept_previous" if previous else "unavailable")
-                if previous: write_list(target,previous,f"atomic:{category}/{name}:last-known-good")
-            categories[category][name]=current
-            statuses[f"{category}/{name}"]={"state":state,"rule_count":len(current),"previous_count":len(previous),"healthy_sources":healthy,"sources":results}
-
+            custom=[norm(x) for x in scfg.get("custom",{}).get(f"{category}/{name}.list",[])]; custom=[x for x in custom if x]; candidates=list(dict.fromkeys(candidates+custom))
+            if candidates and (healthy>0 or not sources): write_list(target,candidates,f"atomic:{category}/{name}"); current,state=candidates,"updated"
+            else: current,state=previous,("kept_previous" if previous else "unavailable"); write_list(target,previous,f"atomic:{category}/{name}:last-known-good") if previous else None
+            categories[category][name]=current; statuses[f"{category}/{name}"]={"state":state,"rule_count":len(current),"previous_count":len(previous),"healthy_sources":healthy,"sources":results}; quality[f"{category}/{name}"]=validate_outputs({category:current})
+    order=pcfg.get("category_order",list(categories)); outputs,winners=build_outputs(categories,order)
     compiled={}
-    order=pcfg.get("category_order",list(categories)); rank={c:i for i,c in enumerate(order)}
-    winners={}
-    for category in order + [c for c in categories if c not in order]:
-        if category not in categories: continue
-        for rules in categories[category].values():
-            for r in rules:
-                if r not in winners or rank.get(category,999999) < rank.get(winners[r],999999): winners[r]=category
-    for category,items in categories.items():
-        kept=[r for rules in items.values() for r in rules if winners.get(r)==category]
-        kept=list(dict.fromkeys(kept)); write_list(RULES/"compiled"/f"{category}.list",kept,f"compiled:{category}"); compiled[category]=len(kept)
-
+    for cat,rules in outputs.items(): write_list(RULES/"compiled"/f"{cat}.list",rules,f"compiled:{cat}"); compiled[cat]=len(rules)
     occ=defaultdict(set)
-    for category,items in categories.items():
+    for cat,items in categories.items():
         for rules in items.values():
-            for r in rules: occ[r].add(category)
-    conflicts={r:sorted(c) for r,c in occ.items() if len(c)>1}
-    resolved={r:{"winner":winners[r],"categories":sorted(c)} for r,c in occ.items() if len(c)>1}
-    semantic=semantic_domain_redundancy(categories)
-    semantic_counts=defaultdict(int)
-    for finding in semantic: semantic_counts[finding["type"]]+=1
+            for r in rules: occ[r].add(cat)
+    conflicts={r:sorted(c) for r,c in occ.items() if len(c)>1}; domain_audit=semantic_domain_audit(categories,limit); cidr_audit=semantic_cidr_audit(categories,limit); output_audit=validate_outputs(outputs)
+    exact_duplicates=sum(max(0,len(c)-1) for c in occ.values()); invalid_domain=sum(v["problem_count"] for v in quality.values())
+    global_quality={"exact_duplicate_rule_count":exact_duplicates,"cross_category_conflict_count":len(conflicts),"semantic_domain_redundancy_count":domain_audit["count"],"semantic_cidr_redundancy_count":cidr_audit["count"],"risky_keyword_count":domain_audit["risky_keyword_count"],"source_anomaly_count":len(anomalies),"compiled_output_problem_count":output_audit["problem_count"]}
     REPORTS.mkdir(parents=True,exist_ok=True)
-    report={"generated_at":now(),"status":statuses,"compiled_counts":compiled,"cross_category_conflicts":conflicts,"conflict_resolution":resolved,"semantic_redundancy":semantic,"semantic_redundancy_counts":dict(semantic_counts),"priority":pcfg}
+    report={"generated_at":generated,"status":statuses,"compiled_counts":compiled,"cross_category_conflicts":conflicts,"conflict_resolution":{r:{"winner":winners[r],"categories":sorted(c)} for r,c in occ.items() if len(c)>1},"priority":pcfg,"source_anomalies":anomalies[:limit],"source_rule_quality":quality,"semantic_domain_audit":domain_audit,"semantic_cidr_audit":cidr_audit,"compiled_output_audit":output_audit,"global_quality":global_quality}
     (REPORTS/"latest.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    md=["# Group-Rule 审计报告","",f"生成时间：`{report['generated_at']}`",f"跨分类重复规则：`{len(conflicts)}`",f"语义冗余：`{len(semantic)}`","", "## 分类统计",""]
+    (REPORTS/"source-history.json").write_text(json.dumps(history,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    md=["# Group-Rule 审计报告","",f"生成时间：`{generated}`","","## 总体质量","",f"- 精确重复：`{exact_duplicates}`",f"- 跨分类重复：`{len(conflicts)}`",f"- DOMAIN 语义冗余：`{domain_audit['count']}`",f"- CIDR 语义冗余：`{cidr_audit['count']}`",f"- 高风险 DOMAIN-KEYWORD：`{domain_audit['risky_keyword_count']}`",f"- 源异常：`{len(anomalies)}`",f"- 编译输出问题：`{output_audit['problem_count']}`","","## 分类统计",""]
     md += [f"- `{k}`：{v} 条" for k,v in compiled.items()]
-    if semantic:
-        md += ["","## 语义冗余审计","",f"发现 `{len(semantic)}` 条 DOMAIN / DOMAIN-SUFFIX 包含关系。当前**只审计、不自动删除**，避免误伤规则覆盖范围。",""]
-        md += [f"- `{f['type']}`：`{f['covered']['rule']}` 可被 `{f['covering']['rule']}` 覆盖" for f in semantic[:100]]
-    md += ["","## 原子规则状态",""]
+    md += ["","## 源状态",""]
     for key,st in sorted(statuses.items()):
         md.append(f"- `{key}`：**{st['state']}**，当前 {st['rule_count']}，历史 {st['previous_count']}，健康源 {st['healthy_sources']}")
         for src in st["sources"]:
-            if src.get("status")!="ok": md.append(f"  - ⚠️ `{src.get('url')}` → `{src.get('status')}` {src.get('reason',src.get('error',''))}")
+            if src.get("status")!="ok": md.append(f"  - ⚠️ `{src.get('url')}` → `{src.get('reason',src.get('error',''))}`")
+            elif src.get("redirect_host_changed"): md.append(f"  - ⚠️ `{src.get('url')}` → redirect host changed")
+    if domain_audit["samples"]:
+        md += ["","## DOMAIN 语义冗余（示例）",""]+[f"- `{x['covered']['rule']}` ← `{x['covering']['rule']}`" for x in domain_audit["samples"][:50]]
+    if cidr_audit["samples"]:
+        md += ["","## CIDR 语义冗余（示例）",""]+[f"- `{x['rule']}` → `{x['reason']}`" for x in cidr_audit["samples"][:50]]
     if conflicts:
-        md += ["","## 冲突处理","",f"共检测到 `{len(conflicts)}` 条跨分类重复规则；compiled 输出按 `priority.json` 自动保留优先级最高的分类。","", "## 冲突示例（最多 100 条）",""] + [f"- `{r}` → 胜出 `{winners[r]}`，涉及 {', '.join(c)}" for r,c in list(sorted(conflicts.items()))[:100]]
+        md += ["","## 跨分类冲突（示例）",""]+[f"- `{r}` → `{winners[r]}`；涉及 {', '.join(c)}" for r,c in list(sorted(conflicts.items()))[:100]]
+    md += ["","## 编译输出校验","",f"- 状态：**{'PASS' if output_audit['valid'] else 'FAIL'}**",f"- 问题数：`{output_audit['problem_count']}`"]
     (REPORTS/"latest.md").write_text("\n".join(md)+"\n",encoding="utf-8")
-    print(json.dumps({"ok":True,"conflicts":len(conflicts),"semantic_redundancy":len(semantic),"compiled":compiled},ensure_ascii=False))
+    print(json.dumps({"ok":output_audit["valid"],"conflicts":len(conflicts),"domain_redundancy":domain_audit["count"],"cidr_redundancy":cidr_audit["count"],"source_anomalies":len(anomalies),"compiled":compiled},ensure_ascii=False))
 
 if __name__=="__main__": main()
