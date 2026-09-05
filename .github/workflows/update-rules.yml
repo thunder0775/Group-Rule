@@ -13,25 +13,32 @@ on:
 permissions:
   contents: write
 
+# 多次配置提交同时触发时，只保留最新一次构建，避免生成文件互相抢占 main。
 concurrency:
   group: shadowrocket-rules
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Build and audit
         run: python scripts/rule_engine.py
+
       - name: Show report
         run: cat reports/latest.md
+
       - name: Commit generated rules
         run: |
           git config user.name "github-actions[bot]"
@@ -42,4 +49,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update generated shadowrocket rules"
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
