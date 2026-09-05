@@ -9,19 +9,16 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 CFG,RULES,REPORTS=ROOT/"config",ROOT/"rules",ROOT/"reports"
 ALLOWED={"DOMAIN","DOMAIN-SUFFIX","DOMAIN-KEYWORD","IP-CIDR","IP-CIDR6","USER-AGENT","URL-REGEX","PROCESS-NAME","DEST-PORT","DST-PORT","GEOIP"}
-IP_TYPES={"IP-CIDR","IP-CIDR6"}
-DOMAIN_TYPES={"DOMAIN","DOMAIN-SUFFIX"}
+IP_TYPES={"IP-CIDR","IP-CIDR6"}; DOMAIN_TYPES={"DOMAIN","DOMAIN-SUFFIX"}
 
 def now(): return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
-
 def norm(line):
     line=line.replace("\ufeff","").strip()
     if not line or line.startswith(("#",";")): return None
     p=[x.strip() for x in line.split(",")]
     if len(p)<2 or p[0] not in ALLOWED or not p[1]: return None
     return f"{p[0]},{p[1]}"
-
 def domain_norm(v): return v.strip().lower().rstrip(".")
 def valid_domain(v):
     v=domain_norm(v)
@@ -61,7 +58,7 @@ def source_line_stats(text,mode):
     return considered,malformed
 
 def fetch(url,timeout,max_bytes):
-    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/5.0"})
+    req=urllib.request.Request(url,headers={"User-Agent":"Group-Rule/5.1"})
     with urllib.request.urlopen(req,timeout=timeout) as resp:
         data=resp.read(max_bytes+1)
         if len(data)>max_bytes: raise ValueError("response_too_large")
@@ -122,7 +119,6 @@ def semantic_domain_audit(categories,limit):
                 parents=[".".join(labels[i:]) for i in range(1,len(labels))]
                 if t=="DOMAIN": parents=[d]+parents
                 for parent in parents:
-                    # Never treat a bare TLD (cn, com, uk, etc.) as meaningful parent coverage.
                     if "." not in parent: continue
                     for pcat,pitem,prule in suffixes.get(parent,set()):
                         findings.add((r,prule,cat,name,pcat,pitem,"exact_domain_covered" if t=="DOMAIN" else "child_suffix_covered"))
@@ -247,19 +243,18 @@ def main():
     conflicts={r:sorted({cat for cat,_ in locs}) for r,locs in locations.items() if len({cat for cat,_ in locs})>1}
     same_category_duplicates={r:sorted(locs) for r,locs in locations.items() if len(locs)>1 and len({cat for cat,_ in locs})==1}
     domain_audit=semantic_domain_audit(categories,limit); cidr_audit=semantic_cidr_audit(categories,limit); output_audit=validate_outputs(outputs); cfg_audit=config_audit(scfg)
-    exact_duplicate_occurrences=sum(max(0,len(locs)-1) for locs in locations.values())
-    invalid_domain=sum(len(v["invalid_domains"]) for v in quality.values()); invalid_cidr=sum(len(v["invalid_cidrs"]) for v in quality.values()); risky_keywords=sum(len(v["risky_keywords"]) for v in quality.values())
-    global_quality={"exact_duplicate_occurrences":exact_duplicate_occurrences,"same_category_duplicate_rule_count":len(same_category_duplicates),"cross_category_conflict_count":len(conflicts),"semantic_domain_redundancy_count":domain_audit["count"],"semantic_cidr_redundancy_count":cidr_audit["count"],"invalid_domain_count":invalid_domain,"invalid_cidr_count":invalid_cidr,"risky_keyword_count":risky_keywords+domain_audit["risky_keyword_count"],"source_anomaly_count":len(anomalies),"config_problem_count":len(cfg_audit),"compiled_output_problem_count":output_audit["problem_count"]}
+    exact_duplicate_occurrences=sum(max(0,len(locs)-1) for locs in locations.values()); invalid_domain=sum(len(v["invalid_domains"]) for v in quality.values()); invalid_cidr=sum(len(v["invalid_cidrs"]) for v in quality.values()); risky_keywords=sum(len(v["risky_keywords"]) for v in quality.values())+domain_audit["risky_keyword_count"]
+    global_quality={"exact_duplicate_occurrences":exact_duplicate_occurrences,"same_category_duplicate_rule_count":len(same_category_duplicates),"cross_category_conflict_count":len(conflicts),"semantic_domain_redundancy_count":domain_audit["count"],"semantic_cidr_redundancy_count":cidr_audit["count"],"invalid_domain_count":invalid_domain,"invalid_cidr_count":invalid_cidr,"risky_keyword_count":risky_keywords,"source_anomaly_count":len(anomalies),"config_problem_count":len(cfg_audit),"compiled_output_problem_count":output_audit["problem_count"]}
     REPORTS.mkdir(parents=True,exist_ok=True)
     report={"generated_at":generated,"status":statuses,"compiled_counts":compiled,"cross_category_conflicts":conflicts,"same_category_duplicates":same_category_duplicates,"conflict_resolution":{r:{"winner":winners[r],"categories":sorted(c)} for r,c in conflicts.items()},"priority":pcfg,"source_anomalies":anomalies[:limit],"config_audit":cfg_audit[:limit],"source_rule_quality":quality,"semantic_domain_audit":domain_audit,"semantic_cidr_audit":cidr_audit,"compiled_output_audit":output_audit,"global_quality":global_quality}
     (REPORTS/"latest.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (REPORTS/"source-history.json").write_text(json.dumps(history,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    md=["# Group-Rule 审计报告","",f"生成时间：`{generated}`","","## 总体质量","",f"- 精确重复出现次数：`{exact_duplicate_occurrences}`",f"- 同分类重复规则：`{len(same_category_duplicates)}`",f"- 跨分类重复规则：`{len(conflicts)}`",f"- DOMAIN 语义冗余：`{domain_audit['count']}`",f"- CIDR 语义冗余：`{cidr_audit['count']}`",f"- 无效 DOMAIN：`{invalid_domain}`",f"- 无效 CIDR：`{invalid_cidr}`",f"- 高风险 DOMAIN-KEYWORD：`{global_quality['risky_keyword_count']}`",f"- 源异常：`{len(anomalies)}`",f"- 配置问题：`{len(cfg_audit)}`",f"- 编译输出问题：`{output_audit['problem_count']}`","","## 分类统计",""]
+    md=["# Group-Rule 审计报告","",f"生成时间：`{generated}`","","## 总体质量","",f"- 精确重复出现次数：`{exact_duplicate_occurrences}`",f"- 同分类重复规则：`{len(same_category_duplicates)}`",f"- 跨分类重复规则：`{len(conflicts)}`",f"- DOMAIN 语义冗余：`{domain_audit['count']}`",f"- CIDR 语义冗余：`{cidr_audit['count']}`",f"- 无效 DOMAIN：`{invalid_domain}`",f"- 无效 CIDR：`{invalid_cidr}`",f"- 高风险 DOMAIN-KEYWORD：`{risky_keywords}`",f"- 源异常：`{len(anomalies)}`",f"- 配置问题：`{len(cfg_audit)}`",f"- 编译输出问题：`{output_audit['problem_count']}`","","## 分类统计",""]
     md += [f"- `{k}`：{v} 条" for k,v in compiled.items()]
     md += ["","## 语义冗余","",f"DOMAIN 父级覆盖子规则：`{domain_audit['count']}`（已排除裸 TLD，如 `cn/com`）",f"CIDR 父网覆盖子网：`{cidr_audit['count']}`"]
     if domain_audit["samples"]: md += ["","### DOMAIN 示例",""]+[f"- `{x['covered']['rule']}` ← `{x['covering']['rule']}`" for x in domain_audit["samples"][:50]]
     if cidr_audit["samples"]: md += ["","### CIDR 示例",""]+[f"- `{x['rule']}` → `{x['reason']}` ← `{x['covered_by']['category']}/{x['covered_by']['item']}`" for x in cidr_audit["samples"][:50]]
-    if cfg_audit: md += ["","## 配置问题",""]+[f"- `{x}`" for x in cfg_audit[:50]]
+    if cfg_audit: md += ["","## 配置问题","",]+[f"- `{x}`" for x in cfg_audit[:50]]
     if conflicts: md += ["","## 跨分类冲突（最多 100 条）",""]+[f"- `{r}` → 胜出 `{winners[r]}`；涉及 {', '.join(c)}" for r,c in list(sorted(conflicts.items()))[:100]]
     if anomalies: md += ["","## 源异常（最多 100 条）",""]+[f"- `{x}`" for x in anomalies[:100]]
     md += ["","## 编译输出校验","",f"- 状态：**{'PASS' if output_audit['valid'] else 'FAIL'}**",f"- 问题数：`{output_audit['problem_count']}`"]
