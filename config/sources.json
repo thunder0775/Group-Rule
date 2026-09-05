@@ -1,130 +1,88 @@
 {
-  "version": 2,
+  "version": 3,
   "source_timeout": 30,
-  "max_bytes": 5242880,
+  "max_bytes": 10485760,
   "sources": {
     "ai": {
-      "openai": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list"
-      ],
-      "anthropic": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list"
-      ],
-      "gemini": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list"
-      ],
-      "copilot": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list"
-      ],
+      "openai": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list"}],
+      "anthropic": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list"}],
+      "gemini": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list"}],
+      "copilot": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list"}],
       "xai": []
     },
     "streaming": {
-      "youtube": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list"
-      ],
-      "netflix": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list"
-      ],
-      "disney": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list"
-      ],
-      "max": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list"
-      ],
-      "spotify": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list"
-      ]
+      "youtube": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list"}],
+      "netflix": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list"}],
+      "disney": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list"}],
+      "max": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list"}],
+      "spotify": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list"}]
     },
     "social": {
       "telegram": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list"
+        {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/telegramcidr.list"}
       ],
-      "twitter": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list"
-      ],
-      "facebook": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list"
-      ],
-      "instagram": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list"
-      ],
-      "tiktok": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list"
-      ]
+      "twitter": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list"}],
+      "facebook": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list"}],
+      "instagram": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list"}],
+      "tiktok": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list"}]
     },
     "developer": {
-      "github": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list"
-      ],
-      "gitlab": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list"
-      ],
-      "dropbox": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list"
-      ],
-      "onedrive": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list"
-      ]
+      "github": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list"}],
+      "gitlab": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list"}],
+      "dropbox": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list"}],
+      "onedrive": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list"}]
     },
     "service": {
-      "google": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list"
-      ],
+      "google": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list"}],
       "apple": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list"
+        {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list"}
       ],
-      "microsoft": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list"
-      ],
-      "bilibili": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list"
-      ],
-      "baidu": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list"
-      ],
-      "douyin": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list"
-      ],
-      "zhihu": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list"
-      ],
-      "xiaohongshu": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list"
+      "icloud": [{"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list"}],
+      "microsoft": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list"}],
+      "bilibili": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list"}],
+      "baidu": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list"}],
+      "douyin": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list"}],
+      "zhihu": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list"}],
+      "xiaohongshu": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list"}]
+    },
+    "global": {
+      "proxy": [
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list"},
+        {"url":"https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module","policy":"PROXY","mode":"shadowrocket_conf"}
       ]
     },
     "china": {
       "domains": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
-        "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list"
+        {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list","mode":"domains"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list","mode":"domains"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list","mode":"domains"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list","mode":"domains"},
+        {"url":"https://raw.githubusercontent.com/PeterLooper/rules-config/main/cn-direct.conf","policy":"DIRECT","mode":"shadowrocket_conf"},
+        {"url":"https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module","policy":"DIRECT","mode":"shadowrocket_conf"}
       ],
       "rules": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list"
+        {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/cncidr.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/lancidr.list"},
+        {"url":"https://raw.githubusercontent.com/PeterLooper/rules-config/main/cn-direct.conf","policy":"DIRECT","mode":"shadowrocket_conf"},
+        {"url":"https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module","policy":"DIRECT","mode":"shadowrocket_conf"}
       ]
     },
     "reject": {
       "advertising": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
-        "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list"
+        {"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list"},
+        {"url":"https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list"},
+        {"url":"https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module","policy":"REJECT","mode":"shadowrocket_conf"},
+        {"url":"https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module","policy":"REJECT","mode":"shadowrocket_conf"}
       ],
-      "privacy": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
-        "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list"
-      ],
-      "hijacking": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
-        "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list"
-      ]
+      "privacy": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list"}],
+      "hijacking": [{"url":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list"}]
     }
   },
   "custom": {
-    "ai/xai.list": [
-      "DOMAIN-SUFFIX,x.ai",
-      "DOMAIN-SUFFIX,grok.com"
-    ],
-    "streaming/max.list": [
-      "DOMAIN-SUFFIX,discomax.com",
-      "DOMAIN-SUFFIX,max.com",
-      "DOMAIN-SUFFIX,h264.io"
-    ]
+    "ai/xai.list": ["DOMAIN-SUFFIX,x.ai", "DOMAIN-SUFFIX,grok.com"],
+    "streaming/max.list": ["DOMAIN-SUFFIX,discomax.com", "DOMAIN-SUFFIX,max.com", "DOMAIN-SUFFIX,h264.io"]
   }
 }
