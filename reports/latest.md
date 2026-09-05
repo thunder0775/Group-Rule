@@ -1,7 +1,8 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T04:06:35+00:00`
+生成时间：`2026-09-05T04:09:04+00:00`
 跨分类重复规则：`3281`
+语义冗余：`234548`
 
 ## 分类统计
 
@@ -13,6 +14,111 @@
 - `global`：24958 条
 - `china`：236425 条
 - `reject`：190335 条
+
+## 语义冗余审计
+
+发现 `234548` 条 DOMAIN / DOMAIN-SUFFIX 包含关系。当前**只审计、不自动删除**，避免误伤规则覆盖范围。
+
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1017.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1017.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,12306.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,12306.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,12306.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,12306.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,189zj.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,189zj.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1drv.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1drv.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1s8pj.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,1s8pj.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,4336wang.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,4336wang.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,51mld.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,51mld.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,51mypc.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,51mypc.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,58mingri.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,58mingri.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,58mingtian.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,58mingtian.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,666pool.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,666pool.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,911dns.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,911dns.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,9kh5b.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,9kh5b.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,9s6q.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,9s6q.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aadrm.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aadrm.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,ad-plus.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,ad-plus.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adfuture.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adfuture.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adintl.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adintl.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adtrafficquality.google` 可被 `DOMAIN-SUFFIX,google` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,advmob.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,advmob.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adx.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adx.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adzp.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,adzp.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aiqicha.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aiqicha.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,airbnb.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,airbnb.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aka.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aka.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,alienskins.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,alienskins.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,amazonlumberyard.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,amazonlumberyard.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,amwm.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,amwm.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,analysys.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,analysys.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,animetamashi.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,animetamashi.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,anitama.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,anitama.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,anydeskchina.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,anydeskchina.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aovk.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,aovk.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apihub-internal.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apihub-internal.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,app-store.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,app-store.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appcenter.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appcenter.ms` 可被 `DOMAIN-SUFFIX,ms` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-icloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-icloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-icloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-icloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-pay.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-pay.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-store.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple-store.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple.xn--czr694b` 可被 `DOMAIN-SUFFIX,xn--czr694b` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple.xn--czr694b` 可被 `DOMAIN-SUFFIX,xn--czr694b` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple.xn--fiqs8s` 可被 `DOMAIN-SUFFIX,xn--fiqs8s` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,apple.xn--fiqs8s` 可被 `DOMAIN-SUFFIX,xn--fiqs8s` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applecare.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applecare.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appleicloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appleicloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appleicloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appleicloud.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applemusic.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applemusic.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applestore.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applestore.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appletv.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appletv.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applewatch.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,applewatch.wang` 可被 `DOMAIN-SUFFIX,wang` 覆盖
+- `parent_suffix_covers_child_suffix`：`DOMAIN-SUFFIX,appserviceenvironment.cn` 可被 `DOMAIN-SUFFIX,cn` 覆盖
 
 ## 原子规则状态
 
