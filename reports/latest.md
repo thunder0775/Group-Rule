@@ -1,6 +1,14 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T04:13:53+00:00`
+生成时间：`2026-09-05T04:20:05+00:00`
+发布闸门：**PASS**
+
+## 审计等级
+
+- `BLOCK`：禁止本次生成结果进入 Git 提交。
+- `ERROR`：严重运行异常。
+- `WARNING`：记录并继续，异常原子规则使用 Last Known Good。
+- `INFO`：信息类质量提示。
 
 ## 总体质量
 
@@ -10,11 +18,8 @@
 - DOMAIN 语义冗余：`13615`
 - CIDR 语义冗余：`3747`
 - 无效 DOMAIN：`0`
-- 无效 CIDR：`5304`
+- 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`0`
-- 源异常：`1`
-- 配置问题：`0`
-- 编译输出问题：`0`
 
 ## 分类统计
 
@@ -27,9 +32,20 @@
 - `china`：125227 条
 - `reject`：190335 条
 
+## 闸门结果
+
+- `INFO`：`2`
+- `WARNING`：`1`
+
+### Findings
+
+- **WARNING** `high_invalid_rule_ratio` — `china/domains`
+- **INFO** `semantic_domain_redundancy`
+- **INFO** `semantic_cidr_redundancy`
+
 ## 语义冗余
 
-DOMAIN 父级覆盖子规则：`13615`（已排除裸 TLD，如 `cn/com`）
+DOMAIN 父子覆盖：`13615`（排除裸 TLD）
 CIDR 父网覆盖子网：`3747`
 
 ### DOMAIN 示例
@@ -87,56 +103,56 @@ CIDR 父网覆盖子网：`3747`
 
 ### CIDR 示例
 
-- `IP-CIDR,0.0.0.0/24` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,0.0.0.0/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,0.0.0.0/32` → `covered_by_parent_cidr` ← `reject/advertising`
-- `IP-CIDR,0.0.0.1/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,0.0.0.1/32` → `covered_by_parent_cidr` ← `reject/advertising`
-- `IP-CIDR,1.116.0.0/15` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.0.0/23` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.128.0/17` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.16.0/20` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.37.0/24` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.38.0/23` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.4.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.40.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.56.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.8.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.118.96.0/19` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.119.0.0/16` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,1.3.0.10/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,10.0.0.0/8` → `covered_by_parent_cidr` ← `china/domains`
-- `IP-CIDR,10.255.128.136/32` → `covered_by_parent_cidr` ← `china/domains`
-- `IP-CIDR,10.255.128.136/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,10.72.25.0/24` → `covered_by_parent_cidr` ← `china/domains`
-- `IP-CIDR,10.72.25.0/24` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,100.64.0.0/10` → `covered_by_parent_cidr` ← `china/domains`
-- `IP-CIDR,101.124.19.122/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.0.0/18` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.132.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.164.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.168.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.176.0/20` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.192.0/19` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.68.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.84.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.192.88.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.0.0/18` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.100.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.108.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.112.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.120.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.132.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.164.0/22` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.168.0/21` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.176.0/20` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.193.192.0/19` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.194.0.0/15` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.196.0.0/14` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.201.29.182/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.226.10.8/32` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.227.200.0/24` → `covered_by_parent_cidr` ← `china/rules`
-- `IP-CIDR,101.227.97.240/32` → `covered_by_parent_cidr` ← `china/rules`
+- `IP-CIDR,0.0.0.0/24` ← `china/rules`
+- `IP-CIDR,0.0.0.0/32` ← `china/rules`
+- `IP-CIDR,0.0.0.0/32` ← `reject/advertising`
+- `IP-CIDR,0.0.0.1/32` ← `china/rules`
+- `IP-CIDR,0.0.0.1/32` ← `reject/advertising`
+- `IP-CIDR,1.116.0.0/15` ← `china/rules`
+- `IP-CIDR,1.118.0.0/23` ← `china/rules`
+- `IP-CIDR,1.118.128.0/17` ← `china/rules`
+- `IP-CIDR,1.118.16.0/20` ← `china/rules`
+- `IP-CIDR,1.118.37.0/24` ← `china/rules`
+- `IP-CIDR,1.118.38.0/23` ← `china/rules`
+- `IP-CIDR,1.118.4.0/22` ← `china/rules`
+- `IP-CIDR,1.118.40.0/21` ← `china/rules`
+- `IP-CIDR,1.118.56.0/21` ← `china/rules`
+- `IP-CIDR,1.118.8.0/21` ← `china/rules`
+- `IP-CIDR,1.118.96.0/19` ← `china/rules`
+- `IP-CIDR,1.119.0.0/16` ← `china/rules`
+- `IP-CIDR,1.3.0.10/32` ← `china/rules`
+- `IP-CIDR,10.0.0.0/8` ← `china/domains`
+- `IP-CIDR,10.255.128.136/32` ← `china/domains`
+- `IP-CIDR,10.255.128.136/32` ← `china/rules`
+- `IP-CIDR,10.72.25.0/24` ← `china/domains`
+- `IP-CIDR,10.72.25.0/24` ← `china/rules`
+- `IP-CIDR,100.64.0.0/10` ← `china/domains`
+- `IP-CIDR,101.124.19.122/32` ← `china/rules`
+- `IP-CIDR,101.192.0.0/18` ← `china/rules`
+- `IP-CIDR,101.192.132.0/22` ← `china/rules`
+- `IP-CIDR,101.192.164.0/22` ← `china/rules`
+- `IP-CIDR,101.192.168.0/21` ← `china/rules`
+- `IP-CIDR,101.192.176.0/20` ← `china/rules`
+- `IP-CIDR,101.192.192.0/19` ← `china/rules`
+- `IP-CIDR,101.192.68.0/22` ← `china/rules`
+- `IP-CIDR,101.192.84.0/22` ← `china/rules`
+- `IP-CIDR,101.192.88.0/21` ← `china/rules`
+- `IP-CIDR,101.193.0.0/18` ← `china/rules`
+- `IP-CIDR,101.193.100.0/22` ← `china/rules`
+- `IP-CIDR,101.193.108.0/22` ← `china/rules`
+- `IP-CIDR,101.193.112.0/22` ← `china/rules`
+- `IP-CIDR,101.193.120.0/21` ← `china/rules`
+- `IP-CIDR,101.193.132.0/22` ← `china/rules`
+- `IP-CIDR,101.193.164.0/22` ← `china/rules`
+- `IP-CIDR,101.193.168.0/21` ← `china/rules`
+- `IP-CIDR,101.193.176.0/20` ← `china/rules`
+- `IP-CIDR,101.193.192.0/19` ← `china/rules`
+- `IP-CIDR,101.194.0.0/15` ← `china/rules`
+- `IP-CIDR,101.196.0.0/14` ← `china/rules`
+- `IP-CIDR,101.201.29.182/32` ← `china/rules`
+- `IP-CIDR,101.226.10.8/32` ← `china/rules`
+- `IP-CIDR,101.227.200.0/24` ← `china/rules`
+- `IP-CIDR,101.227.97.240/32` ← `china/rules`
 
 ## 跨分类冲突（最多 100 条）
 
@@ -240,10 +256,6 @@ CIDR 父网覆盖子网：`3747`
 - `DOMAIN-SUFFIX,876920.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,88362zubo95838.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,8k69vb6421.com` → 胜出 `reject`；涉及 china, reject
-
-## 源异常（最多 100 条）
-
-- `{'url': 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list', 'reason': 'sudden_rule_count_drop'}`
 
 ## 编译输出校验
 
