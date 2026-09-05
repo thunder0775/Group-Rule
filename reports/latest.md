@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T04:20:05+00:00`
+生成时间：`2026-09-05T04:41:31+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -35,11 +35,12 @@
 ## 闸门结果
 
 - `INFO`：`2`
-- `WARNING`：`1`
+- `WARNING`：`2`
 
 ### Findings
 
-- **WARNING** `high_invalid_rule_ratio` — `china/domains`
+- **WARNING** `using_last_known_good` — `china/domains`
+- **WARNING** `using_last_known_good` — `china/rules`
 - **INFO** `semantic_domain_redundancy`
 - **INFO** `semantic_cidr_redundancy`
 
