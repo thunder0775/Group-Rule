@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "source_timeout": 30,
   "max_bytes": 10485760,
   "health": {
@@ -62,7 +62,8 @@
     },
     "china": {
       "domains": [
-        {"url":"https://raw.githubusercontent.com/GrandpaNiuu/cn-direct-rules/main/dist/rule-set/cn.list"}
+        {"url":"https://raw.githubusercontent.com/GrandpaNiuu/cn-direct-rules/main/dist/rule-set/cn.list"},
+        {"url":"https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"}
       ]
     },
     "reject": {
