@@ -1,7 +1,7 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T03:17:51+00:00`
-跨分类重复规则：`23`
+生成时间：`2026-09-05T03:30:41+00:00`
+跨分类重复规则：`324`
 
 ## 分类统计
 
@@ -10,67 +10,150 @@
 - `social`：670 条
 - `developer`：70 条
 - `service`：1814 条
-- `china`：12586 条
+- `china`：123678 条
 - `reject`：972 条
 
 ## 原子规则状态
 
-- `ai/anthropic`：**updated**，当前 3，历史 3
-- `ai/copilot`：**updated**，当前 49，历史 49
-- `ai/gemini`：**updated**，当前 13，历史 13
-- `ai/openai`：**updated**，当前 34，历史 34
-- `ai/xai`：**updated**，当前 2，历史 2
-- `china/domains`：**unavailable**，当前 0，历史 0
+- `ai/anthropic`：**kept_previous**，当前 3，历史 3，健康源 0
+  - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list` → `rejected` too_few_rules
+- `ai/copilot`：**updated**，当前 49，历史 49，健康源 1
+- `ai/gemini`：**updated**，当前 13，历史 13，健康源 1
+- `ai/openai`：**updated**，当前 34，历史 34，健康源 1
+- `ai/xai`：**updated**，当前 2，历史 2，健康源 0
+- `china/domains`：**updated**，当前 111142，历史 0，健康源 1
   - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list` → `rejected` zero_rules
-- `china/rules`：**updated**，当前 12586，历史 12586
-- `developer/dropbox`：**updated**，当前 17，历史 17
-- `developer/github`：**updated**，当前 31，历史 31
-- `developer/gitlab`：**updated**，当前 6，历史 6
-- `developer/onedrive`：**updated**，当前 16，历史 16
-- `reject/advertising`：**updated**，当前 781，历史 781
-- `reject/hijacking`：**updated**，当前 228，历史 228
-- `reject/privacy`：**updated**，当前 20，历史 20
-- `service/apple`：**updated**，当前 43，历史 43
-- `service/baidu`：**updated**，当前 251，历史 251
-- `service/bilibili`：**updated**，当前 127，历史 127
-- `service/douyin`：**updated**，当前 13，历史 13
-- `service/google`：**updated**，当前 698，历史 698
-- `service/microsoft`：**updated**，当前 671，历史 671
-- `service/xiaohongshu`：**updated**，当前 4，历史 4
-- `service/zhihu`：**updated**，当前 7，历史 7
-- `social/facebook`：**updated**，当前 569，历史 569
-- `social/instagram`：**updated**，当前 4，历史 4
-- `social/telegram`：**updated**，当前 35，历史 35
-- `social/tiktok`：**updated**，当前 32，历史 32
-- `social/twitter`：**updated**，当前 33，历史 33
-- `streaming/disney`：**updated**，当前 173，历史 173
-- `streaming/max`：**updated**，当前 51，历史 51
-- `streaming/netflix`：**updated**，当前 1157，历史 1157
-- `streaming/spotify`：**updated**，当前 30，历史 30
-- `streaming/youtube`：**updated**，当前 190，历史 190
+- `china/rules`：**updated**，当前 12586，历史 12586，健康源 1
+- `developer/dropbox`：**updated**，当前 17，历史 17，健康源 1
+- `developer/github`：**updated**，当前 31，历史 31，健康源 1
+- `developer/gitlab`：**updated**，当前 6，历史 6，健康源 1
+- `developer/onedrive`：**updated**，当前 16，历史 16，健康源 1
+- `reject/advertising`：**updated**，当前 781，历史 781，健康源 1
+  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list` → `error` response_too_large
+- `reject/hijacking`：**updated**，当前 228，历史 228，健康源 1
+  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list` → `error` response_too_large
+- `reject/privacy`：**updated**，当前 20，历史 20，健康源 1
+  - ⚠️ `https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list` → `error` response_too_large
+- `service/apple`：**updated**，当前 43，历史 43，健康源 1
+- `service/baidu`：**updated**，当前 251，历史 251，健康源 1
+- `service/bilibili`：**updated**，当前 127，历史 127，健康源 1
+- `service/douyin`：**updated**，当前 13，历史 13，健康源 1
+- `service/google`：**updated**，当前 698，历史 698，健康源 1
+- `service/microsoft`：**updated**，当前 671，历史 671，健康源 1
+- `service/xiaohongshu`：**kept_previous**，当前 4，历史 4，健康源 0
+  - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list` → `rejected` too_few_rules
+- `service/zhihu`：**updated**，当前 7，历史 7，健康源 1
+- `social/facebook`：**updated**，当前 569，历史 569，健康源 1
+- `social/instagram`：**kept_previous**，当前 4，历史 4，健康源 0
+  - ⚠️ `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list` → `rejected` too_few_rules
+- `social/telegram`：**updated**，当前 35，历史 35，健康源 1
+- `social/tiktok`：**updated**，当前 32，历史 32，健康源 1
+- `social/twitter`：**updated**，当前 33，历史 33，健康源 1
+- `streaming/disney`：**updated**，当前 173，历史 173，健康源 1
+- `streaming/max`：**updated**，当前 51，历史 51，健康源 1
+- `streaming/netflix`：**updated**，当前 1157，历史 1157，健康源 1
+- `streaming/spotify`：**updated**，当前 30，历史 30，健康源 1
+- `streaming/youtube`：**updated**，当前 190，历史 190，健康源 1
 
 ## 冲突示例（最多 100 条）
 
 - `DOMAIN-KEYWORD,1drv` → developer, service
 - `DOMAIN-KEYWORD,onedrive` → developer, service
 - `DOMAIN-KEYWORD,skydrive` → developer, service
+- `DOMAIN-SUFFIX,17gouwuba.com` → china, reject
+- `DOMAIN-SUFFIX,17swan.com` → china, service
 - `DOMAIN-SUFFIX,1drv.com` → developer, service
-- `DOMAIN-SUFFIX,deepmind.com` → ai, service
-- `DOMAIN-SUFFIX,grok.com` → ai, social
-- `DOMAIN-SUFFIX,livefilestore.com` → developer, service
-- `DOMAIN-SUFFIX,microsoftpersonalcontent.com` → developer, service
-- `DOMAIN-SUFFIX,onedrive.com` → developer, service
-- `DOMAIN-SUFFIX,sharepoint.com` → developer, service
-- `DOMAIN-SUFFIX,sharepointonline.com` → developer, service
-- `DOMAIN-SUFFIX,snssdk.com` → service, social
-- `DOMAIN-SUFFIX,spoprod-a.akamaihd.net` → developer, service
-- `IP-CIDR,172.110.32.0/21` → service, streaming
-- `IP-CIDR,203.107.1.0/24` → reject, service
-- `IP-CIDR,216.73.80.0/20` → service, streaming
-- `IP-CIDR,2620:120:e000::/40` → service, streaming
-- `USER-AGENT,*bili*` → china, service
-- `USER-AGENT,Bilibili*` → china, service
-- `USER-AGENT,Microsoft*` → china, service
-- `USER-AGENT,TikTok*` → china, social
-- `USER-AGENT,bili*` → china, service
-- `USER-AGENT,bili-inter*` → china, service
+- `DOMAIN-SUFFIX,21vbc.com` → china, service
+- `DOMAIN-SUFFIX,21vbluecloud.com` → china, service
+- `DOMAIN-SUFFIX,21vbluecloud.net` → china, service
+- `DOMAIN-SUFFIX,265.com` → china, service
+- `DOMAIN-SUFFIX,3721zh.com` → china, reject
+- `DOMAIN-SUFFIX,37swan.com` → china, service
+- `DOMAIN-SUFFIX,4009997658.com` → china, reject
+- `DOMAIN-SUFFIX,6d63d3.com` → china, reject
+- `DOMAIN-SUFFIX,91.com` → china, service
+- `DOMAIN-SUFFIX,abbyychina.com` → china, reject
+- `DOMAIN-SUFFIX,acg.tv` → china, service
+- `DOMAIN-SUFFIX,acgvideo.com` → china, service
+- `DOMAIN-SUFFIX,adsame.com` → china, reject
+- `DOMAIN-SUFFIX,aggresmart.com` → china, service
+- `DOMAIN-SUFFIX,aicdn.work` → china, service
+- `DOMAIN-SUFFIX,aipage.com` → china, service
+- `DOMAIN-SUFFIX,aiqicha.com` → china, service
+- `DOMAIN-SUFFIX,amemv.com` → china, service
+- `DOMAIN-SUFFIX,animetamashi.com` → china, service
+- `DOMAIN-SUFFIX,anitama.net` → china, service
+- `DOMAIN-SUFFIX,apollo-platform.com` → china, service
+- `DOMAIN-SUFFIX,apollo-share.com` → china, service
+- `DOMAIN-SUFFIX,apollo.auto` → china, service
+- `DOMAIN-SUFFIX,b23.tv` → china, service
+- `DOMAIN-SUFFIX,baeapps.com` → china, service
+- `DOMAIN-SUFFIX,baetyl.tech` → china, service
+- `DOMAIN-SUFFIX,baidu-bank.com` → china, service
+- `DOMAIN-SUFFIX,baidu-cdn.com` → china, service
+- `DOMAIN-SUFFIX,baidu-cdn.net` → china, service
+- `DOMAIN-SUFFIX,baidu-int.com` → china, service
+- `DOMAIN-SUFFIX,baidu-itm.com` → china, service
+- `DOMAIN-SUFFIX,baidu-tech.com` → china, service
+- `DOMAIN-SUFFIX,baidu.com` → china, service
+- `DOMAIN-SUFFIX,baidu.mobi` → china, service
+- `DOMAIN-SUFFIX,baiduads.com` → china, service
+- `DOMAIN-SUFFIX,baiduapp.com` → china, service
+- `DOMAIN-SUFFIX,baidubce.com` → china, service
+- `DOMAIN-SUFFIX,baidubcr.com` → china, service
+- `DOMAIN-SUFFIX,baidubos.com` → china, service
+- `DOMAIN-SUFFIX,baiducloudapi.com` → china, service
+- `DOMAIN-SUFFIX,baiducontent.com` → china, service
+- `DOMAIN-SUFFIX,baiduhui.com` → china, service
+- `DOMAIN-SUFFIX,baidupcs.com` → china, service
+- `DOMAIN-SUFFIX,baidupcs.net` → china, service
+- `DOMAIN-SUFFIX,baidustatic.com` → china, service
+- `DOMAIN-SUFFIX,baiduux.com` → china, service
+- `DOMAIN-SUFFIX,baiduwaf.com` → china, service
+- `DOMAIN-SUFFIX,baiduwebgame.com` → china, service
+- `DOMAIN-SUFFIX,baiduxiaodai.com` → china, service
+- `DOMAIN-SUFFIX,baiduyangguang.org` → china, service
+- `DOMAIN-SUFFIX,baiduyuncdn.com` → china, service
+- `DOMAIN-SUFFIX,baiduyuncdn.net` → china, service
+- `DOMAIN-SUFFIX,baiduyundns.com` → china, service
+- `DOMAIN-SUFFIX,baiduyundns.net` → china, service
+- `DOMAIN-SUFFIX,baiduyunwaf.com` → china, service
+- `DOMAIN-SUFFIX,baifae.com` → china, service
+- `DOMAIN-SUFFIX,baifubao.com` → china, service
+- `DOMAIN-SUFFIX,baihangbao.com` → china, service
+- `DOMAIN-SUFFIX,baihangdai.com` → china, service
+- `DOMAIN-SUFFIX,baijincdn.com` → china, service
+- `DOMAIN-SUFFIX,baka.im` → china, service
+- `DOMAIN-SUFFIX,bakshifen.com` → china, service
+- `DOMAIN-SUFFIX,bartender.cc` → china, reject
+- `DOMAIN-SUFFIX,bce-cdn.com` → china, service
+- `DOMAIN-SUFFIX,bce-cdn.net` → china, service
+- `DOMAIN-SUFFIX,bceapp.com` → china, service
+- `DOMAIN-SUFFIX,bcebos.com` → china, service
+- `DOMAIN-SUFFIX,bcedns.com` → china, service
+- `DOMAIN-SUFFIX,bcedns.net` → china, service
+- `DOMAIN-SUFFIX,bcedocument.com` → china, service
+- `DOMAIN-SUFFIX,bcehost.com` → china, service
+- `DOMAIN-SUFFIX,bcehosts.com` → china, service
+- `DOMAIN-SUFFIX,bceidaas.com` → china, service
+- `DOMAIN-SUFFIX,bceimg.com` → china, service
+- `DOMAIN-SUFFIX,bcelive.com` → china, service
+- `DOMAIN-SUFFIX,bcevod.com` → china, service
+- `DOMAIN-SUFFIX,bcewaf.com` → china, service
+- `DOMAIN-SUFFIX,bchdemo.site` → china, service
+- `DOMAIN-SUFFIX,bdbae.com` → china, service
+- `DOMAIN-SUFFIX,bdcloudapi.com` → china, service
+- `DOMAIN-SUFFIX,bdeceimg.com` → china, service
+- `DOMAIN-SUFFIX,bdimg.com` → china, service
+- `DOMAIN-SUFFIX,bdstatic.com` → china, service
+- `DOMAIN-SUFFIX,bdtjrcv.com` → china, service
+- `DOMAIN-SUFFIX,bduapp.com` → china, service
+- `DOMAIN-SUFFIX,bdurl.net` → china, service
+- `DOMAIN-SUFFIX,bdycdn.com` → china, service
+- `DOMAIN-SUFFIX,bdycdn.net` → china, service
+- `DOMAIN-SUFFIX,bdydns.com` → china, service
+- `DOMAIN-SUFFIX,bdydns.net` → china, service
+- `DOMAIN-SUFFIX,bdymkt.com` → china, service
+- `DOMAIN-SUFFIX,bdysite.com` → china, service
+- `DOMAIN-SUFFIX,bdysites.com` → china, service
+- `DOMAIN-SUFFIX,betterzip.net` → china, reject

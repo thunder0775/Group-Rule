@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-09-05T03:17:51+00:00",
+  "generated_at": "2026-09-05T03:30:41+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
       "rule_count": 34,
       "previous_count": 34,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list",
@@ -18,9 +19,10 @@
       ]
     },
     "ai/anthropic": {
-      "state": "updated",
+      "state": "kept_previous",
       "rule_count": 3,
       "previous_count": 3,
+      "healthy_sources": 0,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list",
@@ -29,7 +31,8 @@
           "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list",
           "rules": 3,
-          "status": "ok"
+          "status": "rejected",
+          "reason": "too_few_rules"
         }
       ]
     },
@@ -37,6 +40,7 @@
       "state": "updated",
       "rule_count": 13,
       "previous_count": 13,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list",
@@ -53,6 +57,7 @@
       "state": "updated",
       "rule_count": 49,
       "previous_count": 49,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list",
@@ -69,12 +74,14 @@
       "state": "updated",
       "rule_count": 2,
       "previous_count": 2,
+      "healthy_sources": 0,
       "sources": []
     },
     "streaming/youtube": {
       "state": "updated",
       "rule_count": 190,
       "previous_count": 190,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list",
@@ -91,6 +98,7 @@
       "state": "updated",
       "rule_count": 1157,
       "previous_count": 1157,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list",
@@ -107,6 +115,7 @@
       "state": "updated",
       "rule_count": 173,
       "previous_count": 173,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list",
@@ -123,6 +132,7 @@
       "state": "updated",
       "rule_count": 51,
       "previous_count": 51,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list",
@@ -139,6 +149,7 @@
       "state": "updated",
       "rule_count": 30,
       "previous_count": 30,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list",
@@ -155,6 +166,7 @@
       "state": "updated",
       "rule_count": 35,
       "previous_count": 35,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list",
@@ -171,6 +183,7 @@
       "state": "updated",
       "rule_count": 33,
       "previous_count": 33,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list",
@@ -187,6 +200,7 @@
       "state": "updated",
       "rule_count": 569,
       "previous_count": 569,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list",
@@ -200,9 +214,10 @@
       ]
     },
     "social/instagram": {
-      "state": "updated",
+      "state": "kept_previous",
       "rule_count": 4,
       "previous_count": 4,
+      "healthy_sources": 0,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list",
@@ -211,7 +226,8 @@
           "sha256": "65f28f9253b0dbb2a81485c788537896a0817766685e7bd91b2f90ec7aa19548",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list",
           "rules": 4,
-          "status": "ok"
+          "status": "rejected",
+          "reason": "too_few_rules"
         }
       ]
     },
@@ -219,6 +235,7 @@
       "state": "updated",
       "rule_count": 32,
       "previous_count": 32,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list",
@@ -235,6 +252,7 @@
       "state": "updated",
       "rule_count": 31,
       "previous_count": 31,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list",
@@ -251,6 +269,7 @@
       "state": "updated",
       "rule_count": 6,
       "previous_count": 6,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list",
@@ -267,6 +286,7 @@
       "state": "updated",
       "rule_count": 17,
       "previous_count": 17,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list",
@@ -283,6 +303,7 @@
       "state": "updated",
       "rule_count": 16,
       "previous_count": 16,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list",
@@ -299,6 +320,7 @@
       "state": "updated",
       "rule_count": 698,
       "previous_count": 698,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list",
@@ -315,6 +337,7 @@
       "state": "updated",
       "rule_count": 43,
       "previous_count": 43,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
@@ -331,6 +354,7 @@
       "state": "updated",
       "rule_count": 671,
       "previous_count": 671,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list",
@@ -347,6 +371,7 @@
       "state": "updated",
       "rule_count": 127,
       "previous_count": 127,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list",
@@ -363,6 +388,7 @@
       "state": "updated",
       "rule_count": 251,
       "previous_count": 251,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list",
@@ -379,6 +405,7 @@
       "state": "updated",
       "rule_count": 13,
       "previous_count": 13,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list",
@@ -395,6 +422,7 @@
       "state": "updated",
       "rule_count": 7,
       "previous_count": 7,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list",
@@ -408,9 +436,10 @@
       ]
     },
     "service/xiaohongshu": {
-      "state": "updated",
+      "state": "kept_previous",
       "rule_count": 4,
       "previous_count": 4,
+      "healthy_sources": 0,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
@@ -419,14 +448,16 @@
           "sha256": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
           "rules": 4,
-          "status": "ok"
+          "status": "rejected",
+          "reason": "too_few_rules"
         }
       ]
     },
     "china/domains": {
-      "state": "unavailable",
-      "rule_count": 0,
+      "state": "updated",
+      "rule_count": 111142,
       "previous_count": 0,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list",
@@ -437,6 +468,15 @@
           "rules": 0,
           "status": "rejected",
           "reason": "zero_rules"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list",
+          "status_code": 200,
+          "bytes": 2963377,
+          "sha256": "659f4a1418916869c83bace218e6ff94f0489a00ff8255407bcccd1793d94232",
+          "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list",
+          "rules": 111142,
+          "status": "ok"
         }
       ]
     },
@@ -444,6 +484,7 @@
       "state": "updated",
       "rule_count": 12586,
       "previous_count": 12586,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list",
@@ -460,6 +501,7 @@
       "state": "updated",
       "rule_count": 781,
       "previous_count": 781,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
@@ -469,6 +511,11 @@
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "rules": 781,
           "status": "ok"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
+          "status": "error",
+          "error": "response_too_large"
         }
       ]
     },
@@ -476,6 +523,7 @@
       "state": "updated",
       "rule_count": 20,
       "previous_count": 20,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
@@ -485,6 +533,11 @@
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
           "rules": 20,
           "status": "ok"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
+          "status": "error",
+          "error": "response_too_large"
         }
       ]
     },
@@ -492,6 +545,7 @@
       "state": "updated",
       "rule_count": 228,
       "previous_count": 228,
+      "healthy_sources": 1,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
@@ -501,6 +555,11 @@
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
           "rules": 228,
           "status": "ok"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
+          "status": "error",
+          "error": "response_too_large"
         }
       ]
     }
@@ -511,7 +570,7 @@
     "social": 670,
     "developer": 70,
     "service": 1814,
-    "china": 12586,
+    "china": 123678,
     "reject": 972
   },
   "cross_category_conflicts": {
@@ -536,7 +595,16 @@
       "streaming"
     ],
     "DOMAIN-SUFFIX,snssdk.com": [
+      "china",
       "service",
+      "social"
+    ],
+    "DOMAIN-SUFFIX,tik-tokapi.com": [
+      "china",
+      "social"
+    ],
+    "DOMAIN-SUFFIX,ttwebview.com": [
+      "china",
       "social"
     ],
     "USER-AGENT,TikTok*": [
@@ -583,7 +651,223 @@
       "developer",
       "service"
     ],
+    "DOMAIN-SUFFIX,265.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,gvt1-cn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,gvt2-cn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,qiao-cn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,21vbc.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,21vbluecloud.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,21vbluecloud.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,aggresmart.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,blueaggrestore.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bluecloudprod.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,engkoo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mcchcdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,microsoftuwp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mschcdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,o365cn.com": [
+      "china",
+      "service"
+    ],
     "USER-AGENT,Microsoft*": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,acg.tv": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,acgvideo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,animetamashi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,anitama.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,b23.tv": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baka.im": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biliapi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biliapi.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibili.cc": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibili.co": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibili.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibili.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibiligame.co": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibiligame.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilibilipay.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicdn1.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicdn2.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicdn3.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicdn4.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicdn5.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilicomics.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biligame.co": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biligame.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biligame.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biligo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biliimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biliintl.co": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,biliintl.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilivideo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bilivideo.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dreamcast.hk": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dyhgames.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hdslb.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hdslb.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hdslb.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,maoercdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mcbbs.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mincdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,smtcdns.net": [
       "china",
       "service"
     ],
@@ -606,6 +890,986 @@
     "IP-CIDR,203.107.1.0/24": [
       "reject",
       "service"
+    ],
+    "DOMAIN-SUFFIX,17swan.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,37swan.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,91.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,aicdn.work": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,aipage.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,aiqicha.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,apollo-platform.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,apollo-share.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,apollo.auto": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baeapps.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baetyl.tech": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-bank.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-cdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-cdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-int.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-itm.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu-tech.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidu.mobi": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduads.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduapp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidubce.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidubcr.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidubos.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiducloudapi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiducontent.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduhui.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidupcs.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidupcs.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baidustatic.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduux.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduwaf.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduwebgame.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduxiaodai.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyangguang.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyuncdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyuncdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyundns.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyundns.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baiduyunwaf.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baifae.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baifubao.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baihangbao.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baihangdai.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,baijincdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bakshifen.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bce-cdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bce-cdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bceapp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcebos.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcedns.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcedns.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcedocument.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcehost.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcehosts.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bceidaas.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bceimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcelive.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcevod.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bcewaf.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bchdemo.site": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdbae.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdcloudapi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdeceimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdstatic.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdtjrcv.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bduapp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdurl.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdycdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdycdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdydns.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdydns.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdymkt.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdysite.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,bdysites.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,chuanke.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,clouda.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,cloudajs.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,content4ads.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,daoru.in": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dlnel.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dlnel.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dmhmusic.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,du-xiaomai.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duapp-preview.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duapp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duapp.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duapps.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dulife.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dumall.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dusdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dusdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,dushifen.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duxiaomai.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,duxuetang.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,estrongs.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,eyoubaidu.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,fhldns.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,fhldns.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,game-client.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,haluan2u.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hao123.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hao123.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hao123img.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hao222.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hao222.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,haokan.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hiapk.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hongmeiti.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,hongmeiti.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,huoyanyunying.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,ja-cloud.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,jomocdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,jomodns.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,jomodns.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,lasmasas.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,micro-game-client.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mipcdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mipengine.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mipengine.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mipplan.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,mipplan.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,nhmuni.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,nuomi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,oasesalliance.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,oortos.tech": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,openintelliedge.tech": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,openrasp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,openrasp.info": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,openrasp.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,openrasp.org": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,pubbcsapp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,qianqian.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,qxllq.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,sanguows.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,sg.work": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,shifen.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,siteapp-static.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,swan366.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,taihe.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,tieba.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,tiebaimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,tradaquan.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,ttplayer.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,videomind.cloud": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,videomind.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,vplay8.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,webgamehome.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,wenku.in": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,wssanguo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xianfae.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xiaodutv.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xinzhi.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yeyingkf.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn1.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn10.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn2.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn3.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn4.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn5.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn6.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn7.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn8.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yjs-cdn9.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,youyou.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,youyou001.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yunjiasu-cdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,yunjiasu.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,zuoyebang.cc": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,zuoyebang.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,zybang.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,amemv.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,douyincdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,douyinpic.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,douyinstatic.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,douyinvod.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,idouyinvod.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,ixigua.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,ixiguavideo.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,pstatp.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,toutiao.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,zhihu.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,zhimg.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,fengkongcloud.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xhscdn.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xhscdn.net": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,xiaohongshu.com": [
+      "china",
+      "service"
+    ],
+    "DOMAIN-SUFFIX,17gouwuba.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,3721zh.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,4009997658.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,6d63d3.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,abbyychina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,adsame.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,bartender.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,betterzip.net": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,betterzipcn.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,beyondcompare.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,bianxianmao.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,cjmakeding.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,cjmkt.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,codesoftchina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,coreldrawchina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,crossoverchina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,cudaojia.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,dongmansoft.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,easyrecoverychina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,ediuschina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,flstudiochina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,formysql.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,gouwubang.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,guitarpro.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,hypersnap.net": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,idmchina.net": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,imazingchina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,imindmap.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,jiubuhua.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,keyshot.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,kuaizip.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,logoshejishi.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,mairuan.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,mairuanwang.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,makeding.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,mindmapper.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,mobjump.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,mycleanmymac.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,newapi.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,nicelabel.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,ntfsformac.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,officesoftcn.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,overturechina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,pdfexpert.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,photozoomchina.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,qichexin.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,qinchugudao.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,shankejingling.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,tuitiger.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,xitongqingli.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,xmindchina.net": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,xshellcn.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,yuanchengxiezuo.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,zbrushcn.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,zhenxinet.com": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,zhzzx.com": [
+      "china",
+      "reject"
     ]
   },
   "priority": {
