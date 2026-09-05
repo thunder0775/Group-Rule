@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T03:42:25+00:00`
+生成时间：`2026-09-05T03:42:46+00:00`
 跨分类重复规则：`3281`
 
 ## 分类统计
@@ -22,7 +22,7 @@
 - `ai/gemini`：**updated**，当前 13，历史 13，健康源 1
 - `ai/openai`：**updated**，当前 34，历史 34，健康源 1
 - `ai/xai`：**updated**，当前 2，历史 2，健康源 0
-- `china/domains`：**updated**，当前 222629，历史 222411，健康源 6
+- `china/domains`：**updated**，当前 222629，历史 222629，健康源 6
 - `china/rules`：**updated**，当前 125960，历史 125960，健康源 5
 - `developer/dropbox`：**updated**，当前 17，历史 17，健康源 1
 - `developer/github`：**updated**，当前 31，历史 31，健康源 1

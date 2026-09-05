@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T03:42:25+00:00",
+  "generated_at": "2026-09-05T03:42:46+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -579,7 +579,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 222629,
-      "previous_count": 222411,
+      "previous_count": 222629,
       "healthy_sources": 6,
       "sources": [
         {
