@@ -38,6 +38,9 @@ jobs:
       - name: Build and audit
         run: python scripts/rule_engine.py
 
+      - name: Sanitize China direct rules
+        run: python scripts/direct_rule_sanitize.py
+
       - name: Regression test direct rules
         run: python scripts/direct_rule_regression.py
 
