@@ -1,18 +1,21 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-05T03:42:46+00:00`
-跨分类重复规则：`3281`
+生成时间：`2026-09-05T03:46:50+00:00`
+跨分类重复规则（原始）：`3281`
+按优先级自动裁决：`3401`
+
+优先级顺序：`ai > china > developer > global > reject > service > social > streaming`
 
 ## 分类统计
 
 - `ai`：71 条
-- `streaming`：1600 条
-- `social`：678 条
+- `streaming`：1194 条
+- `social`：61 条
 - `developer`：70 条
-- `service`：2032 条
-- `global`：27313 条
+- `service`：460 条
+- `global`：27000 条
 - `china`：237408 条
-- `reject`：190335 条
+- `reject`：189842 条
 
 ## 原子规则状态
 
@@ -54,105 +57,105 @@
 - `streaming/spotify`：**updated**，当前 30，历史 30，健康源 1
 - `streaming/youtube`：**updated**，当前 190，历史 190，健康源 1
 
-## 冲突示例（最多 100 条）
+## 自动裁决示例（最多 100 条）
 
-- `DOMAIN,ai.google.dev` → ai, global
-- `DOMAIN,alkalimakersuite-pa.clients6.google.com` → ai, global
-- `DOMAIN,api.msn.com` → ai, global
-- `DOMAIN,api.statsig.com` → ai, global
-- `DOMAIN,assets.msn.com` → ai, global
-- `DOMAIN,audio4-ak-spotify-com.akamaized.net` → global, streaming
-- `DOMAIN,browser-intake-datadoghq.com` → ai, global
-- `DOMAIN,cdn-spotify-experiments.conductrics.com` → global, streaming
-- `DOMAIN,cdn.usefathom.com` → ai, global
-- `DOMAIN,copilot.microsoft.com` → ai, global
-- `DOMAIN,developer.microsoft.com` → china, global
-- `DOMAIN,gateway.bingviz.microsoft.net` → ai, global
-- `DOMAIN,gateway.bingviz.microsoftapp.net` → ai, global
-- `DOMAIN,heads-ak-spotify-com.akamaized.net` → global, streaming
-- `DOMAIN,in.appcenter.ms` → ai, global
-- `DOMAIN,lf16-effectcdn.byteeffecttos-g.com` → global, social
-- `DOMAIN,lf16-pkgcdn.pitaya-clientai.com` → global, social
-- `DOMAIN,location.microsoft.com` → ai, global
-- `DOMAIN,makersuite.google.com` → ai, global
-- `DOMAIN,netflix.com.edgesuite.net` → global, streaming
-- `DOMAIN,np-edge.itunes.apple.com` → china, global
-- `DOMAIN,odc.officeapps.live.com` → ai, global
-- `DOMAIN,openai-api.arkoselabs.com` → ai, global
-- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net` → ai, global
-- `DOMAIN,openaicomproductionae4b.blob.core.windows.net` → ai, global
-- `DOMAIN,p16-tiktokcdn-com.akamaized.net` → global, social
-- `DOMAIN,play-edge.itunes.apple.com` → china, global
-- `DOMAIN,production-openaicom-storage.azureedge.net` → ai, global
-- `DOMAIN,r.bing.com` → ai, global
-- `DOMAIN,self.events.data.microsoft.com` → ai, global
-- `DOMAIN,services.bingapis.com` → ai, global
-- `DOMAIN,spotify.com.edgesuite.net` → global, streaming
-- `DOMAIN,spotify.map.fastly.net` → global, streaming
-- `DOMAIN,spotify.map.fastlylb.net` → global, streaming
-- `DOMAIN,static.cloudflareinsights.com` → ai, global
-- `DOMAIN,vsmarketplacebadge.apphb.com` → global, service
-- `DOMAIN,www.bing.com` → ai, global
-- `DOMAIN-KEYWORD,1drv` → developer, global, service
-- `DOMAIN-KEYWORD,colab` → ai, global
-- `DOMAIN-KEYWORD,developerprofiles` → ai, global
-- `DOMAIN-KEYWORD,generativelanguage` → ai, global
-- `DOMAIN-KEYWORD,musical.ly` → global, social
-- `DOMAIN-KEYWORD,onedrive` → developer, global, service
-- `DOMAIN-KEYWORD,openai` → ai, global
-- `DOMAIN-KEYWORD,openaicom-api` → ai, global
-- `DOMAIN-KEYWORD,skydrive` → developer, global, service
-- `DOMAIN-KEYWORD,tiktok` → global, social
-- `DOMAIN-SUFFIX,003store.com` → china, reject
-- `DOMAIN-SUFFIX,0emm.com` → global, reject, service
-- `DOMAIN-SUFFIX,165tchuang.com` → china, reject
-- `DOMAIN-SUFFIX,17gouwuba.com` → china, reject
-- `DOMAIN-SUFFIX,17swan.com` → china, service
-- `DOMAIN-SUFFIX,1drv.com` → developer, global, service
-- `DOMAIN-SUFFIX,1drv.ms` → global, service
-- `DOMAIN-SUFFIX,1e100.net` → global, service
-- `DOMAIN-SUFFIX,1l1.cc` → china, reject
-- `DOMAIN-SUFFIX,1sapp.com` → china, reject
-- `DOMAIN-SUFFIX,1ucrs.com` → global, service
-- `DOMAIN-SUFFIX,20thcenturystudios.com.au` → global, streaming
-- `DOMAIN-SUFFIX,20thcenturystudios.com.br` → global, streaming
-- `DOMAIN-SUFFIX,20thcenturystudios.jp` → global, streaming
-- `DOMAIN-SUFFIX,21vbc.com` → china, service
-- `DOMAIN-SUFFIX,21vbluecloud.com` → china, service
-- `DOMAIN-SUFFIX,21vbluecloud.net` → china, service
-- `DOMAIN-SUFFIX,2481e.com` → china, reject
-- `DOMAIN-SUFFIX,25662zubo23739.com` → china, reject
-- `DOMAIN-SUFFIX,265.com` → china, global, service
-- `DOMAIN-SUFFIX,2mdn-cn.net` → china, global, reject, service
-- `DOMAIN-SUFFIX,2mdn.net` → global, reject, service
-- `DOMAIN-SUFFIX,2o7.net` → global, reject
-- `DOMAIN-SUFFIX,3337723.com` → china, reject
-- `DOMAIN-SUFFIX,3337738.com` → china, reject
-- `DOMAIN-SUFFIX,360ads.com` → china, reject
-- `DOMAIN-SUFFIX,365dmp.com` → china, reject
-- `DOMAIN-SUFFIX,3721zh.com` → china, reject
-- `DOMAIN-SUFFIX,37swan.com` → china, service
-- `DOMAIN-SUFFIX,39jz.com` → china, reject
-- `DOMAIN-SUFFIX,3p8801.co` → china, reject
-- `DOMAIN-SUFFIX,4009997658.com` → china, reject
-- `DOMAIN-SUFFIX,466453.com` → global, service
-- `DOMAIN-SUFFIX,50bang.org` → china, reject
-- `DOMAIN-SUFFIX,51.la` → china, reject
-- `DOMAIN-SUFFIX,518ad.com` → china, reject
-- `DOMAIN-SUFFIX,52av.be` → global, reject
-- `DOMAIN-SUFFIX,54kefu.net` → china, reject
-- `DOMAIN-SUFFIX,55726zubo56686.com` → china, reject
-- `DOMAIN-SUFFIX,57573zubo36833.com` → china, reject
-- `DOMAIN-SUFFIX,595image.com` → china, reject
-- `DOMAIN-SUFFIX,5hffr1p22j.com` → china, reject
-- `DOMAIN-SUFFIX,609999.xyz` → china, reject
-- `DOMAIN-SUFFIX,644446.com` → china, reject
-- `DOMAIN-SUFFIX,68287zubo85737.com` → china, reject
-- `DOMAIN-SUFFIX,693836.com` → china, reject
-- `DOMAIN-SUFFIX,6d63d3.com` → china, reject
-- `DOMAIN-SUFFIX,6fm4dcpj31.com` → china, reject
-- `DOMAIN-SUFFIX,6pctuhriw.com` → china, reject
-- `DOMAIN-SUFFIX,73336zubo25326.com` → china, reject
-- `DOMAIN-SUFFIX,876920.com` → china, reject
-- `DOMAIN-SUFFIX,88362zubo95838.com` → china, reject
-- `DOMAIN-SUFFIX,8k69vb6421.com` → china, reject
+- `DOMAIN,ai.google.dev` → 保留 `ai`，移除 `global`
+- `DOMAIN,alkalimakersuite-pa.clients6.google.com` → 保留 `ai`，移除 `global`
+- `DOMAIN,developer.microsoft.com` → 保留 `china`，移除 `global`
+- `DOMAIN,location.microsoft.com` → 保留 `ai`，移除 `global`
+- `DOMAIN,np-edge.itunes.apple.com` → 保留 `china`，移除 `global`
+- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net` → 保留 `ai`，移除 `global`
+- `DOMAIN,openaicomproductionae4b.blob.core.windows.net` → 保留 `ai`，移除 `global`
+- `DOMAIN,play-edge.itunes.apple.com` → 保留 `china`，移除 `global`
+- `DOMAIN,production-openaicom-storage.azureedge.net` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,1drv.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,265.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,2mdn-cn.net` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,91cy.app` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,91short.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,99thz.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,aa77kk.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,acs.org` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,admob-cn.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,age.tv` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,agedm.app` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,agefans.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,alibabacloud.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,alicloud.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,anthropic.com` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,app-analytics-services.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,app-measurement-cn.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,app-measurement.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,apple.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,applemx-icloud.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,apps5.oingo.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,as.mr` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,asmr.gay` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,atom.io` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,auth0.com` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,avstar4.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,bilinovel.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,binancezh.kim` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,binancezh.link` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,bscdnweb.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,calgoncarbon-china.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,chatgpt.com` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,chatgpt.livekit.cloud` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,chinamule.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,claude.ai` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,clickserve.cc-dt.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,cnpmjs.org` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,ctyun.online` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,cxacg.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,dartsearch-cn.net` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,db.tt` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,deepmind.com` → 保留 `ai`，移除 `global`
+- `DOMAIN-SUFFIX,dependabot.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,doubleclick-cn.net` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,doubleclick.net` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,dropbox-dns.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropbox.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropbox.tech` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxapi.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxbusiness.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxcaptcha.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxforum.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxforums.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxinsiders.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxmail.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxpartners.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxstatic.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,dropboxusercontent.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,eilieili.cc` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,fi11.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,footseen.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,furrybar.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futu5.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futuau.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futuesop.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futufin.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futuhn.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futuniuniu.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futunn.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,futustatic.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,fututrade.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,fututrustee.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,galaxyappstore.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,genshinimpact.com` → 保留 `china`，移除 `global`
+- `DOMAIN-SUFFIX,getdropbox.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,ghcr.io` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,git.io` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,github.blog` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,github.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,github.community` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,github.dev` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,github.io` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubapp.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubassets.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubcopilot.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubhackathon.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubnext.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubpreview.dev` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubstatus.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubuniverse.com` → 保留 `developer`，移除 `global`
+- `DOMAIN-SUFFIX,githubusercontent.com` → 保留 `developer`，移除 `global`
