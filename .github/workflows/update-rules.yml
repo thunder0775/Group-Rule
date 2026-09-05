@@ -13,7 +13,6 @@ on:
 permissions:
   contents: write
 
-# 多次配置提交同时触发时，只保留最新一次构建，避免生成文件互相抢占 main。
 concurrency:
   group: shadowrocket-rules
   cancel-in-progress: true
@@ -36,10 +35,13 @@ jobs:
       - name: Build and audit
         run: python scripts/rule_engine.py
 
+      # 即使发布闸门失败，也显示完整审计报告，便于定位问题。
       - name: Show report
+        if: always()
         run: cat reports/latest.md
 
       - name: Commit generated rules
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
