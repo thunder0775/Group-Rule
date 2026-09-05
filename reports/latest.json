@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-05T03:11:44+00:00",
+  "generated_at": "2026-09-05T03:17:51+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
       "rule_count": 34,
-      "previous_count": 0,
+      "previous_count": 34,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OpenAI/OpenAI.list",
@@ -20,7 +20,7 @@
     "ai/anthropic": {
       "state": "updated",
       "rule_count": 3,
-      "previous_count": 0,
+      "previous_count": 3,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list",
@@ -36,7 +36,7 @@
     "ai/gemini": {
       "state": "updated",
       "rule_count": 13,
-      "previous_count": 0,
+      "previous_count": 13,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list",
@@ -52,7 +52,7 @@
     "ai/copilot": {
       "state": "updated",
       "rule_count": 49,
-      "previous_count": 0,
+      "previous_count": 49,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list",
@@ -68,13 +68,13 @@
     "ai/xai": {
       "state": "updated",
       "rule_count": 2,
-      "previous_count": 0,
+      "previous_count": 2,
       "sources": []
     },
     "streaming/youtube": {
       "state": "updated",
       "rule_count": 190,
-      "previous_count": 0,
+      "previous_count": 190,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list",
@@ -90,7 +90,7 @@
     "streaming/netflix": {
       "state": "updated",
       "rule_count": 1157,
-      "previous_count": 0,
+      "previous_count": 1157,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list",
@@ -106,7 +106,7 @@
     "streaming/disney": {
       "state": "updated",
       "rule_count": 173,
-      "previous_count": 0,
+      "previous_count": 173,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list",
@@ -122,7 +122,7 @@
     "streaming/max": {
       "state": "updated",
       "rule_count": 51,
-      "previous_count": 0,
+      "previous_count": 51,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list",
@@ -138,7 +138,7 @@
     "streaming/spotify": {
       "state": "updated",
       "rule_count": 30,
-      "previous_count": 0,
+      "previous_count": 30,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list",
@@ -154,7 +154,7 @@
     "social/telegram": {
       "state": "updated",
       "rule_count": 35,
-      "previous_count": 0,
+      "previous_count": 35,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list",
@@ -170,7 +170,7 @@
     "social/twitter": {
       "state": "updated",
       "rule_count": 33,
-      "previous_count": 0,
+      "previous_count": 33,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list",
@@ -186,7 +186,7 @@
     "social/facebook": {
       "state": "updated",
       "rule_count": 569,
-      "previous_count": 0,
+      "previous_count": 569,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list",
@@ -202,7 +202,7 @@
     "social/instagram": {
       "state": "updated",
       "rule_count": 4,
-      "previous_count": 0,
+      "previous_count": 4,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list",
@@ -218,7 +218,7 @@
     "social/tiktok": {
       "state": "updated",
       "rule_count": 32,
-      "previous_count": 0,
+      "previous_count": 32,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list",
@@ -234,7 +234,7 @@
     "developer/github": {
       "state": "updated",
       "rule_count": 31,
-      "previous_count": 0,
+      "previous_count": 31,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list",
@@ -250,7 +250,7 @@
     "developer/gitlab": {
       "state": "updated",
       "rule_count": 6,
-      "previous_count": 0,
+      "previous_count": 6,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list",
@@ -266,7 +266,7 @@
     "developer/dropbox": {
       "state": "updated",
       "rule_count": 17,
-      "previous_count": 0,
+      "previous_count": 17,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list",
@@ -282,7 +282,7 @@
     "developer/onedrive": {
       "state": "updated",
       "rule_count": 16,
-      "previous_count": 0,
+      "previous_count": 16,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list",
@@ -298,7 +298,7 @@
     "service/google": {
       "state": "updated",
       "rule_count": 698,
-      "previous_count": 0,
+      "previous_count": 698,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list",
@@ -314,7 +314,7 @@
     "service/apple": {
       "state": "updated",
       "rule_count": 43,
-      "previous_count": 0,
+      "previous_count": 43,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
@@ -330,7 +330,7 @@
     "service/microsoft": {
       "state": "updated",
       "rule_count": 671,
-      "previous_count": 0,
+      "previous_count": 671,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list",
@@ -346,7 +346,7 @@
     "service/bilibili": {
       "state": "updated",
       "rule_count": 127,
-      "previous_count": 0,
+      "previous_count": 127,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list",
@@ -362,7 +362,7 @@
     "service/baidu": {
       "state": "updated",
       "rule_count": 251,
-      "previous_count": 0,
+      "previous_count": 251,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list",
@@ -378,7 +378,7 @@
     "service/douyin": {
       "state": "updated",
       "rule_count": 13,
-      "previous_count": 0,
+      "previous_count": 13,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list",
@@ -394,7 +394,7 @@
     "service/zhihu": {
       "state": "updated",
       "rule_count": 7,
-      "previous_count": 0,
+      "previous_count": 7,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list",
@@ -410,7 +410,7 @@
     "service/xiaohongshu": {
       "state": "updated",
       "rule_count": 4,
-      "previous_count": 0,
+      "previous_count": 4,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
@@ -443,7 +443,7 @@
     "china/rules": {
       "state": "updated",
       "rule_count": 12586,
-      "previous_count": 0,
+      "previous_count": 12586,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list",
@@ -459,7 +459,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 781,
-      "previous_count": 0,
+      "previous_count": 781,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
@@ -475,7 +475,7 @@
     "reject/privacy": {
       "state": "updated",
       "rule_count": 20,
-      "previous_count": 0,
+      "previous_count": 20,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
@@ -491,7 +491,7 @@
     "reject/hijacking": {
       "state": "updated",
       "rule_count": 228,
-      "previous_count": 0,
+      "previous_count": 228,
       "sources": [
         {
           "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list",
