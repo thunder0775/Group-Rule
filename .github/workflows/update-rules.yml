@@ -3,7 +3,8 @@ name: Update Shadowrocket Rules
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "26 8 * * *"
+      timezone: "Asia/Shanghai"
   push:
     paths:
       - "config/**"
