@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T01:41:59+00:00",
+  "generated_at": "2026-09-06T01:52:33+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -749,7 +749,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 27319,
-      "previous_count": 27313,
+      "previous_count": 27319,
       "healthy_sources": 2,
       "sources": [
         {
@@ -757,7 +757,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27079,
+          "previous_source_rules": 27085,
           "considered_lines": 27085,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -775,7 +775,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27305,
+          "previous_source_rules": 27311,
           "considered_lines": 27318,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -838,7 +838,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 190465,
-      "previous_count": 190145,
+      "previous_count": 190465,
       "healthy_sources": 4,
       "sources": [
         {
@@ -864,7 +864,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 189166,
+          "previous_source_rules": 189486,
           "considered_lines": 189486,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -882,7 +882,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 189173,
+          "previous_source_rules": 189493,
           "considered_lines": 189493,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
