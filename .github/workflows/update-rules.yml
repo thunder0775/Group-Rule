@@ -2,8 +2,15 @@ name: Update Shadowrocket Rules
 
 on:
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for rebuild"
+        required: false
+        default: "manual-or-fallback"
+        type: string
   schedule:
-    - cron: "26 8 * * *"
+    # Daily safety net: 08:30 Beijing time.
+    - cron: "30 8 * * *"
       timezone: "Asia/Shanghai"
   push:
     paths:
@@ -32,6 +39,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Show trigger reason
+        run: echo "Reason: ${{ inputs.reason || 'scheduled-fallback-or-push' }}"
 
       - name: Guard direct-rule upstreams
         run: python scripts/direct_source_guard.py
