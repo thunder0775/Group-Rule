@@ -4,8 +4,8 @@
 No domain allowlists. Uses semantic parent/child DOMAIN-SUFFIX coverage to:
 1) strip reject rules covered by proxy categories
 2) dedupe the same rule across proxy categories (priority winner keeps it)
-3) optionally collapse children into the parent category
-4) audit remaining children that still land in a different proxy category
+3) optionally collapse children into a higher-priority parent category (never demote)
+4) audit remaining demotions / multi-parent inconsistencies
 """
 from __future__ import annotations
 
@@ -206,6 +206,10 @@ def collapse_children_to_parent_category(categories, order, limit, write_list, a
                 )
                 if pcat == category:
                     continue
+                # Never demote: do not move a higher-priority category (e.g. ai)
+                # into a lower-priority parent (e.g. service/global).
+                if rank.get(pcat, 10**9) > rank.get(category, 10**9):
+                    continue
                 to_remove[(category, name)].append(rule)
                 to_add[(pcat, pname)].append(rule)
                 moved.append({
@@ -256,6 +260,11 @@ def audit_child_policy_split(categories, order, limit):
                     continue
                 parent_categories = sorted({c for c, _, _ in owners})
                 winner = min(parent_categories, key=lambda c: rank.get(c, 10**9))
+                parent_best = min(rank.get(c, 10**9) for c in parent_categories)
+                # Child in a higher-priority category than any covering parent is intentional
+                # (e.g. DOMAIN in ai under DOMAIN-SUFFIX,google.com in service).
+                if rank.get(category, 10**9) < parent_best:
+                    continue
                 # OK when child already sits in the winning parent category and
                 # parent is not multi-owned (dedupe should have fixed multi-own).
                 if category == winner and len(parent_categories) == 1:
