@@ -230,6 +230,7 @@
     "reject_proxy_overlap_sanitize": true,
     "dedupe_proxy_cross_category": true,
     "collapse_child_to_parent_category": true,
+    "unify_infrastructure_to_parent": true,
     "child_policy_split_severity": "WARNING"
   }
 }
