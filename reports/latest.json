@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T06:32:08+00:00",
+  "generated_at": "2026-09-07T06:32:55+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -793,7 +793,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 110953,
+      "previous_count": 110952,
       "healthy_sources": 1,
       "sources": [
         {
@@ -838,7 +838,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 185104,
-      "previous_count": 190812,
+      "previous_count": 185104,
       "healthy_sources": 4,
       "sources": [
         {
@@ -946,7 +946,7 @@
     "reject/hijacking": {
       "state": "updated",
       "rule_count": 227,
-      "previous_count": 228,
+      "previous_count": 227,
       "healthy_sources": 1,
       "sources": [
         {
