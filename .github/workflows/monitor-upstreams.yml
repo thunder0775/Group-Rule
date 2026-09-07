@@ -12,7 +12,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: upstream-monitor
+  group: upstream-monitor-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -42,6 +42,6 @@ jobs:
         run: |
           gh workflow run update-rules.yml \
             --repo "${{ github.repository }}" \
-            --ref main \
+            --ref "${{ github.ref_name }}" \
             -f reason="upstream-content-change"
-          echo "Rule rebuild requested."
+          echo "Rule rebuild requested on branch ${{ github.ref_name }}."
