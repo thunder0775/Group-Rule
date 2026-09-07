@@ -1,15 +1,36 @@
 {
-  "version": 2,
-  "category_order": ["reject", "ai", "streaming", "social", "developer", "service", "global", "china"],
+  "version": 3,
+  "category_order": [
+    "reject",
+    "china",
+    "ai",
+    "streaming",
+    "gaming",
+    "developer",
+    "social",
+    "shopping",
+    "service",
+    "global"
+  ],
   "conflict_winner": "first_category",
   "cross_category_priority": {
     "reject": 1000,
+    "china": 950,
     "ai": 900,
-    "streaming": 800,
+    "streaming": 850,
+    "gaming": 800,
+    "developer": 750,
     "social": 700,
-    "developer": 650,
+    "shopping": 650,
     "service": 600,
-    "global": 550,
-    "china": 500
+    "global": 500
+  },
+  "invariants": {
+    "single_final_policy": true,
+    "single_category_per_domain": true,
+    "no_cross_category_duplicate_output": true,
+    "global_is_fallback_only": true,
+    "reject_always_wins": true,
+    "china_precedes_proxy": true
   }
 }
