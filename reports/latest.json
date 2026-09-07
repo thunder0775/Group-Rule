@@ -42622,14 +42622,14 @@
     "compiled_output_problem_count": 0
   },
   "direct_sanitization": {
-    "input_rules": 120528,
+    "input_rules": 110953,
     "output_rules": 110953,
     "removed": {
-      "non_domain": 8065,
-      "foreign_tld": 841,
-      "explicit_deny": 2,
-      "proxy_category_overlap": 625,
-      "invalid": 42
+      "non_domain": 0,
+      "foreign_tld": 0,
+      "explicit_deny": 0,
+      "proxy_category_overlap": 0,
+      "invalid": 0
     },
     "explicit_deny_count": 9,
     "proxy_domain_evidence_rules": 27915,
