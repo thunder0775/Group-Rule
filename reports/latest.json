@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T10:04:56+00:00",
+  "generated_at": "2026-09-07T10:06:31+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
-      "rule_count": 34,
+      "rule_count": 32,
       "previous_count": 34,
       "healthy_sources": 1,
       "sources": [
@@ -81,7 +81,7 @@
     },
     "ai/copilot": {
       "state": "updated",
-      "rule_count": 52,
+      "rule_count": 49,
       "previous_count": 52,
       "healthy_sources": 1,
       "sources": [
@@ -748,7 +748,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 24827,
+      "rule_count": 24830,
       "previous_count": 24827,
       "healthy_sources": 2,
       "sources": [
@@ -972,12 +972,12 @@
     }
   },
   "compiled_counts": {
-    "ai": 74,
+    "ai": 71,
     "streaming": 1617,
     "social": 685,
     "developer": 82,
     "service": 2202,
-    "global": 24827,
+    "global": 24830,
     "china": 119628,
     "reject": 185293
   },
@@ -4598,16 +4598,6 @@
         "openai"
       ]
     ],
-    "DOMAIN,chat.openai.com.cdn.cloudflare.net": [
-      [
-        "ai",
-        "copilot"
-      ],
-      [
-        "ai",
-        "openai"
-      ]
-    ],
     "DOMAIN,openai-api.arkoselabs.com": [
       [
         "ai",
@@ -4629,16 +4619,6 @@
       ]
     ],
     "DOMAIN,production-openaicom-storage.azureedge.net": [
-      [
-        "ai",
-        "copilot"
-      ],
-      [
-        "ai",
-        "openai"
-      ]
-    ],
-    "DOMAIN,static.cloudflareinsights.com": [
       [
         "ai",
         "copilot"
@@ -11835,7 +11815,7 @@
   "source_rule_quality": {
     "ai/openai": {
       "type_counts": {
-        "DOMAIN": 7,
+        "DOMAIN": 5,
         "DOMAIN-KEYWORD": 1,
         "DOMAIN-SUFFIX": 24,
         "IP-CIDR": 2
@@ -11865,9 +11845,9 @@
     },
     "ai/copilot": {
       "type_counts": {
-        "DOMAIN": 22,
+        "DOMAIN": 20,
         "DOMAIN-KEYWORD": 1,
-        "DOMAIN-SUFFIX": 27,
+        "DOMAIN-SUFFIX": 26,
         "IP-CIDR": 2
       },
       "invalid_domains": [],
@@ -12117,9 +12097,9 @@
     },
     "global/proxy": {
       "type_counts": {
-        "DOMAIN": 513,
+        "DOMAIN": 515,
         "DOMAIN-KEYWORD": 2,
-        "DOMAIN-SUFFIX": 24157,
+        "DOMAIN-SUFFIX": 24158,
         "IP-CIDR": 10,
         "URL-REGEX": 145
       },
@@ -12171,7 +12151,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 2682,
+    "count": 2680,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -13853,21 +13833,8 @@
       {
         "type": "exact_domain_covered",
         "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,chat.openai.com.cdn.cloudflare.net"
-        },
-        "covering": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cdn.cloudflare.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "openai",
           "rule": "DOMAIN,chat.openai.com.cdn.cloudflare.net"
         },
         "covering": {
@@ -14771,6 +14738,19 @@
           "category": "service",
           "item": "microsoft",
           "rule": "DOMAIN-SUFFIX,exp-tas.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,dell.my.site.com"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,site.com"
         }
       }
     ],
@@ -20233,12 +20213,12 @@
     "problem_count": 0,
     "problems": [],
     "counts": {
-      "ai": 74,
+      "ai": 71,
       "streaming": 1617,
       "social": 685,
       "developer": 82,
       "service": 2202,
-      "global": 24827,
+      "global": 24830,
       "china": 119628,
       "reject": 185293
     }
@@ -20260,7 +20240,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 2682
+        "count": 2680
       },
       {
         "severity": "INFO",
@@ -20280,10 +20260,10 @@
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 993,
-    "same_category_duplicate_rule_count": 91,
+    "exact_duplicate_occurrences": 991,
+    "same_category_duplicate_rule_count": 89,
     "cross_category_conflict_count": 901,
-    "semantic_domain_redundancy_count": 2682,
+    "semantic_domain_redundancy_count": 2680,
     "semantic_cidr_redundancy_count": 420,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
