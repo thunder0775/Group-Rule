@@ -42,7 +42,8 @@ jobs:
           python-version: "3.12"
 
       - name: Show trigger reason
-        run: echo "Reason: ${{ inputs.reason || 'scheduled-fallback-or-push' }}"
+        run: |
+          echo "Reason: ${{ inputs.reason || 'scheduled-fallback-or-push' }}"
 
       - name: Guard direct-rule upstreams
         run: python scripts/direct_source_guard.py
