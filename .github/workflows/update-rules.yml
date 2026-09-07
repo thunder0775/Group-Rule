@@ -1,6 +1,13 @@
 name: Update Shadowrocket Rules
 
 on:
+  workflow_call:
+    inputs:
+      reason:
+        description: "Reason for rebuild"
+        required: false
+        default: "upstream-content-change"
+        type: string
   workflow_dispatch:
     inputs:
       reason:
