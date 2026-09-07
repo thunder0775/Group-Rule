@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07T08:11:37+00:00",
+  "generated_at": "2026-09-07T08:19:35+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
       "rule_count": 34,
-      "previous_count": 27,
+      "previous_count": 34,
       "healthy_sources": 1,
       "sources": [
         {
@@ -56,7 +56,7 @@
     "ai/gemini": {
       "state": "updated",
       "rule_count": 13,
-      "previous_count": 6,
+      "previous_count": 13,
       "healthy_sources": 1,
       "sources": [
         {
@@ -82,7 +82,7 @@
     "ai/copilot": {
       "state": "updated",
       "rule_count": 52,
-      "previous_count": 27,
+      "previous_count": 52,
       "healthy_sources": 1,
       "sources": [
         {
@@ -115,7 +115,7 @@
     "streaming/youtube": {
       "state": "updated",
       "rule_count": 198,
-      "previous_count": 192,
+      "previous_count": 198,
       "healthy_sources": 1,
       "sources": [
         {
@@ -141,7 +141,7 @@
     "streaming/netflix": {
       "state": "updated",
       "rule_count": 1158,
-      "previous_count": 1153,
+      "previous_count": 1158,
       "healthy_sources": 1,
       "sources": [
         {
@@ -167,7 +167,7 @@
     "streaming/disney": {
       "state": "updated",
       "rule_count": 177,
-      "previous_count": 167,
+      "previous_count": 177,
       "healthy_sources": 1,
       "sources": [
         {
@@ -193,7 +193,7 @@
     "streaming/max": {
       "state": "updated",
       "rule_count": 53,
-      "previous_count": 36,
+      "previous_count": 53,
       "healthy_sources": 1,
       "sources": [
         {
@@ -219,7 +219,7 @@
     "streaming/spotify": {
       "state": "updated",
       "rule_count": 32,
-      "previous_count": 22,
+      "previous_count": 32,
       "healthy_sources": 1,
       "sources": [
         {
@@ -315,7 +315,7 @@
     "social/facebook": {
       "state": "updated",
       "rule_count": 577,
-      "previous_count": 575,
+      "previous_count": 577,
       "healthy_sources": 1,
       "sources": [
         {
@@ -367,7 +367,7 @@
     "social/tiktok": {
       "state": "updated",
       "rule_count": 32,
-      "previous_count": 31,
+      "previous_count": 32,
       "healthy_sources": 1,
       "sources": [
         {
@@ -393,7 +393,7 @@
     "developer/github": {
       "state": "updated",
       "rule_count": 41,
-      "previous_count": 38,
+      "previous_count": 41,
       "healthy_sources": 1,
       "sources": [
         {
@@ -445,7 +445,7 @@
     "developer/dropbox": {
       "state": "updated",
       "rule_count": 18,
-      "previous_count": 15,
+      "previous_count": 18,
       "healthy_sources": 1,
       "sources": [
         {
@@ -471,7 +471,7 @@
     "developer/onedrive": {
       "state": "updated",
       "rule_count": 16,
-      "previous_count": 9,
+      "previous_count": 16,
       "healthy_sources": 1,
       "sources": [
         {
@@ -497,7 +497,7 @@
     "service/google": {
       "state": "updated",
       "rule_count": 810,
-      "previous_count": 823,
+      "previous_count": 810,
       "healthy_sources": 1,
       "sources": [
         {
@@ -523,7 +523,7 @@
     "service/apple": {
       "state": "updated",
       "rule_count": 213,
-      "previous_count": 79,
+      "previous_count": 213,
       "healthy_sources": 2,
       "sources": [
         {
@@ -593,7 +593,7 @@
     "service/microsoft": {
       "state": "updated",
       "rule_count": 725,
-      "previous_count": 735,
+      "previous_count": 725,
       "healthy_sources": 1,
       "sources": [
         {
@@ -619,7 +619,7 @@
     "service/bilibili": {
       "state": "updated",
       "rule_count": 127,
-      "previous_count": 123,
+      "previous_count": 127,
       "healthy_sources": 1,
       "sources": [
         {
@@ -749,7 +749,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 24827,
-      "previous_count": 25038,
+      "previous_count": 24827,
       "healthy_sources": 2,
       "sources": [
         {
