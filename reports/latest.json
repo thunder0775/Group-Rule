@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07T06:53:09+00:00",
+  "generated_at": "2026-09-07T07:24:49+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
       "rule_count": 28,
-      "previous_count": 34,
+      "previous_count": 28,
       "healthy_sources": 1,
       "sources": [
         {
@@ -56,7 +56,7 @@
     "ai/gemini": {
       "state": "updated",
       "rule_count": 6,
-      "previous_count": 13,
+      "previous_count": 6,
       "healthy_sources": 1,
       "sources": [
         {
@@ -82,7 +82,7 @@
     "ai/copilot": {
       "state": "updated",
       "rule_count": 29,
-      "previous_count": 49,
+      "previous_count": 29,
       "healthy_sources": 1,
       "sources": [
         {
@@ -115,7 +115,7 @@
     "streaming/youtube": {
       "state": "updated",
       "rule_count": 184,
-      "previous_count": 190,
+      "previous_count": 184,
       "healthy_sources": 1,
       "sources": [
         {
@@ -141,7 +141,7 @@
     "streaming/netflix": {
       "state": "updated",
       "rule_count": 1155,
-      "previous_count": 1157,
+      "previous_count": 1155,
       "healthy_sources": 1,
       "sources": [
         {
@@ -167,7 +167,7 @@
     "streaming/disney": {
       "state": "updated",
       "rule_count": 167,
-      "previous_count": 173,
+      "previous_count": 167,
       "healthy_sources": 1,
       "sources": [
         {
@@ -193,7 +193,7 @@
     "streaming/max": {
       "state": "updated",
       "rule_count": 35,
-      "previous_count": 51,
+      "previous_count": 35,
       "healthy_sources": 1,
       "sources": [
         {
@@ -219,7 +219,7 @@
     "streaming/spotify": {
       "state": "updated",
       "rule_count": 24,
-      "previous_count": 30,
+      "previous_count": 24,
       "healthy_sources": 1,
       "sources": [
         {
@@ -367,7 +367,7 @@
     "social/tiktok": {
       "state": "updated",
       "rule_count": 31,
-      "previous_count": 32,
+      "previous_count": 31,
       "healthy_sources": 1,
       "sources": [
         {
@@ -393,7 +393,7 @@
     "developer/github": {
       "state": "updated",
       "rule_count": 39,
-      "previous_count": 31,
+      "previous_count": 39,
       "healthy_sources": 1,
       "sources": [
         {
@@ -419,7 +419,7 @@
     "developer/gitlab": {
       "state": "updated",
       "rule_count": 7,
-      "previous_count": 6,
+      "previous_count": 7,
       "healthy_sources": 1,
       "sources": [
         {
@@ -445,7 +445,7 @@
     "developer/dropbox": {
       "state": "updated",
       "rule_count": 16,
-      "previous_count": 17,
+      "previous_count": 16,
       "healthy_sources": 1,
       "sources": [
         {
@@ -471,7 +471,7 @@
     "developer/onedrive": {
       "state": "updated",
       "rule_count": 9,
-      "previous_count": 16,
+      "previous_count": 9,
       "healthy_sources": 1,
       "sources": [
         {
@@ -497,7 +497,7 @@
     "service/google": {
       "state": "updated",
       "rule_count": 691,
-      "previous_count": 698,
+      "previous_count": 691,
       "healthy_sources": 1,
       "sources": [
         {
@@ -523,7 +523,7 @@
     "service/apple": {
       "state": "updated",
       "rule_count": 51,
-      "previous_count": 208,
+      "previous_count": 51,
       "healthy_sources": 2,
       "sources": [
         {
@@ -593,7 +593,7 @@
     "service/microsoft": {
       "state": "updated",
       "rule_count": 665,
-      "previous_count": 671,
+      "previous_count": 665,
       "healthy_sources": 1,
       "sources": [
         {
@@ -619,7 +619,7 @@
     "service/bilibili": {
       "state": "updated",
       "rule_count": 123,
-      "previous_count": 127,
+      "previous_count": 123,
       "healthy_sources": 1,
       "sources": [
         {
@@ -749,7 +749,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 27512,
-      "previous_count": 27320,
+      "previous_count": 27512,
       "healthy_sources": 2,
       "sources": [
         {
