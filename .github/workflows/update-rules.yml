@@ -9,7 +9,6 @@ on:
         default: "manual-or-fallback"
         type: string
   schedule:
-    # Daily safety net: 08:30 Beijing time.
     - cron: "30 8 * * *"
       timezone: "Asia/Shanghai"
   push:
