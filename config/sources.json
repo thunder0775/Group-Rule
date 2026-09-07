@@ -228,7 +228,7 @@
   },
   "policy": {
     "reject_proxy_overlap_sanitize": true,
-    "collapse_child_to_parent_category": false,
+    "collapse_child_to_parent_category": true,
     "child_policy_split_severity": "WARNING"
   }
 }
