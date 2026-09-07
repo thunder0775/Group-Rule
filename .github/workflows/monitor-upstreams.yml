@@ -2,6 +2,9 @@ name: Monitor Upstream Rules
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - test/upstream-sync-fix
   schedule:
     # Every 15 minutes, offset from the hour to reduce scheduled-run congestion.
     - cron: "7,22,37,52 * * * *"
