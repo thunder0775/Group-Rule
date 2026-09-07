@@ -9,10 +9,11 @@ on:
         default: "manual-or-fallback"
         type: string
   schedule:
-    # Daily safety net: 08:30 Beijing time.
     - cron: "30 8 * * *"
       timezone: "Asia/Shanghai"
   push:
+    branches-ignore:
+      - test/upstream-sync-fix
     paths:
       - "config/**"
       - "scripts/**"
@@ -22,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: shadowrocket-rules
+  group: shadowrocket-rules-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -70,6 +71,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update generated shadowrocket rules"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          git fetch origin "${{ github.ref_name }}"
+          git rebase "origin/${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"

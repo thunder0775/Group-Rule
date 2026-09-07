@@ -2,28 +2,29 @@ name: Monitor Upstream Rules
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - test/upstream-sync-fix
   schedule:
-    # Every 15 minutes, offset from the hour to reduce scheduled-run congestion.
     - cron: "7,22,37,52 * * * *"
       timezone: "Asia/Shanghai"
 
 permissions:
-  contents: read
-  actions: write
+  contents: write
 
 concurrency:
-  group: upstream-monitor
+  group: upstream-monitor-${{ github.ref_name }}
   cancel-in-progress: false
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 2
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,16 +33,52 @@ jobs:
 
       - name: Check upstream content
         id: check
-        continue-on-error: true
-        run: python scripts/upstream_monitor.py
-
-      - name: Trigger rebuild
-        if: steps.check.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh workflow run update-rules.yml \
-            --repo "${{ github.repository }}" \
-            --ref main \
-            -f reason="upstream-content-change"
-          echo "Rule rebuild requested."
+          set +e
+          python scripts/upstream_monitor.py
+          status=$?
+          if [ "$status" -eq 2 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$status" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Guard direct-rule upstreams
+        if: steps.check.outputs.changed == 'true'
+        run: python scripts/direct_source_guard.py
+
+      - name: Build and audit
+        if: steps.check.outputs.changed == 'true'
+        run: python scripts/rule_engine.py
+
+      - name: Sanitize China direct rules
+        if: steps.check.outputs.changed == 'true'
+        run: python scripts/direct_rule_sanitize.py
+
+      - name: Regression test direct rules
+        if: steps.check.outputs.changed == 'true'
+        run: python scripts/direct_rule_regression.py
+
+      - name: Show report
+        if: always()
+        run: cat reports/latest.md
+
+      - name: Commit generated rules
+        if: steps.check.outputs.changed == 'true' && success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules reports
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "chore: update generated shadowrocket rules"
+          git fetch origin "${{ github.ref_name }}"
+          git rebase "origin/${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
