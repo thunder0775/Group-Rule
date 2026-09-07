@@ -1,13 +1,6 @@
 name: Update Shadowrocket Rules
 
 on:
-  workflow_call:
-    inputs:
-      reason:
-        description: "Reason for rebuild"
-        required: false
-        default: "upstream-content-change"
-        type: string
   workflow_dispatch:
     inputs:
       reason:
@@ -19,6 +12,8 @@ on:
     - cron: "30 8 * * *"
       timezone: "Asia/Shanghai"
   push:
+    branches-ignore:
+      - test/upstream-sync-fix
     paths:
       - "config/**"
       - "scripts/**"
