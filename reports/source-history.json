@@ -3,249 +3,249 @@
     "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b",
     "rules": 34,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list": {
     "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378",
     "rules": 3,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list": {
     "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49",
     "rules": 13,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list": {
     "sha256": "12773330de34b84b7fd2f3f2af598480ea62d8574d8e9b8ae9d011a53c044d39",
     "rules": 49,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list": {
     "sha256": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
     "rules": 190,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list": {
     "sha256": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
     "rules": 1157,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list": {
     "sha256": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "rules": 173,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list": {
     "sha256": "f89c50e9a1f433dc1acb8a75aa2cab27d4e2fd82f4fed6ba2820ce9b923680e2",
     "rules": 49,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list": {
     "sha256": "577afc9442a38c578e0aa8769b192d2f935e808114c60cbd5afd2294c79b74d0",
     "rules": 30,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list": {
     "sha256": "09f093cce5b3e2994147a2640e03040aac75e1db7bf2103fd1c9a2509b0176ab",
     "rules": 35,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/telegramcidr.list": {
     "sha256": "2fbe4b74d08ef9e0522a355db5071f640d68b83c7a69dba8e4e4cd81bbfcc207",
     "rules": 12,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list": {
     "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
     "rules": 33,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list": {
     "sha256": "747563c96825bbd5f868be955543b0ca1979064e7b094f8aab08aafbce577c36",
     "rules": 569,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list": {
     "sha256": "65f28f9253b0dbb2a81485c788537896a0817766685e7bd91b2f90ec7aa19548",
     "rules": 4,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list": {
     "sha256": "403dccb2d51606d73db9e669e82cc1d9030c7e697756ae13d9f8f5fea53c151a",
     "rules": 32,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list": {
     "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
     "rules": 31,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitLab/GitLab.list": {
     "sha256": "0c41418dd3d49d6313c5516b1d828a39aa13e1c08b9750698b5e4ec5d7ba5f8c",
     "rules": 6,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Dropbox/Dropbox.list": {
     "sha256": "5e66a0c3798c02e8fdbdfd366c178b3273f03746e677193c35b5e4a411b6cbde",
     "rules": 17,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/OneDrive/OneDrive.list": {
     "sha256": "9352a648b6a170ec902f4683a9002634e66e776c8362334757bb5ba115f6d3b6",
     "rules": 16,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list": {
     "sha256": "c6efe08ab4c0a12ddba20f5e75abfba2dd63a42b810f8cb5c303433a38e93b73",
     "rules": 698,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list": {
     "sha256": "79a36f0a07eb0799fd0a33317ccf6af0e48c1ce748548e37ea48c88ccbe9c02a",
     "rules": 43,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-06T01:41:59+00:00",
-    "unchanged_runs": 19
+    "unchanged_runs": 20
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/apple.list": {
     "sha256": "7071d09cc505c5eead63e6c28230730e1f2cd61bf7cb7c9b73aa7b20bedaa218",
     "rules": 165,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 28
+    "unchanged_runs": 29
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/icloud.list": {
     "sha256": "f0b7f9f2754b9fdb5a5676253d76e490d1baa1b4098197fabcdbc3c950e7fee3",
     "rules": 53,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 28
+    "unchanged_runs": 29
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list": {
     "sha256": "22df1a1017ad5d41755bf020ca8eb9afeedc7bdc2c649ed2074b255227a7ed8e",
     "rules": 671,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/BiliBili/BiliBili.list": {
     "sha256": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "rules": 127,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list": {
     "sha256": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
     "rules": 251,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouYin/DouYin.list": {
     "sha256": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
     "rules": 13,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list": {
     "sha256": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33",
     "rules": 7,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list": {
     "sha256": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
     "rules": 4,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list": {
     "sha256": "a5f59976a4484787bd3b5827ef88bd21886f6ee27341d0162dd41001e08d5a6d",
     "rules": 27086,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-07T04:00:42+00:00",
-    "unchanged_runs": 17
+    "unchanged_runs": 18
   },
   "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module": {
     "sha256": "402b6c51eccbed6b8282aa6d7d2c50f3f5be650e082f2f3cc626a606837dd9fd",
     "rules": 27312,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-07T04:00:42+00:00",
-    "unchanged_runs": 17
+    "unchanged_runs": 18
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/direct.list": {
     "sha256": "659f4a1418916869c83bace218e6ff94f0489a00ff8255407bcccd1793d94232",
@@ -299,56 +299,152 @@
     "sha256": "cd68ad50461eb23c3031c958927a57b3cb100a02ed79b1dddfd831ae9464eff1",
     "rules": 781,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-06T01:41:59+00:00",
-    "unchanged_runs": 19
+    "unchanged_runs": 20
   },
   "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list": {
     "sha256": "eacb7b97dfcbecac53617ac7403a7d8c6a51d416c8d560324c70b61500774724",
     "rules": 189833,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-07T04:00:42+00:00",
-    "unchanged_runs": 17
+    "unchanged_runs": 18
   },
   "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module": {
     "sha256": "e9b2b7baba81bb54e6c69badf8f52ad2fdc363703191556f141e211b5bceee38",
     "rules": 189840,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-07T04:00:42+00:00",
-    "unchanged_runs": 17
+    "unchanged_runs": 18
   },
   "https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module": {
     "sha256": "92313ecc4ee7e12c9dbae7a32cfa7438fb0771092c77042204dcbdef66bde587",
     "rules": 286,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list": {
     "sha256": "24b048634166c810833c424455586e57d0db6991ed1bab2adafa09603b4f4c22",
     "rules": 20,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Hijacking/Hijacking.list": {
     "sha256": "47bffe4e8d4f56e736e43f1ed5f639f0b909591de09c5908df6cddad4b9e4e5b",
     "rules": 228,
     "first_seen": "2026-09-05T04:13:53+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:13:53+00:00",
-    "unchanged_runs": 26
+    "unchanged_runs": 27
   },
   "https://raw.githubusercontent.com/GrandpaNiuu/cn-direct-rules/main/dist/rule-set/cn.list": {
     "sha256": "6e33ab0c17debf3e7aafbe7e61acea46a107e7a2d2c81d999c988899e79bf4be",
     "rules": 120528,
     "first_seen": "2026-09-05T04:59:15+00:00",
-    "last_seen": "2026-09-07T10:20:24+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
     "last_changed": "2026-09-05T04:59:15+00:00",
-    "unchanged_runs": 22
+    "unchanged_runs": 23
+  },
+  "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/js/ai.list": {
+    "sha256": "8313c239d93fe6b253861e324c7f2cdaabdd052e3495525dffc442cc341bb445",
+    "rules": 8,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Reddit/Reddit.list": {
+    "sha256": "8437bd0bbf3214170f6601f3a9b34d45a7684c9e9f8d7554b608142be8a2e80b",
+    "rules": 8,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Discord/Discord.list": {
+    "sha256": "3d18c8fe716de06891ba3d6c34dba254cb65138a10f79e1a1a0628b5237ecb2c",
+    "rules": 29,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Developer/Developer.list": {
+    "sha256": "d665f274c517e512aaf7ee72eff8ade6bccfc7146be9fbc24f92707ef2a829ec",
+    "rules": 70,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list": {
+    "sha256": "35826051b8797c7636210389fafadea23a16af51378feee20ededbb652b43332",
+    "rules": 54,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list": {
+    "sha256": "8f5fcadadd967023aa81273803de80beb2ceadd9af4e9352b565b3b00ccf464d",
+    "rules": 15,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sony/Sony.list": {
+    "sha256": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
+    "rules": 116,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list": {
+    "sha256": "ca3cf3ea5051ed220c255fbccbdd93e477f1c558e26ada6bf3dbcc2ba0487da2",
+    "rules": 126,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list": {
+    "sha256": "0414d83a4ed81d979bf663498b421b9c111b1ff5118b6c92a12ebb182eaca950",
+    "rules": 597,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Amazon/Amazon.list": {
+    "sha256": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
+    "rules": 205,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/PayPal/PayPal.list": {
+    "sha256": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
+    "rules": 248,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
+  },
+  "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list": {
+    "sha256": "79fd6cfe5fb3b3fa89ea73d520d3ed7fd4ea4a48df08b016167aa0a47c16e2f9",
+    "rules": 31914,
+    "first_seen": "2026-09-07T11:37:54+00:00",
+    "last_seen": "2026-09-07T11:37:54+00:00",
+    "last_changed": "2026-09-07T11:37:54+00:00",
+    "unchanged_runs": 0
   }
 }
