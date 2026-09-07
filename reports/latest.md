@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-07T06:39:23+00:00`
+生成时间：`2026-09-07T06:53:09+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,32 +12,32 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`3276`
-- 同分类重复规则：`62`
-- 跨分类重复规则：`3165`
-- DOMAIN 语义冗余：`3145`
+- 精确重复出现次数：`3225`
+- 同分类重复规则：`61`
+- 跨分类重复规则：`3121`
+- DOMAIN 语义冗余：`3055`
 - CIDR 语义冗余：`434`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`0`
 - reject 与代理域重叠已剔除：`5709`
-- 父子策略分裂（跨代理分类）：`540`
-- 子域并入父分类：`0`
+- 父子策略分裂（跨代理分类）：`313`
+- 子域并入父分类：`326`
 
 ## 分类统计
 
-- `ai`：71 条
-- `streaming`：1600 条
-- `social`：677 条
-- `developer`：70 条
-- `service`：2016 条
-- `global`：25053 条
+- `ai`：43 条
+- `streaming`：1565 条
+- `social`：676 条
+- `developer`：71 条
+- `service`：1843 条
+- `global`：25289 条
 - `china`：119628 条
 - `reject`：185293 条
 
 ## 闸门结果
 
-- `INFO`：`3`
+- `INFO`：`4`
 - `WARNING`：`2`
 
 ### Findings
@@ -46,11 +46,12 @@
 - **INFO** `semantic_domain_redundancy`
 - **INFO** `semantic_cidr_redundancy`
 - **INFO** `reject_proxy_overlap_sanitized`
+- **INFO** `child_collapsed_to_parent_category`
 - **WARNING** `child_policy_split`
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`3145`（排除裸 TLD）
+DOMAIN 父子覆盖：`3055`（排除裸 TLD）
 CIDR 父网覆盖子网：`434`
 
 ### DOMAIN 示例
@@ -216,12 +217,10 @@ CIDR 父网覆盖子网：`434`
 
 ## 父子策略分裂（跨代理分类）
 
-数量：`540`（同一站点子域与父域落在不同代理策略组，易导致 SSL/拆隧道问题）
+数量：`313`（同一站点子域与父域落在不同代理策略组，易导致 SSL/拆隧道问题）
 
-- 子 `DOMAIN,ai.google.dev` @`ai` ← 父 `DOMAIN-SUFFIX,google.dev` @`service`
 - 子 `DOMAIN,ai.google.dev` @`global` ← 父 `DOMAIN-SUFFIX,google.dev` @`service`
 - 子 `DOMAIN,alkalicore-pa.clients6.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
-- 子 `DOMAIN,alkalimakersuite-pa.clients6.google.com` @`ai` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
 - 子 `DOMAIN,alkalimakersuite-pa.clients6.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
 - 子 `DOMAIN,alt1-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
 - 子 `DOMAIN,alt2-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
@@ -234,30 +233,24 @@ CIDR 父网覆盖子网：`434`
 - 子 `DOMAIN,android.googlesource.com` @`global` ← 父 `DOMAIN-SUFFIX,googlesource.com` @`service`
 - 子 `DOMAIN,antigravity-pa.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
 - 子 `DOMAIN,antigravity.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
-- 子 `DOMAIN,api.msn.com` @`ai` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
 - 子 `DOMAIN,api.msn.com` @`global` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
 - 子 `DOMAIN,api.statsig.com` @`ai` ← 父 `DOMAIN-SUFFIX,api.statsig.com` @`global`
-- 子 `DOMAIN,api.statsig.com` @`global` ← 父 `DOMAIN-SUFFIX,api.statsig.com` @`ai`
 - 子 `DOMAIN,api.viu.now.com` @`global` ← 父 `DOMAIN-SUFFIX,now.com` @`streaming`
 - 子 `DOMAIN,apple.com.akadns.net` @`global` ← 父 `DOMAIN-SUFFIX,akadns.net` @`service`
-- 子 `DOMAIN,assets.msn.com` @`ai` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
 - 子 `DOMAIN,assets.msn.com` @`global` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
-- 子 `DOMAIN,audio-ak-spotify-com.akamaized.net` @`global` ← 父 `DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net` @`streaming`
-- 子 `DOMAIN,audio4-ak-spotify-com.akamaized.net` @`streaming` ← 父 `DOMAIN-SUFFIX,akamaized.net` @`global`
+- 子 `DOMAIN,audio-ak-spotify-com.akamaized.net` @`streaming` ← 父 `DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net` @`global`
 - 子 `DOMAIN,az764295.vo.msecnd.net` @`global` ← 父 `DOMAIN-SUFFIX,msecnd.net` @`service`
 - 子 `DOMAIN,azure.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
 - 子 `DOMAIN,azuremarketplace.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
 - 子 `DOMAIN,bingsettingssearch.trafficmanager.net` @`global` ← 父 `DOMAIN-SUFFIX,trafficmanager.net` @`service`
-- 子 `DOMAIN,bybit-exchange.github.io` @`global` ← 父 `DOMAIN-SUFFIX,github.io` @`developer`
-- 子 `DOMAIN,chat.openai.com.cdn.cloudflare.net` @`ai` ← 父 `DOMAIN-SUFFIX,cdn.cloudflare.net` @`global`
+- 子 `DOMAIN,bybit-exchange.github.io` @`developer` ← 父 `DOMAIN-SUFFIX,github.io` @`global`
 - 子 `DOMAIN,client-teamviewer-com.trafficmanager.net` @`global` ← 父 `DOMAIN-SUFFIX,trafficmanager.net` @`service`
 - 子 `DOMAIN,clients1.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
 - 子 `DOMAIN,cloudaicompanion.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
 - 子 `DOMAIN,cloudcode-pa.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
 - 子 `DOMAIN,configuration-lb.ls-apple.com.akadns.net` @`global` ← 父 `DOMAIN-SUFFIX,akadns.net` @`service`
-- 子 `DOMAIN,copilot-proxy.githubusercontent.com` @`global` ← 父 `DOMAIN-SUFFIX,githubusercontent.com` @`developer`
-- 子 `DOMAIN,copilot-workspace.githubnext.com` @`global` ← 父 `DOMAIN-SUFFIX,githubnext.com` @`developer`
-- 子 `DOMAIN,copilot.microsoft.com` @`ai` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,copilot-proxy.githubusercontent.com` @`developer` ← 父 `DOMAIN-SUFFIX,githubusercontent.com` @`global`
+- 子 `DOMAIN,copilot-workspace.githubnext.com` @`developer` ← 父 `DOMAIN-SUFFIX,githubnext.com` @`global`
 - 子 `DOMAIN,copilot.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
 - 子 `DOMAIN,copilotprodattachments.blob.core.windows.net` @`global` ← 父 `DOMAIN-SUFFIX,windows.net` @`service`
 - 子 `DOMAIN,crl.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
@@ -266,45 +259,81 @@ CIDR 父网覆盖子网：`434`
 - 子 `DOMAIN,developer.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
 - 子 `DOMAIN,developers.facebook.com` @`global` ← 父 `DOMAIN-SUFFIX,facebook.com` @`social`
 - 子 `DOMAIN,discord-attachments-uploads-prd.storage.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
-- 子 `DOMAIN,disneyplus.com.ssl.sc.omtrdc.net` @`global` ← 父 `DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net` @`streaming`
+- 子 `DOMAIN,disneyplus.com.ssl.sc.omtrdc.net` @`streaming` ← 父 `DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net` @`global`
 - 子 `DOMAIN,dtlgalleryint.cloudapp.net` @`global` ← 父 `DOMAIN-SUFFIX,cloudapp.net` @`service`
+- 子 `DOMAIN,epc-de-agent-proxy.germanywestcentral.cloudapp.azure.com` @`global` ← 父 `DOMAIN-SUFFIX,azure.com` @`service`
+- 子 `DOMAIN,espn.api.edge.bamgrid.com` @`global` ← 父 `DOMAIN-SUFFIX,bamgrid.com` @`streaming`
+- 子 `DOMAIN,espn.hb.omtrdc.net` @`streaming` ← 父 `DOMAIN-SUFFIX,espn.hb.omtrdc.net` @`global`
+- 子 `DOMAIN,espndotcom.tt.omtrdc.net` @`streaming` ← 父 `DOMAIN-SUFFIX,espndotcom.tt.omtrdc.net` @`global`
+- 子 `DOMAIN,fbcdn-a.akamaihd.net` @`social` ← 父 `DOMAIN-SUFFIX,fbcdn-a.akamaihd.net` @`global`
+- 子 `DOMAIN,firebase.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,firebase.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,firebaseappcheck.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+
+## 子域并入父分类
+
+移动条数：`326`
+
+- `DOMAIN,chat.openai.com.cdn.cloudflare.net`：`ai/openai` → `global/proxy`
+- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net`：`ai/openai` → `global/proxy`
+- `DOMAIN,openaicomproductionae4b.blob.core.windows.net`：`ai/openai` → `global/proxy`
+- `DOMAIN,production-openaicom-storage.azureedge.net`：`ai/openai` → `global/proxy`
+- `DOMAIN,static.cloudflareinsights.com`：`ai/openai` → `global/proxy`
+- `DOMAIN-SUFFIX,openaiapi-site.azureedge.net`：`ai/openai` → `global/proxy`
+- `DOMAIN-SUFFIX,openaicom.imgix.net`：`ai/openai` → `global/proxy`
+- `DOMAIN,ai.google.dev`：`ai/gemini` → `global/proxy`
+- `DOMAIN,alkalimakersuite-pa.clients6.google.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN,makersuite.google.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN-SUFFIX,bard.google.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN-SUFFIX,gemini.google.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN-SUFFIX,apis.google.com`：`ai/gemini` → `global/proxy`
+- `DOMAIN,api.msn.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,assets.msn.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,chat.openai.com.cdn.cloudflare.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN,copilot.microsoft.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,gateway.bingviz.microsoft.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN,gateway.bingviz.microsoftapp.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN,in.appcenter.ms`：`ai/copilot` → `global/proxy`
+- `DOMAIN,location.microsoft.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,odc.officeapps.live.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,openaicomproductionae4b.blob.core.windows.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN,production-openaicom-storage.azureedge.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN,r.bing.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,self.events.data.microsoft.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,services.bingapis.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,static.cloudflareinsights.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,sydney.bing.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN,www.bing.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,api.microsoftapp.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,challenges.cloudflare.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,edgeservices.bing.com`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,openaiapi-site.azureedge.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,openaicom.imgix.net`：`ai/copilot` → `global/proxy`
+- `DOMAIN-SUFFIX,video.google.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN-SUFFIX,wide-youtube.l.google.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN-SUFFIX,youtube-ui.l.google.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN-SUFFIX,youtube.googleapis.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN-SUFFIX,youtubei.googleapis.com`：`streaming/youtube` → `global/proxy`
+- `DOMAIN,e13252.dscg.akamaiedge.net`：`streaming/netflix` → `global/proxy`
+- `DOMAIN-SUFFIX,netflix.com.edgesuite.net`：`streaming/netflix` → `global/proxy`
+- `DOMAIN-SUFFIX,us-west-2.amazonaws.com`：`streaming/netflix` → `global/proxy`
+- `DOMAIN-SUFFIX,abcnews.edgesuite.net`：`streaming/disney` → `global/proxy`
+- `DOMAIN-SUFFIX,cdn.optimizely.com`：`streaming/disney` → `service/microsoft`
+- `DOMAIN-SUFFIX,disney-portal.my.onetrust.com`：`streaming/disney` → `global/proxy`
+- `DOMAIN-SUFFIX,disney.my.sentry.io`：`streaming/disney` → `ai/copilot`
 
 ## 跨分类冲突（最多 100 条）
 
-- `DOMAIN,ai.google.dev` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,alkalimakersuite-pa.clients6.google.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,api.msn.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,api.statsig.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,assets.msn.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,audio4-ak-spotify-com.akamaized.net` → 胜出 `streaming`；涉及 global, streaming
 - `DOMAIN,browser-intake-datadoghq.com` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN,cdn-spotify-experiments.conductrics.com` → 胜出 `streaming`；涉及 global, streaming
 - `DOMAIN,cdn.usefathom.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,copilot.microsoft.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,gateway.bingviz.microsoft.net` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,gateway.bingviz.microsoftapp.net` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,heads-ak-spotify-com.akamaized.net` → 胜出 `streaming`；涉及 global, streaming
-- `DOMAIN,in.appcenter.ms` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN,lf16-effectcdn.byteeffecttos-g.com` → 胜出 `social`；涉及 global, social
 - `DOMAIN,lf16-pkgcdn.pitaya-clientai.com` → 胜出 `social`；涉及 global, social
-- `DOMAIN,location.microsoft.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,makersuite.google.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,netflix.com.edgesuite.net` → 胜出 `streaming`；涉及 global, streaming
-- `DOMAIN,odc.officeapps.live.com` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN,openai-api.arkoselabs.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,openaicomproductionae4b.blob.core.windows.net` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,p16-tiktokcdn-com.akamaized.net` → 胜出 `social`；涉及 global, social
-- `DOMAIN,production-openaicom-storage.azureedge.net` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,r.bing.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,self.events.data.microsoft.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,services.bingapis.com` → 胜出 `ai`；涉及 ai, global
-- `DOMAIN,spotify.com.edgesuite.net` → 胜出 `streaming`；涉及 global, streaming
-- `DOMAIN,spotify.map.fastly.net` → 胜出 `streaming`；涉及 global, streaming
-- `DOMAIN,spotify.map.fastlylb.net` → 胜出 `streaming`；涉及 global, streaming
-- `DOMAIN,static.cloudflareinsights.com` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN,vsmarketplacebadge.apphb.com` → 胜出 `service`；涉及 global, service
-- `DOMAIN,www.bing.com` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN-KEYWORD,1drv` → 胜出 `developer`；涉及 developer, global, service
 - `DOMAIN-KEYWORD,colab` → 胜出 `ai`；涉及 ai, global
 - `DOMAIN-KEYWORD,developerprofiles` → 胜出 `ai`；涉及 ai, global
@@ -371,6 +400,33 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN-SUFFIX,91.com` → 胜出 `service`；涉及 china, service
 - `DOMAIN-SUFFIX,91cy.app` → 胜出 `global`；涉及 china, global
 - `DOMAIN-SUFFIX,91short.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,93692zubo66936.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,961.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,96382zubo66756.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,99thz.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,9cao9.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,a-msedge.net` → 胜出 `service`；涉及 global, service
+- `DOMAIN-SUFFIX,a1.mzstatic.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,a2.mzstatic.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,a3.mzstatic.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,a4.mzstatic.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,a4xvv2g18l.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,a5.mzstatic.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,aa77kk.com` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,aadrm.com` → 胜出 `service`；涉及 global, service
+- `DOMAIN-SUFFIX,abbyychina.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,abc-studios.com` → 胜出 `streaming`；涉及 global, streaming
+- `DOMAIN-SUFFIX,abc.com` → 胜出 `streaming`；涉及 global, streaming
+- `DOMAIN-SUFFIX,abc.xyz` → 胜出 `service`；涉及 global, service
+- `DOMAIN-SUFFIX,abcnews.com` → 胜出 `streaming`；涉及 global, streaming
+- `DOMAIN-SUFFIX,aboutfacebook.com` → 胜出 `social`；涉及 global, social
+- `DOMAIN-SUFFIX,accessfacebookfromschool.com` → 胜出 `social`；涉及 global, social
+- `DOMAIN-SUFFIX,accountkit.com` → 胜出 `social`；涉及 global, social
+- `DOMAIN-SUFFIX,acebooik.com` → 胜出 `social`；涉及 global, social
+- `DOMAIN-SUFFIX,acebook.com` → 胜出 `social`；涉及 global, social
+- `DOMAIN-SUFFIX,acg.tv` → 胜出 `service`；涉及 china, service
+- `DOMAIN-SUFFIX,acgvideo.com` → 胜出 `service`；涉及 china, service
+- `DOMAIN-SUFFIX,achat-followers-instagram.com` → 胜出 `social`；涉及 global, social
 
 ## 编译输出校验
 
