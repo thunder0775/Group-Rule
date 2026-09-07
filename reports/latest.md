@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-07T06:11:14+00:00`
+生成时间：`2026-09-07T06:32:08+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,40 +12,45 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`3411`
+- 精确重复出现次数：`3276`
 - 同分类重复规则：`62`
-- 跨分类重复规则：`3262`
-- DOMAIN 语义冗余：`9435`
+- 跨分类重复规则：`3165`
+- DOMAIN 语义冗余：`3145`
 - CIDR 语义冗余：`434`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`0`
+- reject 与代理域重叠已剔除：`5709`
+- 父子策略分裂（跨代理分类）：`540`
+- 子域并入父分类：`0`
 
 ## 分类统计
 
-- `ai`：67 条
-- `streaming`：1596 条
-- `social`：672 条
+- `ai`：71 条
+- `streaming`：1600 条
+- `social`：677 条
 - `developer`：70 条
-- `service`：1983 条
-- `global`：24965 条
-- `china`：119627 条
-- `reject`：191002 条
+- `service`：2016 条
+- `global`：25053 条
+- `china`：119628 条
+- `reject`：185293 条
 
 ## 闸门结果
 
-- `INFO`：`2`
-- `WARNING`：`1`
+- `INFO`：`3`
+- `WARNING`：`2`
 
 ### Findings
 
 - **WARNING** `too_few_rules` — `china/domains`
 - **INFO** `semantic_domain_redundancy`
 - **INFO** `semantic_cidr_redundancy`
+- **INFO** `reject_proxy_overlap_sanitized`
+- **WARNING** `child_policy_split`
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`9435`（排除裸 TLD）
+DOMAIN 父子覆盖：`3145`（排除裸 TLD）
 CIDR 父网覆盖子网：`434`
 
 ### DOMAIN 示例
@@ -93,12 +98,12 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN,222-188-6-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,36-104-134-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,36-25-252-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
-- `DOMAIN,3dns-1.adobe.com` ← `DOMAIN-SUFFIX,3dns-1.adobe.com`
-- `DOMAIN,3dns-2.adobe.com` ← `DOMAIN-SUFFIX,3dns-2.adobe.com`
-- `DOMAIN,3dns-3.adobe.com` ← `DOMAIN-SUFFIX,3dns-3.adobe.com`
-- `DOMAIN,3dns-4.adobe.com` ← `DOMAIN-SUFFIX,3dns-4.adobe.com`
+- `DOMAIN,3dns-1.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3dns-2.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3dns-3.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3dns-4.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3dns-5.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
-- `DOMAIN,3dns.adobe.com` ← `DOMAIN-SUFFIX,3dns.adobe.com`
+- `DOMAIN,3dns.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3ge3drmttga5nhcbqge3ur.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
 
 ### CIDR 示例
@@ -154,6 +159,116 @@ CIDR 父网覆盖子网：`434`
 - `IP-CIDR,113.57.230.88/32` ← `china/domains`
 - `IP-CIDR,114.110.97.97/32` ← `china/domains`
 
+## reject 代理域重叠清理
+
+剔除条数：`5709`（父域已在代理分类中的子域不再 REJECT）
+
+- `DOMAIN-SUFFIX,0emm.com` ← covered by `0emm.com`
+- `DOMAIN-SUFFIX,1.hao123.com` ← covered by `hao123.com`
+- `DOMAIN-SUFFIX,104231.dtiblog.com` ← covered by `dtiblog.com`
+- `DOMAIN-SUFFIX,1080872514.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1097834592.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1187531871.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1208344341.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1437953666.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1529462937.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1548164934.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1675450967.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1991482557.rsc.cdn77.org` ← covered by `cdn77.org`
+- `DOMAIN-SUFFIX,1l-hit.mail.ru` ← covered by `mail.ru`
+- `DOMAIN-SUFFIX,1l-hit.vkplay.ru` ← covered by `vkplay.ru`
+- `DOMAIN-SUFFIX,1l-view.mail.ru` ← covered by `mail.ru`
+- `DOMAIN-SUFFIX,1l-view.my.games` ← covered by `my.games`
+- `DOMAIN-SUFFIX,1wincdn.b-cdn.net` ← covered by `b-cdn.net`
+- `DOMAIN-SUFFIX,2006mindfreaklike.blogspot.com` ← covered by `blogspot.com`
+- `DOMAIN-SUFFIX,24hmoneygram.weebly.com` ← covered by `weebly.com`
+- `DOMAIN-SUFFIX,25serve.yourporngod.com` ← covered by `yourporngod.com`
+- `DOMAIN-SUFFIX,2mdn-cn.net` ← covered by `2mdn-cn.net`
+- `DOMAIN-SUFFIX,2mdn.net` ← covered by `2mdn.net`
+- `DOMAIN-SUFFIX,2o7.net` ← covered by `2o7.net`
+- `DOMAIN-SUFFIX,3dns-1.adobe.com` ← covered by `adobe.com`
+- `DOMAIN-SUFFIX,3dns-2.adobe.com` ← covered by `adobe.com`
+- `DOMAIN-SUFFIX,3dns-3.adobe.com` ← covered by `adobe.com`
+- `DOMAIN-SUFFIX,3dns-4.adobe.com` ← covered by `adobe.com`
+- `DOMAIN-SUFFIX,3dns.adobe.com` ← covered by `adobe.com`
+- `DOMAIN-SUFFIX,3j0pw4ed7uac-a.akamaihd.net` ← covered by `akamaihd.net`
+- `DOMAIN-SUFFIX,3p-geo.yahoo.com` ← covered by `yahoo.com`
+- `DOMAIN-SUFFIX,3p-udc.yahoo.com` ← covered by `yahoo.com`
+- `DOMAIN-SUFFIX,450a.feet9.com` ← covered by `feet9.com`
+- `DOMAIN-SUFFIX,478789.everydayporn.co` ← covered by `everydayporn.co`
+- `DOMAIN-SUFFIX,4hfvbao1ea.execute-api.ap-northeast-2.amazonaws.com` ← covered by `amazonaws.com`
+- `DOMAIN-SUFFIX,51tongji.trafficmanager.net` ← covered by `trafficmanager.net`
+- `DOMAIN-SUFFIX,52av.be` ← covered by `52av.be`
+- `DOMAIN-SUFFIX,61serve.everydayporn.co` ← covered by `everydayporn.co`
+- `DOMAIN-SUFFIX,682a5845.b-cdn.net` ← covered by `b-cdn.net`
+- `DOMAIN-SUFFIX,6969.javher.com` ← covered by `javher.com`
+- `DOMAIN-SUFFIX,7ng6v3lu3c.execute-api.us-east-1.amazonaws.com` ← covered by `execute-api.us-east-1.amazonaws.com`
+- `DOMAIN-SUFFIX,7q1z79gxsi.global.ssl.fastly.net` ← covered by `fastly.net`
+- `DOMAIN-SUFFIX,9w2zed1szg.execute-api.us-east-1.amazonaws.com` ← covered by `execute-api.us-east-1.amazonaws.com`
+- `DOMAIN-SUFFIX,a-delivery.rmbl.ws` ← covered by `rmbl.ws`
+- `DOMAIN-SUFFIX,a-reporting.nytimes.com` ← covered by `nytimes.com`
+- `DOMAIN-SUFFIX,a.ad.playstation.net` ← covered by `playstation.net`
+- `DOMAIN-SUFFIX,a.apkpures.xyz` ← covered by `apkpures.xyz`
+- `DOMAIN-SUFFIX,a.baidu.com` ← covered by `baidu.com`
+- `DOMAIN-SUFFIX,a.fox.com` ← covered by `fox.com`
+- `DOMAIN-SUFFIX,a.foxsports.com` ← covered by `foxsports.com`
+- `DOMAIN-SUFFIX,a.foxsportsflorida.com` ← covered by `foxsportsflorida.com`
+
+## 父子策略分裂（跨代理分类）
+
+数量：`540`（同一站点子域与父域落在不同代理策略组，易导致 SSL/拆隧道问题）
+
+- 子 `DOMAIN,ai.google.dev` @`ai` ← 父 `DOMAIN-SUFFIX,google.dev` @`service`
+- 子 `DOMAIN,ai.google.dev` @`global` ← 父 `DOMAIN-SUFFIX,google.dev` @`service`
+- 子 `DOMAIN,alkalicore-pa.clients6.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alkalimakersuite-pa.clients6.google.com` @`ai` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alkalimakersuite-pa.clients6.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt1-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt2-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt3-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt4-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt5-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt6-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt7-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,alt8-mtalk.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,android.googlesource.com` @`global` ← 父 `DOMAIN-SUFFIX,googlesource.com` @`service`
+- 子 `DOMAIN,antigravity-pa.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,antigravity.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,api.msn.com` @`ai` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
+- 子 `DOMAIN,api.msn.com` @`global` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
+- 子 `DOMAIN,api.statsig.com` @`ai` ← 父 `DOMAIN-SUFFIX,api.statsig.com` @`global`
+- 子 `DOMAIN,api.statsig.com` @`global` ← 父 `DOMAIN-SUFFIX,api.statsig.com` @`ai`
+- 子 `DOMAIN,api.viu.now.com` @`global` ← 父 `DOMAIN-SUFFIX,now.com` @`streaming`
+- 子 `DOMAIN,apple.com.akadns.net` @`global` ← 父 `DOMAIN-SUFFIX,akadns.net` @`service`
+- 子 `DOMAIN,assets.msn.com` @`ai` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
+- 子 `DOMAIN,assets.msn.com` @`global` ← 父 `DOMAIN-SUFFIX,msn.com` @`service`
+- 子 `DOMAIN,audio-ak-spotify-com.akamaized.net` @`global` ← 父 `DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net` @`streaming`
+- 子 `DOMAIN,audio4-ak-spotify-com.akamaized.net` @`streaming` ← 父 `DOMAIN-SUFFIX,akamaized.net` @`global`
+- 子 `DOMAIN,az764295.vo.msecnd.net` @`global` ← 父 `DOMAIN-SUFFIX,msecnd.net` @`service`
+- 子 `DOMAIN,azure.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,azuremarketplace.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,bingsettingssearch.trafficmanager.net` @`global` ← 父 `DOMAIN-SUFFIX,trafficmanager.net` @`service`
+- 子 `DOMAIN,bybit-exchange.github.io` @`global` ← 父 `DOMAIN-SUFFIX,github.io` @`developer`
+- 子 `DOMAIN,chat.openai.com.cdn.cloudflare.net` @`ai` ← 父 `DOMAIN-SUFFIX,cdn.cloudflare.net` @`global`
+- 子 `DOMAIN,client-teamviewer-com.trafficmanager.net` @`global` ← 父 `DOMAIN-SUFFIX,trafficmanager.net` @`service`
+- 子 `DOMAIN,clients1.google.com` @`global` ← 父 `DOMAIN-SUFFIX,google.com` @`service`
+- 子 `DOMAIN,cloudaicompanion.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,cloudcode-pa.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,configuration-lb.ls-apple.com.akadns.net` @`global` ← 父 `DOMAIN-SUFFIX,akadns.net` @`service`
+- 子 `DOMAIN,copilot-proxy.githubusercontent.com` @`global` ← 父 `DOMAIN-SUFFIX,githubusercontent.com` @`developer`
+- 子 `DOMAIN,copilot-workspace.githubnext.com` @`global` ← 父 `DOMAIN-SUFFIX,githubnext.com` @`developer`
+- 子 `DOMAIN,copilot.microsoft.com` @`ai` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,copilot.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,copilotprodattachments.blob.core.windows.net` @`global` ← 父 `DOMAIN-SUFFIX,windows.net` @`service`
+- 子 `DOMAIN,crl.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,daily-cloudcode-pa.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,default.exp-tas.com` @`global` ← 父 `DOMAIN-SUFFIX,exp-tas.com` @`service`
+- 子 `DOMAIN,developer.microsoft.com` @`global` ← 父 `DOMAIN-SUFFIX,microsoft.com` @`service`
+- 子 `DOMAIN,developers.facebook.com` @`global` ← 父 `DOMAIN-SUFFIX,facebook.com` @`social`
+- 子 `DOMAIN,discord-attachments-uploads-prd.storage.googleapis.com` @`global` ← 父 `DOMAIN-SUFFIX,googleapis.com` @`service`
+- 子 `DOMAIN,disneyplus.com.ssl.sc.omtrdc.net` @`global` ← 父 `DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net` @`streaming`
+- 子 `DOMAIN,dtlgalleryint.cloudapp.net` @`global` ← 父 `DOMAIN-SUFFIX,cloudapp.net` @`service`
+
 ## 跨分类冲突（最多 100 条）
 
 - `DOMAIN,ai.google.dev` → 胜出 `ai`；涉及 ai, global
@@ -201,7 +316,7 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN-KEYWORD,skydrive` → 胜出 `developer`；涉及 developer, global, service
 - `DOMAIN-KEYWORD,tiktok` → 胜出 `social`；涉及 global, social
 - `DOMAIN-SUFFIX,003store.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,0emm.com` → 胜出 `reject`；涉及 global, reject, service
+- `DOMAIN-SUFFIX,0emm.com` → 胜出 `service`；涉及 global, service
 - `DOMAIN-SUFFIX,165tchuang.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,17gouwuba.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,17swan.com` → 胜出 `service`；涉及 china, service
@@ -221,9 +336,8 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN-SUFFIX,25662zubo23739.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,265.com` → 胜出 `service`；涉及 global, service
 - `DOMAIN-SUFFIX,2girls1finger.org` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,2mdn-cn.net` → 胜出 `reject`；涉及 global, reject, service
-- `DOMAIN-SUFFIX,2mdn.net` → 胜出 `reject`；涉及 global, reject, service
-- `DOMAIN-SUFFIX,2o7.net` → 胜出 `reject`；涉及 global, reject
+- `DOMAIN-SUFFIX,2mdn-cn.net` → 胜出 `service`；涉及 global, service
+- `DOMAIN-SUFFIX,2mdn.net` → 胜出 `service`；涉及 global, service
 - `DOMAIN-SUFFIX,3337723.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,3337738.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,360ads.com` → 胜出 `reject`；涉及 china, reject
@@ -237,7 +351,6 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN-SUFFIX,50bang.org` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,51.la` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,518ad.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,52av.be` → 胜出 `reject`；涉及 global, reject
 - `DOMAIN-SUFFIX,54kefu.net` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,55726zubo56686.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,57573zubo36833.com` → 胜出 `reject`；涉及 china, reject
@@ -256,6 +369,8 @@ CIDR 父网覆盖子网：`434`
 - `DOMAIN-SUFFIX,8k69vb6421.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,8x5vviy4r2.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,91.com` → 胜出 `service`；涉及 china, service
+- `DOMAIN-SUFFIX,91cy.app` → 胜出 `global`；涉及 china, global
+- `DOMAIN-SUFFIX,91short.com` → 胜出 `global`；涉及 china, global
 
 ## 编译输出校验
 
@@ -265,26 +380,8 @@ CIDR 父网覆盖子网：`434`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`110953`
+- 发布中国域名规则：`110952`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`625`
-
-## 中国直连安全过滤
-
-- 原始中国规则：`110953`
-- 发布中国域名规则：`110953`
-- 移除非域名/关键词/IP规则：`0`
-- 移除非 CN TLD：`0`
-- 移除显式海外回归域名：`0`
-- 移除与海外高优先级分类重叠：`0`
-
-## 中国直连安全过滤
-
-- 原始中国规则：`110953`
-- 发布中国域名规则：`110953`
-- 移除非域名/关键词/IP规则：`0`
-- 移除非 CN TLD：`0`
-- 移除显式海外回归域名：`0`
-- 移除与海外高优先级分类重叠：`0`
+- 移除与海外高优先级分类重叠：`626`

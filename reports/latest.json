@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T06:11:14+00:00",
+  "generated_at": "2026-09-07T06:32:08+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -837,7 +837,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 190812,
+      "rule_count": 185104,
       "previous_count": 190812,
       "healthy_sources": 4,
       "sources": [
@@ -913,7 +913,8 @@
           "status": "ok",
           "redirect_host_changed": false
         }
-      ]
+      ],
+      "reject_proxy_overlap_removed": 5708
     },
     "reject/privacy": {
       "state": "updated",
@@ -939,11 +940,12 @@
           "status": "ok",
           "redirect_host_changed": false
         }
-      ]
+      ],
+      "reject_proxy_overlap_removed": 0
     },
     "reject/hijacking": {
       "state": "updated",
-      "rule_count": 228,
+      "rule_count": 227,
       "previous_count": 228,
       "healthy_sources": 1,
       "sources": [
@@ -965,18 +967,19 @@
           "status": "ok",
           "redirect_host_changed": false
         }
-      ]
+      ],
+      "reject_proxy_overlap_removed": 1
     }
   },
   "compiled_counts": {
-    "ai": 67,
-    "streaming": 1596,
-    "social": 672,
+    "ai": 71,
+    "streaming": 1600,
+    "social": 677,
     "developer": 70,
-    "service": 1983,
-    "global": 24965,
-    "china": 119627,
-    "reject": 191002
+    "service": 2016,
+    "global": 25053,
+    "china": 119628,
+    "reject": 185293
   },
   "cross_category_conflicts": {
     "DOMAIN,browser-intake-datadoghq.com": [
@@ -1013,8 +1016,7 @@
     ],
     "DOMAIN-SUFFIX,api.statsig.com": [
       "ai",
-      "global",
-      "reject"
+      "global"
     ],
     "DOMAIN-SUFFIX,auth0.com": [
       "ai",
@@ -1034,13 +1036,11 @@
     ],
     "DOMAIN-SUFFIX,events.statsigapi.net": [
       "ai",
-      "global",
-      "reject"
+      "global"
     ],
     "DOMAIN-SUFFIX,featuregates.org": [
       "ai",
-      "global",
-      "reject"
+      "global"
     ],
     "DOMAIN-SUFFIX,host.livekit.cloud": [
       "ai",
@@ -1088,8 +1088,7 @@
     ],
     "DOMAIN-SUFFIX,segment.io": [
       "ai",
-      "global",
-      "reject"
+      "global"
     ],
     "DOMAIN-SUFFIX,sentry.io": [
       "ai",
@@ -1267,7 +1266,6 @@
     ],
     "DOMAIN-SUFFIX,gvt2.com": [
       "global",
-      "reject",
       "streaming"
     ],
     "DOMAIN-SUFFIX,withyoutube.com": [
@@ -2106,14 +2104,6 @@
       "global",
       "streaming"
     ],
-    "DOMAIN-SUFFIX,cdn.optimizely.com": [
-      "reject",
-      "streaming"
-    ],
-    "DOMAIN-SUFFIX,conviva.com": [
-      "reject",
-      "streaming"
-    ],
     "DOMAIN-SUFFIX,dilcdn.com": [
       "global",
       "streaming"
@@ -2546,10 +2536,6 @@
       "global",
       "streaming"
     ],
-    "DOMAIN-SUFFIX,js-agent.newrelic.com": [
-      "reject",
-      "streaming"
-    ],
     "DOMAIN-SUFFIX,marvel.com": [
       "global",
       "streaming"
@@ -2976,7 +2962,6 @@
     ],
     "DOMAIN-SUFFIX,ads-twitter.com": [
       "global",
-      "reject",
       "social"
     ],
     "DOMAIN-SUFFIX,cms-twdigitalassets.com": [
@@ -2997,7 +2982,6 @@
     ],
     "DOMAIN-SUFFIX,tellapart.com": [
       "global",
-      "reject",
       "social"
     ],
     "DOMAIN-SUFFIX,tweetdeck.com": [
@@ -3186,7 +3170,6 @@
     ],
     "DOMAIN-SUFFIX,click-url.com": [
       "global",
-      "reject",
       "social"
     ],
     "DOMAIN-SUFFIX,como-hackearfacebook.com": [
@@ -4339,7 +4322,6 @@
     ],
     "DOMAIN-SUFFIX,fbthirdpartypixel.com": [
       "global",
-      "reject",
       "social"
     ],
     "DOMAIN-SUFFIX,fbthirdpartypixel.net": [
@@ -4876,7 +4858,6 @@
     ],
     "DOMAIN-SUFFIX,liverail.com": [
       "global",
-      "reject",
       "social"
     ],
     "DOMAIN-SUFFIX,liverail.tv": [
@@ -5608,7 +5589,6 @@
     ],
     "DOMAIN-SUFFIX,0emm.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,1e100.net": [
@@ -5625,12 +5605,10 @@
     ],
     "DOMAIN-SUFFIX,2mdn-cn.net": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,2mdn.net": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,466453.com": [
@@ -5647,25 +5625,18 @@
     ],
     "DOMAIN-SUFFIX,admeld.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,admob-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,admob.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,adsense.com": [
       "global",
-      "service"
-    ],
-    "DOMAIN-SUFFIX,adsensecustomsearchads.com": [
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,advertisercommunity.com": [
@@ -5714,7 +5685,6 @@
     ],
     "DOMAIN-SUFFIX,app-analytics-services.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,app-measurement-cn.com": [
@@ -5723,7 +5693,6 @@
     ],
     "DOMAIN-SUFFIX,app-measurement.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,appbridge.ca": [
@@ -5740,7 +5709,6 @@
     ],
     "DOMAIN-SUFFIX,apps5.oingo.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,appspot.com": [
@@ -5749,7 +5717,6 @@
     ],
     "DOMAIN-SUFFIX,apture.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,area120.com": [
@@ -6238,7 +6205,6 @@
     ],
     "DOMAIN-SUFFIX,crashlytics.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,crbug.com": [
@@ -6331,16 +6297,10 @@
     ],
     "DOMAIN-SUFFIX,doubleclick-cn.net": [
       "global",
-      "reject",
-      "service"
-    ],
-    "DOMAIN-SUFFIX,doubleclick.com": [
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,doubleclick.net": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,episodic.com": [
@@ -6537,12 +6497,10 @@
     ],
     "DOMAIN-SUFFIX,google-analytics-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,google-analytics.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,google-syndication.com": [
@@ -7335,17 +7293,14 @@
     ],
     "DOMAIN-SUFFIX,googleadservices-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googleadservices.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googleanalytics.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googleapis-cn.com": [
@@ -7446,7 +7401,6 @@
     ],
     "DOMAIN-SUFFIX,googleoptimize-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googleoptimize.com": [
@@ -7491,17 +7445,14 @@
     ],
     "DOMAIN-SUFFIX,googlesyndication.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googletagmanager-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googletagmanager.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googletagservices-cn.com": [
@@ -7510,7 +7461,6 @@
     ],
     "DOMAIN-SUFFIX,googletagservices.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googletraveladservices-cn.com": [
@@ -7523,7 +7473,6 @@
     ],
     "DOMAIN-SUFFIX,googlevads-cn.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,googleventures.com": [
@@ -8145,7 +8094,6 @@
     ],
     "DOMAIN-SUFFIX,www.destinationurl.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,www.pxcc.com": [
@@ -8518,7 +8466,6 @@
     ],
     "DOMAIN-SUFFIX,iadsdk.apple.com": [
       "china",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,images.apple.com.edgekey.net.globalredir.akadns.net": [
@@ -9491,7 +9438,6 @@
     ],
     "DOMAIN-SUFFIX,footprintdns.com": [
       "global",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,forzamotorsport.net": [
@@ -9656,10 +9602,6 @@
     ],
     "DOMAIN-SUFFIX,livingyourambition.com": [
       "global",
-      "service"
-    ],
-    "DOMAIN-SUFFIX,localytics.com": [
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,m12.vc": [
@@ -10159,10 +10101,6 @@
       "global",
       "service"
     ],
-    "DOMAIN-SUFFIX,msads.net": [
-      "reject",
-      "service"
-    ],
     "DOMAIN-SUFFIX,msauth.net": [
       "global",
       "service"
@@ -10385,10 +10323,6 @@
     ],
     "DOMAIN-SUFFIX,opticsforthecloud.net": [
       "global",
-      "service"
-    ],
-    "DOMAIN-SUFFIX,optimizely.com": [
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,orithegame.com": [
@@ -11713,7 +11647,6 @@
     ],
     "DOMAIN-SUFFIX,idouyinvod.com": [
       "china",
-      "reject",
       "service"
     ],
     "DOMAIN-SUFFIX,ixigua.com": [
@@ -11756,14 +11689,6 @@
       "china",
       "service"
     ],
-    "DOMAIN-SUFFIX,2o7.net": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,52av.be": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,91cy.app": [
       "china",
       "global"
@@ -11788,26 +11713,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,addthiscdn.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,adobetag.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,adult3dcomics.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,adultblogtoplist.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,adultfriendfinder.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,age.tv": [
       "china",
       "global"
@@ -11820,10 +11725,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,akstat.io": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,alibabacloud.com": [
       "china",
       "global"
@@ -11832,21 +11733,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,animezilla.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,area51.to": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,as.mr": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,asextube.net": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,asmr.gay": [
       "china",
@@ -11856,25 +11745,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,awempire.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,awstrack.me": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,bbc-reporting-api.app": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,bilinovel.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,bimbim.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,binancezh.kim": [
       "china",
@@ -11884,26 +11757,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,bizographics.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,bluffyporn.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,bongacams.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,brightline.tv": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,bronto.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,bscdnweb.com": [
       "china",
       "global"
@@ -11912,29 +11765,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,cambaddies.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,camonster.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,camsoda1.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,chinamule.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,clck.ru": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,cloudflareinsights.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,cnbetacdn.com": [
       "china",
@@ -11944,21 +11777,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,cookiebot.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,cs.co": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,ctyun.online": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,cuntwars.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,cxacg.com": [
       "china",
@@ -11968,53 +11789,17 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,digitaldesire.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,dirty.games": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ebayadvertising.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ebayclassifiedsgroup.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ebayrtm.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,eilieili.cc": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,erogazopple.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,fapcat.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,fi11.com": [
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,flirt4free.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,footseen.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,fullstory.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,furrybar.com": [
       "china",
@@ -12068,18 +11853,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,girls.xyz": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,gloporn.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,gotraffic.net": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,hechaji.com": [
       "china",
       "global"
@@ -12132,10 +11905,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,incloak.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,inshotapp.com": [
       "china",
       "global"
@@ -12163,14 +11932,6 @@
     "DOMAIN-SUFFIX,joox.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,joyourself.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,jwpltx.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,kimi.ai": [
       "china",
@@ -12208,14 +11969,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,liveprivates.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,livexxx.me": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,loli.net": [
       "china",
       "global"
@@ -12232,10 +11985,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,lsawards.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,maa.plus": [
       "china",
       "global"
@@ -12248,22 +11997,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,marketo.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,marketo.net": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,masterwanker.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,mediasama.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,minimax.io": [
       "china",
       "global"
@@ -12275,10 +12008,6 @@
     "DOMAIN-SUFFIX,mitao.bar": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,mmaaxx.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,moomoo.com": [
       "china",
@@ -12296,10 +12025,6 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,mrporngeek.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,mypikpak.com": [
       "china",
       "global"
@@ -12307,10 +12032,6 @@
     "DOMAIN-SUFFIX,mypikpak.net": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,mytopf.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,n0vadesktop.com": [
       "china",
@@ -12352,29 +12073,13 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,omniture.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,omobi.cc": [
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,omtrdc.net": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,opus-gaming.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,oracleinfinity.io": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pctlwm.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,picacgp.com": [
       "china",
@@ -12388,53 +12093,13 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,pixanalytics.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,pokemon-unitepgame.com": [
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,pornodanke.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pornogrund.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pornojux.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pornomasse.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pornvideos.casa": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,powercx.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,prpops.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ptapjmp.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pubmatic.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,pussy-pics.net": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,qoder.com": [
       "china",
@@ -12444,69 +12109,17 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,rabbitcounter.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ravm.tv": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,redlightcenter.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,rutrk.org": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,sc-static.net": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,sci-hub.ee": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,scorecardresearch.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,sexemulator.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,sifangclub.com": [
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,simility.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,skyxvpn.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,slackb.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,smutstone.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,streamate.com": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,swag.live": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,taboola.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,tantaly.com": [
       "china",
@@ -12540,29 +12153,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,uimserv.net": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,usercentrics.eu": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,vid.me": [
-      "global",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,vkcdnservice.com": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,vnet.link": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,watchmygf.to": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,wbrks.com": [
       "china",
@@ -12572,17 +12165,9 @@
       "china",
       "global"
     ],
-    "DOMAIN-SUFFIX,wowpornlist.xyz": [
-      "global",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,xiaohu8.com": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,xlovecam.com": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,xn--2vxsp6vi4j.com": [
       "china",
@@ -12591,10 +12176,6 @@
     "DOMAIN-SUFFIX,xn--sgt856gbjl.cc": [
       "china",
       "global"
-    ],
-    "DOMAIN-SUFFIX,yandexadexchange.net": [
-      "global",
-      "reject"
     ],
     "DOMAIN-SUFFIX,yantaqu.com": [
       "china",
@@ -12861,10 +12442,6 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,allyes.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,analytics.tiktok.com": [
       "china",
       "reject"
     ],
@@ -14765,11 +14342,10 @@
       ]
     },
     "DOMAIN-SUFFIX,api.statsig.com": {
-      "winner": "reject",
+      "winner": "ai",
       "categories": [
         "ai",
-        "global",
-        "reject"
+        "global"
       ]
     },
     "DOMAIN-SUFFIX,auth0.com": {
@@ -14801,19 +14377,17 @@
       ]
     },
     "DOMAIN-SUFFIX,events.statsigapi.net": {
-      "winner": "reject",
+      "winner": "ai",
       "categories": [
         "ai",
-        "global",
-        "reject"
+        "global"
       ]
     },
     "DOMAIN-SUFFIX,featuregates.org": {
-      "winner": "reject",
+      "winner": "ai",
       "categories": [
         "ai",
-        "global",
-        "reject"
+        "global"
       ]
     },
     "DOMAIN-SUFFIX,host.livekit.cloud": {
@@ -14894,11 +14468,10 @@
       ]
     },
     "DOMAIN-SUFFIX,segment.io": {
-      "winner": "reject",
+      "winner": "ai",
       "categories": [
         "ai",
-        "global",
-        "reject"
+        "global"
       ]
     },
     "DOMAIN-SUFFIX,sentry.io": {
@@ -15205,10 +14778,9 @@
       ]
     },
     "DOMAIN-SUFFIX,gvt2.com": {
-      "winner": "reject",
+      "winner": "streaming",
       "categories": [
         "global",
-        "reject",
         "streaming"
       ]
     },
@@ -16675,20 +16247,6 @@
         "streaming"
       ]
     },
-    "DOMAIN-SUFFIX,cdn.optimizely.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
-        "streaming"
-      ]
-    },
-    "DOMAIN-SUFFIX,conviva.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
-        "streaming"
-      ]
-    },
     "DOMAIN-SUFFIX,dilcdn.com": {
       "winner": "streaming",
       "categories": [
@@ -17445,13 +17003,6 @@
         "streaming"
       ]
     },
-    "DOMAIN-SUFFIX,js-agent.newrelic.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
-        "streaming"
-      ]
-    },
     "DOMAIN-SUFFIX,marvel.com": {
       "winner": "streaming",
       "categories": [
@@ -18195,10 +17746,9 @@
       ]
     },
     "DOMAIN-SUFFIX,ads-twitter.com": {
-      "winner": "reject",
+      "winner": "social",
       "categories": [
         "global",
-        "reject",
         "social"
       ]
     },
@@ -18231,10 +17781,9 @@
       ]
     },
     "DOMAIN-SUFFIX,tellapart.com": {
-      "winner": "reject",
+      "winner": "social",
       "categories": [
         "global",
-        "reject",
         "social"
       ]
     },
@@ -18561,10 +18110,9 @@
       ]
     },
     "DOMAIN-SUFFIX,click-url.com": {
-      "winner": "reject",
+      "winner": "social",
       "categories": [
         "global",
-        "reject",
         "social"
       ]
     },
@@ -20578,10 +20126,9 @@
       ]
     },
     "DOMAIN-SUFFIX,fbthirdpartypixel.com": {
-      "winner": "reject",
+      "winner": "social",
       "categories": [
         "global",
-        "reject",
         "social"
       ]
     },
@@ -21517,10 +21064,9 @@
       ]
     },
     "DOMAIN-SUFFIX,liverail.com": {
-      "winner": "reject",
+      "winner": "social",
       "categories": [
         "global",
-        "reject",
         "social"
       ]
     },
@@ -22786,10 +22332,9 @@
       ]
     },
     "DOMAIN-SUFFIX,0emm.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -22815,18 +22360,16 @@
       ]
     },
     "DOMAIN-SUFFIX,2mdn-cn.net": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,2mdn.net": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -22852,26 +22395,23 @@
       ]
     },
     "DOMAIN-SUFFIX,admeld.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,admob-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,admob.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -22879,13 +22419,6 @@
       "winner": "service",
       "categories": [
         "global",
-        "service"
-      ]
-    },
-    "DOMAIN-SUFFIX,adsensecustomsearchads.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
         "service"
       ]
     },
@@ -22967,10 +22500,9 @@
       ]
     },
     "DOMAIN-SUFFIX,app-analytics-services.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -22982,10 +22514,9 @@
       ]
     },
     "DOMAIN-SUFFIX,app-measurement.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -23011,10 +22542,9 @@
       ]
     },
     "DOMAIN-SUFFIX,apps5.oingo.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -23026,10 +22556,9 @@
       ]
     },
     "DOMAIN-SUFFIX,apture.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -23881,10 +23410,9 @@
       ]
     },
     "DOMAIN-SUFFIX,crashlytics.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -24043,25 +23571,16 @@
       ]
     },
     "DOMAIN-SUFFIX,doubleclick-cn.net": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
-        "service"
-      ]
-    },
-    "DOMAIN-SUFFIX,doubleclick.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,doubleclick.net": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -24402,18 +23921,16 @@
       ]
     },
     "DOMAIN-SUFFIX,google-analytics-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,google-analytics.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -25797,26 +25314,23 @@
       ]
     },
     "DOMAIN-SUFFIX,googleadservices-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,googleadservices.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,googleanalytics.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -25989,10 +25503,9 @@
       ]
     },
     "DOMAIN-SUFFIX,googleoptimize-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -26067,26 +25580,23 @@
       ]
     },
     "DOMAIN-SUFFIX,googlesyndication.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,googletagmanager-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
     "DOMAIN-SUFFIX,googletagmanager.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -26098,10 +25608,9 @@
       ]
     },
     "DOMAIN-SUFFIX,googletagservices.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -26120,10 +25629,9 @@
       ]
     },
     "DOMAIN-SUFFIX,googlevads-cn.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -27207,10 +26715,9 @@
       ]
     },
     "DOMAIN-SUFFIX,www.destinationurl.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -27859,10 +27366,9 @@
       ]
     },
     "DOMAIN-SUFFIX,iadsdk.apple.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "china",
-        "reject",
         "service"
       ]
     },
@@ -29561,10 +29067,9 @@
       ]
     },
     "DOMAIN-SUFFIX,footprintdns.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "global",
-        "reject",
         "service"
       ]
     },
@@ -29852,13 +29357,6 @@
       "winner": "service",
       "categories": [
         "global",
-        "service"
-      ]
-    },
-    "DOMAIN-SUFFIX,localytics.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
         "service"
       ]
     },
@@ -30731,13 +30229,6 @@
         "service"
       ]
     },
-    "DOMAIN-SUFFIX,msads.net": {
-      "winner": "reject",
-      "categories": [
-        "reject",
-        "service"
-      ]
-    },
     "DOMAIN-SUFFIX,msauth.net": {
       "winner": "service",
       "categories": [
@@ -31127,13 +30618,6 @@
       "winner": "service",
       "categories": [
         "global",
-        "service"
-      ]
-    },
-    "DOMAIN-SUFFIX,optimizely.com": {
-      "winner": "reject",
-      "categories": [
-        "reject",
         "service"
       ]
     },
@@ -33448,10 +32932,9 @@
       ]
     },
     "DOMAIN-SUFFIX,idouyinvod.com": {
-      "winner": "reject",
+      "winner": "service",
       "categories": [
         "china",
-        "reject",
         "service"
       ]
     },
@@ -33525,20 +33008,6 @@
         "service"
       ]
     },
-    "DOMAIN-SUFFIX,2o7.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,52av.be": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,91cy.app": {
       "winner": "global",
       "categories": [
@@ -33581,41 +33050,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,addthiscdn.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,adobetag.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,adult3dcomics.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,adultblogtoplist.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,adultfriendfinder.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,age.tv": {
       "winner": "global",
       "categories": [
@@ -33637,13 +33071,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,akstat.io": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,alibabacloud.com": {
       "winner": "global",
       "categories": [
@@ -33658,32 +33085,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,animezilla.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,area51.to": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,as.mr": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,asextube.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,asmr.gay": {
@@ -33700,39 +33106,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,awempire.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,awstrack.me": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,bbc-reporting-api.app": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,bilinovel.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,bimbim.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,binancezh.kim": {
@@ -33749,41 +33127,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,bizographics.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,bluffyporn.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,bongacams.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,brightline.tv": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,bronto.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,bscdnweb.com": {
       "winner": "global",
       "categories": [
@@ -33798,46 +33141,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,cambaddies.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,camonster.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,camsoda1.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,chinamule.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,clck.ru": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,cloudflareinsights.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,cnbetacdn.com": {
@@ -33854,32 +33162,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,cookiebot.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,cs.co": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,ctyun.online": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,cuntwars.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,cxacg.com": {
@@ -33896,60 +33183,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,digitaldesire.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,dirty.games": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ebayadvertising.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ebayclassifiedsgroup.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ebayrtm.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,eilieili.cc": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,erogazopple.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,fapcat.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,fi11.com": {
@@ -33959,25 +33197,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,flirt4free.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,footseen.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,fullstory.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,furrybar.com": {
@@ -34071,27 +33295,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,girls.xyz": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,gloporn.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,gotraffic.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,hechaji.com": {
       "winner": "global",
       "categories": [
@@ -34183,13 +33386,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,incloak.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,inshotapp.com": {
       "winner": "global",
       "categories": [
@@ -34237,20 +33433,6 @@
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,joyourself.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,jwpltx.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,kimi.ai": {
@@ -34316,20 +33498,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,liveprivates.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,livexxx.me": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,loli.net": {
       "winner": "global",
       "categories": [
@@ -34358,13 +33526,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,lsawards.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,maa.plus": {
       "winner": "global",
       "categories": [
@@ -34386,34 +33547,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,marketo.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,marketo.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,masterwanker.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,mediasama.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,minimax.io": {
       "winner": "global",
       "categories": [
@@ -34433,13 +33566,6 @@
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,mmaaxx.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,moomoo.com": {
@@ -34470,13 +33596,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,mrporngeek.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,mypikpak.com": {
       "winner": "global",
       "categories": [
@@ -34489,13 +33608,6 @@
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,mytopf.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,n0vadesktop.com": {
@@ -34568,13 +33680,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,omniture.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,omobi.cc": {
       "winner": "global",
       "categories": [
@@ -34582,32 +33687,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,omtrdc.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,opus-gaming.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,oracleinfinity.io": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pctlwm.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,picacgp.com": {
@@ -34631,13 +33715,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,pixanalytics.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,pokemon-unitepgame.com": {
       "winner": "global",
       "categories": [
@@ -34645,74 +33722,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,pornodanke.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pornogrund.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pornojux.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pornomasse.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pornvideos.casa": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,powercx.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,prpops.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ptapjmp.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pubmatic.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,pussy-pics.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,qoder.com": {
@@ -34729,60 +33743,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,rabbitcounter.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ravm.tv": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,redlightcenter.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,rutrk.org": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,sc-static.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,sci-hub.ee": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,scorecardresearch.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,sexemulator.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,sifangclub.com": {
@@ -34792,53 +33757,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,simility.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,skyxvpn.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,slackb.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,smutstone.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,streamate.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,swag.live": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,taboola.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,tantaly.com": {
@@ -34897,46 +33820,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,uimserv.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,usercentrics.eu": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,vid.me": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,vkcdnservice.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,vnet.link": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,watchmygf.to": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,wbrks.com": {
@@ -34953,25 +33841,11 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,wowpornlist.xyz": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,xiaohu8.com": {
       "winner": "global",
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,xlovecam.com": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,xn--2vxsp6vi4j.com": {
@@ -34986,13 +33860,6 @@
       "categories": [
         "china",
         "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,yandexadexchange.net": {
-      "winner": "reject",
-      "categories": [
-        "global",
-        "reject"
       ]
     },
     "DOMAIN-SUFFIX,yantaqu.com": {
@@ -35458,13 +34325,6 @@
       ]
     },
     "DOMAIN-SUFFIX,allyes.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,analytics.tiktok.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -37928,7 +36788,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 190031,
+        "DOMAIN-SUFFIX": 184323,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -37947,7 +36807,6 @@
     },
     "reject/hijacking": {
       "type_counts": {
-        "DOMAIN": 1,
         "DOMAIN-SUFFIX": 185,
         "IP-CIDR": 42
       },
@@ -37957,7 +36816,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 9435,
+    "count": 3145,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -38526,9 +37385,9 @@
           "rule": "DOMAIN,3dns-1.adobe.com"
         },
         "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,3dns-1.adobe.com"
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,adobe.com"
         }
       },
       {
@@ -38539,9 +37398,9 @@
           "rule": "DOMAIN,3dns-2.adobe.com"
         },
         "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,3dns-2.adobe.com"
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,adobe.com"
         }
       },
       {
@@ -38552,9 +37411,9 @@
           "rule": "DOMAIN,3dns-3.adobe.com"
         },
         "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,3dns-3.adobe.com"
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,adobe.com"
         }
       },
       {
@@ -38565,9 +37424,9 @@
           "rule": "DOMAIN,3dns-4.adobe.com"
         },
         "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,3dns-4.adobe.com"
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,adobe.com"
         }
       },
       {
@@ -38591,9 +37450,9 @@
           "rule": "DOMAIN,3dns.adobe.com"
         },
         "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,3dns.adobe.com"
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,adobe.com"
         }
       },
       {
@@ -39418,19 +38277,6 @@
       {
         "type": "exact_domain_covered",
         "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,api.statsig.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,api.statsig.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN,api.statsig.com"
@@ -39451,19 +38297,6 @@
         "covering": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,api.statsig.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,api.statsig.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
           "rule": "DOMAIN-SUFFIX,api.statsig.com"
         }
       },
@@ -39576,37 +38409,11 @@
         "covered": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN,appleworldwidedeveloper.hb-api.omtrdc.net"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
           "rule": "DOMAIN,appleworldwidedeveloper.sc.omtrdc.net"
         },
         "covering": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,appleworldwidedeveloper.sc.omtrdc.net"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
           "rule": "DOMAIN-SUFFIX,omtrdc.net"
         }
       },
@@ -39646,19 +38453,6 @@
         "covering": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,asahishimbun.sc.omtrdc.net"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
           "rule": "DOMAIN-SUFFIX,omtrdc.net"
         }
       },
@@ -39893,19 +38687,6 @@
         "covering": {
           "category": "global",
           "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,beatselectronicsllc.tt.omtrdc.net"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
           "rule": "DOMAIN-SUFFIX,omtrdc.net"
         }
       },
@@ -40557,6 +39338,84 @@
           "category": "service",
           "item": "microsoft",
           "rule": "DOMAIN-SUFFIX,windows.net"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,crl.microsoft.com"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,crl.microsoft.com"
+        },
+        "covering": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,csis-prod.s3.amazonaws.com"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,amazonaws.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,d1d0w7op819ely.cloudfront.net"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,cloudfront.net"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,d1fijc56o1fzod.cloudfront.net"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,cloudfront.net"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,d1g1f25tn8m2e6.cloudfront.net"
+        },
+        "covering": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,cloudfront.net"
         }
       }
     ],
@@ -42569,27 +41428,4445 @@
     ],
     "cidr_rule_count": 9798
   },
+  "reject_proxy_overlap_sanitize": {
+    "removed_count": 5709,
+    "per_item": {
+      "advertising": {
+        "before": 190812,
+        "after": 185104,
+        "removed": 5708
+      },
+      "privacy": {
+        "before": 20,
+        "after": 20,
+        "removed": 0
+      },
+      "hijacking": {
+        "before": 228,
+        "after": 227,
+        "removed": 1
+      }
+    },
+    "samples": [
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,0emm.com",
+        "covered_by_suffix": "0emm.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1.hao123.com",
+        "covered_by_suffix": "hao123.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,104231.dtiblog.com",
+        "covered_by_suffix": "dtiblog.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1080872514.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1097834592.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1187531871.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1208344341.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1437953666.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1529462937.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1548164934.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1675450967.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1991482557.rsc.cdn77.org",
+        "covered_by_suffix": "cdn77.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1l-hit.mail.ru",
+        "covered_by_suffix": "mail.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1l-hit.vkplay.ru",
+        "covered_by_suffix": "vkplay.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1l-view.mail.ru",
+        "covered_by_suffix": "mail.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1l-view.my.games",
+        "covered_by_suffix": "my.games"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1wincdn.b-cdn.net",
+        "covered_by_suffix": "b-cdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,2006mindfreaklike.blogspot.com",
+        "covered_by_suffix": "blogspot.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,24hmoneygram.weebly.com",
+        "covered_by_suffix": "weebly.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,25serve.yourporngod.com",
+        "covered_by_suffix": "yourporngod.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,2mdn-cn.net",
+        "covered_by_suffix": "2mdn-cn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,2mdn.net",
+        "covered_by_suffix": "2mdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,2o7.net",
+        "covered_by_suffix": "2o7.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3dns-1.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3dns-2.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3dns-3.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3dns-4.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3dns.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3j0pw4ed7uac-a.akamaihd.net",
+        "covered_by_suffix": "akamaihd.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3p-geo.yahoo.com",
+        "covered_by_suffix": "yahoo.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,3p-udc.yahoo.com",
+        "covered_by_suffix": "yahoo.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,450a.feet9.com",
+        "covered_by_suffix": "feet9.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,478789.everydayporn.co",
+        "covered_by_suffix": "everydayporn.co"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,4hfvbao1ea.execute-api.ap-northeast-2.amazonaws.com",
+        "covered_by_suffix": "amazonaws.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,51tongji.trafficmanager.net",
+        "covered_by_suffix": "trafficmanager.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,52av.be",
+        "covered_by_suffix": "52av.be"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,61serve.everydayporn.co",
+        "covered_by_suffix": "everydayporn.co"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,682a5845.b-cdn.net",
+        "covered_by_suffix": "b-cdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,6969.javher.com",
+        "covered_by_suffix": "javher.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,7ng6v3lu3c.execute-api.us-east-1.amazonaws.com",
+        "covered_by_suffix": "execute-api.us-east-1.amazonaws.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,7q1z79gxsi.global.ssl.fastly.net",
+        "covered_by_suffix": "fastly.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,9w2zed1szg.execute-api.us-east-1.amazonaws.com",
+        "covered_by_suffix": "execute-api.us-east-1.amazonaws.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a-delivery.rmbl.ws",
+        "covered_by_suffix": "rmbl.ws"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a-reporting.nytimes.com",
+        "covered_by_suffix": "nytimes.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.ad.playstation.net",
+        "covered_by_suffix": "playstation.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.apkpures.xyz",
+        "covered_by_suffix": "apkpures.xyz"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.baidu.com",
+        "covered_by_suffix": "baidu.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.fox.com",
+        "covered_by_suffix": "fox.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.foxsports.com",
+        "covered_by_suffix": "foxsports.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.foxsportsflorida.com",
+        "covered_by_suffix": "foxsportsflorida.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.fxnetworks.com",
+        "covered_by_suffix": "fxnetworks.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.hcaptcha.com",
+        "covered_by_suffix": "hcaptcha.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.line.me",
+        "covered_by_suffix": "line.me"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.mts.ru",
+        "covered_by_suffix": "mts.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.quora.com",
+        "covered_by_suffix": "quora.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.redd.porn",
+        "covered_by_suffix": "porn"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.ria.ru",
+        "covered_by_suffix": "ria.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.rule34.porn",
+        "covered_by_suffix": "porn"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.rutube.ru",
+        "covered_by_suffix": "rutube.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.tampermonkey.net",
+        "covered_by_suffix": "tampermonkey.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.ucoz.net",
+        "covered_by_suffix": "ucoz.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.ucoz.ru",
+        "covered_by_suffix": "ucoz.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a.wb.ru",
+        "covered_by_suffix": "wb.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a1.api.bbc.co.uk",
+        "covered_by_suffix": "bbc.co.uk"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a1.api.bbc.com",
+        "covered_by_suffix": "bbc.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a2.hotpornfile.org",
+        "covered_by_suffix": "hotpornfile.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a3.hotpornfile.org",
+        "covered_by_suffix": "hotpornfile.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a4.hotpornfile.org",
+        "covered_by_suffix": "hotpornfile.org"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a46e0368.forwarding-request-consent.pages.dev",
+        "covered_by_suffix": "pages.dev"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8-itp.qoo10.jp",
+        "covered_by_suffix": "qoo10.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8.makeshop.jp",
+        "covered_by_suffix": "makeshop.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8.onamae.com",
+        "covered_by_suffix": "onamae.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8.www.melonbooks.co.jp",
+        "covered_by_suffix": "melonbooks.co.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8clk.lolipop.jp",
+        "covered_by_suffix": "lolipop.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8clk.manage.conoha.jp",
+        "covered_by_suffix": "conoha.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8clk.muumuu-domain.com",
+        "covered_by_suffix": "muumuu-domain.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8clk.staff.mynavi.jp",
+        "covered_by_suffix": "mynavi.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.gmo-connect.com",
+        "covered_by_suffix": "gmo-connect.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.lp.nalevi.mynavi.jp",
+        "covered_by_suffix": "mynavi.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.members.race.sanspo.com",
+        "covered_by_suffix": "sanspo.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.omni7.jp",
+        "covered_by_suffix": "omni7.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.order.gmocloud.com",
+        "covered_by_suffix": "gmocloud.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,a8cv.wedding.mynavi.jp",
+        "covered_by_suffix": "mynavi.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.cbs.com",
+        "covered_by_suffix": "cbs.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.cbsi.com",
+        "covered_by_suffix": "cbsi.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.cbsnews.com",
+        "covered_by_suffix": "cbsnews.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.cbssports.com",
+        "covered_by_suffix": "cbssports.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.cnet.com",
+        "covered_by_suffix": "cnet.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.last.fm",
+        "covered_by_suffix": "last.fm"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.metacritic.com",
+        "covered_by_suffix": "metacritic.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.paramountplus.com",
+        "covered_by_suffix": "paramountplus.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.pornvideotop.com",
+        "covered_by_suffix": "pornvideotop.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.tv.com",
+        "covered_by_suffix": "tv.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aa.zdnet.com",
+        "covered_by_suffix": "zdnet.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aab.faperoni.com",
+        "covered_by_suffix": "faperoni.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aabb.faperoni.com",
+        "covered_by_suffix": "faperoni.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aamt.msnbc.com",
+        "covered_by_suffix": "msnbc.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aamt.nbcnews.com",
+        "covered_by_suffix": "nbcnews.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aan.amazon.com",
+        "covered_by_suffix": "amazon.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aax-eu-dub.amazon.com",
+        "covered_by_suffix": "amazon.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ab.rule34.porn",
+        "covered_by_suffix": "porn"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,abbott.vo.llnwd.net",
+        "covered_by_suffix": "llnwd.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ablink.info.wise.com",
+        "covered_by_suffix": "wise.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,abt.nike.com",
+        "covered_by_suffix": "nike.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,abt.s3.yandex.net",
+        "covered_by_suffix": "yandex.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,abvghl.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ac2.tnaflix.com",
+        "covered_by_suffix": "tnaflix.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,acache.ilbe.com",
+        "covered_by_suffix": "ilbe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,acclog001.shop-pro.jp",
+        "covered_by_suffix": "shop-pro.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,acclog002.shop-pro.jp",
+        "covered_by_suffix": "shop-pro.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,acds-events.adobe.io",
+        "covered_by_suffix": "adobe.io"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ace.naver.com",
+        "covered_by_suffix": "naver.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,aclog.itmedia.co.jp",
+        "covered_by_suffix": "itmedia.co.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,acollector.wb.ru",
+        "covered_by_suffix": "wb.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-api.band.us",
+        "covered_by_suffix": "band.us"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-channel.wikawika.xyz",
+        "covered_by_suffix": "wikawika.xyz"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-creative.pstatic.net",
+        "covered_by_suffix": "pstatic.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-creatives-public.commondatastorage.googleapis.com",
+        "covered_by_suffix": "googleapis.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-ettoday.cdn.hinet.net",
+        "covered_by_suffix": "hinet.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-log-upload-os.hoyoverse.com",
+        "covered_by_suffix": "hoyoverse.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad-serve.b-cdn.net",
+        "covered_by_suffix": "b-cdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.52av.one",
+        "covered_by_suffix": "52av.one"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.abcnews.com",
+        "covered_by_suffix": "abcnews.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.abema.io",
+        "covered_by_suffix": "abema.io"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.daum.net",
+        "covered_by_suffix": "daum.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.deviantart.com",
+        "covered_by_suffix": "deviantart.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.duapps.com",
+        "covered_by_suffix": "duapps.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.duga.jp",
+        "covered_by_suffix": "duga.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.eporner.com",
+        "covered_by_suffix": "eporner.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.ettoday.net",
+        "covered_by_suffix": "ettoday.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.flipboard.com",
+        "covered_by_suffix": "flipboard.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.goo.ne.jp",
+        "covered_by_suffix": "goo.ne.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.ilbe.com",
+        "covered_by_suffix": "ilbe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.iloveinterracial.com",
+        "covered_by_suffix": "iloveinterracial.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.kakaobank.com",
+        "covered_by_suffix": "kakaobank.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.lgappstv.com",
+        "covered_by_suffix": "lgappstv.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.line-scdn.net",
+        "covered_by_suffix": "line-scdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.mail.ru",
+        "covered_by_suffix": "mail.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.nicovideo.jp",
+        "covered_by_suffix": "nicovideo.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.parkvv.com",
+        "covered_by_suffix": "parkvv.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.pornimg.xyz",
+        "covered_by_suffix": "pornimg.xyz"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.thisav.com",
+        "covered_by_suffix": "thisav.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.usatoday.com",
+        "covered_by_suffix": "usatoday.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.woman.mynavi.jp",
+        "covered_by_suffix": "mynavi.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad.xrea.com",
+        "covered_by_suffix": "xrea.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad1.popcap.com",
+        "covered_by_suffix": "popcap.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad1.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad2.nationalreview.com",
+        "covered_by_suffix": "nationalreview.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad2.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad2.xrea.com",
+        "covered_by_suffix": "xrea.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad2.zophar.net",
+        "covered_by_suffix": "zophar.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad3.nationalreview.com",
+        "covered_by_suffix": "nationalreview.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad3.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad3.xrea.com",
+        "covered_by_suffix": "xrea.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad4.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,ad5.udn.com",
+        "covered_by_suffix": "udn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adagiobanner.s3.amazonaws.com",
+        "covered_by_suffix": "amazonaws.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adbq.bk.mufg.jp",
+        "covered_by_suffix": "bk.mufg.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adbutler.costco.com",
+        "covered_by_suffix": "costco.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adc-js.nine.com.au",
+        "covered_by_suffix": "nine.com.au"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adc.9news.com.au",
+        "covered_by_suffix": "9news.com.au"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adc.nine.com.au",
+        "covered_by_suffix": "nine.com.au"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adcast.deviantart.com",
+        "covered_by_suffix": "deviantart.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adcdn.gamemeca.com",
+        "covered_by_suffix": "gamemeca.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adcdn.goo.ne.jp",
+        "covered_by_suffix": "goo.ne.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adconfigproxy.azurewebsites.net",
+        "covered_by_suffix": "azurewebsites.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,addthiscdn.com",
+        "covered_by_suffix": "addthiscdn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adebis.sbishinseibank.co.jp",
+        "covered_by_suffix": "sbishinseibank.co.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adelogs.adobe.com",
+        "covered_by_suffix": "adobe.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adengine.rt.ru",
+        "covered_by_suffix": "rt.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adeventtracker.spotify.com",
+        "covered_by_suffix": "spotify.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adeventtrackermonitoring.spotify.com",
+        "covered_by_suffix": "spotify.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adf.underhentai.net",
+        "covered_by_suffix": "underhentai.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adfox.yandex.ru",
+        "covered_by_suffix": "yandex.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adfstat.yandex.ru",
+        "covered_by_suffix": "yandex.ru"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adgbb.io.naver.com",
+        "covered_by_suffix": "naver.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adhub.porcino-kinoko.workers.dev",
+        "covered_by_suffix": "workers.dev"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adimages.go.com",
+        "covered_by_suffix": "go.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adinplay-venatus.workers.dev",
+        "covered_by_suffix": "workers.dev"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adl.national-lottery.co.uk",
+        "covered_by_suffix": "national-lottery.co.uk"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adm.6park.com",
+        "covered_by_suffix": "6park.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adm.baidu.com",
+        "covered_by_suffix": "baidu.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admarketing.yahoo.net",
+        "covered_by_suffix": "yahoo.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admarvel.s3.amazonaws.com",
+        "covered_by_suffix": "amazonaws.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admd.yam.com",
+        "covered_by_suffix": "yam.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admeld.com",
+        "covered_by_suffix": "admeld.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admob-cn.com",
+        "covered_by_suffix": "admob-cn.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admob.com",
+        "covered_by_suffix": "admob.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admost-banner.b-cdn.net",
+        "covered_by_suffix": "b-cdn.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,admsapi.businessweekly.com.tw",
+        "covered_by_suffix": "businessweekly.com.tw"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adn.ebay.com",
+        "covered_by_suffix": "ebay.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adn.porndig.com",
+        "covered_by_suffix": "porndig.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adncdnend.azureedge.net",
+        "covered_by_suffix": "azureedge.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adnet.asahi.com",
+        "covered_by_suffix": "asahi.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adnl.bk.mufg.jp",
+        "covered_by_suffix": "bk.mufg.jp"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adobe-ep.cms.gov",
+        "covered_by_suffix": "cms.gov"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adobecorp.data.adobedc.net",
+        "covered_by_suffix": "adobedc.net"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adobemetrics.auth0.com",
+        "covered_by_suffix": "auth0.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adobetag.com",
+        "covered_by_suffix": "adobetag.com"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,adpublisher.s3.amazonaws.com",
+        "covered_by_suffix": "amazonaws.com"
+      }
+    ]
+  },
+  "child_policy_split_audit": {
+    "count": 540,
+    "samples": [
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "gemini",
+          "rule": "DOMAIN,ai.google.dev"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.dev"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,ai.google.dev"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.dev"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alkalicore-pa.clients6.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "gemini",
+          "rule": "DOMAIN,alkalimakersuite-pa.clients6.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alkalimakersuite-pa.clients6.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt1-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt2-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt3-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt4-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt5-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt6-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt7-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,alt8-mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,android.googlesource.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googlesource.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,antigravity-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,antigravity.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,api.msn.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,msn.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,api.msn.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,msn.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,api.statsig.com"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,api.statsig.com"
+        },
+        "parent_categories": [
+          "ai",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,api.statsig.com"
+        },
+        "parent": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN-SUFFIX,api.statsig.com"
+        },
+        "parent_categories": [
+          "ai",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,api.viu.now.com"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "max",
+          "rule": "DOMAIN-SUFFIX,now.com"
+        },
+        "parent_categories": [
+          "global",
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,apple.com.akadns.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,akadns.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,assets.msn.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,msn.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,assets.msn.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,msn.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,audio-ak-spotify-com.akamaized.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "spotify",
+          "rule": "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "streaming",
+          "item": "spotify",
+          "rule": "DOMAIN,audio4-ak-spotify-com.akamaized.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,akamaized.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,az764295.vo.msecnd.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,msecnd.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,azure.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,azuremarketplace.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,bingsettingssearch.trafficmanager.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,trafficmanager.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,bybit-exchange.github.io"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,github.io"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN,chat.openai.com.cdn.cloudflare.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,cdn.cloudflare.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,client-teamviewer-com.trafficmanager.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,trafficmanager.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,clients1.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,cloudaicompanion.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,cloudcode-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,configuration-lb.ls-apple.com.akadns.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,akadns.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,copilot-proxy.githubusercontent.com"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,copilot-workspace.githubnext.com"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,githubnext.com"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,copilot.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,copilot.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,copilotprodattachments.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,crl.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,daily-cloudcode-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,default.exp-tas.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,exp-tas.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,developer.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,developers.facebook.com"
+        },
+        "parent": {
+          "category": "social",
+          "item": "facebook",
+          "rule": "DOMAIN-SUFFIX,facebook.com"
+        },
+        "parent_categories": [
+          "global",
+          "social"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,discord-attachments-uploads-prd.storage.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,disneyplus.com.ssl.sc.omtrdc.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "disney",
+          "rule": "DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,dtlgalleryint.cloudapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,cloudapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "streaming",
+          "item": "netflix",
+          "rule": "DOMAIN,e13252.dscg.akamaiedge.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,akamaiedge.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,epc-de-agent-proxy.germanywestcentral.cloudapp.azure.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azure.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,espn.api.edge.bamgrid.com"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "disney",
+          "rule": "DOMAIN-SUFFIX,bamgrid.com"
+        },
+        "parent_categories": [
+          "global",
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,espn.hb.omtrdc.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "disney",
+          "rule": "DOMAIN-SUFFIX,espn.hb.omtrdc.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,espndotcom.tt.omtrdc.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "disney",
+          "rule": "DOMAIN-SUFFIX,espndotcom.tt.omtrdc.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,fbcdn-a.akamaihd.net"
+        },
+        "parent": {
+          "category": "social",
+          "item": "facebook",
+          "rule": "DOMAIN-SUFFIX,fbcdn-a.akamaihd.net"
+        },
+        "parent_categories": [
+          "social"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebase.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebase.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaseappcheck.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebasedynamiclinks-ipv4.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebasedynamiclinks-ipv6.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebasedynamiclinks.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaseinappmessaging.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaseinstallations.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaselogging-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaselogging.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaseperusertopics-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,firebaseremoteconfig.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,flightsimulator.azureedge.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azureedge.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,gateway.bingviz.microsoft.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,gateway.bingviz.microsoft.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,gateway.bingviz.microsoftapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoftapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,gateway.bingviz.microsoftapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoftapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,generativelanguage.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,gigabyte2.azureedge.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azureedge.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,github-cloud.s3.amazonaws.com"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com"
+        },
+        "parent_categories": [
+          "developer"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,gitlab-assets.oss-cn-hongkong.aliyuncs.com"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "gitlab",
+          "rule": "DOMAIN-SUFFIX,gitlab-assets.oss-cn-hongkong.aliyuncs.com"
+        },
+        "parent_categories": [
+          "developer"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "streaming",
+          "item": "spotify",
+          "rule": "DOMAIN,heads-ak-spotify-com.akamaized.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,akamaized.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,heads4-ak-spotify-com.akamaized.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "spotify",
+          "rule": "DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,hls-amt.itunes.apple.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "apple",
+          "rule": "DOMAIN-SUFFIX,itunes.apple.com"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,hls.itunes.apple.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "apple",
+          "rule": "DOMAIN-SUFFIX,itunes.apple.com"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,hulu.playback.edge.bamgrid.com"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "disney",
+          "rule": "DOMAIN-SUFFIX,bamgrid.com"
+        },
+        "parent_categories": [
+          "global",
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,img-s-msn-com.akamaized.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,img-s-msn-com.akamaized.net"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,in.appcenter.ms"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,appcenter.ms"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,in.appcenter.ms"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,appcenter.ms"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,location.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,location.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "gemini",
+          "rule": "DOMAIN,makersuite.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,makersuite.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,matsuridayo.github.io"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,github.io"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,metacubex.github.io"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,github.io"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mscrl.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mtalk-dev.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mtalk-staging.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mtalk.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mtalk4.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,mwf-service.akamaized.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,mwf-service.akamaized.net"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,netflix.com.edgesuite.net"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "netflix",
+          "rule": "DOMAIN-SUFFIX,netflix.com.edgesuite.net"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,nix-community.github.io"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,github.io"
+        },
+        "parent_categories": [
+          "developer",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,notary-submissions-prod.s3.us-west-2.amazonaws.com"
+        },
+        "parent": {
+          "category": "streaming",
+          "item": "netflix",
+          "rule": "DOMAIN-SUFFIX,us-west-2.amazonaws.com"
+        },
+        "parent_categories": [
+          "streaming"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,notebooklm-pa.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,notebooklm.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,np-edge.itunes.apple.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "apple",
+          "rule": "DOMAIN-SUFFIX,itunes.apple.com"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,ocsp.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,odc.officeapps.live.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,live.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,odc.officeapps.live.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,live.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,officecdn-microsoft-com.akamaized.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,officecdn-microsoft-com.akamaized.net"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,oneocsp.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,openaiapi-site.azureedge.net"
+        },
+        "parent": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN-SUFFIX,openaiapi-site.azureedge.net"
+        },
+        "parent_categories": [
+          "ai",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,openaiassets.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azurefd.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azurefd.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,openaicom.imgix.net"
+        },
+        "parent": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN-SUFFIX,openaicom.imgix.net"
+        },
+        "parent_categories": [
+          "ai",
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "service",
+          "item": "bilibili",
+          "rule": "DOMAIN,p-bstarstatic.akamaized.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,akamaized.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "social",
+          "item": "tiktok",
+          "rule": "DOMAIN,p16-tiktokcdn-com.akamaized.net"
+        },
+        "parent": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN-SUFFIX,akamaized.net"
+        },
+        "parent_categories": [
+          "global"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,packages.microsoft.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,microsoft.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,paper-attachments.s3.amazonaws.com"
+        },
+        "parent": {
+          "category": "developer",
+          "item": "dropbox",
+          "rule": "DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com"
+        },
+        "parent_categories": [
+          "developer"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,pki.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,play-edge.itunes.apple.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "apple",
+          "rule": "DOMAIN-SUFFIX,itunes.apple.com"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,poshtestgallery.cloudapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,cloudapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,preprod-publicca.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,prodforza.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "openai",
+          "rule": "DOMAIN,production-openaicom-storage.azureedge.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azureedge.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,production-openaicom-storage.azureedge.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,azureedge.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa0.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa1.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa10.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa11.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa12.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa13.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa14.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa15.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa16.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa17.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa18.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa19.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa2.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa3.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa4.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa5.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa6.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa7.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa8.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,productionresultssa9.blob.core.windows.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,windows.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,psg-int-centralus.cloudapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,cloudapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,psg-int-eastus.cloudapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,cloudapp.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,publicca.googleapis.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,googleapis.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,push-apple.com.akadns.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,akadns.net"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "ai",
+          "item": "copilot",
+          "rule": "DOMAIN,r.bing.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,bing.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,r.bing.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,bing.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,rink.hockeyapp.net"
+        },
+        "parent": {
+          "category": "service",
+          "item": "microsoft",
+          "rule": "DOMAIN-SUFFIX,hockeyapp.net"
+        },
+        "parent_categories": [
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.ae"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.ae"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.at"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.at"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.be"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.be"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.bg"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.bg"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.ca"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.ca"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.cat"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.cat"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.ch"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.ch"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.cl"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.cl"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.cn"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.cn"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.cr"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.cr"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.id"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.id"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.il"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.il"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.in"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.in"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.jp"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.jp"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.kr"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.kr"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.nz"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.nz"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.th"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.th"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.uk"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.uk"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.ve"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.ve"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.co.za"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.co.za"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.ar"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.ar"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.au"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.au"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.bo"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.bo"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.br"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.br"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.co"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.co"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.cu"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.cu"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.do"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.do"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.ec"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.ec"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.eg"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.eg"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.gt"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.gt"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.hk"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.hk"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.ly"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.ly"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.mx"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.mx"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.my"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.my"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.ni"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.ni"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.pa"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.pa"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.pe"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.pe"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.ph"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.ph"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.pk"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.pk"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.pr"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.pr"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.py"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.py"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.sg"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.sg"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.sv"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.sv"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.tr"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.tr"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      },
+      {
+        "type": "child_policy_split",
+        "child": {
+          "category": "global",
+          "item": "proxy",
+          "rule": "DOMAIN,scholar.google.com.tw"
+        },
+        "parent": {
+          "category": "service",
+          "item": "google",
+          "rule": "DOMAIN-SUFFIX,google.com.tw"
+        },
+        "parent_categories": [
+          "global",
+          "service"
+        ]
+      }
+    ]
+  },
+  "child_collapse": {
+    "moved_count": 0,
+    "samples": []
+  },
+  "policy": {
+    "reject_proxy_overlap_sanitize": true,
+    "collapse_child_to_parent_category": false,
+    "child_policy_split_severity": "WARNING",
+    "proxy_categories": [
+      "ai",
+      "streaming",
+      "social",
+      "developer",
+      "service",
+      "global"
+    ]
+  },
   "compiled_output_audit": {
     "valid": true,
     "problem_count": 0,
     "problems": [],
     "counts": {
-      "ai": 67,
-      "streaming": 1596,
-      "social": 672,
+      "ai": 71,
+      "streaming": 1600,
+      "social": 677,
       "developer": 70,
-      "service": 1983,
-      "global": 24965,
-      "china": 119627,
-      "reject": 191002
+      "service": 2016,
+      "global": 25053,
+      "china": 119628,
+      "reject": 185293
     }
   },
   "config_audit": [],
   "gate": {
     "status": "PASS",
     "severity_counts": {
-      "WARNING": 1,
-      "INFO": 2
+      "WARNING": 2,
+      "INFO": 3
     },
     "findings": [
       {
@@ -42601,38 +45878,51 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 9435
+        "count": 3145
       },
       {
         "severity": "INFO",
         "reason": "semantic_cidr_redundancy",
         "count": 434
+      },
+      {
+        "severity": "INFO",
+        "reason": "reject_proxy_overlap_sanitized",
+        "count": 5709
+      },
+      {
+        "severity": "WARNING",
+        "reason": "child_policy_split",
+        "count": 540
       }
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 3411,
+    "exact_duplicate_occurrences": 3276,
     "same_category_duplicate_rule_count": 62,
-    "cross_category_conflict_count": 3262,
-    "semantic_domain_redundancy_count": 9435,
+    "cross_category_conflict_count": 3165,
+    "semantic_domain_redundancy_count": 3145,
     "semantic_cidr_redundancy_count": 434,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 0,
-    "compiled_output_problem_count": 0
+    "compiled_output_problem_count": 0,
+    "reject_proxy_overlap_removed": 5709,
+    "child_policy_split_count": 540,
+    "child_collapsed_count": 0
   },
   "direct_sanitization": {
-    "input_rules": 110953,
-    "output_rules": 110953,
+    "input_rules": 120528,
+    "output_rules": 110952,
     "removed": {
-      "non_domain": 0,
-      "foreign_tld": 0,
-      "explicit_deny": 0,
-      "proxy_category_overlap": 0,
-      "invalid": 0
+      "non_domain": 8065,
+      "foreign_tld": 841,
+      "explicit_deny": 2,
+      "proxy_category_overlap": 626,
+      "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 27915,
+    "proxy_domain_evidence_rules": 28049,
     "foreign_tld_count": 829
   }
 }
