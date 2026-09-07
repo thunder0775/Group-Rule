@@ -5,7 +5,8 @@ No domain allowlists. Uses semantic parent/child DOMAIN-SUFFIX coverage to:
 1) strip reject rules covered by proxy categories
 2) dedupe the same rule across proxy categories (priority winner keeps it)
 3) optionally collapse children into a higher-priority parent category (never demote)
-4) audit remaining demotions / multi-parent inconsistencies
+4) unify CDN/infra children onto parent category (avoid Turnstile split-path)
+5) audit remaining demotions / multi-parent inconsistencies
 """
 from __future__ import annotations
 
@@ -22,6 +23,22 @@ ROOT_TLDS = {
 
 # Default matches config/priority.json category_order (proxy subset, higher priority first).
 DEFAULT_PROXY_ORDER = list(PROXY_CATEGORIES)
+
+# Shared CDN / bot-management parents. Specialty categories (ai/streaming/…) must not
+# keep children under these when the parent lives in another proxy category (usually
+# global). Otherwise main site and Turnstile/challenge hit different node groups.
+INFRA_PARENT_SUFFIXES = {
+    "cloudflare.com",
+    "cloudflare.net",
+    "cdn.cloudflare.net",
+    "cloudflareinsights.com",
+    "cloudflarechallenge.com",
+    "cloudflare-dns.com",
+    "cloudflareclient.com",
+    "workers.dev",
+    "pages.dev",
+    "r2.dev",
+}
 
 
 def domain_norm(value: str) -> str:
@@ -296,6 +313,96 @@ def audit_child_policy_split(categories, order, limit):
     return {"count": len(findings), "samples": findings[:limit]}
 
 
+def unify_infrastructure_to_parent(categories, order, limit, write_list, atomic_path):
+    """Move specialty-category rules under infra parents into the parent's category.
+
+    Example: challenges.cloudflare.com in ai + cloudflare.com in global
+    → move challenge rule to global so Turnstile shares the same node group.
+    """
+    rank = _rank_map(order)
+    # parent_suffix -> list of (category, item, rule) for DOMAIN-SUFFIX parents in INFRA set
+    suffix_owners = defaultdict(list)
+    for category in PROXY_CATEGORIES:
+        for name, rules in categories.get(category, {}).items():
+            for rule in rules:
+                kind, value = rule.split(",", 1)
+                if kind != "DOMAIN-SUFFIX":
+                    continue
+                value = domain_norm(value)
+                if value in INFRA_PARENT_SUFFIXES:
+                    suffix_owners[value].append((category, name, rule))
+
+    # Also index exact infra names that only appear as DOMAIN
+    for category in PROXY_CATEGORIES:
+        for name, rules in categories.get(category, {}).items():
+            for rule in rules:
+                kind, value = rule.split(",", 1)
+                if kind == "DOMAIN-SUFFIX":
+                    value = domain_norm(value)
+                    if value in INFRA_PARENT_SUFFIXES and value not in suffix_owners:
+                        suffix_owners[value].append((category, name, rule))
+
+    if not suffix_owners:
+        return {"moved_count": 0, "samples": []}
+
+    moved = []
+    to_remove = defaultdict(list)
+    to_add = defaultdict(list)
+
+    for category in PROXY_CATEGORIES:
+        for name, rules in categories.get(category, {}).items():
+            for rule in rules:
+                kind, value = rule.split(",", 1)
+                if kind not in DOMAIN_TYPES:
+                    continue
+                domain = domain_norm(value)
+                # Find longest matching infra parent that actually exists in the index
+                labels = domain.split(".")
+                parent = None
+                for i in range(len(labels)):
+                    cand = ".".join(labels[i:])
+                    if cand in suffix_owners:
+                        parent = cand
+                        break
+                if not parent:
+                    # domain itself is an infra parent rule — leave ownership to dedupe
+                    continue
+                owners = suffix_owners[parent]
+                pcat, pname, prule = min(
+                    owners, key=lambda x: (rank.get(x[0], 10**9), x[0], x[1], x[2])
+                )
+                # Prefer global when parent is multi-owned including global (CDN path)
+                owner_cats = {c for c, _, _ in owners}
+                if "global" in owner_cats:
+                    for c, n, r in owners:
+                        if c == "global":
+                            pcat, pname, prule = c, n, r
+                            break
+                if pcat == category:
+                    continue
+                # Only move when current category is specialty (not already on parent path)
+                to_remove[(category, name)].append(rule)
+                to_add[(pcat, pname)].append(rule)
+                moved.append({
+                    "rule": rule,
+                    "from": {"category": category, "item": name},
+                    "to": {"category": pcat, "item": pname},
+                    "parent_rule": prule,
+                    "infra_parent": parent,
+                })
+
+    for (cat, name), rules in to_remove.items():
+        drop = set(rules)
+        categories[cat][name] = [r for r in categories[cat][name] if r not in drop]
+        write_list(atomic_path(cat, name), categories[cat][name], f"atomic:{cat}/{name}:infra-unify")
+
+    for (cat, name), rules in to_add.items():
+        categories[cat][name] = list(dict.fromkeys(categories[cat].get(name, []) + rules))
+        write_list(atomic_path(cat, name), categories[cat][name], f"atomic:{cat}/{name}:infra-unify")
+
+    return {"moved_count": len(moved), "samples": moved[:limit]}
+
+
 def apply_policy_consistency(categories, scfg, limit, write_list, atomic_path, validate_rule_set, statuses, quality):
     """Run sanitize / dedupe / optional collapse / split audit. Mutates categories in place."""
     policy = scfg.get("policy", {})
@@ -344,7 +451,8 @@ def apply_policy_consistency(categories, scfg, limit, write_list, atomic_path, v
                 categories, order, limit, write_list, atomic_path
             )
             dedupe_stats["removed_count"] += extra["removed_count"]
-            room = max(0, limit - len(dedupe_stats["samples"]))
+            room = max(0, limit - len(dedupe_stats["samples"])
+            )
             dedupe_stats["samples"].extend(extra["samples"][:room])
         second = collapse_children_to_parent_category(
             categories, order, limit, write_list, atomic_path
@@ -361,16 +469,36 @@ def apply_policy_consistency(categories, scfg, limit, write_list, atomic_path, v
                     statuses[key]["rule_count"] = len(rules)
                 quality[key] = validate_rule_set(rules)
 
+    infra_stats = {"moved_count": 0, "samples": []}
+    unify_infra = bool(policy.get("unify_infrastructure_to_parent", True))
+    if unify_infra:
+        infra_stats = unify_infrastructure_to_parent(
+            categories, order, limit, write_list, atomic_path
+        )
+        if dedupe_proxy:
+            extra = dedupe_proxy_cross_category(
+                categories, order, limit, write_list, atomic_path
+            )
+            dedupe_stats["removed_count"] += extra["removed_count"]
+        for category in PROXY_CATEGORIES:
+            for name, rules in categories.get(category, {}).items():
+                key = f"{category}/{name}"
+                if key in statuses:
+                    statuses[key]["rule_count"] = len(rules)
+                quality[key] = validate_rule_set(rules)
+
     split_audit = audit_child_policy_split(categories, order, limit)
     return {
         "reject_sanitize_stats": reject_sanitize_stats,
         "dedupe_stats": dedupe_stats,
         "collapse_stats": collapse_stats,
+        "infra_unify_stats": infra_stats,
         "split_audit": split_audit,
         "split_severity": split_severity,
         "reject_sanitize": reject_sanitize,
         "dedupe_proxy": dedupe_proxy,
         "collapse_children": collapse_children,
+        "unify_infrastructure_to_parent": unify_infra,
         "proxy_categories": list(PROXY_CATEGORIES),
         "proxy_category_order": order,
     }
