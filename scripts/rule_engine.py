@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Shadowrocket rule engine entrypoint.
-
-Loads the full engine body from rule_engine.payload.b64 (gzip+base64) on first
-import path resolution, then executes it. Keeps the logical engine in one place
-while allowing the source blob to be transported as a compact payload file.
-"""
+"""Shadowrocket rule engine entrypoint."""
 from __future__ import annotations
 
 import base64
@@ -15,15 +10,16 @@ from pathlib import Path
 
 _HERE = Path(__file__).resolve().parent
 _BODY = _HERE / "_rule_engine_impl.py"
-_PAYLOAD = _HERE / "rule_engine.payload.b64"
 
 
 def _materialize() -> Path:
     if _BODY.exists() and _BODY.stat().st_size > 1000:
         return _BODY
-    if not _PAYLOAD.exists():
-        raise SystemExit(f"missing engine payload: {_PAYLOAD}")
-    data = gzip.decompress(base64.b64decode(_PAYLOAD.read_text(encoding="ascii")))
+    parts = sorted(_HERE.glob("rule_engine.payload.part*"))
+    if not parts:
+        raise SystemExit(f"missing engine payload parts under {_HERE}")
+    b64 = "".join(p.read_text(encoding="ascii").strip() for p in parts)
+    data = gzip.decompress(base64.b64decode(b64))
     _BODY.write_bytes(data)
     return _BODY
 
