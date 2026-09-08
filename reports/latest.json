@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T01:17:38+00:00",
+  "generated_at": "2026-09-08T05:04:41+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 180004,
-      "previous_count": 183808,
+      "previous_count": 180004,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 189833,
+          "previous_source_rules": 186028,
           "considered_lines": 186028,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 189840,
+          "previous_source_rules": 186035,
           "considered_lines": 186035,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
