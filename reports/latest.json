@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T19:36:57+00:00",
+  "generated_at": "2026-09-09T22:05:02+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19223,
-          "sha256": "4ab1ba219cec8f8104829c26ae390925273faf2d8d4a8bdac8b98df671d13afa",
+          "sha256": "a3f0323cffc9a86fd69d9fc7bff35374bd34d97cc651ee0e1d5b2bacbcc32b55",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 597,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "9c6016c1c1ceb52f0513fcfe6a64221e883e1ec92c1debaf9315c1ee33e3fc98",
+          "sha256": "38cb2d310c015d088c5c0ea27698a788e8b41c3f0f019fcca2bd8aa83b97f3bc",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911051,
-          "sha256": "7e8231a5bed24ce62c0077749e2b77cb51b007ac1756bd99d851a88a56568db1",
+          "sha256": "dfb321488c67b1c8a33325d33bc74f4bf59088807d3e59af0ec4de51c2043088",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31914,
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "ea535f611e0451aa553685a3a251c2f53724d0c835710fb5cf71d46816575b58",
+          "sha256": "002bb55b211312e61c2e0eae699e25888b0bac7c4c034accf007e7a6c50f4d26",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
