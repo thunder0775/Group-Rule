@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T01:47:20+00:00",
+  "generated_at": "2026-09-09T05:03:22+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49632,
-      "previous_count": 49631,
+      "previous_count": 49632,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27086,
+          "previous_source_rules": 27087,
           "considered_lines": 27087,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27312,
+          "previous_source_rules": 27313,
           "considered_lines": 27320,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911051,
-          "sha256": "15457162545baa2d626b3f907168ccaa9b2816a33eacb5ae10d98fbc278c7685",
+          "sha256": "19d52b88a93071c0de16db91e95a2d9353d1547d7e0e0c57b018a30300acf320",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31914,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 180373,
-      "previous_count": 180004,
+      "previous_count": 180373,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 186028,
+          "previous_source_rules": 186402,
           "considered_lines": 186402,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 186035,
+          "previous_source_rules": 186409,
           "considered_lines": 186409,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
