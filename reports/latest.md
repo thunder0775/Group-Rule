@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-09-11T22:11:40+00:00`
+生成时间：`2026-09-12T04:55:03+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -15,12 +15,12 @@
 - 精确重复出现次数：`2239`
 - 同分类重复规则：`132`
 - 跨分类重复规则：`1950`
-- DOMAIN 语义冗余：`6313`
+- DOMAIN 语义冗余：`6285`
 - CIDR 语义冗余：`445`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7012`
+- reject 与代理域重叠已剔除：`7013`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`800`
 
@@ -33,9 +33,9 @@
 - `gaming`：708 条
 - `shopping`：453 条
 - `service`：2038 条
-- `global`：48496 条
+- `global`：48480 条
 - `china`：120163 条
-- `reject`：181314 条
+- `reject`：181670 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`6313`（排除裸 TLD）
+DOMAIN 父子覆盖：`6285`（排除裸 TLD）
 CIDR 父网覆盖子网：`445`
 
 ### DOMAIN 示例
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`445`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7012`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`7013`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
@@ -208,6 +208,7 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,61serve.everydayporn.co` ← covered by `None`
 - `DOMAIN-SUFFIX,682a5845.b-cdn.net` ← covered by `None`
 - `DOMAIN-SUFFIX,6969.javher.com` ← covered by `None`
+- `DOMAIN-SUFFIX,7lzwgj.donaukurier.de` ← covered by `None`
 - `DOMAIN-SUFFIX,7ng6v3lu3c.execute-api.us-east-1.amazonaws.com` ← covered by `None`
 - `DOMAIN-SUFFIX,7q1z79gxsi.global.ssl.fastly.net` ← covered by `None`
 - `DOMAIN-SUFFIX,911.x24hr.com` ← covered by `None`
@@ -215,7 +216,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,a-da.invideo.io` ← covered by `None`
 - `DOMAIN-SUFFIX,a-delivery.rmbl.ws` ← covered by `None`
 - `DOMAIN-SUFFIX,a-reporting.nytimes.com` ← covered by `None`
-- `DOMAIN-SUFFIX,a.20minutes.fr` ← covered by `None`
 
 ## 子域并入父分类
 
