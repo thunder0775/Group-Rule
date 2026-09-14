@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T00:27:32+00:00",
+  "generated_at": "2026-09-14T05:16:52+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 910514,
-          "sha256": "ddced46ccf2ef5c4b9d3657375782e288f42abfe82a00f20ff8aabf9608bf23a",
+          "sha256": "16ec5120c83e54f2a895014da6794a42d4e888acd017f5bc33341babff165276",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31898,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 182211,
-      "previous_count": 181830,
+      "previous_count": 182211,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 187863,
-          "considered_lines": 187863,
+          "considered_lines": 188242,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6535324,
-          "sha256": "90bf73338f2d05ab03fee60d4e7adf673b4d08bb7eeb943e15d88a9480357ae4",
+          "bytes": 6547768,
+          "sha256": "9ab805b4bfa95ea2facd7ef5dc23cbd6ae1f9cf8bdeb2bbfec2128ca7b7ecf96",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 187863,
+          "rules": 188242,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 187870,
+          "previous_source_rules": 188249,
           "considered_lines": 188249,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
