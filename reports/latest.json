@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T05:16:52+00:00",
+  "generated_at": "2026-09-14T05:20:22+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 187863,
+          "previous_source_rules": 188242,
           "considered_lines": 188242,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
