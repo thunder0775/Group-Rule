@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T01:30:22+00:00",
+  "generated_at": "2026-09-16T05:07:04+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -385,7 +385,7 @@
     "social/tiktok": {
       "state": "updated",
       "rule_count": 44,
-      "previous_count": 43,
+      "previous_count": 44,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49619,
-      "previous_count": 49616,
+      "previous_count": 49619,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27088,
+          "previous_source_rules": 27092,
           "considered_lines": 27092,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27314,
+          "previous_source_rules": 27318,
           "considered_lines": 27325,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 182972,
-      "previous_count": 182211,
+      "previous_count": 182972,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 188242,
+          "previous_source_rules": 189002,
           "considered_lines": 189002,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 188249,
+          "previous_source_rules": 189009,
           "considered_lines": 189009,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
