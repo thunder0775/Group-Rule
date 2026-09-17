@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T00:34:32+00:00",
+  "generated_at": "2026-09-17T05:11:35+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1059,7 +1059,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 951443,
-          "sha256": "dbe71434ed09ebb80ae9959de190e65f3565cb95946bd22403d4fd2c5ae3ff0b",
+          "sha256": "2f778c9ec318ea59b450266b432565532506e69a95eef333bdc9c5f1f71a369a",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 27318,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 910514,
-          "sha256": "47103ff61584b120d370b6d9c1af30d2d60ca3c55c428f5b6d2b90c081d1299a",
+          "sha256": "dcff1bbdd64329d591d0e9b56fe65a79719aabaf7a593a98f631150dd8619fd2",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31898,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 182972,
+      "rule_count": 182928,
       "previous_count": 182972,
       "healthy_sources": 4,
       "sources": [
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 189002,
-          "considered_lines": 189002,
+          "considered_lines": 188956,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6572900,
-          "sha256": "6253c4db837377d8c7c286adf40754283cf99e036c8879a7c69d077009f53cac",
+          "bytes": 6573619,
+          "sha256": "3d438a0248cf13faf3ecdd37bffafe5aa04bfa3d31fe83e0e69f8b2a3e9b394c",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 189002,
+          "rules": 188956,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 189009,
-          "considered_lines": 189009,
+          "considered_lines": 188963,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 7896206,
-          "sha256": "789a8d9f129c2eea3af6a11e1ad7295b9a4116003689c95b27dd63f4c906e8dd",
+          "bytes": 7896603,
+          "sha256": "12487bd79051ebd1271276dbc618cee082d8e535049b71429393f58ecc242dc4",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 189009,
+          "rules": 188963,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7011
+      "reject_proxy_overlap_removed": 7009
     },
     "reject/privacy": {
       "state": "updated",
@@ -1276,8 +1276,8 @@
     "shopping": 453,
     "service": 2038,
     "global": 48483,
-    "china": 120163,
-    "reject": 183161
+    "china": 120176,
+    "reject": 183117
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -8052,10 +8052,6 @@
       "china",
       "reject"
     ],
-    "DOMAIN-SUFFIX,dzjzg.com": [
-      "china",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,easyrecoverychina.com": [
       "china",
       "reject"
@@ -8077,10 +8073,6 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,evyy.net": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,ewrrpuquc1.com": [
       "china",
       "reject"
     ],
@@ -8177,14 +8169,6 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,gnla02071qp.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,goi08130kh.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,goi08160kh.com": [
       "china",
       "reject"
     ],
@@ -8296,10 +8280,6 @@
       "china",
       "reject"
     ],
-    "DOMAIN-SUFFIX,instrument95.com": [
-      "china",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,iper2.com": [
       "china",
       "reject"
@@ -8389,10 +8369,6 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,lady177.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,le4le.com": [
       "china",
       "reject"
     ],
@@ -8536,23 +8512,11 @@
       "china",
       "reject"
     ],
-    "DOMAIN-SUFFIX,nio08310lt.com": [
-      "china",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,niuk12020gi.com": [
       "china",
       "reject"
     ],
     "DOMAIN-SUFFIX,ntfsformac.cc": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,nug08030lu.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,nug08031lu.com": [
       "china",
       "reject"
     ],
@@ -8696,10 +8660,6 @@
       "china",
       "reject"
     ],
-    "DOMAIN-SUFFIX,s4y6lhotaw.com": [
-      "china",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,sbird.xyz": [
       "china",
       "reject"
@@ -8820,14 +8780,6 @@
       "china",
       "reject"
     ],
-    "DOMAIN-SUFFIX,vbc08100op.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,vbc08101op.com": [
-      "china",
-      "reject"
-    ],
     "DOMAIN-SUFFIX,vhgu5ivtew.com": [
       "china",
       "reject"
@@ -8905,10 +8857,6 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,xdyjt.com": [
-      "china",
-      "reject"
-    ],
-    "DOMAIN-SUFFIX,xegnfwkju.com": [
       "china",
       "reject"
     ],
@@ -22255,13 +22203,6 @@
         "reject"
       ]
     },
-    "DOMAIN-SUFFIX,dzjzg.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,easyrecoverychina.com": {
       "winner": "reject",
       "categories": [
@@ -22298,13 +22239,6 @@
       ]
     },
     "DOMAIN-SUFFIX,evyy.net": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,ewrrpuquc1.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -22473,20 +22407,6 @@
       ]
     },
     "DOMAIN-SUFFIX,gnla02071qp.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,goi08130kh.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,goi08160kh.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -22682,13 +22602,6 @@
         "reject"
       ]
     },
-    "DOMAIN-SUFFIX,instrument95.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,iper2.com": {
       "winner": "reject",
       "categories": [
@@ -22844,13 +22757,6 @@
       ]
     },
     "DOMAIN-SUFFIX,lady177.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,le4le.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -23102,13 +23008,6 @@
         "reject"
       ]
     },
-    "DOMAIN-SUFFIX,nio08310lt.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,niuk12020gi.com": {
       "winner": "reject",
       "categories": [
@@ -23117,20 +23016,6 @@
       ]
     },
     "DOMAIN-SUFFIX,ntfsformac.cc": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,nug08030lu.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,nug08031lu.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -23382,13 +23267,6 @@
         "reject"
       ]
     },
-    "DOMAIN-SUFFIX,s4y6lhotaw.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,sbird.xyz": {
       "winner": "reject",
       "categories": [
@@ -23599,20 +23477,6 @@
         "reject"
       ]
     },
-    "DOMAIN-SUFFIX,vbc08100op.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,vbc08101op.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
     "DOMAIN-SUFFIX,vhgu5ivtew.com": {
       "winner": "reject",
       "categories": [
@@ -23747,13 +23611,6 @@
       ]
     },
     "DOMAIN-SUFFIX,xdyjt.com": {
-      "winner": "reject",
-      "categories": [
-        "china",
-        "reject"
-      ]
-    },
-    "DOMAIN-SUFFIX,xegnfwkju.com": {
       "winner": "reject",
       "categories": [
         "china",
@@ -24499,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 182191,
+        "DOMAIN-SUFFIX": 182147,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24527,7 +24384,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6287,
+    "count": 6284,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -29153,12 +29010,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7012,
+    "removed_count": 7010,
     "per_item": {
       "advertising": {
-        "before": 189983,
-        "after": 182972,
-        "removed": 7011
+        "before": 189937,
+        "after": 182928,
+        "removed": 7009
       },
       "privacy": {
         "before": 20,
@@ -32610,8 +32467,8 @@
       "shopping": 453,
       "service": 2038,
       "global": 48483,
-      "china": 120163,
-      "reject": 183161
+      "china": 120176,
+      "reject": 183117
     }
   },
   "config_audit": [],
@@ -32636,7 +32493,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6287
+        "count": 6284
       },
       {
         "severity": "INFO",
@@ -32646,7 +32503,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7012
+        "count": 7010
       },
       {
         "severity": "INFO",
@@ -32656,16 +32513,16 @@
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 2239,
+    "exact_duplicate_occurrences": 2226,
     "same_category_duplicate_rule_count": 132,
-    "cross_category_conflict_count": 1950,
-    "semantic_domain_redundancy_count": 6287,
+    "cross_category_conflict_count": 1937,
+    "semantic_domain_redundancy_count": 6284,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7012,
+    "reject_proxy_overlap_removed": 7010,
     "child_policy_split_count": 0,
     "child_collapsed_count": 801
   },
