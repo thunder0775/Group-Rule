@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T19:07:32+00:00",
+  "generated_at": "2026-09-17T22:15:22+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19223,
-          "sha256": "15f29b49e49335977e880be7932d1bef67ddd50e64392682c01e96586ad76faa",
+          "sha256": "19569cafe6c66e5f471d8335cc4bfc2bcafda750cf15d9f0eb11fc45c52b7079",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 597,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "38cb2d310c015d088c5c0ea27698a788e8b41c3f0f019fcca2bd8aa83b97f3bc",
+          "sha256": "c5c29f2bc3732f19ad8200d2c1058ac829096f7b86580ff02896057ca493bed2",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "7eb4f3be306e91c2682cf314885dbaa67eee5fe2b36ddc0935a115b414d69e5e",
+          "sha256": "f9d14b305dc081e08725b8bffddc7b43dbd279fb99fad566d1f1edad29974c5a",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
