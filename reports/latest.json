@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T01:04:49+00:00",
+  "generated_at": "2026-09-22T05:17:08+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1036,15 +1036,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 27098,
-          "considered_lines": 27098,
+          "considered_lines": 27100,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 776813,
-          "sha256": "0b17d7a26787e7d6c0553e6568235b9e4331d71aba1e20573f2a1204f40b303e",
+          "bytes": 776869,
+          "sha256": "c1a6af52a0db0ea59b27f29c25fa639ce039f4db6448320c785298dab012b494",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27098,
+          "rules": 27100,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27324,
+          "previous_source_rules": 27326,
           "considered_lines": 27333,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 910514,
-          "sha256": "4007c7e53560c34e57219cde952342251523cb666652f3ee3d3cd3fc4d82f630",
+          "sha256": "ef0ed3a22f84b984ff5367a4e26423cdf020af877c37929f7a4aa7bd1077e77a",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31898,
@@ -1133,8 +1133,8 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 184720,
-      "previous_count": 184354,
+      "rule_count": 184718,
+      "previous_count": 184720,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 190384,
-          "considered_lines": 190384,
+          "considered_lines": 190748,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6620813,
-          "sha256": "70b7a998a9faa0e60fea3e0ee0066d3b768b4a70940988ba560db8c76e8d20dd",
+          "bytes": 6632823,
+          "sha256": "eafed25777178bf34174f7af55b57ea6d08d11a6f1f92625c0528a8437305d8a",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 190384,
+          "rules": 190748,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 190391,
+          "previous_source_rules": 190755,
           "considered_lines": 190755,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1277,7 +1277,7 @@
     "service": 2039,
     "global": 48488,
     "china": 120176,
-    "reject": 184909
+    "reject": 184907
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24356,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 183939,
+        "DOMAIN-SUFFIX": 183937,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -29013,8 +29013,8 @@
     "removed_count": 7012,
     "per_item": {
       "advertising": {
-        "before": 191731,
-        "after": 184720,
+        "before": 191729,
+        "after": 184718,
         "removed": 7011
       },
       "privacy": {
@@ -32468,7 +32468,7 @@
       "service": 2039,
       "global": 48488,
       "china": 120176,
-      "reject": 184909
+      "reject": 184907
     }
   },
   "config_audit": [],
