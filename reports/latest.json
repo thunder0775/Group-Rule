@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T18:56:31+00:00",
+  "generated_at": "2026-09-22T01:04:49+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19223,
-          "sha256": "634558b7eac472f12a4b3e03eda51d681f87710888e482c665d8ad7d68ddb5a9",
+          "sha256": "d67d70d65aad3cdc24e940e0587bdaad720d6a75e15b27b5ab76cdeaa9f05df0",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 597,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "c5c29f2bc3732f19ad8200d2c1058ac829096f7b86580ff02896057ca493bed2",
+          "sha256": "523c65bd12018c152a7f7af38ebad7b6a72a345003964b0edb123d6999b73561",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1054,15 +1054,15 @@
           "policy_filter": "PROXY",
           "min_rules": 1,
           "previous_source_rules": 27324,
-          "considered_lines": 27331,
+          "considered_lines": 27333,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 951687,
-          "sha256": "892021757d0644c491edb1df6e416733cd08b650297268847357d4808b4c460c",
+          "bytes": 951755,
+          "sha256": "47f618f6b6b9834406cb7fc35171fffa4c6dce454cb78271976267f4276f47e1",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27324,
+          "rules": 27326,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 910514,
-          "sha256": "d72f5b83300200436cbe2c1f5474b24fbcf3987cc92b318ea9f1b0bbfd33ef70",
+          "sha256": "4007c7e53560c34e57219cde952342251523cb666652f3ee3d3cd3fc4d82f630",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31898,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 184354,
+      "rule_count": 184720,
       "previous_count": 184354,
       "healthy_sources": 4,
       "sources": [
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "ad55354160bc1296c08ba1efbe84cbc4c3f9636f85c9bf589535f8c9bdc337f8",
+          "sha256": "cfa81f43f1d4b091d44877bf4c4a6e84ec3857b7bac50b31cc5cd24a8d205deb",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 190391,
-          "considered_lines": 190391,
+          "considered_lines": 190755,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 7953793,
-          "sha256": "96c7f018e654efe055f93eb56c52d7ee350473af406f4d659db080cf89061bce",
+          "bytes": 7968351,
+          "sha256": "a5afbdc5d599e14509da4b3f204650ded38d3275795bd06d9e027b3149e75925",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 190391,
+          "rules": 190755,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1277,7 +1277,7 @@
     "service": 2039,
     "global": 48488,
     "china": 120176,
-    "reject": 184543
+    "reject": 184909
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24356,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 183573,
+        "DOMAIN-SUFFIX": 183939,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -29013,8 +29013,8 @@
     "removed_count": 7012,
     "per_item": {
       "advertising": {
-        "before": 191365,
-        "after": 184354,
+        "before": 191731,
+        "after": 184720,
         "removed": 7011
       },
       "privacy": {
@@ -32468,7 +32468,7 @@
       "service": 2039,
       "global": 48488,
       "china": 120176,
-      "reject": 184543
+      "reject": 184909
     }
   },
   "config_audit": [],
