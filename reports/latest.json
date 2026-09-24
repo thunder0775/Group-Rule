@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T22:23:14+00:00",
+  "generated_at": "2026-09-24T00:44:04+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1059,7 +1059,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 951755,
-          "sha256": "1586c56a51c6500c660e57b7dede6207de635b7bbe9fc231262b4a3cdc502edb",
+          "sha256": "b61fd0f802b96456b39cefe68f4cc4b05cd0c06695d907120f970d6fc5dc5550",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 27326,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 910514,
-          "sha256": "8db02e0b6fccdae478da42cedc875d955ca1f15b05c18f69e847bba3b79adb5f",
+          "sha256": "05a76202c899c8aecb530eb71b0419865d7b07749419fa7f8b2aa24160c78434",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31898,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 185048,
+      "rule_count": 185369,
       "previous_count": 185048,
       "healthy_sources": 4,
       "sources": [
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 191087,
-          "considered_lines": 191087,
+          "considered_lines": 191408,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 7981604,
-          "sha256": "72eaddc164ec570e5413940d3a39dcaf77c19af06258cbe27b3e86f25fa9fc82",
+          "bytes": 7994411,
+          "sha256": "67391733721624fa55fdced0993b150ef80436e91253933e5f4513b371c720c0",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 191087,
+          "rules": 191408,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7013
+      "reject_proxy_overlap_removed": 7014
     },
     "reject/privacy": {
       "state": "updated",
@@ -1277,7 +1277,7 @@
     "service": 2039,
     "global": 48488,
     "china": 120176,
-    "reject": 185237
+    "reject": 185558
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24356,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 184267,
+        "DOMAIN-SUFFIX": 184588,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24384,7 +24384,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6288,
+    "count": 6290,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -29010,12 +29010,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7014,
+    "removed_count": 7015,
     "per_item": {
       "advertising": {
-        "before": 192061,
-        "after": 185048,
-        "removed": 7013
+        "before": 192383,
+        "after": 185369,
+        "removed": 7014
       },
       "privacy": {
         "before": 20,
@@ -32468,7 +32468,7 @@
       "service": 2039,
       "global": 48488,
       "china": 120176,
-      "reject": 185237
+      "reject": 185558
     }
   },
   "config_audit": [],
@@ -32493,7 +32493,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6288
+        "count": 6290
       },
       {
         "severity": "INFO",
@@ -32503,7 +32503,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7014
+        "count": 7015
       },
       {
         "severity": "INFO",
@@ -32516,13 +32516,13 @@
     "exact_duplicate_occurrences": 2226,
     "same_category_duplicate_rule_count": 132,
     "cross_category_conflict_count": 1937,
-    "semantic_domain_redundancy_count": 6288,
+    "semantic_domain_redundancy_count": 6290,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7014,
+    "reject_proxy_overlap_removed": 7015,
     "child_policy_split_count": 0,
     "child_collapsed_count": 802
   },
