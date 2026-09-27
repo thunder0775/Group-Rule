@@ -49,6 +49,8 @@ dns-fallback-system = false
 ⚡ 优选 = fallback,interval=600,timeout=1,url=https://cesu.laoyoutiaot.link,policy-regex-filter=^(?!.*(住宅|Grok)).*$
 # AI 为唯一专用网络，不与普通代理池混用。
 🧠 AI = fallback,interval=600,timeout=2,url=https://chat.openai.com/cdn-cgi/trace,policy-regex-filter=Grok专用|住宅
+# TikTok 专用网络：只使用名称匹配 TikTok专用 的节点，独立于普通代理池。
+🎵 TikTok = fallback,interval=600,timeout=2,url=https://www.tiktok.com/robots.txt,policy-regex-filter=TikTok专用
 
 [Rule]
 # 规则顺序：reject > china > ai > streaming > gaming > developer > social > shopping > service > global。
@@ -71,7 +73,10 @@ RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/atomic/ai
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/atomic/ai/copilot.list,🧠 AI,force-remote-dns
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/atomic/ai/xai.list,🧠 AI,force-remote-dns
 
-# 05. 其余专项分类全部交给 🚀 策略选择。
+# 05. TikTok：独立专用网络，必须先于 social.list 命中。
+RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/tiktok.list,🎵 TikTok,force-remote-dns
+
+# 06. 其余专项分类全部交给 🚀 策略选择。
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/streaming.list,🚀 策略选择,force-remote-dns
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/gaming.list,🚀 策略选择,force-remote-dns
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/developer.list,🚀 策略选择,force-remote-dns
@@ -80,10 +85,10 @@ RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/service.list,🚀 策略选择,force-remote-dns
 RULE-SET,https://raw.laoyoutiao.link/thunder0775/Group-Rule/main/rules/compiled/global.list,🚀 策略选择,force-remote-dns
 
-# 06. 显式 IP 的中国大陆兜底；no-resolve 防止 DNS 解析导致海外域名误判。
+# 07. 显式 IP 的中国大陆兜底；no-resolve 防止 DNS 解析导致海外域名误判。
 GEOIP,CN,DIRECT,no-resolve
 
-# 07. 未分类流量统一交给 🚀 策略选择。
+# 08. 未分类流量统一交给 🚀 策略选择。
 FINAL,🚀 策略选择
 
 [Host]
