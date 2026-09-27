@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T11:52:44+00:00",
+  "generated_at": "2026-09-27T12:05:28+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -32537,7 +32537,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 51866,
+    "proxy_domain_evidence_rules": 51860,
     "foreign_tld_count": 829
   }
 }
