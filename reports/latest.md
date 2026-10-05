@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-05T00:23:33+00:00`
+生成时间：`2026-10-05T06:02:35+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -20,7 +20,7 @@
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7016`
+- reject 与代理域重叠已剔除：`7017`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`804`
 
@@ -33,9 +33,9 @@
 - `gaming`：708 条
 - `shopping`：453 条
 - `service`：2041 条
-- `global`：48496 条
+- `global`：48497 条
 - `china`：120176 条
-- `reject`：181256 条
+- `reject`：181555 条
 
 ## 闸门结果
 
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`445`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7016`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`7017`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
