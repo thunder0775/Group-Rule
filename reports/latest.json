@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T06:00:14+00:00",
+  "generated_at": "2026-10-07T06:21:02+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49647,
-      "previous_count": 49633,
+      "previous_count": 49647,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27111,
+          "previous_source_rules": 27140,
           "considered_lines": 27140,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27337,
+          "previous_source_rules": 27366,
           "considered_lines": 27373,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111298,
+      "previous_count": 111297,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 181984,
-      "previous_count": 181678,
+      "previous_count": 181984,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 187715,
+          "previous_source_rules": 188023,
           "considered_lines": 188023,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 187722,
+          "previous_source_rules": 188030,
           "considered_lines": 188030,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32528,16 +32528,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 51920,
+    "proxy_domain_evidence_rules": 51884,
     "foreign_tld_count": 829
   }
 }
