@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T02:41:17+00:00",
+  "generated_at": "2026-10-09T06:33:24+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -463,7 +463,7 @@
     "developer/github": {
       "state": "updated",
       "rule_count": 47,
-      "previous_count": 45,
+      "previous_count": 47,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49653,
-      "previous_count": 49651,
+      "previous_count": 49653,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1036,15 +1036,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 27144,
-          "considered_lines": 27144,
+          "considered_lines": 27148,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 778055,
-          "sha256": "bf765380e80022a6ab77a3ec034fe35cef5598cbb2fcfbb1df40dc38bad8aa35",
+          "bytes": 778237,
+          "sha256": "ef61197210a641c074211acb6be1effa51103e34b10db1b8888fc8b64c3e3e36",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27144,
+          "rules": 27148,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27370,
+          "previous_source_rules": 27374,
           "considered_lines": 27381,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911075,
-          "sha256": "d2511bd9f0ecbc4c95cc3fd6e517c69d18f5574cee0246bf893a9d4137fd77b9",
+          "sha256": "934b2b981c02200fc0683e15bb1c27898afd341af5ce2b74df22f340f7fd0973",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31919,
@@ -1133,8 +1133,8 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 182598,
-      "previous_count": 182271,
+      "rule_count": 182594,
+      "previous_count": 182598,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 188314,
-          "considered_lines": 188314,
+          "considered_lines": 188639,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6550041,
-          "sha256": "0c946ba2ec8fd1a4c58d757f92c297f5f0aceb532385326c6ee1d99ef8114467",
+          "bytes": 6560683,
+          "sha256": "b9145f584ffb8ef96155e00f38fee2ad554b98aa85b12e37d749bb4613d0022d",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 188314,
+          "rules": 188639,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 188321,
+          "previous_source_rules": 188646,
           "considered_lines": 188646,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1277,7 +1277,7 @@
     "service": 2041,
     "global": 48517,
     "china": 120176,
-    "reject": 182787
+    "reject": 182783
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24356,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 181817,
+        "DOMAIN-SUFFIX": 181813,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24384,7 +24384,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6301,
+    "count": 6299,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -29013,8 +29013,8 @@
     "removed_count": 7026,
     "per_item": {
       "advertising": {
-        "before": 189623,
-        "after": 182598,
+        "before": 189619,
+        "after": 182594,
         "removed": 7025
       },
       "privacy": {
@@ -30807,6 +30807,30 @@
         "parent_rule": "DOMAIN-SUFFIX,githubusercontent.com"
       },
       {
+        "rule": "DOMAIN,copilot-telemetry-service.githubusercontent.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "developer",
+          "item": "github"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,githubusercontent.com"
+      },
+      {
+        "rule": "DOMAIN,copilot-telemetry.githubusercontent.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "developer",
+          "item": "github"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,githubusercontent.com"
+      },
+      {
         "rule": "DOMAIN,copilot-workspace.githubnext.com",
         "from": {
           "category": "global",
@@ -32413,30 +32437,6 @@
           "item": "google"
         },
         "parent_rule": "DOMAIN-SUFFIX,google.com.sg"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.sv",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.sv"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.tr",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.tr"
       }
     ],
     "passes": 2
@@ -32468,7 +32468,7 @@
       "service": 2041,
       "global": 48517,
       "china": 120176,
-      "reject": 182787
+      "reject": 182783
     }
   },
   "config_audit": [],
@@ -32493,7 +32493,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6301
+        "count": 6299
       },
       {
         "severity": "INFO",
@@ -32516,7 +32516,7 @@
     "exact_duplicate_occurrences": 2226,
     "same_category_duplicate_rule_count": 132,
     "cross_category_conflict_count": 1937,
-    "semantic_domain_redundancy_count": 6301,
+    "semantic_domain_redundancy_count": 6299,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
@@ -32528,16 +32528,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 51928,
+    "proxy_domain_evidence_rules": 51892,
     "foreign_tld_count": 829
   }
 }
