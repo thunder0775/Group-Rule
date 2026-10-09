@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T17:44:01+00:00",
+  "generated_at": "2026-10-09T02:41:17+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -462,7 +462,7 @@
     },
     "developer/github": {
       "state": "updated",
-      "rule_count": 45,
+      "rule_count": 47,
       "previous_count": 45,
       "healthy_sources": 1,
       "sources": [
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 49651,
+      "rule_count": 49653,
       "previous_count": 49651,
       "healthy_sources": 3,
       "sources": [
@@ -1054,15 +1054,15 @@
           "policy_filter": "PROXY",
           "min_rules": 1,
           "previous_source_rules": 27370,
-          "considered_lines": 27377,
+          "considered_lines": 27381,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 953205,
-          "sha256": "55f279eb6133ca7d3cf1ae822a0e1430e8e137a70f112570f2fb13d741dd7d81",
+          "bytes": 953411,
+          "sha256": "e279083107108feccf3b26be621a3ce0b45d24a06f3a1eff1a6f3bd2a639de8b",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27370,
+          "rules": 27374,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911075,
-          "sha256": "a8378da72d9a4c14cb2e79fcc82397f0517f6b3b56541b1e1c1ef5267a1a81bd",
+          "sha256": "d2511bd9f0ecbc4c95cc3fd6e517c69d18f5574cee0246bf893a9d4137fd77b9",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31919,
@@ -1116,12 +1116,12 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 0,
-          "considered_lines": 111393,
-          "malformed_lines": 111393,
+          "considered_lines": 111725,
+          "malformed_lines": 111725,
           "invalid_ratio": 1.0,
           "status_code": 200,
-          "bytes": 2304442,
-          "sha256": "d7bff4c90e03d703797f35b1592af68636e33787e0e1052dde783f9d66981c8f",
+          "bytes": 2311238,
+          "sha256": "6ecbfd74ab9682c1c9bf511fa0f734535514548a35e882bbf716cdb46e30ada1",
           "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
           "content_type": "text/plain; charset=utf-8",
           "rules": 0,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 182271,
+      "rule_count": 182598,
       "previous_count": 182271,
       "healthy_sources": 4,
       "sources": [
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 188321,
-          "considered_lines": 188321,
+          "considered_lines": 188646,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 7868531,
-          "sha256": "513f8e859173bef6d026361963b308f823a3d9f2cad2d4e6ef5fab363e75bf01",
+          "bytes": 7881448,
+          "sha256": "a24f3b80e5dc439a9b4e4dcffa797accf93ea1a8d5d01d0796baa2e9a771df23",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 188321,
+          "rules": 188646,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7023
+      "reject_proxy_overlap_removed": 7025
     },
     "reject/privacy": {
       "state": "updated",
@@ -1271,13 +1271,13 @@
     "ai": 78,
     "streaming": 1805,
     "social": 766,
-    "developer": 164,
+    "developer": 166,
     "gaming": 708,
     "shopping": 453,
     "service": 2041,
-    "global": 48515,
+    "global": 48517,
     "china": 120176,
-    "reject": 182460
+    "reject": 182787
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24124,7 +24124,7 @@
     },
     "developer/github": {
       "type_counts": {
-        "DOMAIN": 10,
+        "DOMAIN": 12,
         "DOMAIN-KEYWORD": 1,
         "DOMAIN-SUFFIX": 34
       },
@@ -24327,7 +24327,7 @@
     },
     "global/proxy": {
       "type_counts": {
-        "DOMAIN": 510,
+        "DOMAIN": 512,
         "DOMAIN-KEYWORD": 7,
         "DOMAIN-SUFFIX": 48976,
         "IP-CIDR": 13,
@@ -24356,7 +24356,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 181490,
+        "DOMAIN-SUFFIX": 181817,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24384,7 +24384,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6295,
+    "count": 6301,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -26237,6 +26237,32 @@
         "covered": {
           "category": "developer",
           "item": "github",
+          "rule": "DOMAIN,copilot-telemetry-service.githubusercontent.com"
+        },
+        "covering": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN,copilot-telemetry.githubusercontent.com"
+        },
+        "covering": {
+          "category": "developer",
+          "item": "github",
+          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "developer",
+          "item": "github",
           "rule": "DOMAIN,copilot-workspace.githubnext.com"
         },
         "covering": {
@@ -26953,32 +26979,6 @@
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN,d2be40xdoc0in8.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2dylwb3shzel1.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2dylwb3shzel1.cloudfront.net"
         },
         "covering": {
           "category": "shopping",
@@ -29010,12 +29010,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7024,
+    "removed_count": 7026,
     "per_item": {
       "advertising": {
-        "before": 189294,
-        "after": 182271,
-        "removed": 7023
+        "before": 189623,
+        "after": 182598,
+        "removed": 7025
       },
       "privacy": {
         "before": 20,
@@ -30036,7 +30036,7 @@
     "samples": []
   },
   "child_collapse": {
-    "moved_count": 804,
+    "moved_count": 806,
     "samples": [
       {
         "rule": "DOMAIN-SUFFIX,disney.my.sentry.io",
@@ -32462,13 +32462,13 @@
       "ai": 78,
       "streaming": 1805,
       "social": 766,
-      "developer": 164,
+      "developer": 166,
       "gaming": 708,
       "shopping": 453,
       "service": 2041,
-      "global": 48515,
+      "global": 48517,
       "china": 120176,
-      "reject": 182460
+      "reject": 182787
     }
   },
   "config_audit": [],
@@ -32493,7 +32493,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6295
+        "count": 6301
       },
       {
         "severity": "INFO",
@@ -32503,12 +32503,12 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7024
+        "count": 7026
       },
       {
         "severity": "INFO",
         "reason": "child_collapsed_to_parent_category",
-        "count": 804
+        "count": 806
       }
     ]
   },
@@ -32516,15 +32516,15 @@
     "exact_duplicate_occurrences": 2226,
     "same_category_duplicate_rule_count": 132,
     "cross_category_conflict_count": 1937,
-    "semantic_domain_redundancy_count": 6295,
+    "semantic_domain_redundancy_count": 6301,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7024,
+    "reject_proxy_overlap_removed": 7026,
     "child_policy_split_count": 0,
-    "child_collapsed_count": 804
+    "child_collapsed_count": 806
   },
   "direct_sanitization": {
     "input_rules": 120528,
@@ -32537,7 +32537,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 51924,
+    "proxy_domain_evidence_rules": 51928,
     "foreign_tld_count": 829
   }
 }
