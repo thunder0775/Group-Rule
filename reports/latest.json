@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T18:41:53+00:00",
+  "generated_at": "2026-10-13T23:14:49+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19223,
-          "sha256": "81e8ceb4f590806c2f60537059bd20a26165d736acf975776e3377a1153ea15f",
+          "sha256": "003e60e83989e57af8b25e7e427e77bfe3ed7d7b0675f6967e81ee4f771bb0d2",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 597,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "a96f78883f1659ba6966e45551cb031b86b40d24118677c66ad27e141ae4816e",
+          "sha256": "dd467e3a4fe207961c5b96464df18c3d759b03d318313000a2f71253495a948f",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911075,
-          "sha256": "604c696b80848b20fa1abb21826e7cf7ef96e69e04580fc5bbce049eca56078f",
+          "sha256": "7831c3ffd7c274421da901644a61cabb29967774460e13b2d9132c2b13b29486",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31919,
@@ -1116,12 +1116,12 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 0,
-          "considered_lines": 110925,
-          "malformed_lines": 110925,
+          "considered_lines": 110615,
+          "malformed_lines": 110615,
           "invalid_ratio": 1.0,
           "status_code": 200,
-          "bytes": 2293950,
-          "sha256": "c91a00128a071c6a3fa94c11cf7448ed1552a691e84ffb30a43b5838b9e39abc",
+          "bytes": 2287419,
+          "sha256": "8b5a1eb6595bd1c23e39f65df75e2129ca65c0b6273024dcf725ef4d999438fa",
           "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
           "content_type": "text/plain; charset=utf-8",
           "rules": 0,
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "5ed67f498bc7b7e065b5a5ba5c3cdedce9f7b867ee0f1757cbbc5072eaeb4aec",
+          "sha256": "7f9542ecfa7adcd00b398177e529d734f5b6da751c1202ba3763a4e280f2e434",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
@@ -3336,6 +3336,10 @@
       "gaming",
       "global"
     ],
+    "DOMAIN-SUFFIX,pvp.net": [
+      "gaming",
+      "global"
+    ],
     "DOMAIN-SUFFIX,pvp.tv": [
       "gaming",
       "global"
@@ -3356,11 +3360,19 @@
       "gaming",
       "global"
     ],
+    "DOMAIN-SUFFIX,riotcdn.net": [
+      "gaming",
+      "global"
+    ],
     "DOMAIN-SUFFIX,riotforgegames.com": [
       "gaming",
       "global"
     ],
     "DOMAIN-SUFFIX,riotgames.co.kr": [
+      "gaming",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,riotgames.com": [
       "gaming",
       "global"
     ],
@@ -3449,18 +3461,6 @@
       "global"
     ],
     "DOMAIN-SUFFIX,uplay.com": [
-      "gaming",
-      "global"
-    ],
-    "DOMAIN-SUFFIX,pvp.net": [
-      "gaming",
-      "global"
-    ],
-    "DOMAIN-SUFFIX,riotcdn.net": [
-      "gaming",
-      "global"
-    ],
-    "DOMAIN-SUFFIX,riotgames.com": [
       "gaming",
       "global"
     ],
@@ -13926,6 +13926,13 @@
         "global"
       ]
     },
+    "DOMAIN-SUFFIX,pvp.net": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
     "DOMAIN-SUFFIX,pvp.tv": {
       "winner": "gaming",
       "categories": [
@@ -13961,6 +13968,13 @@
         "global"
       ]
     },
+    "DOMAIN-SUFFIX,riotcdn.net": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
     "DOMAIN-SUFFIX,riotforgegames.com": {
       "winner": "gaming",
       "categories": [
@@ -13969,6 +13983,13 @@
       ]
     },
     "DOMAIN-SUFFIX,riotgames.co.kr": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
+    "DOMAIN-SUFFIX,riotgames.com": {
       "winner": "gaming",
       "categories": [
         "gaming",
@@ -14123,27 +14144,6 @@
       ]
     },
     "DOMAIN-SUFFIX,uplay.com": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,pvp.net": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,riotcdn.net": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,riotgames.com": {
       "winner": "gaming",
       "categories": [
         "gaming",
