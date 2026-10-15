@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T18:33:04+00:00",
+  "generated_at": "2026-10-15T21:52:24+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -384,7 +384,7 @@
     },
     "social/tiktok": {
       "state": "updated",
-      "rule_count": 44,
+      "rule_count": 47,
       "previous_count": 44,
       "healthy_sources": 1,
       "sources": [
@@ -394,15 +394,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 32,
-          "considered_lines": 32,
+          "considered_lines": 35,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 1100,
-          "sha256": "403dccb2d51606d73db9e669e82cc1d9030c7e697756ae13d9f8f5fea53c151a",
+          "bytes": 1186,
+          "sha256": "94262918311e66c8a3bcf5a65173ff0c4e1ceaa29e24644acafadc127121a295",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 32,
+          "rules": 35,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19223,
-          "sha256": "003e60e83989e57af8b25e7e427e77bfe3ed7d7b0675f6967e81ee4f771bb0d2",
+          "sha256": "ae8b957942e25c420f29f750e22dfa47169709a68c560a75def6cc36257e6ada",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 597,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "dd467e3a4fe207961c5b96464df18c3d759b03d318313000a2f71253495a948f",
+          "sha256": "0c0262104652ba952e4a933ecec393a33a11085c68c37d0b70c4074e7823f6cb",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911075,
-          "sha256": "ddd61bcff77224976c6a0c5ff4acfdc6965fde9b501686e0cc26dde21b1029bd",
+          "sha256": "a1609947ef633e2f1650b12db92cc25ad681dfd565f523776c9a66350a469e45",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31919,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 187618,
+      "rule_count": 187605,
       "previous_count": 187618,
       "healthy_sources": 4,
       "sources": [
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "7f9542ecfa7adcd00b398177e529d734f5b6da751c1202ba3763a4e280f2e434",
+          "sha256": "9e8593bc2a5a7100ec4689aa91cec2187de662003803b925229e43210eec8387",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7030
+      "reject_proxy_overlap_removed": 7043
     },
     "reject/privacy": {
       "state": "updated",
@@ -1270,14 +1270,14 @@
   "compiled_counts": {
     "ai": 78,
     "streaming": 1805,
-    "social": 766,
+    "social": 769,
     "developer": 166,
     "gaming": 708,
     "shopping": 453,
     "service": 2041,
     "global": 48602,
     "china": 120201,
-    "reject": 187807
+    "reject": 187794
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -3336,10 +3336,6 @@
       "gaming",
       "global"
     ],
-    "DOMAIN-SUFFIX,pvp.net": [
-      "gaming",
-      "global"
-    ],
     "DOMAIN-SUFFIX,pvp.tv": [
       "gaming",
       "global"
@@ -3360,19 +3356,11 @@
       "gaming",
       "global"
     ],
-    "DOMAIN-SUFFIX,riotcdn.net": [
-      "gaming",
-      "global"
-    ],
     "DOMAIN-SUFFIX,riotforgegames.com": [
       "gaming",
       "global"
     ],
     "DOMAIN-SUFFIX,riotgames.co.kr": [
-      "gaming",
-      "global"
-    ],
-    "DOMAIN-SUFFIX,riotgames.com": [
       "gaming",
       "global"
     ],
@@ -3461,6 +3449,18 @@
       "global"
     ],
     "DOMAIN-SUFFIX,uplay.com": [
+      "gaming",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,pvp.net": [
+      "gaming",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,riotcdn.net": [
+      "gaming",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,riotgames.com": [
       "gaming",
       "global"
     ],
@@ -13850,13 +13850,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,pvp.net": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
     "DOMAIN-SUFFIX,pvp.tv": {
       "winner": "gaming",
       "categories": [
@@ -13892,13 +13885,6 @@
         "global"
       ]
     },
-    "DOMAIN-SUFFIX,riotcdn.net": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
     "DOMAIN-SUFFIX,riotforgegames.com": {
       "winner": "gaming",
       "categories": [
@@ -13907,13 +13893,6 @@
       ]
     },
     "DOMAIN-SUFFIX,riotgames.co.kr": {
-      "winner": "gaming",
-      "categories": [
-        "gaming",
-        "global"
-      ]
-    },
-    "DOMAIN-SUFFIX,riotgames.com": {
       "winner": "gaming",
       "categories": [
         "gaming",
@@ -14068,6 +14047,27 @@
       ]
     },
     "DOMAIN-SUFFIX,uplay.com": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
+    "DOMAIN-SUFFIX,pvp.net": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
+    "DOMAIN-SUFFIX,riotcdn.net": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
+    "DOMAIN-SUFFIX,riotgames.com": {
       "winner": "gaming",
       "categories": [
         "gaming",
@@ -23823,7 +23823,7 @@
       "type_counts": {
         "DOMAIN": 5,
         "DOMAIN-KEYWORD": 2,
-        "DOMAIN-SUFFIX": 36,
+        "DOMAIN-SUFFIX": 39,
         "USER-AGENT": 1
       },
       "invalid_domains": [],
@@ -24081,7 +24081,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 186837,
+        "DOMAIN-SUFFIX": 186824,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -28735,12 +28735,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7031,
+    "removed_count": 7044,
     "per_item": {
       "advertising": {
         "before": 194648,
-        "after": 187618,
-        "removed": 7030
+        "after": 187605,
+        "removed": 7043
       },
       "privacy": {
         "before": 20,
@@ -32186,14 +32186,14 @@
     "counts": {
       "ai": 78,
       "streaming": 1805,
-      "social": 766,
+      "social": 769,
       "developer": 166,
       "gaming": 708,
       "shopping": 453,
       "service": 2041,
       "global": 48602,
       "china": 120201,
-      "reject": 187807
+      "reject": 187794
     }
   },
   "config_audit": [],
@@ -32228,7 +32228,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7031
+        "count": 7044
       },
       {
         "severity": "INFO",
@@ -32247,7 +32247,7 @@
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7031,
+    "reject_proxy_overlap_removed": 7044,
     "child_policy_split_count": 0,
     "child_collapsed_count": 806
   },
@@ -32262,7 +32262,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52013,
+    "proxy_domain_evidence_rules": 52016,
     "foreign_tld_count": 829
   }
 }
