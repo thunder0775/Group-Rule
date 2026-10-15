@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T04:35:49+00:00",
+  "generated_at": "2026-10-15T05:02:51+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1133,8 +1133,8 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 187569,
-      "previous_count": 187595,
+      "rule_count": 187618,
+      "previous_count": 187569,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 193644,
+          "previous_source_rules": 193617,
           "considered_lines": 193617,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 193651,
+          "previous_source_rules": 193624,
           "considered_lines": 193624,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1197,20 +1197,20 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 286,
-          "considered_lines": 1101,
+          "considered_lines": 1152,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 44138,
-          "sha256": "038a7fd5748a9658390e4db78e0067b4e1afa02d9363bf82493056c3167147f7",
+          "bytes": 46230,
+          "sha256": "bf7730c0b9144f4ce11750fcb1ed0c723e203e10e601a80fc834dad67a722691",
           "final_url": "https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 286,
+          "rules": 339,
           "status": "ok",
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7028
+      "reject_proxy_overlap_removed": 7030
     },
     "reject/privacy": {
       "state": "updated",
@@ -1277,7 +1277,7 @@
     "service": 2041,
     "global": 48602,
     "china": 120201,
-    "reject": 187758
+    "reject": 187807
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24081,7 +24081,7 @@
     "reject/advertising": {
       "type_counts": {
         "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 186788,
+        "DOMAIN-SUFFIX": 186837,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24109,7 +24109,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6291,
+    "count": 6332,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -28735,12 +28735,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7029,
+    "removed_count": 7031,
     "per_item": {
       "advertising": {
-        "before": 194597,
-        "after": 187569,
-        "removed": 7028
+        "before": 194648,
+        "after": 187618,
+        "removed": 7030
       },
       "privacy": {
         "before": 20,
@@ -32193,7 +32193,7 @@
       "service": 2041,
       "global": 48602,
       "china": 120201,
-      "reject": 187758
+      "reject": 187807
     }
   },
   "config_audit": [],
@@ -32218,7 +32218,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6291
+        "count": 6332
       },
       {
         "severity": "INFO",
@@ -32228,7 +32228,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7029
+        "count": 7031
       },
       {
         "severity": "INFO",
@@ -32241,28 +32241,28 @@
     "exact_duplicate_occurrences": 2201,
     "same_category_duplicate_rule_count": 132,
     "cross_category_conflict_count": 1912,
-    "semantic_domain_redundancy_count": 6291,
+    "semantic_domain_redundancy_count": 6332,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7029,
+    "reject_proxy_overlap_removed": 7031,
     "child_policy_split_count": 0,
     "child_collapsed_count": 806
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52013,
+    "proxy_domain_evidence_rules": 51977,
     "foreign_tld_count": 829
   }
 }
