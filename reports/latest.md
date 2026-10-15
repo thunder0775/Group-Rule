@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-15T00:02:36+00:00`
+生成时间：`2026-10-15T04:35:49+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,15 +12,15 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2220`
+- 精确重复出现次数：`2201`
 - 同分类重复规则：`132`
-- 跨分类重复规则：`1931`
+- 跨分类重复规则：`1912`
 - DOMAIN 语义冗余：`6291`
 - CIDR 语义冗余：`445`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7030`
+- reject 与代理域重叠已剔除：`7029`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`806`
 
@@ -34,8 +34,8 @@
 - `shopping`：453 条
 - `service`：2041 条
 - `global`：48602 条
-- `china`：120182 条
-- `reject`：187784 条
+- `china`：120201 条
+- `reject`：187758 条
 
 ## 闸门结果
 
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`445`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7030`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`7029`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
@@ -291,7 +291,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,2girls1finger.org` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,2hua.com` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,3337723.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,3337738.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,360.com` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,360ads.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,365dmp.com` → 胜出 `reject`；涉及 china, reject
@@ -324,7 +323,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,880.net` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,88362zubo95838.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,8k69vb6421.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,8x5vviy4r2.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,91.com` → 胜出 `china`；涉及 china, service
 - `DOMAIN-SUFFIX,91cy.app` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,91short.com` → 胜出 `china`；涉及 china, global
@@ -374,6 +372,8 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,ads8.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsame.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsmogo.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,adsmogo.mobi` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,adsmogo.net` → 胜出 `reject`；涉及 china, reject
 
 ## 编译输出校验
 
