@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T21:52:24+00:00",
+  "generated_at": "2026-10-16T00:05:14+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -385,7 +385,7 @@
     "social/tiktok": {
       "state": "updated",
       "rule_count": 47,
-      "previous_count": 44,
+      "previous_count": 47,
       "healthy_sources": 1,
       "sources": [
         {
@@ -393,7 +393,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 32,
+          "previous_source_rules": 35,
           "considered_lines": 35,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911075,
-          "sha256": "a1609947ef633e2f1650b12db92cc25ad681dfd565f523776c9a66350a469e45",
+          "sha256": "71b233925151623670108df92a49e594d27817765934cda8d5a7550edb9ce3a1",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31919,
@@ -1116,12 +1116,12 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 0,
-          "considered_lines": 110615,
-          "malformed_lines": 110615,
+          "considered_lines": 110561,
+          "malformed_lines": 110561,
           "invalid_ratio": 1.0,
           "status_code": 200,
-          "bytes": 2287419,
-          "sha256": "8b5a1eb6595bd1c23e39f65df75e2129ca65c0b6273024dcf725ef4d999438fa",
+          "bytes": 2286325,
+          "sha256": "d2d9549f28bfe21802d2ec31352bb45bfbfc59549e14fdd7f94c9d0f93fdde59",
           "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
           "content_type": "text/plain; charset=utf-8",
           "rules": 0,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 187605,
-      "previous_count": 187618,
+      "previous_count": 187605,
       "healthy_sources": 4,
       "sources": [
         {
