@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T10:44:14+00:00",
+  "generated_at": "2026-10-17T14:03:47+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911102,
-          "sha256": "a3177408f1e3392d6be496a4b011902cd32178d9029f4ccaad41e6b7d9ee0e3b",
+          "sha256": "2774eb500a1c5e2f77be6de7c7dad4ccba66a0446828d3ef2cb9f8cf6095156d",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31920,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111298,
+      "previous_count": 111297,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 188601,
+      "rule_count": 189399,
       "previous_count": 188601,
       "healthy_sources": 4,
       "sources": [
@@ -1197,20 +1197,20 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 339,
-          "considered_lines": 1152,
+          "considered_lines": 2111,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 46230,
-          "sha256": "bf7730c0b9144f4ce11750fcb1ed0c723e203e10e601a80fc834dad67a722691",
+          "bytes": 79521,
+          "sha256": "f8b36534ea1f5b758961fdfd02bf8ba7269a285eb8fd6ab065a32c68d99bb148",
           "final_url": "https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 339,
+          "rules": 1303,
           "status": "ok",
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7043
+      "reject_proxy_overlap_removed": 7205
     },
     "reject/privacy": {
       "state": "updated",
@@ -1276,8 +1276,8 @@
     "shopping": 453,
     "service": 2041,
     "global": 48606,
-    "china": 120201,
-    "reject": 188790
+    "china": 120200,
+    "reject": 189588
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -7633,6 +7633,10 @@
       "reject"
     ],
     "DOMAIN-SUFFIX,1l1.cc": [
+      "china",
+      "reject"
+    ],
+    "DOMAIN-SUFFIX,1rtb.com": [
       "china",
       "reject"
     ],
@@ -21375,6 +21379,13 @@
         "reject"
       ]
     },
+    "DOMAIN-SUFFIX,1rtb.com": {
+      "winner": "reject",
+      "categories": [
+        "china",
+        "reject"
+      ]
+    },
     "DOMAIN-SUFFIX,1sapp.com": {
       "winner": "reject",
       "categories": [
@@ -24080,8 +24091,9 @@
     },
     "reject/advertising": {
       "type_counts": {
-        "DOMAIN-KEYWORD": 278,
-        "DOMAIN-SUFFIX": 187820,
+        "DOMAIN": 788,
+        "DOMAIN-KEYWORD": 282,
+        "DOMAIN-SUFFIX": 187826,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24109,7 +24121,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 6326,
+    "count": 7056,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -24291,6 +24303,45 @@
           "category": "china",
           "item": "domains",
           "rule": "DOMAIN-SUFFIX,ksyungslb.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,1500020991.vodplayer.wxamedia.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,wxamedia.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,1500022744.vodplayer.wxamedia.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,wxamedia.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,1500026601.vodplayer.wxamedia.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,wxamedia.com"
         }
       },
       {
@@ -24829,6 +24880,19 @@
       {
         "type": "exact_domain_covered",
         "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,8le8le.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,8le8le.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN,a.ppy.sh"
@@ -24837,6 +24901,32 @@
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN-SUFFIX,ppy.sh"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,a0.app.xiaomi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,xiaomi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,aaid.umeng.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,umeng.com"
         }
       },
       {
@@ -24959,6 +25049,591 @@
       {
         "type": "exact_domain_covered",
         "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-api.4pyun.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,4pyun.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-cdn.qingting.fm"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,qingting.fm"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-files.4pyun.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,4pyun.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-sdk-config.youdao.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,youdao.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-splash-tracking.hktvmall.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad-splash-tracking.hktvmall.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad-splash.hktvmall.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad-splash.hktvmall.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.51wnl.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,51wnl.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.api.3g.youku.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,youku.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.bn.netease.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,netease.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.bwton.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,bwton.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.cctv.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.cctv.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.duoduo.link"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,duoduo.link"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.gameley.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.gameley.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.hpplay.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.hpplay.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.maoyan.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,maoyan.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.partner.gifshow.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,gifshow.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.qingting.fm"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,qingting.fm"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.qq.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.shenshiads.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,shenshiads.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.shunchangzhixing.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.shunchangzhixing.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.tencentmusic.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.tencentmusic.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.v3mh.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,v3mh.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.ximalaya.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ximalaya.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.xunkids.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,xunkids.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ad.zijieapi.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ad.zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adapi.izuiyou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,izuiyou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adapi.yynetwk.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,yynetwk.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adashbc.ut.taobao.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,taobao.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adashx.m.taobao.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adashx.m.taobao.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adashxgc.ut.taobao.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,taobao.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adcdn.hpplay.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adcdn.hpplay.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adcdn.tencentmusic.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,tencentmusic.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adclick.tencentmusic.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,tencentmusic.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adcolony.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adcolony.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,addata.jd.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,jd.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adeng.hpplay.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adeng.hpplay.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adexpo.tencentmusic.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,tencentmusic.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adfilter.imtt.qq.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adguanggao.eee114.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adguanggao.eee114.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adimg.uve.weibo.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,weibo.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adjust.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adjust.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adlink-api.huan.tv"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,huan.tv"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adm.funshion.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adm.funshion.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adm.zhangyuyidong.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adm.zhangyuyidong.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN,adobe-dns-1.adobe.com"
@@ -25024,6 +25699,851 @@
       {
         "type": "exact_domain_covered",
         "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads-api-o.api.leiniao.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,leiniao.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads-sdk-api.ranfenghd.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ranfenghd.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads-shopping.shouqianba.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,shouqianba.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.95516.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,95516.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.adfunlink.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,adfunlink.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.cup.com.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ads.cup.com.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.huan.tv"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,huan.tv"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.huantest.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,huantest.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.inmobi.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,inmobi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.ishansong.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ishansong.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.servebom.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,servebom.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.service.kugou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,kugou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads.v3mh.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,v3mh.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads3-normal-hl.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads3-normal-lf.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads3-normal-lq.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads3-normal.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads5-normal-hl.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads5-normal-lf.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads5-normal-lq.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ads5-normal.zijieapi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,zijieapi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adse.test.ximalaya.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ximalaya.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adse.wsa.ximalaya.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ximalaya.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adse.ximalaya.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ximalaya.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsebs.ximalaya.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ximalaya.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adservice.sigmob.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,sigmob.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adserviceretry.kugou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,kugou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfile.bssdlbig.kugou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,kugou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfile.qq.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsfile.qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfilebssdlbig.ali.kugou.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsfilebssdlbig.ali.kugou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfileretry.service.kugou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,kugou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfs-sdkconfig.heytapimage.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,heytapimage.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfs.heytapimage.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsfs.heytapimage.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsfs.oppomobile.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsfs.oppomobile.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adslvfile.qq.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adslvfile.qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsmart.konka.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,konka.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsmind.gdtimg.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsmind.gdtimg.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsmind.ugdtimg.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,ugdtimg.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsmoloco.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adsmoloco.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adsp.xunlei.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,xunlei.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstat.izuiyou.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,izuiyou.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstats.tencentmusic.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adstats.tencentmusic.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstextview.qq.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adstextview.qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstore-1252524079.file.myqcloud.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,myqcloud.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstore-index-1252524079.file.myqcloud.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,myqcloud.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adstrategy.biz.weibo.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adstrategy.biz.weibo.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adtracker.adfunlink.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,adfunlink.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adtracker.medproad.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,medproad.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adui.tg.meitu.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adui.tg.meitu.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adv-api.shenshiads.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,shenshiads.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adv.sec.intl.miui.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adv.sec.intl.miui.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adv.sec.miui.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adv.sec.miui.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-bj-req.anythinktech.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,anythinktech.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-bj.anythinktech.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,anythinktech.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-cn.anythinktech.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,anythinktech.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-open-service.youku.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adx-open-service.youku.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-os.anythinktech.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,anythinktech.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-os.bridgeoos.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adx-os.bridgeoos.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-saas.advlion.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,advlion.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx-strategy-api-cn.statisticslinks.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,statisticslinks.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx.ads.heytapmobi.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ads.heytapmobi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx.ads.oppomobile.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ads.oppomobile.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adx.tuia.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "hijacking",
+          "rule": "DOMAIN-SUFFIX,tuia.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,adxlog-adnet.vivo.com.cn"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,adxlog-adnet.vivo.com.cn"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,aegis.qq.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,aegis.qq.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
           "category": "global",
           "item": "proxy",
           "rule": "DOMAIN,afa7f374f51cc8991.awsglobalaccelerator.com"
@@ -25037,6 +26557,19 @@
       {
         "type": "exact_domain_covered",
         "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,agn.aty.sohu.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,sohu.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
           "category": "ai",
           "item": "gemini",
           "rule": "DOMAIN,ai.google.dev"
@@ -25045,6 +26578,71 @@
           "category": "service",
           "item": "google",
           "rule": "DOMAIN-SUFFIX,google.dev"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,aiseet.aa.atianqi.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,atianqi.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ali-ad.a.yximgs.com"
+        },
+        "covering": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN-SUFFIX,ali-ad.a.yximgs.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,ali-p2p-v2.pull.yximgs.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,yximgs.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,alicoccdncnc-xn.inter.71edge.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,71edge.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,alicoccdnct-xn.inter.71edge.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,71edge.com"
         }
       },
       {
@@ -25076,6 +26674,32 @@
       {
         "type": "exact_domain_covered",
         "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,alog.umeng.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,umeng.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
+          "category": "reject",
+          "item": "advertising",
+          "rule": "DOMAIN,alogus.umeng.com"
+        },
+        "covering": {
+          "category": "china",
+          "item": "domains",
+          "rule": "DOMAIN-SUFFIX,umeng.com"
+        }
+      },
+      {
+        "type": "exact_domain_covered",
+        "covered": {
           "category": "service",
           "item": "google",
           "rule": "DOMAIN,alt1-mtalk.google.com"
@@ -25097,1618 +26721,6 @@
           "category": "service",
           "item": "google",
           "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt3-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt4-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt5-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt6-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt7-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,alt8-mtalk.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,amp.akamaized.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,android.googlesource.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,googlesource.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,anime-rule34-world.b-cdn.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,b-cdn.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,antigravity-pa.googleapis.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,googleapis.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,antigravity.googleapis.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,googleapis.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,aod-pod-uk-live.akamaized.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,api.msn.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,msn.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,api.statsig.com"
-        },
-        "covering": {
-          "category": "ai",
-          "item": "openai",
-          "rule": "DOMAIN-SUFFIX,api.statsig.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "streaming",
-          "item": "max",
-          "rule": "DOMAIN,api.viu.now.com"
-        },
-        "covering": {
-          "category": "streaming",
-          "item": "max",
-          "rule": "DOMAIN-SUFFIX,now.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,apkmirror.disqus.com"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,disqus.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,apl-hamivideo.cdn.hinet.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,hinet.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,apple-tv-plus-press.apple.com"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,apple.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN,apple.com.akadns.net"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN-SUFFIX,apple.com.akadns.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN,appleworldwidedeveloper.hb-api.omtrdc.net"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN-SUFFIX,appleworldwidedeveloper.hb-api.omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN,appleworldwidedeveloper.sc.omtrdc.net"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "developer",
-          "rule": "DOMAIN-SUFFIX,appleworldwidedeveloper.sc.omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,as-dash-uk-live.akamaized.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,as-hls-uk-live.akamaized.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,asahishimbun.sc.omtrdc.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,assets.msn.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,msn.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,assets.ppy.sh"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,ppy.sh"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "streaming",
-          "item": "spotify",
-          "rule": "DOMAIN,audio-ak-spotify-com.akamaized.net"
-        },
-        "covering": {
-          "category": "streaming",
-          "item": "spotify",
-          "rule": "DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "streaming",
-          "item": "spotify",
-          "rule": "DOMAIN,audio4-ak-spotify-com.akamaized.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,avatargarenanow-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,avatargarenanow-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,az764295.vo.msecnd.net"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,msecnd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,azure.microsoft.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,microsoft.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,azuremarketplace.microsoft.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,microsoft.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,bcovlive-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,bcsecure01-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,beatselectronicsllc.tt.omtrdc.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,omtrdc.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,bingsettingssearch.trafficmanager.net"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,trafficmanager.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blizzard.nefficient.co.kr"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blizzard.nefficient.co.kr"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blizzcon-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blizzcon-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blzddist1-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blzddist1-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blzddistkr1-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blzddistkr1-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blzmedia-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blzmedia-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,blznav.akamaized.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,blznav.akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,bnetcmsus-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,bnetcmsus-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,bnetproduct-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,bnetproduct-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,bnetshopus.akamaized.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,bnetshopus.akamaized.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,brightcove.imgix.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,imgix.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,browser-intake-datadoghq.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,browser-intake-datadoghq.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "openai",
-          "rule": "DOMAIN,browser-intake-datadoghq.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,browser-intake-datadoghq.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN,bybit-exchange.github.io"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN-SUFFIX,github.io"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,c.ppy.sh"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,ppy.sh"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "streaming",
-          "item": "spotify",
-          "rule": "DOMAIN,cdn-spotify-experiments.conductrics.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,conductrics.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,cdn.js7k.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,js7k.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "anthropic",
-          "rule": "DOMAIN,cdn.usefathom.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,cdn.usefathom.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,cdngarenanow-a.akamaihd.net"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,cdngarenanow-a.akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,chat.openai.com.cdn.cloudflare.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,chat.openai.com.cdn.cloudflare.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,chatscc-hamivideo2.cdn.hinet.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,hinet.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,chinapower.csis.org"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,csis.org"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,cisco.evergage.com"
-        },
-        "covering": {
-          "category": "reject",
-          "item": "advertising",
-          "rule": "DOMAIN-SUFFIX,evergage.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,ciscolivehls-i.akamaihd.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,akamaihd.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,client-teamviewer-com.trafficmanager.net"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,trafficmanager.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,clients1.google.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,google.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,cloudaicompanion.googleapis.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,googleapis.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN,cloudcode-pa.googleapis.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "google",
-          "rule": "DOMAIN-SUFFIX,googleapis.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,cloudsync-prod.s3.amazonaws.com"
-        },
-        "covering": {
-          "category": "gaming",
-          "item": "game",
-          "rule": "DOMAIN-SUFFIX,cloudsync-prod.s3.amazonaws.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,configuration-lb.ls-apple.com.akadns.net"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,akadns.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN,copilot-proxy.githubusercontent.com"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN,copilot-telemetry-service.githubusercontent.com"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN,copilot-telemetry.githubusercontent.com"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN-SUFFIX,githubusercontent.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN,copilot-workspace.githubnext.com"
-        },
-        "covering": {
-          "category": "developer",
-          "item": "github",
-          "rule": "DOMAIN-SUFFIX,githubnext.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "ai",
-          "item": "copilot",
-          "rule": "DOMAIN,copilot.microsoft.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,copilot.microsoft.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,copilotprodattachments.blob.core.windows.net"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,windows.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN,crl.microsoft.com"
-        },
-        "covering": {
-          "category": "service",
-          "item": "microsoft",
-          "rule": "DOMAIN-SUFFIX,microsoft.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,csis-prod.s3.amazonaws.com"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,amazonaws.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,csis-prod.s3.amazonaws.com"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,amazonaws.com"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1d0w7op819ely.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1d0w7op819ely.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1fijc56o1fzod.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1fijc56o1fzod.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1g1f25tn8m2e6.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1g1f25tn8m2e6.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1k2us671qcoau.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1k2us671qcoau.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1m7jfoe9zdc1j.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1m7jfoe9zdc1j.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1mhjrowxxagfy.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1mhjrowxxagfy.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ndex63qxojbr.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ndex63qxojbr.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1nu566dreq9vj.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1nu566dreq9vj.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1oca24q5dwo6d.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1oca24q5dwo6d.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ugi9qonif2a2.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ugi9qonif2a2.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1unuk07s6td74.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1unuk07s6td74.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1v5ir2lpwr8os.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1v5ir2lpwr8os.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1w2poirtb3as9.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1w2poirtb3as9.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1xhnb4ptk05mw.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1xhnb4ptk05mw.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ymi26ma8va5x.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d1ymi26ma8va5x.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d20g4xwarzxagx.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d20g4xwarzxagx.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d22qjgkvxw22r6.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d22qjgkvxw22r6.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d25xi40x97liuc.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d25xi40x97liuc.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d26rnz3bwp7rlk.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d26rnz3bwp7rlk.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d27xxe7juh1us6.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d27xxe7juh1us6.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d28odxiw1asdj8.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d28odxiw1asdj8.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d29vzk4ow07wi7.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d29vzk4ow07wi7.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2aba1wr3818hz.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2aba1wr3818hz.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2anahhhmp1ffz.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2anahhhmp1ffz.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2be40xdoc0in8.cloudfront.net"
-        },
-        "covering": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
-        }
-      },
-      {
-        "type": "exact_domain_covered",
-        "covered": {
-          "category": "global",
-          "item": "proxy",
-          "rule": "DOMAIN,d2be40xdoc0in8.cloudfront.net"
-        },
-        "covering": {
-          "category": "shopping",
-          "item": "amazon",
-          "rule": "DOMAIN-SUFFIX,cloudfront.net"
         }
       }
     ],
@@ -28735,12 +28747,12 @@
     "cidr_rule_count": 9855
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7044,
+    "removed_count": 7206,
     "per_item": {
       "advertising": {
-        "before": 195644,
-        "after": 188601,
-        "removed": 7043
+        "before": 196604,
+        "after": 189399,
+        "removed": 7205
       },
       "privacy": {
         "before": 20,
@@ -32192,8 +32204,8 @@
       "shopping": 453,
       "service": 2041,
       "global": 48606,
-      "china": 120201,
-      "reject": 188790
+      "china": 120200,
+      "reject": 189588
     }
   },
   "config_audit": [],
@@ -32218,7 +32230,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 6326
+        "count": 7056
       },
       {
         "severity": "INFO",
@@ -32228,7 +32240,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7044
+        "count": 7206
       },
       {
         "severity": "INFO",
@@ -32238,16 +32250,16 @@
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 2201,
+    "exact_duplicate_occurrences": 2202,
     "same_category_duplicate_rule_count": 132,
-    "cross_category_conflict_count": 1912,
-    "semantic_domain_redundancy_count": 6326,
+    "cross_category_conflict_count": 1913,
+    "semantic_domain_redundancy_count": 7056,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7044,
+    "reject_proxy_overlap_removed": 7206,
     "child_policy_split_count": 0,
     "child_collapsed_count": 806
   },

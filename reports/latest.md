@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-17T10:44:14+00:00`
+生成时间：`2026-10-17T14:03:47+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,15 +12,15 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2201`
+- 精确重复出现次数：`2202`
 - 同分类重复规则：`132`
-- 跨分类重复规则：`1912`
-- DOMAIN 语义冗余：`6326`
+- 跨分类重复规则：`1913`
+- DOMAIN 语义冗余：`7056`
 - CIDR 语义冗余：`445`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7044`
+- reject 与代理域重叠已剔除：`7206`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`806`
 
@@ -34,8 +34,8 @@
 - `shopping`：453 条
 - `service`：2041 条
 - `global`：48606 条
-- `china`：120201 条
-- `reject`：188790 条
+- `china`：120200 条
+- `reject`：189588 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`6326`（排除裸 TLD）
+DOMAIN 父子覆盖：`7056`（排除裸 TLD）
 CIDR 父网覆盖子网：`445`
 
 ### DOMAIN 示例
@@ -72,6 +72,9 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN,112-81-125-43.dhost.00cdn.com` ← `DOMAIN-SUFFIX,00cdn.com`
 - `DOMAIN,113-219-145-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,114-236-92-129.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
+- `DOMAIN,1500020991.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
+- `DOMAIN,1500022744.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
+- `DOMAIN,1500026601.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
 - `DOMAIN,180-101-74-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,1geadrmttge3nhcjwgazdope.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
 - `DOMAIN,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
@@ -105,9 +108,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN,3dns-2.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3dns-3.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3dns-4.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
-- `DOMAIN,3dns-5.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
-- `DOMAIN,3dns.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
-- `DOMAIN,3ge3drmttga5nhcbqge3ur.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
 
 ### CIDR 示例
 
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`445`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7044`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`7206`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
@@ -283,6 +283,7 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,17swan.com` → 胜出 `china`；涉及 china, service
 - `DOMAIN-SUFFIX,198game.com` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,1l1.cc` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,1rtb.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,1sapp.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,21vbc.com` → 胜出 `china`；涉及 china, service
 - `DOMAIN-SUFFIX,21vbluecloud.com` → 胜出 `china`；涉及 china, service
@@ -373,7 +374,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,adsame.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsmogo.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsmogo.mobi` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,adsmogo.net` → 胜出 `reject`；涉及 china, reject
 
 ## 编译输出校验
 
