@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-18T23:54:50+00:00`
+生成时间：`2026-10-19T02:00:50+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -15,14 +15,14 @@
 - 精确重复出现次数：`2202`
 - 同分类重复规则：`132`
 - 跨分类重复规则：`1913`
-- DOMAIN 语义冗余：`7055`
+- DOMAIN 语义冗余：`7060`
 - CIDR 语义冗余：`445`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7206`
+- reject 与代理域重叠已剔除：`7208`
 - 父子策略分裂（跨代理分类）：`0`
-- 子域并入父分类：`806`
+- 子域并入父分类：`805`
 
 ## 分类统计
 
@@ -32,10 +32,10 @@
 - `developer`：166 条
 - `gaming`：708 条
 - `shopping`：453 条
-- `service`：2041 条
-- `global`：48612 条
+- `service`：2040 条
+- `global`：48624 条
 - `china`：120200 条
-- `reject`：189943 条
+- `reject`：190274 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7055`（排除裸 TLD）
+DOMAIN 父子覆盖：`7060`（排除裸 TLD）
 CIDR 父网覆盖子网：`445`
 
 ### DOMAIN 示例
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`445`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7206`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`7208`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
@@ -219,7 +219,7 @@ CIDR 父网覆盖子网：`445`
 
 ## 子域并入父分类
 
-移动条数：`806`
+移动条数：`805`
 
 - `DOMAIN-SUFFIX,disney.my.sentry.io`：`streaming/disney` → `ai/copilot`
 - `DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com`：`social/reddit` → `developer/dropbox`
