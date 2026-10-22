@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T00:53:59+00:00",
+  "generated_at": "2026-10-22T05:14:48+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49789,
-      "previous_count": 49767,
+      "previous_count": 49789,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1036,15 +1036,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 27264,
-          "considered_lines": 27264,
+          "considered_lines": 27286,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 781275,
-          "sha256": "277f0c57ee04aca86b65d0e5f06968b43c411e773980de1a96f21b89338283f6",
+          "bytes": 781896,
+          "sha256": "e0a3970365739d379222fd990a41f97e1edcce13a2f65283cfaf26b351d5a73b",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27264,
+          "rules": 27286,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27490,
+          "previous_source_rules": 27512,
           "considered_lines": 27519,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911102,
-          "sha256": "cf64839f98dbecd8d60987d65dfc5415c09c6fd549f842c3d343ec5200af20b0",
+          "sha256": "c8847de05dd396a42eba2a8b031dfd3ddc964869f2213684df9fc411b2362521",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31920,
@@ -1133,8 +1133,8 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 194407,
-      "previous_count": 193087,
+      "rule_count": 194282,
+      "previous_count": 194407,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 198360,
-          "considered_lines": 198360,
+          "considered_lines": 199567,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6910282,
-          "sha256": "9b6e0aec08a690ece6ade13d147ec868aaec38f3421e0ccb3f87589013b4620b",
+          "bytes": 6952174,
+          "sha256": "b41bd440e2e67e13c9c302be271ec1f2442d5b1db8cead9d5b6e65d69bf0dd03",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 198360,
+          "rules": 199567,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 198367,
+          "previous_source_rules": 199574,
           "considered_lines": 199574,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1277,7 +1277,7 @@
     "service": 2040,
     "global": 48653,
     "china": 120200,
-    "reject": 194596
+    "reject": 194471
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24093,7 +24093,7 @@
       "type_counts": {
         "DOMAIN": 787,
         "DOMAIN-KEYWORD": 282,
-        "DOMAIN-SUFFIX": 192835,
+        "DOMAIN-SUFFIX": 192710,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24121,7 +24121,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 7068,
+    "count": 7066,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -28750,8 +28750,8 @@
     "removed_count": 7276,
     "per_item": {
       "advertising": {
-        "before": 201682,
-        "after": 194407,
+        "before": 201557,
+        "after": 194282,
         "removed": 7275
       },
       "privacy": {
@@ -32205,7 +32205,7 @@
       "service": 2040,
       "global": 48653,
       "china": 120200,
-      "reject": 194596
+      "reject": 194471
     }
   },
   "config_audit": [],
@@ -32230,7 +32230,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 7068
+        "count": 7066
       },
       {
         "severity": "INFO",
@@ -32253,7 +32253,7 @@
     "exact_duplicate_occurrences": 2202,
     "same_category_duplicate_rule_count": 132,
     "cross_category_conflict_count": 1913,
-    "semantic_domain_redundancy_count": 7068,
+    "semantic_domain_redundancy_count": 7066,
     "semantic_cidr_redundancy_count": 445,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
@@ -32265,16 +32265,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52066,
+    "proxy_domain_evidence_rules": 52027,
     "foreign_tld_count": 829
   }
 }
