@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-23T01:11:29+00:00`
+生成时间：`2026-10-23T05:13:51+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -15,7 +15,7 @@
 - 精确重复出现次数：`2202`
 - 同分类重复规则：`132`
 - 跨分类重复规则：`1913`
-- DOMAIN 语义冗余：`7068`
+- DOMAIN 语义冗余：`7067`
 - CIDR 语义冗余：`445`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
@@ -35,7 +35,7 @@
 - `service`：2040 条
 - `global`：48679 条
 - `china`：120200 条
-- `reject`：194838 条
+- `reject`：194836 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7068`（排除裸 TLD）
+DOMAIN 父子覆盖：`7067`（排除裸 TLD）
 CIDR 父网覆盖子网：`445`
 
 ### DOMAIN 示例
@@ -171,6 +171,7 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,104231.dtiblog.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1080872514.rsc.cdn77.org` ← covered by `None`
 - `DOMAIN-SUFFIX,1097834592.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,1136838699.b-cdn.net` ← covered by `None`
 - `DOMAIN-SUFFIX,1187531871.rsc.cdn77.org` ← covered by `None`
 - `DOMAIN-SUFFIX,1208344341.rsc.cdn77.org` ← covered by `None`
 - `DOMAIN-SUFFIX,123hmdhjg2.dyndns.org` ← covered by `None`
@@ -215,7 +216,6 @@ CIDR 父网覆盖子网：`445`
 - `DOMAIN-SUFFIX,9w2zed1szg.execute-api.us-east-1.amazonaws.com` ← covered by `None`
 - `DOMAIN-SUFFIX,a-da.invideo.io` ← covered by `None`
 - `DOMAIN-SUFFIX,a-delivery.rmbl.ws` ← covered by `None`
-- `DOMAIN-SUFFIX,a-reporting.nytimes.com` ← covered by `None`
 
 ## 子域并入父分类
 
@@ -383,8 +383,8 @@ CIDR 父网覆盖子网：`445`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`111297`
+- 发布中国域名规则：`111298`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`281`
+- 移除与海外高优先级分类重叠：`280`
