@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-23T20:05:13+00:00`
+生成时间：`2026-10-23T23:13:44+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,11 +12,11 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2202`
-- 同分类重复规则：`132`
-- 跨分类重复规则：`1913`
+- 精确重复出现次数：`2220`
+- 同分类重复规则：`144`
+- 跨分类重复规则：`1916`
 - DOMAIN 语义冗余：`7067`
-- CIDR 语义冗余：`445`
+- CIDR 语义冗余：`457`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
@@ -30,10 +30,10 @@
 - `streaming`：1805 条
 - `social`：769 条
 - `developer`：166 条
-- `gaming`：708 条
+- `gaming`：723 条
 - `shopping`：453 条
 - `service`：2040 条
-- `global`：48679 条
+- `global`：48676 条
 - `china`：120200 条
 - `reject`：194836 条
 
@@ -54,7 +54,7 @@
 ## 语义冗余
 
 DOMAIN 父子覆盖：`7067`（排除裸 TLD）
-CIDR 父网覆盖子网：`445`
+CIDR 父网覆盖子网：`457`
 
 ### DOMAIN 示例
 
@@ -121,8 +121,10 @@ CIDR 父网覆盖子网：`445`
 - `IP-CIDR,101.251.211.235/32` ← `china/domains`
 - `IP-CIDR,101.35.204.35/32` ← `china/domains`
 - `IP-CIDR,101.36.166.16/32` ← `china/domains`
+- `IP-CIDR,103.10.124.0/23` ← `gaming/game`
 - `IP-CIDR,103.224.222.208/32` ← `china/domains`
 - `IP-CIDR,103.249.254.113/32` ← `china/domains`
+- `IP-CIDR,103.28.54.0/24` ← `gaming/game`
 - `IP-CIDR,103.37.152.97/32` ← `china/domains`
 - `IP-CIDR,103.41.167.226/32` ← `china/domains`
 - `IP-CIDR,103.41.167.234/31` ← `china/domains`
@@ -159,8 +161,6 @@ CIDR 父网覆盖子网：`445`
 - `IP-CIDR,113.12.83.4/31` ← `china/domains`
 - `IP-CIDR,113.207.57.24/32` ← `china/domains`
 - `IP-CIDR,113.57.230.88/32` ← `china/domains`
-- `IP-CIDR,114.110.97.97/32` ← `china/domains`
-- `IP-CIDR,114.112.163.232/32` ← `china/domains`
 
 ## reject 代理域重叠清理
 

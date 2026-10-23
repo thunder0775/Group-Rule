@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T20:05:13+00:00",
+  "generated_at": "2026-10-23T23:13:44+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -592,7 +592,7 @@
     },
     "gaming/steam": {
       "state": "updated",
-      "rule_count": 54,
+      "rule_count": 69,
       "previous_count": 54,
       "healthy_sources": 1,
       "sources": [
@@ -602,15 +602,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 54,
-          "considered_lines": 54,
+          "considered_lines": 69,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 2055,
-          "sha256": "35826051b8797c7636210389fafadea23a16af51378feee20ededbb652b43332",
+          "bytes": 2571,
+          "sha256": "290ebccc4be56defc7d36f85d8c9777101548a4f2147ca29fe50b794c6a8dec7",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 54,
+          "rules": 69,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -696,7 +696,7 @@
     },
     "gaming/game": {
       "state": "updated",
-      "rule_count": 597,
+      "rule_count": 612,
       "previous_count": 597,
       "healthy_sources": 1,
       "sources": [
@@ -706,15 +706,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 597,
-          "considered_lines": 597,
+          "considered_lines": 612,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 19223,
-          "sha256": "e99f3571e0e59461a125d2d0ca1abe53d1df4054e58704bc11272320ec6aa519",
+          "bytes": 19725,
+          "sha256": "b4874444c73a11ef8df3da5df6c198df1ad73b5149b70bbd224650716aa33e01",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 597,
+          "rules": 612,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911102,
-          "sha256": "afe54660cb604b8b6f4630f17b040b4beed3995f6e3d5050ee63f7cf48b98183",
+          "sha256": "669dfc4454924a9faa990978be21b26436c2987207dcf202a8661160b17b7f88",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31920,
@@ -1116,12 +1116,12 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 0,
-          "considered_lines": 110519,
-          "malformed_lines": 110519,
+          "considered_lines": 110236,
+          "malformed_lines": 110236,
           "invalid_ratio": 1.0,
           "status_code": 200,
-          "bytes": 2285398,
-          "sha256": "3a49ab7a5daa5a92895c65bd5f7c71b61f4b9ea8c548bf73225c207c3bf06ceb",
+          "bytes": 2278788,
+          "sha256": "a41b282280fcf0d5c2ee7dac24482b996bb271bbc32b6513343015db3d9c391f",
           "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
           "content_type": "text/plain; charset=utf-8",
           "rules": 0,
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "798e505b3bff7e6e437d50890901339655652ce46d5c19c3b30aa3370e779911",
+          "sha256": "93a2f9c953f64327279ec7f14a3523da595461c7cf37b51b9ab8a610427f8759",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
@@ -1272,10 +1272,10 @@
     "streaming": 1805,
     "social": 769,
     "developer": 166,
-    "gaming": 708,
+    "gaming": 723,
     "shopping": 453,
     "service": 2040,
-    "global": 48679,
+    "global": 48676,
     "china": 120200,
     "reject": 194836
   },
@@ -1408,6 +1408,10 @@
       "china",
       "developer"
     ],
+    "DOMAIN-SUFFIX,dota2.com": [
+      "gaming",
+      "global"
+    ],
     "DOMAIN-SUFFIX,edge.steam-dns.top.comcast.net": [
       "gaming",
       "global"
@@ -1476,6 +1480,10 @@
       "gaming",
       "global"
     ],
+    "DOMAIN-SUFFIX,steamconnecttest.com": [
+      "gaming",
+      "global"
+    ],
     "DOMAIN-SUFFIX,steamdeck.com": [
       "gaming",
       "global"
@@ -1501,6 +1509,10 @@
       "global"
     ],
     "DOMAIN-SUFFIX,underlords.com": [
+      "gaming",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,valve.net": [
       "gaming",
       "global"
     ],
@@ -9524,6 +9536,126 @@
         "steam"
       ]
     ],
+    "IP-CIDR,103.10.124.0/23": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,103.28.54.0/24": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,146.66.152.0/24": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,146.66.155.0/24": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,155.133.224.0/19": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,162.254.192.0/21": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,185.25.180.0/22": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,192.69.96.0/22": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,205.196.6.0/24": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,208.64.200.0/22": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,208.78.164.0/22": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
+    "IP-CIDR,45.121.184.0/24": [
+      [
+        "gaming",
+        "game"
+      ],
+      [
+        "gaming",
+        "steam"
+      ]
+    ],
     "DOMAIN-SUFFIX,legendofzelda.cn": [
       [
         "gaming",
@@ -10480,6 +10612,13 @@
         "developer"
       ]
     },
+    "DOMAIN-SUFFIX,dota2.com": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
     "DOMAIN-SUFFIX,edge.steam-dns.top.comcast.net": {
       "winner": "gaming",
       "categories": [
@@ -10599,6 +10738,13 @@
         "global"
       ]
     },
+    "DOMAIN-SUFFIX,steamconnecttest.com": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
     "DOMAIN-SUFFIX,steamdeck.com": {
       "winner": "gaming",
       "categories": [
@@ -10642,6 +10788,13 @@
       ]
     },
     "DOMAIN-SUFFIX,underlords.com": {
+      "winner": "gaming",
+      "categories": [
+        "gaming",
+        "global"
+      ]
+    },
+    "DOMAIN-SUFFIX,valve.net": {
       "winner": "gaming",
       "categories": [
         "gaming",
@@ -23907,7 +24060,8 @@
     "gaming/steam": {
       "type_counts": {
         "DOMAIN-KEYWORD": 3,
-        "DOMAIN-SUFFIX": 51
+        "DOMAIN-SUFFIX": 54,
+        "IP-CIDR": 12
       },
       "invalid_domains": [],
       "invalid_cidrs": [],
@@ -23943,8 +24097,8 @@
       "type_counts": {
         "DOMAIN": 8,
         "DOMAIN-KEYWORD": 4,
-        "DOMAIN-SUFFIX": 539,
-        "IP-CIDR": 46
+        "DOMAIN-SUFFIX": 542,
+        "IP-CIDR": 58
       },
       "invalid_domains": [],
       "invalid_cidrs": [],
@@ -26741,7 +26895,7 @@
     ]
   },
   "semantic_cidr_audit": {
-    "count": 445,
+    "count": 457,
     "samples": [
       {
         "rule": "IP-CIDR,0.0.0.1/32",
@@ -26844,6 +26998,16 @@
         }
       },
       {
+        "rule": "IP-CIDR,103.10.124.0/23",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
+        }
+      },
+      {
         "rule": "IP-CIDR,103.224.222.208/32",
         "category": "reject",
         "item": "advertising",
@@ -26861,6 +27025,16 @@
         "covered_by": {
           "category": "china",
           "item": "domains"
+        }
+      },
+      {
+        "rule": "IP-CIDR,103.28.54.0/24",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
         }
       },
       {
@@ -28434,6 +28608,26 @@
         }
       },
       {
+        "rule": "IP-CIDR,146.66.152.0/24",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
+        }
+      },
+      {
+        "rule": "IP-CIDR,146.66.155.0/24",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
+        }
+      },
+      {
         "rule": "IP-CIDR,149.154.164.0/22",
         "category": "global",
         "item": "proxy",
@@ -28464,6 +28658,16 @@
         }
       },
       {
+        "rule": "IP-CIDR,155.133.224.0/19",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
+        }
+      },
+      {
         "rule": "IP-CIDR,157.148.47.204/32",
         "category": "reject",
         "item": "advertising",
@@ -28491,6 +28695,16 @@
         "covered_by": {
           "category": "reject",
           "item": "advertising"
+        }
+      },
+      {
+        "rule": "IP-CIDR,162.254.192.0/21",
+        "category": "gaming",
+        "item": "steam",
+        "reason": "covered_by_parent_cidr",
+        "covered_by": {
+          "category": "gaming",
+          "item": "game"
         }
       },
       {
@@ -28682,69 +28896,9 @@
           "category": "china",
           "item": "domains"
         }
-      },
-      {
-        "rule": "IP-CIDR,180.76.172.149/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
-      },
-      {
-        "rule": "IP-CIDR,180.76.181.213/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
-      },
-      {
-        "rule": "IP-CIDR,180.96.2.114/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
-      },
-      {
-        "rule": "IP-CIDR,182.254.116.117/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
-      },
-      {
-        "rule": "IP-CIDR,182.254.118.119/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
-      },
-      {
-        "rule": "IP-CIDR,182.92.81.104/32",
-        "category": "reject",
-        "item": "advertising",
-        "reason": "covered_by_parent_cidr",
-        "covered_by": {
-          "category": "china",
-          "item": "domains"
-        }
       }
     ],
-    "cidr_rule_count": 9855
+    "cidr_rule_count": 9879
   },
   "reject_proxy_overlap_sanitize": {
     "removed_count": 7277,
@@ -32200,10 +32354,10 @@
       "streaming": 1805,
       "social": 769,
       "developer": 166,
-      "gaming": 708,
+      "gaming": 723,
       "shopping": 453,
       "service": 2040,
-      "global": 48679,
+      "global": 48676,
       "china": 120200,
       "reject": 194836
     }
@@ -32235,7 +32389,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_cidr_redundancy",
-        "count": 445
+        "count": 457
       },
       {
         "severity": "INFO",
@@ -32250,11 +32404,11 @@
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 2202,
-    "same_category_duplicate_rule_count": 132,
-    "cross_category_conflict_count": 1913,
+    "exact_duplicate_occurrences": 2220,
+    "same_category_duplicate_rule_count": 144,
+    "cross_category_conflict_count": 1916,
     "semantic_domain_redundancy_count": 7067,
-    "semantic_cidr_redundancy_count": 445,
+    "semantic_cidr_redundancy_count": 457,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
@@ -32274,7 +32428,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52092,
+    "proxy_domain_evidence_rules": 52089,
     "foreign_tld_count": 829
   }
 }
