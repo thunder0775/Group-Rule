@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T05:13:51+00:00",
+  "generated_at": "2026-10-23T11:39:11+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27286,
+          "previous_source_rules": 27312,
           "considered_lines": 27312,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911102,
-          "sha256": "cf66c884d4f281a8cc1aab101035a5d71ee14c510752520a7fafc22477b1305e",
+          "sha256": "c2342a2a5aa708afc83c5ceea57bc0caf90fab7905cd5ab7ae4df279e8befa9a",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31920,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111297,
+      "previous_count": 111298,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 194647,
-      "previous_count": 194649,
+      "previous_count": 194647,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 199567,
+          "previous_source_rules": 199933,
           "considered_lines": 199933,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32265,16 +32265,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111298,
+    "output_rules": 111297,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 280,
+      "proxy_category_overlap": 281,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52053,
+    "proxy_domain_evidence_rules": 52092,
     "foreign_tld_count": 829
   }
 }
