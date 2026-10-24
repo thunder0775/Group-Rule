@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T01:40:52+00:00",
+  "generated_at": "2026-10-24T04:55:48+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49817,
-      "previous_count": 49815,
+      "previous_count": 49817,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27312,
+          "previous_source_rules": 27313,
           "considered_lines": 27313,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27538,
+          "previous_source_rules": 27539,
           "considered_lines": 27546,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1071,13 +1071,13 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 31920,
+          "previous_source_rules": 31922,
           "considered_lines": 31922,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911161,
-          "sha256": "bc1df2c94a67db0275b2169a4c6a4a9662148c78799a6ce6055abb4d2bfe604e",
+          "sha256": "a76fb536e1157dc00147fc521ffdd3798b8edd817458898f119a6698042c553f",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31922,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 195004,
-      "previous_count": 194647,
+      "previous_count": 195004,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 199933,
+          "previous_source_rules": 200290,
           "considered_lines": 200290,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 199940,
+          "previous_source_rules": 200297,
           "considered_lines": 200297,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32419,16 +32419,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52091,
+    "proxy_domain_evidence_rules": 52052,
     "foreign_tld_count": 829
   }
 }
