@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T04:55:48+00:00",
+  "generated_at": "2026-10-24T11:41:11+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911161,
-          "sha256": "a76fb536e1157dc00147fc521ffdd3798b8edd817458898f119a6698042c553f",
+          "sha256": "82c1a69f8a70ea3e9354797da59063c0b929a9978e83f63670d053e092fe76e4",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31922,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111297,
+      "previous_count": 111298,
       "healthy_sources": 1,
       "sources": [
         {
@@ -32419,16 +32419,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111298,
+    "output_rules": 111297,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 280,
+      "proxy_category_overlap": 281,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52052,
+    "proxy_domain_evidence_rules": 52091,
     "foreign_tld_count": 829
   }
 }
