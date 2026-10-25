@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T20:05:37+00:00",
+  "generated_at": "2026-10-25T22:38:26+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -711,7 +711,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 19725,
-          "sha256": "b4874444c73a11ef8df3da5df6c198df1ad73b5149b70bbd224650716aa33e01",
+          "sha256": "63ed1092c588beb377cad51b574c921ca113a880752b6c0b8c96b9ecc7f13366",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 612,
@@ -815,7 +815,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1451,
-          "sha256": "0c0262104652ba952e4a933ecec393a33a11085c68c37d0b70c4074e7823f6cb",
+          "sha256": "438384889951117d5f432b600c4b3009583f466de7e87bbe2db865a2ac732a0c",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 43,
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 49819,
+      "rule_count": 49824,
       "previous_count": 49819,
       "healthy_sources": 3,
       "sources": [
@@ -1072,15 +1072,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 31927,
-          "considered_lines": 31927,
+          "considered_lines": 31935,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 911301,
-          "sha256": "9f58776bae0a9e3921994a911d6eea5173384c29717977b5a3a2f3f8b0357ab3",
+          "bytes": 911519,
+          "sha256": "1d3048d995ca27e39a0470c3a590fdc6e224f4b5bf6c4e0f34fb25052d2c7408",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 31927,
+          "rules": 31935,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -1148,7 +1148,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 26853,
-          "sha256": "93a2f9c953f64327279ec7f14a3523da595461c7cf37b51b9ab8a610427f8759",
+          "sha256": "27787ca414a6d8fa193fdecdc5a9bb296e91d4e1faebe4e2fde5edfd99387269",
           "final_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 781,
@@ -1275,7 +1275,7 @@
     "gaming": 723,
     "shopping": 453,
     "service": 2039,
-    "global": 48680,
+    "global": 48685,
     "china": 120200,
     "reject": 195451
   },
@@ -24219,7 +24219,7 @@
       "type_counts": {
         "DOMAIN": 518,
         "DOMAIN-KEYWORD": 7,
-        "DOMAIN-SUFFIX": 49136,
+        "DOMAIN-SUFFIX": 49141,
         "IP-CIDR": 13,
         "URL-REGEX": 145
       },
@@ -32357,7 +32357,7 @@
       "gaming": 723,
       "shopping": 453,
       "service": 2039,
-      "global": 48680,
+      "global": 48685,
       "china": 120200,
       "reject": 195451
     }
@@ -32428,7 +32428,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52092,
+    "proxy_domain_evidence_rules": 52097,
     "foreign_tld_count": 829
   }
 }
