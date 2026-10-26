@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T22:38:26+00:00",
+  "generated_at": "2026-10-26T00:49:46+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 49824,
-      "previous_count": 49819,
+      "previous_count": 49824,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1059,7 +1059,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 958837,
-          "sha256": "5a252ea36fd20fa4590fa90f7ed16da0f1e28584b2f2829221664f5eb30ada15",
+          "sha256": "5ffd2a55bdee76d986b2f833de32787e3efa5762662874950a114f00394e3f9f",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 27543,
@@ -1071,13 +1071,13 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 31927,
+          "previous_source_rules": 31935,
           "considered_lines": 31935,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911519,
-          "sha256": "1d3048d995ca27e39a0470c3a590fdc6e224f4b5bf6c4e0f34fb25052d2c7408",
+          "sha256": "320ac2520674ff2e456cc475d6591a7e48942295575bb0d7ed6101cb30aeac8c",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31935,
@@ -1184,7 +1184,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 8388749,
-          "sha256": "9d9c32e03cd4fc3aed3848ce00482866925966ae1f0b4575d84c9581a965386d",
+          "sha256": "15abc8923ac728ef3714c8ad73052d76c5f35cf483aac7a5015ed55cb40dc373",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 200553,
