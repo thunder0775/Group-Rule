@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T01:06:20+00:00",
+  "generated_at": "2026-10-27T05:27:26+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -540,7 +540,7 @@
     },
     "developer/dropbox": {
       "state": "updated",
-      "rule_count": 20,
+      "rule_count": 21,
       "previous_count": 20,
       "healthy_sources": 1,
       "sources": [
@@ -774,7 +774,7 @@
     },
     "service/google": {
       "state": "updated",
-      "rule_count": 984,
+      "rule_count": 987,
       "previous_count": 984,
       "healthy_sources": 1,
       "sources": [
@@ -870,7 +870,7 @@
     },
     "service/microsoft": {
       "state": "updated",
-      "rule_count": 822,
+      "rule_count": 826,
       "previous_count": 822,
       "healthy_sources": 1,
       "sources": [
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 49824,
+      "rule_count": 49807,
       "previous_count": 49824,
       "healthy_sources": 3,
       "sources": [
@@ -1036,15 +1036,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 27317,
-          "considered_lines": 27317,
+          "considered_lines": 27308,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 782649,
-          "sha256": "c2054c2762cb0113172d229e62e79ba95189b71f1512e2eeae88e09a7dcc1a75",
+          "bytes": 782360,
+          "sha256": "52c27ef9b0dac912c62a83ccb6c5c1f6e9be6c64c4b99ec21ed5f7ab0695f17c",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/proxy.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27317,
+          "rules": 27308,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1054,15 +1054,15 @@
           "policy_filter": "PROXY",
           "min_rules": 1,
           "previous_source_rules": 27543,
-          "considered_lines": 27550,
+          "considered_lines": 27541,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 958837,
-          "sha256": "5ffd2a55bdee76d986b2f833de32787e3efa5762662874950a114f00394e3f9f",
+          "bytes": 958494,
+          "sha256": "a3c139419d5b2203c863e9b8b21dcb281b398afb9c232356001807d3eeadb614",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27543,
+          "rules": 27534,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 911519,
-          "sha256": "a21c6fa937710e3dc946f5238691e0b99b44bc48bd528a1d7c9cd42e1dcc691d",
+          "sha256": "6809aef14a91af17b15acfaca1904a17b85b12a77be9c103266eff73427b0f9a",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 31935,
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 195262,
+      "rule_count": 187898,
       "previous_count": 195262,
       "healthy_sources": 4,
       "sources": [
@@ -1161,15 +1161,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 200546,
-          "considered_lines": 200546,
+          "considered_lines": 193211,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 6984635,
-          "sha256": "8c91935ac966dbb1495c11401ddbe2c57c0a4a0da37e81f132eb625099bee5be",
+          "bytes": 6754797,
+          "sha256": "a4d7476890ef9156794dbb0b609052c39fe9468900858587ebf33077a8a44081",
           "final_url": "https://raw.githubusercontent.com/Vincent-Loeng/shadowrocket-rules/release/reject.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 200546,
+          "rules": 193211,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 200553,
-          "considered_lines": 200553,
+          "considered_lines": 193218,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 8388749,
-          "sha256": "15abc8923ac728ef3714c8ad73052d76c5f35cf483aac7a5015ed55cb40dc373",
+          "bytes": 8107566,
+          "sha256": "a0938d37743f362ab75f824aa7e87215089942ae7e3fa6ecc63661692f8f04dd",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 200553,
+          "rules": 193218,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1197,12 +1197,12 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 1302,
-          "considered_lines": 2110,
+          "considered_lines": 2097,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 79496,
-          "sha256": "fa946c2c99136de43493e020d134b76bd8648d680349a0178857bf38c016f833",
+          "bytes": 79024,
+          "sha256": "0c2edc76ebed86d4c41453e291ebef8862a9c9f9be24ebc3c8fca8e53b95cb40",
           "final_url": "https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 1302,
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 7274
+      "reject_proxy_overlap_removed": 7303
     },
     "reject/privacy": {
       "state": "updated",
@@ -1271,13 +1271,13 @@
     "ai": 78,
     "streaming": 1805,
     "social": 769,
-    "developer": 166,
+    "developer": 167,
     "gaming": 723,
     "shopping": 453,
-    "service": 2039,
-    "global": 48685,
+    "service": 2046,
+    "global": 48668,
     "china": 120200,
-    "reject": 195451
+    "reject": 188087
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24041,7 +24041,7 @@
     },
     "developer/dropbox": {
       "type_counts": {
-        "DOMAIN": 1,
+        "DOMAIN": 2,
         "DOMAIN-SUFFIX": 19
       },
       "invalid_domains": [],
@@ -24128,7 +24128,7 @@
     },
     "service/google": {
       "type_counts": {
-        "DOMAIN": 125,
+        "DOMAIN": 128,
         "DOMAIN-KEYWORD": 5,
         "DOMAIN-SUFFIX": 849,
         "IP-CIDR": 2,
@@ -24161,7 +24161,7 @@
     },
     "service/microsoft": {
       "type_counts": {
-        "DOMAIN": 61,
+        "DOMAIN": 65,
         "DOMAIN-KEYWORD": 1,
         "DOMAIN-SUFFIX": 757,
         "USER-AGENT": 3
@@ -24219,7 +24219,7 @@
       "type_counts": {
         "DOMAIN": 518,
         "DOMAIN-KEYWORD": 7,
-        "DOMAIN-SUFFIX": 49141,
+        "DOMAIN-SUFFIX": 49124,
         "IP-CIDR": 13,
         "URL-REGEX": 145
       },
@@ -24247,7 +24247,7 @@
       "type_counts": {
         "DOMAIN": 787,
         "DOMAIN-KEYWORD": 282,
-        "DOMAIN-SUFFIX": 193690,
+        "DOMAIN-SUFFIX": 186326,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24275,7 +24275,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 7070,
+    "count": 7078,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -28901,12 +28901,12 @@
     "cidr_rule_count": 9879
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 7275,
+    "removed_count": 7304,
     "per_item": {
       "advertising": {
-        "before": 202536,
-        "after": 195262,
-        "removed": 7274
+        "before": 195201,
+        "after": 187898,
+        "removed": 7303
       },
       "privacy": {
         "before": 20,
@@ -29927,7 +29927,7 @@
     "samples": []
   },
   "child_collapse": {
-    "moved_count": 805,
+    "moved_count": 813,
     "samples": [
       {
         "rule": "DOMAIN-SUFFIX,disney.my.sentry.io",
@@ -30554,6 +30554,42 @@
         "parent_rule": "DOMAIN-SUFFIX,appleworldwidedeveloper.sc.omtrdc.net"
       },
       {
+        "rule": "DOMAIN,appsgenaiserver-pa.clients.google.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "google"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,google.com"
+      },
+      {
+        "rule": "DOMAIN,appsgenaiserver-pa.clients6.google.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "google"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,google.com"
+      },
+      {
+        "rule": "DOMAIN,appsgenaiserver-pa.googleapis.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "google"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,googleapis.com"
+      },
+      {
         "rule": "DOMAIN,audio-ak-spotify-com.akamaized.net",
         "from": {
           "category": "global",
@@ -30770,6 +30806,30 @@
         "parent_rule": "DOMAIN-SUFFIX,googleapis.com"
       },
       {
+        "rule": "DOMAIN,dc.applicationinsights.azure.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "microsoft"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,azure.com"
+      },
+      {
+        "rule": "DOMAIN,dc.services.visualstudio.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "microsoft"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,visualstudio.com"
+      },
+      {
         "rule": "DOMAIN,default.exp-tas.com",
         "from": {
           "category": "global",
@@ -30828,6 +30888,18 @@
           "item": "disney"
         },
         "parent_rule": "DOMAIN-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net"
+      },
+      {
+        "rule": "DOMAIN,dropbox.zendesk.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "developer",
+          "item": "dropbox"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,dropbox.zendesk.com"
       },
       {
         "rule": "DOMAIN,dtlgalleryint.cloudapp.net",
@@ -31164,6 +31236,18 @@
           "item": "microsoft"
         },
         "parent_rule": "DOMAIN-SUFFIX,img-s-msn-com.akamaized.net"
+      },
+      {
+        "rule": "DOMAIN,live.applicationinsights.azure.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "microsoft"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,azure.com"
       },
       {
         "rule": "DOMAIN,matsuridayo.github.io",
@@ -31814,6 +31898,18 @@
         "parent_rule": "DOMAIN-SUFFIX,hockeyapp.net"
       },
       {
+        "rule": "DOMAIN,rt.services.visualstudio.com",
+        "from": {
+          "category": "global",
+          "item": "proxy"
+        },
+        "to": {
+          "category": "service",
+          "item": "microsoft"
+        },
+        "parent_rule": "DOMAIN-SUFFIX,visualstudio.com"
+      },
+      {
         "rule": "DOMAIN,scholar.google.ae",
         "from": {
           "category": "global",
@@ -32232,102 +32328,6 @@
           "item": "google"
         },
         "parent_rule": "DOMAIN-SUFFIX,google.com.ni"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.pa",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.pa"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.pe",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.pe"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.ph",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.ph"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.pk",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.pk"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.pr",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.pr"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.py",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.py"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.sg",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.sg"
-      },
-      {
-        "rule": "DOMAIN,scholar.google.com.sv",
-        "from": {
-          "category": "global",
-          "item": "proxy"
-        },
-        "to": {
-          "category": "service",
-          "item": "google"
-        },
-        "parent_rule": "DOMAIN-SUFFIX,google.com.sv"
       }
     ],
     "passes": 2
@@ -32353,13 +32353,13 @@
       "ai": 78,
       "streaming": 1805,
       "social": 769,
-      "developer": 166,
+      "developer": 167,
       "gaming": 723,
       "shopping": 453,
-      "service": 2039,
-      "global": 48685,
+      "service": 2046,
+      "global": 48668,
       "china": 120200,
-      "reject": 195451
+      "reject": 188087
     }
   },
   "config_audit": [],
@@ -32384,7 +32384,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 7070
+        "count": 7078
       },
       {
         "severity": "INFO",
@@ -32394,12 +32394,12 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 7275
+        "count": 7304
       },
       {
         "severity": "INFO",
         "reason": "child_collapsed_to_parent_category",
-        "count": 805
+        "count": 813
       }
     ]
   },
@@ -32407,28 +32407,28 @@
     "exact_duplicate_occurrences": 2220,
     "same_category_duplicate_rule_count": 144,
     "cross_category_conflict_count": 1916,
-    "semantic_domain_redundancy_count": 7070,
+    "semantic_domain_redundancy_count": 7078,
     "semantic_cidr_redundancy_count": 457,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 7275,
+    "reject_proxy_overlap_removed": 7304,
     "child_policy_split_count": 0,
-    "child_collapsed_count": 805
+    "child_collapsed_count": 813
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111297,
+    "output_rules": 111298,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 281,
+      "proxy_category_overlap": 280,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52097,
+    "proxy_domain_evidence_rules": 52049,
     "foreign_tld_count": 829
   }
 }
