@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-10-30T23:19:29+00:00`
+生成时间：`2026-10-31T02:39:53+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -15,27 +15,27 @@
 - 精确重复出现次数：`2220`
 - 同分类重复规则：`144`
 - 跨分类重复规则：`1916`
-- DOMAIN 语义冗余：`7079`
+- DOMAIN 语义冗余：`7081`
 - CIDR 语义冗余：`457`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
 - reject 与代理域重叠已剔除：`7307`
 - 父子策略分裂（跨代理分类）：`0`
-- 子域并入父分类：`813`
+- 子域并入父分类：`814`
 
 ## 分类统计
 
-- `ai`：78 条
+- `ai`：79 条
 - `streaming`：1805 条
 - `social`：769 条
 - `developer`：167 条
 - `gaming`：723 条
 - `shopping`：453 条
 - `service`：2046 条
-- `global`：48676 条
+- `global`：48684 条
 - `china`：120200 条
-- `reject`：189155 条
+- `reject`：189533 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7079`（排除裸 TLD）
+DOMAIN 父子覆盖：`7081`（排除裸 TLD）
 CIDR 父网覆盖子网：`457`
 
 ### DOMAIN 示例
@@ -219,7 +219,7 @@ CIDR 父网覆盖子网：`457`
 
 ## 子域并入父分类
 
-移动条数：`813`
+移动条数：`814`
 
 - `DOMAIN-SUFFIX,disney.my.sentry.io`：`streaming/disney` → `ai/copilot`
 - `DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com`：`social/reddit` → `developer/dropbox`
