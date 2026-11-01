@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T19:02:22+00:00",
+  "generated_at": "2026-11-01T01:35:01+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 49823,
+      "rule_count": 49824,
       "previous_count": 49823,
       "healthy_sources": 3,
       "sources": [
@@ -1054,15 +1054,15 @@
           "policy_filter": "PROXY",
           "min_rules": 1,
           "previous_source_rules": 27550,
-          "considered_lines": 27557,
+          "considered_lines": 27559,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 959051,
-          "sha256": "802e93b58fa2226ccfc8334b4245fc0d3976f226c6c2fc4c7a57a7e6e250a2bc",
+          "bytes": 959126,
+          "sha256": "2c1de971a3669a43597d65d6b88e50fe0ee31d4bd5dc2acacbf7cf50f7d34961",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 27550,
+          "rules": 27552,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1072,15 +1072,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 31940,
-          "considered_lines": 31940,
+          "considered_lines": 31941,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 911673,
-          "sha256": "b554dccbac10bad9df597762a05f368406504b7396a80d75fdb683d66f0a1780",
+          "bytes": 911705,
+          "sha256": "b9c2de14d3ab0dc4934ddaa88d6b3a30118b9b8dbfc45f2f7b70c9b2bf20ecdc",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 31940,
+          "rules": 31941,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -1133,7 +1133,7 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 189344,
+      "rule_count": 189724,
       "previous_count": 189344,
       "healthy_sources": 4,
       "sources": [
@@ -1179,15 +1179,15 @@
           "policy_filter": "REJECT",
           "min_rules": 1,
           "previous_source_rules": 194667,
-          "considered_lines": 194667,
+          "considered_lines": 195047,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 8166384,
-          "sha256": "e8ea49d0f5f68a537c5d1ecbe466921bc9da79952ab1499baa51f0733a0c57df",
+          "bytes": 8181787,
+          "sha256": "e9a10ddbf8226afeb1ce031a0c66c6001875af6c6ef0552853335dcac80a3f4a",
           "final_url": "https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_reject_list.module",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 194667,
+          "rules": 195047,
           "status": "ok",
           "redirect_host_changed": false
         },
@@ -1275,9 +1275,9 @@
     "gaming": 723,
     "shopping": 453,
     "service": 2046,
-    "global": 48684,
+    "global": 48685,
     "china": 120200,
-    "reject": 189533
+    "reject": 189913
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -24219,7 +24219,7 @@
       "type_counts": {
         "DOMAIN": 518,
         "DOMAIN-KEYWORD": 7,
-        "DOMAIN-SUFFIX": 49140,
+        "DOMAIN-SUFFIX": 49141,
         "IP-CIDR": 13,
         "URL-REGEX": 145
       },
@@ -24247,7 +24247,7 @@
       "type_counts": {
         "DOMAIN": 787,
         "DOMAIN-KEYWORD": 282,
-        "DOMAIN-SUFFIX": 187772,
+        "DOMAIN-SUFFIX": 188152,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -28904,8 +28904,8 @@
     "removed_count": 7307,
     "per_item": {
       "advertising": {
-        "before": 196650,
-        "after": 189344,
+        "before": 197030,
+        "after": 189724,
         "removed": 7306
       },
       "privacy": {
@@ -32357,9 +32357,9 @@
       "gaming": 723,
       "shopping": 453,
       "service": 2046,
-      "global": 48684,
+      "global": 48685,
       "china": 120200,
-      "reject": 189533
+      "reject": 189913
     }
   },
   "config_audit": [],
@@ -32428,7 +32428,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 52105,
+    "proxy_domain_evidence_rules": 52106,
     "foreign_tld_count": 829
   }
 }
