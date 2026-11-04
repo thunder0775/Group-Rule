@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-11-04T02:39:07+00:00`
+生成时间：`2026-11-04T06:54:15+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,30 +12,30 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2220`
+- 精确重复出现次数：`2246`
 - 同分类重复规则：`144`
-- 跨分类重复规则：`1916`
-- DOMAIN 语义冗余：`7084`
-- CIDR 语义冗余：`457`
+- 跨分类重复规则：`1942`
+- DOMAIN 语义冗余：`7177`
+- CIDR 语义冗余：`506`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`7321`
+- reject 与代理域重叠已剔除：`51314`
 - 父子策略分裂（跨代理分类）：`0`
-- 子域并入父分类：`814`
+- 子域并入父分类：`857`
 
 ## 分类统计
 
 - `ai`：79 条
-- `streaming`：1805 条
+- `streaming`：1804 条
 - `social`：769 条
 - `developer`：167 条
 - `gaming`：723 条
 - `shopping`：453 条
-- `service`：2046 条
-- `global`：48695 条
-- `china`：120200 条
-- `reject`：192111 条
+- `service`：2090 条
+- `global`：51351 条
+- `china`：120203 条
+- `reject`：148114 条
 
 ## 闸门结果
 
@@ -53,8 +53,8 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7084`（排除裸 TLD）
-CIDR 父网覆盖子网：`457`
+DOMAIN 父子覆盖：`7177`（排除裸 TLD）
+CIDR 父网覆盖子网：`506`
 
 ### DOMAIN 示例
 
@@ -164,62 +164,62 @@ CIDR 父网覆盖子网：`457`
 
 ## reject 代理域重叠清理
 
-剔除条数：`7321`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`51314`（父域已在代理分类中的子域不再 REJECT）
 
+- `DOMAIN-SUFFIX,0.avmarket.rs` ← covered by `None`
+- `DOMAIN-SUFFIX,006.freecounters.co.uk` ← covered by `None`
+- `DOMAIN-SUFFIX,0186141170.apps.iocnt.de` ← covered by `None`
+- `DOMAIN-SUFFIX,02ip.ru` ← covered by `None`
+- `DOMAIN-SUFFIX,0427d7.se` ← covered by `None`
+- `DOMAIN-SUFFIX,0816bvh.ru` ← covered by `None`
+- `DOMAIN-SUFFIX,08ro35delw.ru` ← covered by `None`
+- `DOMAIN-SUFFIX,0916video.ru` ← covered by `None`
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
+- `DOMAIN-SUFFIX,0pn.ru` ← covered by `None`
+- `DOMAIN-SUFFIX,0sbm.consobaby.co.uk` ← covered by `None`
+- `DOMAIN-SUFFIX,0srhzn032t.kempfkuechen.de` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
+- `DOMAIN-SUFFIX,10.im.cz` ← covered by `None`
+- `DOMAIN-SUFFIX,1001paixnidia.fr` ← covered by `None`
 - `DOMAIN-SUFFIX,104231.dtiblog.com` ← covered by `None`
 - `DOMAIN-SUFFIX,1080872514.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,1090pjopm.de` ← covered by `None`
 - `DOMAIN-SUFFIX,1097834592.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,10fbb07a4b0.se` ← covered by `None`
+- `DOMAIN-SUFFIX,10q6e9ne5.de` ← covered by `None`
+- `DOMAIN-SUFFIX,10sn95to9.de` ← covered by `None`
+- `DOMAIN-SUFFIX,10x.yecstore.be` ← covered by `None`
 - `DOMAIN-SUFFIX,1136838699.b-cdn.net` ← covered by `None`
 - `DOMAIN-SUFFIX,1187531871.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,11g1ip22h.de` ← covered by `None`
 - `DOMAIN-SUFFIX,1208344341.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,123-counter.de` ← covered by `None`
 - `DOMAIN-SUFFIX,123hmdhjg2.dyndns.org` ← covered by `None`
+- `DOMAIN-SUFFIX,130gelh8q.de` ← covered by `None`
+- `DOMAIN-SUFFIX,137kfj65k.de` ← covered by `None`
+- `DOMAIN-SUFFIX,13p76nnir.de` ← covered by `None`
+- `DOMAIN-SUFFIX,1414.hexa.su` ← covered by `None`
 - `DOMAIN-SUFFIX,1437953666.rsc.cdn77.org` ← covered by `None`
+- `DOMAIN-SUFFIX,14cpoff22.de` ← covered by `None`
+- `DOMAIN-SUFFIX,14fefmsjd.de` ← covered by `None`
 - `DOMAIN-SUFFIX,1529462937.rsc.cdn77.org` ← covered by `None`
 - `DOMAIN-SUFFIX,1548164934.rsc.cdn77.org` ← covered by `None`
 - `DOMAIN-SUFFIX,1675450967.rsc.cdn77.org` ← covered by `None`
-- `DOMAIN-SUFFIX,1991482557.rsc.cdn77.org` ← covered by `None`
-- `DOMAIN-SUFFIX,1l-hit.mail.ru` ← covered by `None`
-- `DOMAIN-SUFFIX,1l-hit.vkplay.ru` ← covered by `None`
-- `DOMAIN-SUFFIX,1l-view.mail.ru` ← covered by `None`
-- `DOMAIN-SUFFIX,1l-view.my.games` ← covered by `None`
-- `DOMAIN-SUFFIX,1wincdn.b-cdn.net` ← covered by `None`
-- `DOMAIN-SUFFIX,2006mindfreaklike.blogspot.com` ← covered by `None`
-- `DOMAIN-SUFFIX,24hmoneygram.weebly.com` ← covered by `None`
-- `DOMAIN-SUFFIX,25serve.yourporngod.com` ← covered by `None`
-- `DOMAIN-SUFFIX,2mdn-cn.net` ← covered by `None`
-- `DOMAIN-SUFFIX,2mdn.net` ← covered by `None`
-- `DOMAIN-SUFFIX,2o7.net` ← covered by `None`
-- `DOMAIN-SUFFIX,3dns-1.adobe.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3dns-2.adobe.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3dns-3.adobe.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3dns-4.adobe.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3dns.adobe.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3j0pw4ed7uac-a.akamaihd.net` ← covered by `None`
-- `DOMAIN-SUFFIX,3p-geo.yahoo.com` ← covered by `None`
-- `DOMAIN-SUFFIX,3p-udc.yahoo.com` ← covered by `None`
-- `DOMAIN-SUFFIX,450a.feet9.com` ← covered by `None`
-- `DOMAIN-SUFFIX,456vdghgj30.dyndns.org` ← covered by `None`
-- `DOMAIN-SUFFIX,478789.everydayporn.co` ← covered by `None`
-- `DOMAIN-SUFFIX,4hfvbao1ea.execute-api.ap-northeast-2.amazonaws.com` ← covered by `None`
-- `DOMAIN-SUFFIX,51tongji.trafficmanager.net` ← covered by `None`
-- `DOMAIN-SUFFIX,52av.be` ← covered by `None`
-- `DOMAIN-SUFFIX,5fm.985fm.ca` ← covered by `None`
-- `DOMAIN-SUFFIX,61serve.everydayporn.co` ← covered by `None`
-- `DOMAIN-SUFFIX,682a5845.b-cdn.net` ← covered by `None`
-- `DOMAIN-SUFFIX,6969.javher.com` ← covered by `None`
-- `DOMAIN-SUFFIX,7lzwgj.donaukurier.de` ← covered by `None`
-- `DOMAIN-SUFFIX,7ng6v3lu3c.execute-api.us-east-1.amazonaws.com` ← covered by `None`
-- `DOMAIN-SUFFIX,7q1z79gxsi.global.ssl.fastly.net` ← covered by `None`
-- `DOMAIN-SUFFIX,911.x24hr.com` ← covered by `None`
-- `DOMAIN-SUFFIX,9w2zed1szg.execute-api.us-east-1.amazonaws.com` ← covered by `None`
-- `DOMAIN-SUFFIX,a-da.invideo.io` ← covered by `None`
-- `DOMAIN-SUFFIX,a-delivery.rmbl.ws` ← covered by `None`
+- `DOMAIN-SUFFIX,16ao.mathon.fr` ← covered by `None`
+- `DOMAIN-SUFFIX,16i6nuuc2ej.koelewijn.nl` ← covered by `None`
+- `DOMAIN-SUFFIX,16iis7i2p.de` ← covered by `None`
+- `DOMAIN-SUFFIX,16pr72tb5.de` ← covered by `None`
+- `DOMAIN-SUFFIX,17co2k5a.de` ← covered by `None`
+- `DOMAIN-SUFFIX,17do048qm.de` ← covered by `None`
+- `DOMAIN-SUFFIX,180hits.de` ← covered by `None`
+- `DOMAIN-SUFFIX,181m2fscr.de` ← covered by `None`
+- `DOMAIN-SUFFIX,184c4i95p.de` ← covered by `None`
+- `DOMAIN-SUFFIX,18723bnj.keyfy.fr` ← covered by `None`
+- `DOMAIN-SUFFIX,1886.olympia.co.uk` ← covered by `None`
 
 ## 子域并入父分类
 
-移动条数：`814`
+移动条数：`857`
 
 - `DOMAIN-SUFFIX,disney.my.sentry.io`：`streaming/disney` → `ai/copilot`
 - `DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com`：`social/reddit` → `developer/dropbox`
@@ -275,6 +275,7 @@ CIDR 父网覆盖子网：`457`
 ## 跨分类冲突（最多 100 条）
 
 - `DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net` → 胜出 `gaming`；涉及 gaming, service
+- `DOMAIN-KEYWORD,paypal` → 胜出 `shopping`；涉及 global, shopping
 - `DOMAIN-SUFFIX,003store.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,100classicbooks.com` → 胜出 `gaming`；涉及 gaming, global
 - `DOMAIN-SUFFIX,11222.com` → 胜出 `china`；涉及 china, global
@@ -373,7 +374,6 @@ CIDR 父网覆盖子网：`457`
 - `DOMAIN-SUFFIX,ads8.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsame.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsmogo.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,adsmogo.mobi` → 胜出 `reject`；涉及 china, reject
 
 ## 编译输出校验
 
@@ -383,8 +383,8 @@ CIDR 父网覆盖子网：`457`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`111297`
+- 发布中国域名规则：`111097`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`281`
+- 移除与海外高优先级分类重叠：`481`
