@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T06:54:15+00:00",
+  "generated_at": "2026-11-04T09:57:13+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -185,7 +185,7 @@
     "streaming/disney": {
       "state": "updated",
       "rule_count": 177,
-      "previous_count": 178,
+      "previous_count": 177,
       "healthy_sources": 1,
       "sources": [
         {
@@ -489,7 +489,7 @@
     "developer/gitlab": {
       "state": "updated",
       "rule_count": 8,
-      "previous_count": 7,
+      "previous_count": 8,
       "healthy_sources": 1,
       "sources": [
         {
@@ -515,7 +515,7 @@
     "developer/developer": {
       "state": "updated",
       "rule_count": 101,
-      "previous_count": 102,
+      "previous_count": 101,
       "healthy_sources": 1,
       "sources": [
         {
@@ -775,7 +775,7 @@
     "service/google": {
       "state": "updated",
       "rule_count": 988,
-      "previous_count": 987,
+      "previous_count": 988,
       "healthy_sources": 1,
       "sources": [
         {
@@ -845,7 +845,7 @@
     "service/icloud": {
       "state": "updated",
       "rule_count": 53,
-      "previous_count": 54,
+      "previous_count": 53,
       "healthy_sources": 1,
       "sources": [
         {
@@ -871,7 +871,7 @@
     "service/microsoft": {
       "state": "updated",
       "rule_count": 868,
-      "previous_count": 826,
+      "previous_count": 868,
       "healthy_sources": 1,
       "sources": [
         {
@@ -897,7 +897,7 @@
     "service/bilibili": {
       "state": "updated",
       "rule_count": 129,
-      "previous_count": 127,
+      "previous_count": 129,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 52519,
-      "previous_count": 49834,
+      "previous_count": 52519,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27335,
+          "previous_source_rules": 27337,
           "considered_lines": 27337,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1071,13 +1071,13 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 31941,
+          "previous_source_rules": 49055,
           "considered_lines": 49062,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1406836,
-          "sha256": "582e826f744e2b6824b8fe1fdf686581eeec286feaaad3b0c8b7673981349727",
+          "sha256": "1be740895266da4c12b758d5b14df405c49fe7aac1af39ec3cb6588758d029f9",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49055,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111297,
+      "previous_count": 111097,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 147925,
-      "previous_count": 191922,
+      "previous_count": 147925,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 196993,
+          "previous_source_rules": 197239,
           "considered_lines": 197239,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32707,16 +32707,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111097,
+    "output_rules": 111096,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 481,
+      "proxy_category_overlap": 482,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54673,
+    "proxy_domain_evidence_rules": 54712,
     "foreign_tld_count": 829
   }
 }
