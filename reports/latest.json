@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T08:52:52+00:00",
+  "generated_at": "2026-11-09T19:24:01+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1407253,
-          "sha256": "42723c251b64458d934c8216b00477fc220bb46c7d9fba1fe00f2f6350021ed3",
+          "sha256": "f71f2544b172b9658a91ef7bd06cf64fc9c754af40cfb7d5014506700b2c2087",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49069,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111097,
+      "previous_count": 111096,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1201,8 +1201,8 @@
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 79282,
-          "sha256": "6e82a4ee2bfa95d3d7276718a15de842fd97b7d58ada388c40fc2e5fb6cbde5b",
+          "bytes": 79374,
+          "sha256": "a311f75ff49c7136ec5956be54fc58460a20b037a6c5f43f4e2be365dbf807ee",
           "final_url": "https://raw.githubusercontent.com/huijingfei/Shadowrocket-Rules/main/sr_app_ad.module",
           "content_type": "text/plain; charset=utf-8",
           "rules": 1305,
