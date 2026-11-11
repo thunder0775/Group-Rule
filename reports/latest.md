@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-11-11T06:58:15+00:00`
+生成时间：`2026-11-11T09:45:07+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -15,7 +15,7 @@
 - 精确重复出现次数：`2245`
 - 同分类重复规则：`144`
 - 跨分类重复规则：`1941`
-- DOMAIN 语义冗余：`7181`
+- DOMAIN 语义冗余：`7159`
 - CIDR 语义冗余：`506`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
@@ -35,7 +35,7 @@
 - `service`：2091 条
 - `global`：51360 条
 - `china`：120204 条
-- `reject`：148139 条
+- `reject`：148117 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7181`（排除裸 TLD）
+DOMAIN 父子覆盖：`7159`（排除裸 TLD）
 CIDR 父网覆盖子网：`506`
 
 ### DOMAIN 示例
@@ -72,9 +72,6 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN,112-81-125-43.dhost.00cdn.com` ← `DOMAIN-SUFFIX,00cdn.com`
 - `DOMAIN,113-219-145-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,114-236-92-129.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
-- `DOMAIN,1500020991.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
-- `DOMAIN,1500022744.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
-- `DOMAIN,1500026601.vodplayer.wxamedia.com` ← `DOMAIN-SUFFIX,wxamedia.com`
 - `DOMAIN,180-101-74-1.ksyungslb.com` ← `DOMAIN-SUFFIX,ksyungslb.com`
 - `DOMAIN,1geadrmttge3nhcjwgazdope.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
 - `DOMAIN,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
@@ -108,6 +105,9 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN,3dns-2.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3dns-3.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
 - `DOMAIN,3dns-4.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3dns-5.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3dns.adobe.com` ← `DOMAIN-SUFFIX,adobe.com`
+- `DOMAIN,3ge3drmttga5nhcbqge3ur.ourdvsss.com` ← `DOMAIN-SUFFIX,ourdvsss.com`
 
 ### CIDR 示例
 
@@ -383,8 +383,8 @@ CIDR 父网覆盖子网：`506`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`111097`
+- 发布中国域名规则：`111096`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`481`
+- 移除与海外高优先级分类重叠：`482`
