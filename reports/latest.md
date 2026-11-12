@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-11-11T23:50:00+00:00`
+生成时间：`2026-11-12T07:35:32+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,15 +12,15 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2245`
+- 精确重复出现次数：`2244`
 - 同分类重复规则：`144`
-- 跨分类重复规则：`1941`
-- DOMAIN 语义冗余：`7159`
+- 跨分类重复规则：`1940`
+- DOMAIN 语义冗余：`7158`
 - CIDR 语义冗余：`506`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`51640`
+- reject 与代理域重叠已剔除：`43986`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`859`
 
@@ -33,9 +33,9 @@
 - `gaming`：723 条
 - `shopping`：453 条
 - `service`：2091 条
-- `global`：51360 条
+- `global`：51344 条
 - `china`：120204 条
-- `reject`：148117 条
+- `reject`：157703 条
 
 ## 闸门结果
 
@@ -53,7 +53,7 @@
 
 ## 语义冗余
 
-DOMAIN 父子覆盖：`7159`（排除裸 TLD）
+DOMAIN 父子覆盖：`7158`（排除裸 TLD）
 CIDR 父网覆盖子网：`506`
 
 ### DOMAIN 示例
@@ -164,10 +164,9 @@ CIDR 父网覆盖子网：`506`
 
 ## reject 代理域重叠清理
 
-剔除条数：`51640`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`43986`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0.avmarket.rs` ← covered by `None`
-- `DOMAIN-SUFFIX,006.freecounters.co.uk` ← covered by `None`
 - `DOMAIN-SUFFIX,0186141170.apps.iocnt.de` ← covered by `None`
 - `DOMAIN-SUFFIX,02ip.ru` ← covered by `None`
 - `DOMAIN-SUFFIX,0427d7.se` ← covered by `None`
@@ -176,7 +175,6 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN-SUFFIX,0916video.ru` ← covered by `None`
 - `DOMAIN-SUFFIX,0emm.com` ← covered by `None`
 - `DOMAIN-SUFFIX,0pn.ru` ← covered by `None`
-- `DOMAIN-SUFFIX,0sbm.consobaby.co.uk` ← covered by `None`
 - `DOMAIN-SUFFIX,0srhzn032t.kempfkuechen.de` ← covered by `None`
 - `DOMAIN-SUFFIX,1.hao123.com` ← covered by `None`
 - `DOMAIN-SUFFIX,10.im.cz` ← covered by `None`
@@ -214,8 +212,10 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN-SUFFIX,180hits.de` ← covered by `None`
 - `DOMAIN-SUFFIX,181m2fscr.de` ← covered by `None`
 - `DOMAIN-SUFFIX,184c4i95p.de` ← covered by `None`
-- `DOMAIN-SUFFIX,1886.olympia.co.uk` ← covered by `None`
 - `DOMAIN-SUFFIX,18tlm4jee.de` ← covered by `None`
+- `DOMAIN-SUFFIX,191920.bambonature.de` ← covered by `None`
+- `DOMAIN-SUFFIX,19515bia.de` ← covered by `None`
+- `DOMAIN-SUFFIX,1991482557.rsc.cdn77.org` ← covered by `None`
 
 ## 子域并入父分类
 
@@ -383,8 +383,8 @@ CIDR 父网覆盖子网：`506`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`111096`
+- 发布中国域名规则：`111257`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`482`
+- 移除与海外高优先级分类重叠：`321`
