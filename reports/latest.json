@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T06:55:07+00:00",
+  "generated_at": "2026-11-14T16:03:22+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 52512,
+      "rule_count": 52531,
       "previous_count": 52512,
       "healthy_sources": 3,
       "sources": [
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27351,
+          "previous_source_rules": 27352,
           "considered_lines": 27352,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1072,15 +1072,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 49056,
-          "considered_lines": 49063,
+          "considered_lines": 49077,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 1407016,
-          "sha256": "04b5231ad6b4e58d3be5260828260fa14602f558b7d4ae4e4cccc508e53cd6d0",
+          "bytes": 1407253,
+          "sha256": "e7d49fe211dc0ad775774075cec21ab86f23dbe57ea74dce328a7fa6447dd5fd",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 49056,
+          "rules": 49070,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111256,
+      "previous_count": 111257,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1133,8 +1133,8 @@
     },
     "reject/advertising": {
       "state": "updated",
-      "rule_count": 158313,
-      "previous_count": 158322,
+      "rule_count": 149947,
+      "previous_count": 158313,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 199928,
+          "previous_source_rules": 200344,
           "considered_lines": 200344,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1210,7 +1210,7 @@
           "redirect_host_changed": false
         }
       ],
-      "reject_proxy_overlap_removed": 44003
+      "reject_proxy_overlap_removed": 52369
     },
     "reject/privacy": {
       "state": "updated",
@@ -1275,9 +1275,9 @@
     "gaming": 723,
     "shopping": 453,
     "service": 2091,
-    "global": 51345,
+    "global": 51363,
     "china": 120203,
-    "reject": 158502
+    "reject": 150136
   },
   "cross_category_conflicts": {
     "DOMAIN-SUFFIX,bytedapm.com": [
@@ -7549,6 +7549,10 @@
       "global"
     ],
     "DOMAIN-SUFFIX,metcn.com": [
+      "china",
+      "global"
+    ],
+    "DOMAIN-SUFFIX,moegirl.org": [
       "china",
       "global"
     ],
@@ -21464,6 +21468,13 @@
         "global"
       ]
     },
+    "DOMAIN-SUFFIX,moegirl.org": {
+      "winner": "china",
+      "categories": [
+        "china",
+        "global"
+      ]
+    },
     "DOMAIN-SUFFIX,moeub.com": {
       "winner": "china",
       "categories": [
@@ -24492,9 +24503,9 @@
     },
     "global/proxy": {
       "type_counts": {
-        "DOMAIN": 2274,
+        "DOMAIN": 2277,
         "DOMAIN-KEYWORD": 46,
-        "DOMAIN-SUFFIX": 49955,
+        "DOMAIN-SUFFIX": 49971,
         "IP-CIDR": 81,
         "IP-CIDR6": 4,
         "URL-REGEX": 145,
@@ -24524,7 +24535,7 @@
       "type_counts": {
         "DOMAIN": 782,
         "DOMAIN-KEYWORD": 282,
-        "DOMAIN-SUFFIX": 156746,
+        "DOMAIN-SUFFIX": 148380,
         "IP-CIDR": 489,
         "URL-REGEX": 14
       },
@@ -24552,7 +24563,7 @@
     }
   },
   "semantic_domain_audit": {
-    "count": 7159,
+    "count": 7161,
     "samples": [
       {
         "type": "exact_domain_covered",
@@ -29178,12 +29189,12 @@
     "cidr_rule_count": 9951
   },
   "reject_proxy_overlap_sanitize": {
-    "removed_count": 44004,
+    "removed_count": 52370,
     "per_item": {
       "advertising": {
         "before": 202316,
-        "after": 158313,
-        "removed": 44003
+        "after": 149947,
+        "removed": 52369
       },
       "privacy": {
         "before": 20,
@@ -29200,6 +29211,11 @@
       {
         "item": "advertising",
         "rule": "DOMAIN-SUFFIX,0.avmarket.rs",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,006.freecounters.co.uk",
         "reason": "covered_by_proxy"
       },
       {
@@ -29240,6 +29256,11 @@
       {
         "item": "advertising",
         "rule": "DOMAIN-SUFFIX,0pn.ru",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,0sbm.consobaby.co.uk",
         "reason": "covered_by_proxy"
       },
       {
@@ -29429,7 +29450,17 @@
       },
       {
         "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1886.olympia.co.uk",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
         "rule": "DOMAIN-SUFFIX,18tlm4jee.de",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,1909a8.satofull.jp",
         "reason": "covered_by_proxy"
       },
       {
@@ -29674,6 +29705,11 @@
       },
       {
         "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,2.amssurveys.co.uk",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
         "rule": "DOMAIN-SUFFIX,2006mindfreaklike.blogspot.com",
         "reason": "covered_by_proxy"
       },
@@ -29744,6 +29780,11 @@
       },
       {
         "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,247support.adtech.us",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
         "rule": "DOMAIN-SUFFIX,24d.ir",
         "reason": "covered_by_proxy"
       },
@@ -29775,6 +29816,11 @@
       {
         "item": "advertising",
         "rule": "DOMAIN-SUFFIX,24new.ru",
+        "reason": "covered_by_proxy"
+      },
+      {
+        "item": "advertising",
+        "rule": "DOMAIN-SUFFIX,24ora.eu",
         "reason": "covered_by_proxy"
       },
       {
@@ -30160,41 +30206,6 @@
       {
         "item": "advertising",
         "rule": "DOMAIN-SUFFIX,30m4hpei1.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,30p70ar8m.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,30pk41r1i.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,30se9p8a0.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,30tgh64jp.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,3120jpllh.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,314gqd3es.de",
-        "reason": "covered_by_proxy"
-      },
-      {
-        "item": "advertising",
-        "rule": "DOMAIN-SUFFIX,316feq0nc.de",
         "reason": "covered_by_proxy"
       }
     ]
@@ -32634,9 +32645,9 @@
       "gaming": 723,
       "shopping": 453,
       "service": 2091,
-      "global": 51345,
+      "global": 51363,
       "china": 120203,
-      "reject": 158502
+      "reject": 150136
     }
   },
   "config_audit": [],
@@ -32661,7 +32672,7 @@
       {
         "severity": "INFO",
         "reason": "semantic_domain_redundancy",
-        "count": 7159
+        "count": 7161
       },
       {
         "severity": "INFO",
@@ -32671,7 +32682,7 @@
       {
         "severity": "INFO",
         "reason": "reject_proxy_overlap_sanitized",
-        "count": 44004
+        "count": 52370
       },
       {
         "severity": "INFO",
@@ -32681,31 +32692,31 @@
     ]
   },
   "global_quality": {
-    "exact_duplicate_occurrences": 2245,
+    "exact_duplicate_occurrences": 2246,
     "same_category_duplicate_rule_count": 144,
-    "cross_category_conflict_count": 1941,
-    "semantic_domain_redundancy_count": 7159,
+    "cross_category_conflict_count": 1942,
+    "semantic_domain_redundancy_count": 7161,
     "semantic_cidr_redundancy_count": 506,
     "invalid_domain_count": 0,
     "invalid_cidr_count": 0,
     "risky_keyword_count": 4,
     "compiled_output_problem_count": 0,
-    "reject_proxy_overlap_removed": 44004,
+    "reject_proxy_overlap_removed": 52370,
     "child_policy_split_count": 0,
     "child_collapsed_count": 859
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111257,
+    "output_rules": 111096,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 321,
+      "proxy_category_overlap": 482,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54669,
+    "proxy_domain_evidence_rules": 54726,
     "foreign_tld_count": 829
   }
 }
