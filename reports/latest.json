@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T14:51:53+00:00",
+  "generated_at": "2026-11-15T20:09:05+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1407253,
-          "sha256": "08886956840216cf656173ae33cc6c7e8bd4b6f852ff1e132dd34636d2a3aa25",
+          "sha256": "d9ec6f525dc7ce6a04f340c3e8b4a4f9c2c0501da8695d655e64e0186fe6a5b5",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49070,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111097,
+      "previous_count": 111096,
       "healthy_sources": 1,
       "sources": [
         {
