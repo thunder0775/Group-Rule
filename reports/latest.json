@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:09:05+00:00",
+  "generated_at": "2026-11-16T00:05:29+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1407253,
-          "sha256": "d9ec6f525dc7ce6a04f340c3e8b4a4f9c2c0501da8695d655e64e0186fe6a5b5",
+          "sha256": "cc2f70093c27d79dbc568f65dde2f36e5ae49d552e00591dd8e5ed157b9ba1da",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49070,
@@ -1116,12 +1116,12 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 0,
-          "considered_lines": 110240,
-          "malformed_lines": 110240,
+          "considered_lines": 110244,
+          "malformed_lines": 110244,
           "invalid_ratio": 1.0,
           "status_code": 200,
-          "bytes": 2277669,
-          "sha256": "4912af85f480d65a79734c72235bd451e71cc394f7f2979b556ad584e7711fe8",
+          "bytes": 2277797,
+          "sha256": "66fcabd34a05f1865e2b658fa0f6f7ccb0c297b9feb7721685f038ac17dd93c2",
           "final_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
           "content_type": "text/plain; charset=utf-8",
           "rules": 0,
