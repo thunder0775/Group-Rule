@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T08:16:49+00:00",
+  "generated_at": "2026-11-17T08:21:53+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 52535,
-      "previous_count": 52533,
+      "previous_count": 52535,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1035,7 +1035,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 27357,
+          "previous_source_rules": 27359,
           "considered_lines": 27359,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27583,
+          "previous_source_rules": 27585,
           "considered_lines": 27592,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 149168,
-      "previous_count": 150689,
+      "previous_count": 149168,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 201102,
+          "previous_source_rules": 199590,
           "considered_lines": 199590,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 201109,
+          "previous_source_rules": 199597,
           "considered_lines": 199597,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32707,16 +32707,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111096,
+    "output_rules": 111097,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 482,
+      "proxy_category_overlap": 481,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54733,
+    "proxy_domain_evidence_rules": 54694,
     "foreign_tld_count": 829
   }
 }
