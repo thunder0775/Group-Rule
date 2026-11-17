@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-11-17T00:20:21+00:00`
+生成时间：`2026-11-17T08:16:49+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -20,7 +20,7 @@
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`52386`
+- reject 与代理域重叠已剔除：`52395`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`862`
 
@@ -33,9 +33,9 @@
 - `gaming`：723 条
 - `shopping`：453 条
 - `service`：2094 条
-- `global`：51365 条
+- `global`：51367 条
 - `china`：120203 条
-- `reject`：150878 条
+- `reject`：149357 条
 
 ## 闸门结果
 
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`506`
 
 ## reject 代理域重叠清理
 
-剔除条数：`52386`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`52395`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0.avmarket.rs` ← covered by `None`
 - `DOMAIN-SUFFIX,006.freecounters.co.uk` ← covered by `None`
