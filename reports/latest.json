@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T07:20:56+00:00",
+  "generated_at": "2026-11-18T07:51:23+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1077,7 +1077,7 @@
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1407253,
-          "sha256": "af8a1171b958622b170a19d84bf02a372a220daebccf16806f2b5093646e0997",
+          "sha256": "23ecde5fcfbd2aed955ba455bbe6df31647dc6948aebf6d047558df782f84e69",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49070,
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 149563,
-      "previous_count": 149168,
+      "previous_count": 149563,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 199590,
+          "previous_source_rules": 199996,
           "considered_lines": 199996,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 199597,
+          "previous_source_rules": 200003,
           "considered_lines": 200003,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32707,16 +32707,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111096,
+    "output_rules": 111097,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 482,
+      "proxy_category_overlap": 481,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54733,
+    "proxy_domain_evidence_rules": 54694,
     "foreign_tld_count": 829
   }
 }
