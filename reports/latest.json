@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T04:15:53+00:00",
+  "generated_at": "2026-11-19T07:47:48+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -100,7 +100,7 @@
     "ai/copilot": {
       "state": "updated",
       "rule_count": 56,
-      "previous_count": 55,
+      "previous_count": 56,
       "healthy_sources": 1,
       "sources": [
         {
@@ -801,7 +801,7 @@
     "service/apple": {
       "state": "updated",
       "rule_count": 198,
-      "previous_count": 190,
+      "previous_count": 198,
       "healthy_sources": 2,
       "sources": [
         {
@@ -845,7 +845,7 @@
     "service/icloud": {
       "state": "updated",
       "rule_count": 57,
-      "previous_count": 53,
+      "previous_count": 57,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 52539,
-      "previous_count": 52535,
+      "previous_count": 52539,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1053,7 +1053,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "PROXY",
           "min_rules": 1,
-          "previous_source_rules": 27585,
+          "previous_source_rules": 27617,
           "considered_lines": 27629,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1071,13 +1071,13 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 49070,
+          "previous_source_rules": 49063,
           "considered_lines": 49070,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1407209,
-          "sha256": "309199671e06e39ac0659c1dc906851ee5bc478aee1ed252223bebf54a3d03af",
+          "sha256": "ab31fc0ad69d097500b97241d11bd1939b72224beb96c641c60efddef69c7ae8",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 49063,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111096,
+      "previous_count": 111256,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 158301,
-      "previous_count": 149563,
+      "previous_count": 158301,
       "healthy_sources": 4,
       "sources": [
         {
@@ -1160,7 +1160,7 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 199996,
+          "previous_source_rules": 200374,
           "considered_lines": 200374,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -1178,7 +1178,7 @@
           "mode": "shadowrocket_conf",
           "policy_filter": "REJECT",
           "min_rules": 1,
-          "previous_source_rules": 200003,
+          "previous_source_rules": 200379,
           "considered_lines": 200379,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
@@ -32696,16 +32696,16 @@
   },
   "direct_sanitization": {
     "input_rules": 120528,
-    "output_rules": 111256,
+    "output_rules": 111257,
     "removed": {
       "non_domain": 8065,
       "foreign_tld": 841,
       "explicit_deny": 2,
-      "proxy_category_overlap": 322,
+      "proxy_category_overlap": 321,
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54749,
+    "proxy_domain_evidence_rules": 54710,
     "foreign_tld_count": 829
   }
 }
