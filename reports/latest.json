@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T21:14:37+00:00",
+  "generated_at": "2026-11-22T01:21:13+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1026,7 +1026,7 @@
     },
     "global/proxy": {
       "state": "updated",
-      "rule_count": 52543,
+      "rule_count": 52544,
       "previous_count": 52543,
       "healthy_sources": 3,
       "sources": [
@@ -1072,15 +1072,15 @@
           "policy_filter": null,
           "min_rules": 1,
           "previous_source_rules": 49069,
-          "considered_lines": 49076,
+          "considered_lines": 49078,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
-          "bytes": 1407383,
-          "sha256": "fb24cc95d2b6c4c01ea7fe47638ded46a843321d4d6f519da82c6e0bdae8294e",
+          "bytes": 1407462,
+          "sha256": "f3e094eed4780314863cc3279d1a4f0c6ed876203698aaaf20ed604d52d1020e",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
-          "rules": 49069,
+          "rules": 49071,
           "status": "ok",
           "redirect_host_changed": false
         }
@@ -1275,7 +1275,7 @@
     "gaming": 723,
     "shopping": 453,
     "service": 2106,
-    "global": 51376,
+    "global": 51377,
     "china": 120203,
     "reject": 159200
   },
@@ -24492,7 +24492,7 @@
     },
     "global/proxy": {
       "type_counts": {
-        "DOMAIN": 2279,
+        "DOMAIN": 2280,
         "DOMAIN-KEYWORD": 48,
         "DOMAIN-SUFFIX": 49979,
         "IP-CIDR": 81,
@@ -32634,7 +32634,7 @@
       "gaming": 723,
       "shopping": 453,
       "service": 2106,
-      "global": 51376,
+      "global": 51377,
       "china": 120203,
       "reject": 159200
     }
@@ -32705,7 +32705,7 @@
       "invalid": 42
     },
     "explicit_deny_count": 9,
-    "proxy_domain_evidence_rules": 54753,
+    "proxy_domain_evidence_rules": 54754,
     "foreign_tld_count": 829
   }
 }
