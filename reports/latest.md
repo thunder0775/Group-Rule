@@ -1,6 +1,6 @@
 # Group-Rule 审计报告
 
-生成时间：`2026-11-22T01:21:13+00:00`
+生成时间：`2026-11-22T07:18:58+00:00`
 发布闸门：**PASS**
 
 ## 审计等级
@@ -12,15 +12,15 @@
 
 ## 总体质量
 
-- 精确重复出现次数：`2245`
+- 精确重复出现次数：`2234`
 - 同分类重复规则：`144`
-- 跨分类重复规则：`1941`
+- 跨分类重复规则：`1930`
 - DOMAIN 语义冗余：`7200`
 - CIDR 语义冗余：`506`
 - 无效 DOMAIN：`0`
 - 无效 CIDR：`0`
 - 高风险 DOMAIN-KEYWORD：`4`
-- reject 与代理域重叠已剔除：`44070`
+- reject 与代理域重叠已剔除：`44085`
 - 父子策略分裂（跨代理分类）：`0`
 - 子域并入父分类：`875`
 
@@ -33,9 +33,9 @@
 - `gaming`：723 条
 - `shopping`：453 条
 - `service`：2106 条
-- `global`：51377 条
-- `china`：120203 条
-- `reject`：159200 条
+- `global`：51400 条
+- `china`：120214 条
+- `reject`：159237 条
 
 ## 闸门结果
 
@@ -164,7 +164,7 @@ CIDR 父网覆盖子网：`506`
 
 ## reject 代理域重叠清理
 
-剔除条数：`44070`（父域已在代理分类中的子域不再 REJECT）
+剔除条数：`44085`（父域已在代理分类中的子域不再 REJECT）
 
 - `DOMAIN-SUFFIX,0.avmarket.rs` ← covered by `None`
 - `DOMAIN-SUFFIX,0186141170.apps.iocnt.de` ← covered by `None`
@@ -318,7 +318,6 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN-SUFFIX,68287zubo85737.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,6d63d3.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,6fm4dcpj31.com` → 胜出 `reject`；涉及 china, reject
-- `DOMAIN-SUFFIX,6pctuhriw.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,72qq.com` → 胜出 `china`；涉及 china, global
 - `DOMAIN-SUFFIX,73336zubo25326.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,876920.com` → 胜出 `reject`；涉及 china, reject
@@ -374,6 +373,7 @@ CIDR 父网覆盖子网：`506`
 - `DOMAIN-SUFFIX,ads8.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsame.com` → 胜出 `reject`；涉及 china, reject
 - `DOMAIN-SUFFIX,adsmogo.com` → 胜出 `reject`；涉及 china, reject
+- `DOMAIN-SUFFIX,adsmogo.mobi` → 胜出 `reject`；涉及 china, reject
 
 ## 编译输出校验
 
@@ -383,8 +383,8 @@ CIDR 父网覆盖子网：`506`
 ## 中国直连安全过滤
 
 - 原始中国规则：`120528`
-- 发布中国域名规则：`111256`
+- 发布中国域名规则：`111257`
 - 移除非域名/关键词/IP规则：`8065`
 - 移除非 CN TLD：`841`
 - 移除显式海外回归域名：`2`
-- 移除与海外高优先级分类重叠：`322`
+- 移除与海外高优先级分类重叠：`321`
