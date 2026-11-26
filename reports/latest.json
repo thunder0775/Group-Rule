@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T13:01:20+00:00",
+  "generated_at": "2026-11-26T22:09:19+00:00",
   "status": {
     "ai/openai": {
       "state": "updated",
@@ -1027,7 +1027,7 @@
     "global/proxy": {
       "state": "updated",
       "rule_count": 52446,
-      "previous_count": 52584,
+      "previous_count": 52446,
       "healthy_sources": 3,
       "sources": [
         {
@@ -1071,13 +1071,13 @@
           "mode": "rules",
           "policy_filter": null,
           "min_rules": 1,
-          "previous_source_rules": 49071,
+          "previous_source_rules": 48951,
           "considered_lines": 48958,
           "malformed_lines": 0,
           "invalid_ratio": 0.0,
           "status_code": 200,
           "bytes": 1403948,
-          "sha256": "dfde6658d1f2a8f260638fa3e2ba3f8ea428fc3e4f8b74bf74bb247dd0ce80cd",
+          "sha256": "ddd544788888f5f30e98ae4591943cb8f3fcbda14a16660d63609146747f6340",
           "final_url": "https://raw.githubusercontent.com/deezertidal/shadowrocket-rules/main/rule/Global.list",
           "content_type": "text/plain; charset=utf-8",
           "rules": 48951,
@@ -1089,7 +1089,7 @@
     "china/domains": {
       "state": "updated",
       "rule_count": 120528,
-      "previous_count": 111257,
+      "previous_count": 111256,
       "healthy_sources": 1,
       "sources": [
         {
@@ -1134,7 +1134,7 @@
     "reject/advertising": {
       "state": "updated",
       "rule_count": 160985,
-      "previous_count": 160982,
+      "previous_count": 160985,
       "healthy_sources": 4,
       "sources": [
         {
